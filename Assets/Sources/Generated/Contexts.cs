@@ -21,14 +21,28 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
-    public GameContext game { get; set; }
+    public DamageContext damage { get; set; }
+    public DisplayContext display { get; set; }
     public InputContext input { get; set; }
+    public LogContext log { get; set; }
+    public NetworkContext network { get; set; }
+    public NinjutsuContext ninjutsu { get; set; }
+    public PerceptionContext perception { get; set; }
+    public TaijutsuContext taijutsu { get; set; }
+    public WeaponContext weapon { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, input }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { damage, display, input, log, network, ninjutsu, perception, taijutsu, weapon }; } }
 
     public Contexts() {
-        game = new GameContext();
+        damage = new DamageContext();
+        display = new DisplayContext();
         input = new InputContext();
+        log = new LogContext();
+        network = new NetworkContext();
+        ninjutsu = new NinjutsuContext();
+        perception = new PerceptionContext();
+        taijutsu = new TaijutsuContext();
+        weapon = new WeaponContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
@@ -63,8 +77,15 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContextObservers() {
         try {
-            CreateContextObserver(game);
+            CreateContextObserver(damage);
+            CreateContextObserver(display);
             CreateContextObserver(input);
+            CreateContextObserver(log);
+            CreateContextObserver(network);
+            CreateContextObserver(ninjutsu);
+            CreateContextObserver(perception);
+            CreateContextObserver(taijutsu);
+            CreateContextObserver(weapon);
         } catch(System.Exception) {
         }
     }
