@@ -4,6 +4,7 @@ public class GameWorld : Feature
 {
     public GameWorld(Contexts contexts) : base("Game World")
     {
+        Add(new AnimationSystems(contexts));
         Add(new DisplaySystems(contexts));
         Add(new InputSystems(contexts));
         Add(new LogSystems(contexts));        

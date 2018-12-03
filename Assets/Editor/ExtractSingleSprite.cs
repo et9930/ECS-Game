@@ -39,19 +39,20 @@ public class ExtractSingleSprite : EditorWindow
                         var paths = Directory.GetFiles(selectionPath, "*.png", SearchOption.AllDirectories);
                         for (int i = 0; i < paths.Length; i++)
                         {
-                            EditorUtility.DisplayProgressBar("Progress", currect_png_path, Progress);
-                            Progress = (float) i / (float) paths.Length;
+                            Progress = (float)i / (float)paths.Length;
                             currect_png_path = paths[i];
+                            EditorUtility.DisplayProgressBar("Progress", currect_png_path, Progress);       
+                            
                             DealPngFile(paths[i]);
                         }
                     }
                     catch (Exception e)
                     {
-                        Debug.Log(e.Message);
+                        Debug.LogError(e.Message);
                     }
                 }
             }
-        }
+        }        
         EditorUtility.ClearProgressBar();
         isShow = false;
     }
