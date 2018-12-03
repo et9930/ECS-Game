@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameLauncher : MonoBehaviour
 {
     Systems _systems;
 
@@ -25,5 +25,10 @@ public class GameController : MonoBehaviour
         _systems.Execute();
         // call cleanup() on all the ICleanupSystems
         _systems.Cleanup();
+    }
+
+    private void OnDestroy()
+    {
+        _systems.TearDown();
     }
 }

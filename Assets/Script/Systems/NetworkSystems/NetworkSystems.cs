@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class NetworkSystems : Feature
+﻿public class NetworkSystems : Feature
 {
     public NetworkSystems(Contexts contexts) : base("Network Systems")
     {

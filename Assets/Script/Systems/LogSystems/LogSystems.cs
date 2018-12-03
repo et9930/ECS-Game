@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class LogSystems : Feature
+﻿public class LogSystems : Feature
 {
     public LogSystems(Contexts contexts) : base("Log Systems")
     {

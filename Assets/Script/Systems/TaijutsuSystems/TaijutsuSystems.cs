@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class TaijutsuSystems : Feature
+﻿public class TaijutsuSystems : Feature
 {
     public TaijutsuSystems(Contexts contexts) : base("Taijutsu Systems")
     {

@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class SceneSystems : Feature
+﻿public class SceneSystems : Feature
 {
     public SceneSystems(Contexts contexts) : base("Scene Systems")
     {

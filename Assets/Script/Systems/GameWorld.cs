@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class GameWorld : Feature
+﻿public class GameWorld : Feature
 {
     public GameWorld(Contexts contexts) : base("Game World")
     {

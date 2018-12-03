@@ -1,6 +1,4 @@
-﻿using Entitas;
-
-public class PerceptionSystems : Feature
+﻿public class PerceptionSystems : Feature
 {
     public PerceptionSystems(Contexts contexts) : base("Perception Systems")
     {
