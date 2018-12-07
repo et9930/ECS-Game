@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -60,67 +60,126 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DesperateDevs\Compile.cs" />
-    <Compile Include="Assets\Script\Components\LogComponents\DebugMessageComponent.cs" />
-    <Compile Include="Assets\Script\GameController.cs" />
-    <Compile Include="Assets\Script\Generated\Contexts.cs" />
-    <Compile Include="Assets\Script\Generated\Display\DisplayAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Display\DisplayComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Display\DisplayContext.cs" />
-    <Compile Include="Assets\Script\Generated\Display\DisplayEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Display\DisplayMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Feature.cs" />
-    <Compile Include="Assets\Script\Generated\Input\InputAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Input\InputComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Input\InputContext.cs" />
-    <Compile Include="Assets\Script\Generated\Input\InputEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputImageAssetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputLeftMouseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputRightMouseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerPositionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuPositionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerSpriteComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuSpriteComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerViewComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuViewComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputMouseDownComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputMousePositionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Input\Components\InputMouseUpComponent.cs" />
     <Compile Include="Assets\Script\Generated\Log\Components\LogDebugMessageComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Log\LogAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Log\LogComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Log\LogContext.cs" />
-    <Compile Include="Assets\Script\Generated\Log\LogEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Log\LogMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\MapObject\MapObjectAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\MapObject\MapObjectComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\MapObject\MapObjectContext.cs" />
-    <Compile Include="Assets\Script\Generated\MapObject\MapObjectEntity.cs" />
-    <Compile Include="Assets\Script\Generated\MapObject\MapObjectMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Network\NetworkAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Network\NetworkComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Network\NetworkContext.cs" />
-    <Compile Include="Assets\Script\Generated\Network\NetworkEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Network\NetworkMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuContext.cs" />
-    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Player\PlayerAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerAccelerationComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuAccelerationComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerChangingSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuChangingSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerMaxSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuMaxSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerMoveTargetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuMoveTargetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerMovingComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuMovingComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Player\Components\PlayerSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\Components\NinjutsuSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IPositionEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\ISpriteEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IViewEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IAccelerationEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IChangingSpeedEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IMaxSpeedEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IMoveTargetEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\IMovingEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Components\Interfaces\ISpeedEntity.cs" />
     <Compile Include="Assets\Script\Generated\Player\PlayerComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Player\PlayerContext.cs" />
-    <Compile Include="Assets\Script\Generated\Player\PlayerEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Player\PlayerMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Scene\SceneAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Scene\SceneComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Scene\SceneContext.cs" />
-    <Compile Include="Assets\Script\Generated\Scene\SceneEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Scene\SceneMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Weapon\WeaponAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Input\InputComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Log\LogComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Display\DisplayComponentsLookup.cs" />
     <Compile Include="Assets\Script\Generated\Weapon\WeaponComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\MapObject\MapObjectComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Network\NetworkComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Scene\SceneComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Display\DisplayAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Player\PlayerAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Log\LogAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Weapon\WeaponAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\MapObject\MapObjectAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Input\InputAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Network\NetworkAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Scene\SceneAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Display\DisplayContext.cs" />
+    <Compile Include="Assets\Script\Generated\Player\PlayerContext.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuContext.cs" />
+    <Compile Include="Assets\Script\Generated\Log\LogContext.cs" />
     <Compile Include="Assets\Script\Generated\Weapon\WeaponContext.cs" />
-    <Compile Include="Assets\Script\Generated\Weapon\WeaponEntity.cs" />
+    <Compile Include="Assets\Script\Generated\MapObject\MapObjectContext.cs" />
+    <Compile Include="Assets\Script\Generated\Input\InputContext.cs" />
+    <Compile Include="Assets\Script\Generated\Network\NetworkContext.cs" />
+    <Compile Include="Assets\Script\Generated\Scene\SceneContext.cs" />
+    <Compile Include="Assets\Script\Generated\Display\DisplayMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Player\PlayerMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Log\LogMatcher.cs" />
     <Compile Include="Assets\Script\Generated\Weapon\WeaponMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\MapObject\MapObjectMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Network\NetworkMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Scene\SceneMatcher.cs" />
+    <Compile Include="Assets\Script\Generated\Contexts.cs" />
+    <Compile Include="Assets\Script\Generated\Display\DisplayEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Player\PlayerEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Ninjutsu\NinjutsuEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Log\LogEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Weapon\WeaponEntity.cs" />
+    <Compile Include="Assets\Script\Generated\MapObject\MapObjectEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Input\InputEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Network\NetworkEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Scene\SceneEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Feature.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\DesperateDevs\Compile.cs" />
+    <Compile Include="Assets\Script\Components\DisplayComponents\PositionComponent.cs" />
+    <Compile Include="Assets\Script\Components\DisplayComponents\SpriteComponent.cs" />
+    <Compile Include="Assets\Script\Components\DisplayComponents\ViewComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\ImageAssetComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\LeftMouseComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\MouseDownComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\MousePositionComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\MouseUpComponent.cs" />
+    <Compile Include="Assets\Script\Components\InputComponents\RightMouseComponent.cs" />
+    <Compile Include="Assets\Script\Components\LogComponents\DebugMessageComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\AccelerationComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\ChangingSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\MaxSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\MoveTargetComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\MovingComponent.cs" />
+    <Compile Include="Assets\Script\Components\PlayerComponents\SpeedComponent.cs" />
+    <Compile Include="Assets\Script\GameLauncher.cs" />
     <Compile Include="Assets\Script\Systems\AnimationSystems\AnimationSystems.cs" />
     <Compile Include="Assets\Script\Systems\DamageSystems\DamageSystems.cs" />
+    <Compile Include="Assets\Script\Systems\DisplaySystems\AddViewSystem.cs" />
     <Compile Include="Assets\Script\Systems\DisplaySystems\DisplaySystems.cs" />
+    <Compile Include="Assets\Script\Systems\DisplaySystems\RenderPositionSystem.cs" />
+    <Compile Include="Assets\Script\Systems\DisplaySystems\RenderSpriteSystem.cs" />
     <Compile Include="Assets\Script\Systems\GameWorld.cs" />
     <Compile Include="Assets\Script\Systems\HTCSystems\HTCSystems.cs" />
+    <Compile Include="Assets\Script\Systems\InputSystems\CreatePlayerSystem.cs" />
+    <Compile Include="Assets\Script\Systems\InputSystems\EmitInputSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\InputSystems.cs" />
+    <Compile Include="Assets\Script\Systems\InputSystems\LoadImageAssetSystem.cs" />
+    <Compile Include="Assets\Script\Systems\InputSystems\SetMoveTargetSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\CleanupDebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\LogSystems.cs" />
+    <Compile Include="Assets\Script\Systems\MovementSystems\ChangeSpeedSystem.cs" />
     <Compile Include="Assets\Script\Systems\MovementSystems\MovementSystems.cs" />
+    <Compile Include="Assets\Script\Systems\MovementSystems\MoveSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\NetworkSystems.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\NinjutsuSystems.cs" />
     <Compile Include="Assets\Script\Systems\PerceptionSystems\PerceptionSystems.cs" />
@@ -363,11 +422,8 @@
     <Reference Include="Entitas.VisualDebugging.Unity">
       <HintPath>D:/ECS-Game/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    <Reference Include="EPPlus">
+      <HintPath>D:/ECS-Game/Assets/Plugins/u3d-Excel/EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Excel">
       <HintPath>D:/ECS-Game/Assets/Plugins/u3d-Excel/Excel.dll</HintPath>
@@ -375,11 +431,14 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>D:/ECS-Game/Assets/Plugins/u3d-Excel/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>D:/ECS-Game/Assets/Plugins/u3d-Excel/EPPlus.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data">
       <HintPath>D:/ECS-Game/Assets/Plugins/u3d-Excel/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/admin/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

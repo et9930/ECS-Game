@@ -8,21 +8,15 @@
 //------------------------------------------------------------------------------
 public static class DisplayComponentsLookup {
 
-    public const int Position = 0;
-    public const int Sprite = 1;
-    public const int View = 2;
 
-    public const int TotalComponents = 3;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "Position",
-        "Sprite",
-        "View"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(PositionComponent),
-        typeof(SpriteComponent),
-        typeof(ViewComponent)
+
     };
 }

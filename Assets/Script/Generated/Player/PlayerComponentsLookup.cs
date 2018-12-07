@@ -8,15 +8,39 @@
 //------------------------------------------------------------------------------
 public static class PlayerComponentsLookup {
 
+    public const int Acceleration = 0;
+    public const int ChangingSpeed = 1;
+    public const int MaxSpeed = 2;
+    public const int MoveTarget = 3;
+    public const int Moving = 4;
+    public const int Position = 5;
+    public const int Speed = 6;
+    public const int Sprite = 7;
+    public const int View = 8;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
-
+        "Acceleration",
+        "ChangingSpeed",
+        "MaxSpeed",
+        "MoveTarget",
+        "Moving",
+        "Position",
+        "Speed",
+        "Sprite",
+        "View"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(AccelerationComponent),
+        typeof(ChangingSpeedComponent),
+        typeof(MaxSpeedComponent),
+        typeof(MoveTargetComponent),
+        typeof(MovingComponent),
+        typeof(PositionComponent),
+        typeof(SpeedComponent),
+        typeof(SpriteComponent),
+        typeof(ViewComponent)
     };
 }

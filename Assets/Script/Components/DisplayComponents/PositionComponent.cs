@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Entitas;
 
-[Display]
+[Player, Ninjutsu]
 public class PositionComponent : IComponent
 {
     public Vector2 value;

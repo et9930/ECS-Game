@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Display]
+[Player, Ninjutsu]
 public class SpriteComponent : IComponent
 {
     public string path;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Entitas;
 
-[Display]
+[Player, Ninjutsu]
 public class ViewComponent : IComponent
 {
     public GameObject gameObject;

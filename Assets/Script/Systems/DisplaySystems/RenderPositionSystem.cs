@@ -1,23 +1,27 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-public class RenderPositionSystem : ReactiveSystem<DisplayEntity>
+public class RenderPositionSystem : MultiReactiveSystem<IViewableEntity, Contexts>
 {
-    public RenderPositionSystem(Contexts contexts) : base(contexts.display)
+    public RenderPositionSystem(Contexts contexts) : base(contexts)
     {
     }
 
-    protected override ICollector<DisplayEntity> GetTrigger(IContext<DisplayEntity> context)
+    protected override ICollector[] GetTrigger(Contexts contexts)
     {
-        return context.CreateCollector(DisplayMatcher.Position);
+        return new ICollector[]
+        {
+            contexts.player.CreateCollector(PlayerMatcher.Position),
+            contexts.ninjutsu.CreateCollector(NinjutsuMatcher.Position)
+        };
     }
 
-    protected override bool Filter(DisplayEntity entity)
+    protected override bool Filter(IViewableEntity entity)
     {
         return entity.hasPosition && entity.hasView;
     }
 
-    protected override void Execute(List<DisplayEntity> entities)
+    protected override void Execute(List<IViewableEntity> entities)
     {
         foreach (var e in entities)
         {

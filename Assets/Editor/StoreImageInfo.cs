@@ -4,29 +4,14 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class Infos : ScriptableObject
-{
-    public List<PngInfo> infos;
-}
-
-[System.Serializable]
-public class PngInfo
-{
-    public string name;
-    public string animName;
-    public int frameCount;
-    public Vector2 size;
-    public Vector2 pivot;
-}
-
 public class StoreImageInfo : EditorWindow
 {
     public const string resourcesPath = "Assets/Resources/";
-    public const string ImagePath = "Assets/Resources/Output/Image/";
+    public const string ImagePath = "Assets/Resources/Image/";
     public static float Progress = 0;
     public static string currect_path = "";
     public static bool isShow = false;
-    private static Dictionary<string, Infos> pngInfos = new Dictionary<string, Infos>();
+    private static List<CharacterInfo> characterInfos = new List<CharacterInfo>();
     
     [MenuItem("Tools/Store Image Info In Excel File")]
     public static void StoreImageInfoFunc()
@@ -41,13 +26,13 @@ public class StoreImageInfo : EditorWindow
                 Progress = (float)i / (float)dirs.Length;
                 currect_path = dirs[i];
                 EditorUtility.DisplayProgressBar("Progress", currect_path, Progress);
-                
-                pngInfos.Add(dirs[i].Substring(ImagePath.Length), DealDir(dirs[i]));                
+
+                characterInfos.Add(DealDir(dirs[i]));                
             }
         }
         catch (Exception e)
         {
-            Debug.LogError(e.Message);
+            Debug.LogError(e.Message + '\n' + e.StackTrace);
         }
 
         EditorUtility.DisplayProgressBar("Progress", "Write In Asset File", 1);
@@ -59,12 +44,11 @@ public class StoreImageInfo : EditorWindow
 
     private static void WriteInAssetFile()
     {
-        foreach (var item in pngInfos)
-        {
-            var outputPath = resourcesPath + "Image/" + item.Key + ".asset";
-            AssetDatabase.CreateAsset(item.Value, outputPath);
-            AssetDatabase.Refresh();
-        }
+        var infos = ScriptableObject.CreateInstance<Infos>();
+        infos.infos = characterInfos;
+        var outputPath = resourcesPath + "Image/AnimationInfos.asset";
+        AssetDatabase.CreateAsset(infos, outputPath);
+        AssetDatabase.Refresh();
     }
 
     void OnInspectorUpdate()
@@ -72,34 +56,53 @@ public class StoreImageInfo : EditorWindow
         Repaint();
     }
 
-    public static Infos DealDir(string dirPath)
-    {        
-        var pngInfos = ScriptableObject.CreateInstance<Infos>();
-        var infoList = new List<PngInfo>();
+    public static CharacterInfo DealDir(string dirPath)
+    {                
+        var characterInfo = new CharacterInfo();
+        characterInfo.animationInfos = new List<AnimationInfo>();
+        characterInfo.characterName = dirPath.Substring(ImagePath.Length);
+        AnimationInfo animInfo = null;
+        var animName = "";
         try
         {
             var pngPaths = Directory.GetFiles(dirPath, "*.png", SearchOption.TopDirectoryOnly);
-            Debug.Log(pngPaths.Length);
             for (int i = 0; i < pngPaths.Length; i++)
             {
-                infoList.Add(DealPng(pngPaths[i]));
+                var tmp = Path.GetFileNameWithoutExtension(pngPaths[i]);
+                var _index = tmp.IndexOf('_');
+                tmp = tmp.Substring(0, _index);
+                Debug.Log(animName);
+                if (!tmp.Equals(animName))
+                {
+                    Debug.Log("new");
+                    if (animInfo != null)
+                    {
+                        characterInfo.animationInfos.Add(animInfo);
+                    }
+                    animInfo = new AnimationInfo();
+                    animInfo.frameInfos = new List<FrameInfo>();
+                    animName = tmp;
+                    animInfo.animationName = animName;
+                }
+                animInfo.frameInfos.Add(DealPng(pngPaths[i]));
             }
+            characterInfo.animationInfos.Add(animInfo);
         }
         catch (Exception e)
         {
-            Debug.LogError(e.Message);
+            Debug.LogError(e.Message + '\n' + e.StackTrace);
         }
-        pngInfos.infos = infoList;
-        return pngInfos;
+        
+        return characterInfo;
     }
 
-    public static PngInfo DealPng(string pngPath)
+    public static FrameInfo DealPng(string pngPath)
     {
-        var info = new PngInfo();
+        var info = new FrameInfo();
         Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(pngPath);
         info.name = Path.GetFileNameWithoutExtension(pngPath);
+        info.path = Path.GetDirectoryName(pngPath).Substring(resourcesPath.Length).Replace('\\', '/') + "/" + info.name;
         var _index = info.name.IndexOf('_');
-        info.animName = info.name.Substring(0, _index);
         info.frameCount = int.Parse(info.name.Substring(_index + 1));
         info.pivot = sprite.pivot;
         info.size.x = sprite.texture.width;
