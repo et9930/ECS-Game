@@ -8,15 +8,27 @@
 //------------------------------------------------------------------------------
 public static class SceneComponentsLookup {
 
+    public const int Destroy = 0;
+    public const int Layer = 1;
+    public const int LoadingSceneProcess = 2;
+    public const int LoadScene = 3;
+    public const int Name = 4;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
-
+        "Destroy",
+        "Layer",
+        "LoadingSceneProcess",
+        "LoadScene",
+        "Name"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(DestroyComponent),
+        typeof(LayerComponent),
+        typeof(LoadingSceneProcessComponent),
+        typeof(LoadSceneComponent),
+        typeof(NameComponent)
     };
 }

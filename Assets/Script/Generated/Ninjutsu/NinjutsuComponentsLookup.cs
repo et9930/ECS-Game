@@ -13,12 +13,13 @@ public static class NinjutsuComponentsLookup {
     public const int MaxSpeed = 2;
     public const int MoveTarget = 3;
     public const int Moving = 4;
-    public const int Position = 5;
-    public const int Speed = 6;
-    public const int Sprite = 7;
-    public const int View = 8;
+    public const int Name = 5;
+    public const int Position = 6;
+    public const int Speed = 7;
+    public const int Sprite = 8;
+    public const int View = 9;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -26,6 +27,7 @@ public static class NinjutsuComponentsLookup {
         "MaxSpeed",
         "MoveTarget",
         "Moving",
+        "Name",
         "Position",
         "Speed",
         "Sprite",
@@ -38,6 +40,7 @@ public static class NinjutsuComponentsLookup {
         typeof(MaxSpeedComponent),
         typeof(MoveTargetComponent),
         typeof(MovingComponent),
+        typeof(NameComponent),
         typeof(PositionComponent),
         typeof(SpeedComponent),
         typeof(SpriteComponent),

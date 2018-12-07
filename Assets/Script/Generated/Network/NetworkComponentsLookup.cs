@@ -8,15 +8,18 @@
 //------------------------------------------------------------------------------
 public static class NetworkComponentsLookup {
 
+    public const int LoginInfo = 0;
+    public const int SignInInfo = 1;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-
+        "LoginInfo",
+        "SignInInfo"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(LoginInfoComponent),
+        typeof(SignInInfoComponent)
     };
 }

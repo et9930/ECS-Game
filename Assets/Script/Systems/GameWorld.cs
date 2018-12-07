@@ -16,5 +16,7 @@
         Add(new PerceptionSystems(contexts));
         Add(new TaijutsuSystems(contexts));
         Add(new WeaponSystems(contexts));
+
+        Add(new DestroySystems(contexts));
     }
 }

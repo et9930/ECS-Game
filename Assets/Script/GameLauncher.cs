@@ -7,6 +7,7 @@ public class GameLauncher : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
         // get a reference to the contexts
         var contexts = Contexts.sharedInstance;
 

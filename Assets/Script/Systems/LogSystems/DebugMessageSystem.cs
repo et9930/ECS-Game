@@ -18,7 +18,7 @@ public class DebugMessageSystem : ReactiveSystem<LogEntity>
     {
         // good practice to perform a final check in case 
         // the entity has been altered in a different system.
-        return entity.hasDebugMessage;
+        return entity.hasDebugMessage && !entity.isDestroy;
     }
 
     protected override void Execute(List<LogEntity> entities)
@@ -29,6 +29,7 @@ public class DebugMessageSystem : ReactiveSystem<LogEntity>
             // we can safely access their DebugMessage component
             // then grab the string data and print it
             Debug.Log(e.debugMessage.message);
+            e.isDestroy = true;
         }
     }
 }

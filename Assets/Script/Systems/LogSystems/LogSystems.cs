@@ -6,6 +6,5 @@
         Add(new DebugMessageSystem(contexts));
 
         //Cleanup Systems
-        Add(new CleanupDebugMessageSystem(contexts));
     }
 }

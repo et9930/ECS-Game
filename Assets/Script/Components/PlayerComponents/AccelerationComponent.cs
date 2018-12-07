@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Entitas;
+﻿using Entitas;
 
 [Player, Ninjutsu]
 public class AccelerationComponent : IComponent {
