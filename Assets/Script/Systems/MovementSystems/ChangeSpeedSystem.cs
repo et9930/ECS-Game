@@ -2,44 +2,34 @@
 using Entitas;
 using UnityEngine;
 
-public interface IMoveableEntity : IEntity, IAccelerationEntity, IChangingSpeedEntity, IMaxSpeedEntity, IMoveTargetEntity, IMovingEntity, ISpeedEntity, IPositionEntity { }
 
-public partial class PlayerEntity : IMoveableEntity { }
-public partial class NinjutsuEntity : IMoveableEntity { }
-
-
-public class ChangeSpeedSystem : MultiReactiveSystem<IMoveableEntity, Contexts>
+public class ChangeSpeedSystem : ReactiveSystem<GameEntity>
 {
-    public ChangeSpeedSystem(Contexts contexts) : base(contexts)
+    public ChangeSpeedSystem(Contexts contexts) : base(contexts.game)
     {
 
     }
 
-    protected override ICollector[] GetTrigger(Contexts contexts)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return new ICollector[]
-        {
-            contexts.player.CreateCollector(PlayerMatcher.AllOf(PlayerMatcher.Speed, PlayerMatcher.ChangingSpeed)),
-            contexts.ninjutsu.CreateCollector(NinjutsuMatcher.AllOf(NinjutsuMatcher.Speed, NinjutsuMatcher.ChangingSpeed))
-        };
+
+        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.Speed, GameMatcher.ChangingSpeed));
     }
 
-    protected override bool Filter(IMoveableEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.isChangingSpeed;
     }
 
-    protected override void Execute(List<IMoveableEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
-        
+
         foreach (var e in entities)
         {
             e.ReplaceSpeed(e.speed.value + e.acceleration.value * Time.deltaTime);
-            if (e.speed.value >= e.maxSpeed.value)
-            {
-                e.ReplaceSpeed(e.maxSpeed.value);
-                e.isChangingSpeed = false;
-            }
+            if (!(e.speed.value >= e.maxSpeed.value)) continue;
+            e.ReplaceSpeed(e.maxSpeed.value);
+            e.isChangingSpeed = false;
         }
-    }    
+    }
 }

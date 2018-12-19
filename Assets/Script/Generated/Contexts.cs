@@ -21,28 +21,12 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
-    public DisplayContext display { get; set; }
-    public InputContext input { get; set; }
-    public LogContext log { get; set; }
-    public MapObjectContext mapObject { get; set; }
-    public NetworkContext network { get; set; }
-    public NinjutsuContext ninjutsu { get; set; }
-    public PlayerContext player { get; set; }
-    public SceneContext scene { get; set; }
-    public WeaponContext weapon { get; set; }
+    public GameContext game { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { display, input, log, mapObject, network, ninjutsu, player, scene, weapon }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game }; } }
 
     public Contexts() {
-        display = new DisplayContext();
-        input = new InputContext();
-        log = new LogContext();
-        mapObject = new MapObjectContext();
-        network = new NetworkContext();
-        ninjutsu = new NinjutsuContext();
-        player = new PlayerContext();
-        scene = new SceneContext();
-        weapon = new WeaponContext();
+        game = new GameContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
@@ -77,15 +61,7 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContextObservers() {
         try {
-            CreateContextObserver(display);
-            CreateContextObserver(input);
-            CreateContextObserver(log);
-            CreateContextObserver(mapObject);
-            CreateContextObserver(network);
-            CreateContextObserver(ninjutsu);
-            CreateContextObserver(player);
-            CreateContextObserver(scene);
-            CreateContextObserver(weapon);
+            CreateContextObserver(game);
         } catch(System.Exception) {
         }
     }

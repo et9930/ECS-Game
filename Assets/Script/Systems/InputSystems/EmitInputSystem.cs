@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class EmitInputSystem : IInitializeSystem, IExecuteSystem
 {
-    readonly InputContext _context;
-    private InputEntity _leftMouseEntity;
-    private InputEntity _rightMouseEntity;
+    private readonly GameContext _context;
+    private GameEntity _leftMouseEntity;
+    private GameEntity _rightMouseEntity;
 
     public EmitInputSystem(Contexts contexts)
     {
-        _context = contexts.input;
+        _context = contexts.game;
     }
 
     public void Initialize()

@@ -2,26 +2,26 @@
 using Entitas;
 using UnityEngine;
 
-public class DebugMessageSystem : ReactiveSystem<LogEntity>
+public class DebugMessageSystem : ReactiveSystem<GameEntity>
 {
-    public DebugMessageSystem(Contexts contexts) : base(contexts.log)
+    public DebugMessageSystem(Contexts contexts) : base(contexts.game)
     {
     }
 
-    protected override ICollector<LogEntity> GetTrigger(IContext<LogEntity> context)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
         // we only care about entities with DebugMessageComponent 
-        return context.CreateCollector(LogMatcher.DebugMessage);
+        return context.CreateCollector(GameMatcher.DebugMessage);
     }
 
-    protected override bool Filter(LogEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         // good practice to perform a final check in case 
         // the entity has been altered in a different system.
         return entity.hasDebugMessage && !entity.isDestroy;
     }
 
-    protected override void Execute(List<LogEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
         // this is the list of entities that meet our conditions
         foreach (var e in entities)

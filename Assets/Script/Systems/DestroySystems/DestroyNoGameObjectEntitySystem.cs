@@ -1,40 +1,29 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-public interface IDestroyableEntity : IEntity, IDestroyEntity { }
-
-public partial class SceneEntity : IDestroyableEntity { }
-public partial class LogEntity : IDestroyableEntity { }
-
-public class DestroyNoGameObjectEntitySystem : MultiReactiveSystem<IDestroyableEntity, Contexts>
+public class DestroyNoGameObjectEntitySystem : ReactiveSystem<GameEntity>
 {
-    public DestroyNoGameObjectEntitySystem(Contexts contexts) : base(contexts)
+    public DestroyNoGameObjectEntitySystem(Contexts contexts) : base(contexts.game)
     {
 
     }
 
-    protected override ICollector[] GetTrigger(Contexts contexts)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return new ICollector[]
-        {
-            contexts.scene.CreateCollector(SceneMatcher.Destroy),
-            contexts.log.CreateCollector(LogMatcher.Destroy)
-        };
+            //context.CreateCollector(GameMatcher),
+        return context.CreateCollector(GameMatcher.Destroy);
     }
 
-    protected override bool Filter(IDestroyableEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.isDestroy;
     }
 
-    protected override void Execute(List<IDestroyableEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
         foreach (var e in entities)
         {
             e.Destroy();
         }
     }
-      
-
-    
 }

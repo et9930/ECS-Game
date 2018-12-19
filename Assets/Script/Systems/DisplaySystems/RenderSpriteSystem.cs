@@ -2,30 +2,24 @@
 using Entitas;
 using UnityEngine;
 
-public class RenderSpriteSystem : MultiReactiveSystem<IViewableEntity, Contexts>
+public class RenderSpriteSystem : ReactiveSystem<GameEntity>
 {
-    readonly DisplayContext _context; 
 
-    public RenderSpriteSystem(Contexts contexts) : base(contexts)
+    public RenderSpriteSystem(Contexts contexts) : base(contexts.game)
     {
-        _context = contexts.display;
     }
 
-    protected override ICollector[] GetTrigger(Contexts contexts)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return new ICollector[]
-        {
-            contexts.player.CreateCollector(PlayerMatcher.Sprite),
-            contexts.ninjutsu.CreateCollector(NinjutsuMatcher.Sprite)
-        };
+        return context.CreateCollector(GameMatcher.Sprite);
     }
 
-    protected override bool Filter(IViewableEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.hasSprite && entity.hasView;
     }
 
-    protected override void Execute(List<IViewableEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
         foreach (var e in entities)
         {

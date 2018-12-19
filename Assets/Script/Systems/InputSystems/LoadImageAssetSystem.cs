@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class LoadImageAssetSystem : IInitializeSystem
 {
-    readonly InputContext _context;
-    private InputEntity _animationInfosEntity;
+    private readonly GameContext _context;
+    private GameEntity _animationInfosEntity;
 
     public LoadImageAssetSystem(Contexts contexts)
     {
-        _context = contexts.input;
+        _context = contexts.game;
     }
 
     public void Initialize()

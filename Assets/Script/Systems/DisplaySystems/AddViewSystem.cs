@@ -2,36 +2,26 @@
 using Entitas;
 using UnityEngine;
 
-public interface IViewableEntity : IEntity, IPositionEntity, ISpriteEntity, IViewEntity { }
 
-public partial class PlayerEntity : IViewableEntity { }
-public partial class NinjutsuEntity : IViewableEntity { }
-
-public class AddViewSystem : MultiReactiveSystem<IViewableEntity, Contexts>
+public class AddViewSystem : ReactiveSystem<GameEntity>
 {
     readonly Transform _viewContainer = new GameObject("Game Views").transform;
-    readonly DisplayContext _context;
 
-    public AddViewSystem(Contexts contexts) : base(contexts)
+    public AddViewSystem(Contexts contexts) : base(contexts.game)
     {
-        _context = contexts.display;
     }
 
-    protected override ICollector[] GetTrigger(Contexts contexts)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return new ICollector[]
-        {
-            contexts.player.CreateCollector(PlayerMatcher.Sprite),
-            contexts.ninjutsu.CreateCollector(NinjutsuMatcher.Sprite)
-        };
+        return context.CreateCollector(GameMatcher.Sprite);
     }
 
-    protected override bool Filter(IViewableEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.hasSprite && !entity.hasView;
     }
 
-    protected override void Execute(List<IViewableEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
         foreach (var e in entities)
         {

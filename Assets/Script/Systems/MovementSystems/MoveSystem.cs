@@ -2,28 +2,24 @@
 using Entitas;
 using UnityEngine;
 
-public class MoveSystem : MultiReactiveSystem<IMoveableEntity, Contexts>
+public class MoveSystem : ReactiveSystem<GameEntity>
 {
-    public MoveSystem(Contexts contexts) : base(contexts)
+    public MoveSystem(Contexts contexts) : base(contexts.game)
     {
 
     }
 
-    protected override ICollector[] GetTrigger(Contexts contexts)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return new ICollector[]
-        {
-            contexts.player.CreateCollector(PlayerMatcher.AllOf(PlayerMatcher.Position, PlayerMatcher.Moving)),
-            contexts.ninjutsu.CreateCollector(NinjutsuMatcher.AllOf(NinjutsuMatcher.Position, NinjutsuMatcher.Moving))
-        };
+        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.Position, GameMatcher.Moving));
     }
 
-    protected override bool Filter(IMoveableEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.isMoving;
     }
 
-    protected override void Execute(List<IMoveableEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {
         foreach (var e in entities)
         {

@@ -1,40 +1,36 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-public class SetMoveTargetSystem : ReactiveSystem<InputEntity>
+public class SetMoveTargetSystem : ReactiveSystem<GameEntity>
 {
-    readonly InputContext inputContext;
-    readonly PlayerContext playerContext;
+    private readonly GameContext _gameContext;
 
-    public SetMoveTargetSystem(Contexts contexts) : base(contexts.input)
+    public SetMoveTargetSystem(Contexts contexts) : base(contexts.game)
     {
-        inputContext = contexts.input;
-        playerContext = contexts.player;
+        _gameContext = contexts.game;
     }
 
-    protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(InputMatcher.AllOf(InputMatcher.RightMouse, InputMatcher.MouseDown));
+        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.RightMouse, GameMatcher.MouseDown));
     }
 
-    protected override bool Filter(InputEntity entity)
+    protected override bool Filter(GameEntity entity)
     {
         return entity.isRightMouse && entity.hasMouseDown;
     }
 
-    protected override void Execute(List<InputEntity> entities)
+    protected override void Execute(List<GameEntity> entities)
     {      
         foreach (var e in entities)
         {
-            var players = playerContext.GetEntities();            
+            var players = _gameContext.GetEntities();            
             foreach (var player in players)
             {
-                if (player.hasAcceleration)
-                {
-                    player.ReplaceMoveTarget(e.mouseDown.position);
-                    player.isChangingSpeed = true;
-                    player.isMoving = true;
-                }
+                if (!player.hasAcceleration) continue;
+                player.ReplaceMoveTarget(e.mouseDown.position);
+                player.isChangingSpeed = true;
+                player.isMoving = true;
             }
         }
     }
