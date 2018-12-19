@@ -3,7 +3,7 @@
     public InputSystems(Contexts contexts) : base("Input Systems")
     {
         //Initialize Systems
-        Add(new LoadImageAssetSystem(contexts));
+        Add(new LoadGameConfigSystem(contexts));
 
         //Reactive Systems
         Add(new EmitInputSystem(contexts));

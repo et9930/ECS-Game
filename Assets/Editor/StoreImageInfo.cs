@@ -71,10 +71,8 @@ public class StoreImageInfo : EditorWindow
                 var tmp = Path.GetFileNameWithoutExtension(pngPaths[i]);
                 var _index = tmp.IndexOf('_');
                 tmp = tmp.Substring(0, _index);
-                Debug.Log(animName);
                 if (!tmp.Equals(animName))
                 {
-                    Debug.Log("new");
                     if (animInfo != null)
                     {
                         characterInfo.animationInfos.Add(animInfo);

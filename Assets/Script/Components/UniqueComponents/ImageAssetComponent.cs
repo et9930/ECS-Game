@@ -9,6 +9,7 @@ public class ImageAssetComponent : IComponent
     public Infos infos;
 }
 
+[System.Serializable]
 public class Infos : ScriptableObject
 {
     public List<CharacterInfo> infos;

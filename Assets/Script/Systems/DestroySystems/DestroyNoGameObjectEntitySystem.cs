@@ -10,13 +10,12 @@ public class DestroyNoGameObjectEntitySystem : ReactiveSystem<GameEntity>
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-            //context.CreateCollector(GameMatcher),
         return context.CreateCollector(GameMatcher.Destroy);
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isDestroy;
+        return entity.isDestroy && !entity.hasView;
     }
 
     protected override void Execute(List<GameEntity> entities)

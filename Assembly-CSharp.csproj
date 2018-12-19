@@ -65,6 +65,8 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingSceneProcessComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameRightMouseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayersComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAccelerationComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChangingSpeedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameDebugMessageComponent.cs" />
@@ -97,11 +99,7 @@
     <Compile Include="Assets\Script\Components\ChangingSpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\DebugMessageComponent.cs" />
     <Compile Include="Assets\Script\Components\DestroyComponent.cs" />
-    <Compile Include="Assets\Script\Components\ImageAssetComponent.cs" />
     <Compile Include="Assets\Script\Components\LayerComponent.cs" />
-    <Compile Include="Assets\Script\Components\LeftMouseComponent.cs" />
-    <Compile Include="Assets\Script\Components\LoadingSceneProcessComponent.cs" />
-    <Compile Include="Assets\Script\Components\LoadSceneComponent.cs" />
     <Compile Include="Assets\Script\Components\LoginInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\MaxSpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\MouseDownComponent.cs" />
@@ -111,10 +109,16 @@
     <Compile Include="Assets\Script\Components\MovingComponent.cs" />
     <Compile Include="Assets\Script\Components\NameComponent.cs" />
     <Compile Include="Assets\Script\Components\PositionComponent.cs" />
-    <Compile Include="Assets\Script\Components\RightMouseComponent.cs" />
     <Compile Include="Assets\Script\Components\SignInInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\SpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\SpriteComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\ImageAssetComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\LeftMouseComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\LoadingSceneProcessComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\LoadSceneComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\RightMouseComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\UILayerConfigComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\UILayersComponent.cs" />
     <Compile Include="Assets\Script\Components\ViewComponent.cs" />
     <Compile Include="Assets\Script\GameLauncher.cs" />
     <Compile Include="Assets\Script\Systems\AnimationSystems\AnimationSystems.cs" />
@@ -130,7 +134,7 @@
     <Compile Include="Assets\Script\Systems\InputSystems\CreatePlayerSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\EmitInputSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\InputSystems.cs" />
-    <Compile Include="Assets\Script\Systems\InputSystems\LoadImageAssetSystem.cs" />
+    <Compile Include="Assets\Script\Systems\InputSystems\LoadGameConfigSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\SetMoveTargetSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\LogSystems.cs" />

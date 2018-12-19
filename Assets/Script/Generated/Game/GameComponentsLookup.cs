@@ -30,9 +30,11 @@ public static class GameComponentsLookup {
     public const int SignInInfo = 19;
     public const int Speed = 20;
     public const int Sprite = 21;
-    public const int View = 22;
+    public const int UiLayerConfig = 22;
+    public const int UiLayers = 23;
+    public const int View = 24;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -57,6 +59,8 @@ public static class GameComponentsLookup {
         "SignInInfo",
         "Speed",
         "Sprite",
+        "UiLayerConfig",
+        "UiLayers",
         "View"
     };
 
@@ -83,6 +87,8 @@ public static class GameComponentsLookup {
         typeof(SignInInfoComponent),
         typeof(SpeedComponent),
         typeof(SpriteComponent),
+        typeof(UiLayerConfigComponent),
+        typeof(UiLayersComponent),
         typeof(ViewComponent)
     };
 }
