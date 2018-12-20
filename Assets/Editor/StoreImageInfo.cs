@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text;
 using UnityEditor;
 using UnityEngine;
 
@@ -36,19 +38,31 @@ public class StoreImageInfo : EditorWindow
         }
 
         EditorUtility.DisplayProgressBar("Progress", "Write In Asset File", 1);
-        WriteInAssetFile();
+        WriteInJsonFile();
 
         EditorUtility.ClearProgressBar();
         isShow = false;        
     }
 
-    private static void WriteInAssetFile()
+    private static void WriteInJsonFile()
     {
-        var infos = ScriptableObject.CreateInstance<Infos>();
-        infos.infos = characterInfos;
-        var outputPath = resourcesPath + "Image/AnimationInfos.asset";
-        AssetDatabase.CreateAsset(infos, outputPath);
-        AssetDatabase.Refresh();
+        var infos = new Infos {infos = characterInfos};
+        var outputPath = resourcesPath + "Json/AnimationInfos.json";
+        //序列化
+        DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(Infos));
+        MemoryStream msObj = new MemoryStream();
+        //将序列化之后的Json格式数据写入流中
+        js.WriteObject(msObj, infos);
+        msObj.Position = 0;
+        //从0这个位置开始读取流中的数据
+        StreamReader sr = new StreamReader(msObj, Encoding.UTF8);
+        string json = sr.ReadToEnd();
+        sr.Close();
+        msObj.Close();
+        using (StreamWriter sw = new StreamWriter(outputPath))
+        {
+            sw.Write(json);
+        }
     }
 
     void OnInspectorUpdate()
@@ -102,9 +116,9 @@ public class StoreImageInfo : EditorWindow
         info.path = Path.GetDirectoryName(pngPath).Substring(resourcesPath.Length).Replace('\\', '/') + "/" + info.name;
         var _index = info.name.IndexOf('_');
         info.frameCount = int.Parse(info.name.Substring(_index + 1));
-        info.pivot = sprite.pivot;
-        info.size.x = sprite.texture.width;
-        info.size.y = sprite.texture.height;
+        info.pivot = Utilities.ToSystemNumericsVector2(sprite.pivot);
+        info.size.X = sprite.texture.width;
+        info.size.Y = sprite.texture.height;
         return info;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Entitas;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Numerics;
+using System.Runtime.Serialization;
 using Entitas.CodeGeneration.Attributes;
 
 [Game, Unique]
@@ -9,32 +10,42 @@ public class ImageAssetComponent : IComponent
     public Infos infos;
 }
 
-[System.Serializable]
-public class Infos : ScriptableObject
+[DataContract]
+public class Infos
 {
+    [DataMember]
     public List<CharacterInfo> infos;
 }
 
-[System.Serializable]
+[DataContract]
 public class CharacterInfo
 {
+    [DataMember]
     public string characterName;
+    [DataMember]
     public List<AnimationInfo> animationInfos;
 }
 
-[System.Serializable]
+[DataContract]
 public class AnimationInfo
 {
+    [DataMember]
     public string animationName;
+    [DataMember]
     public List<FrameInfo> frameInfos;
 }
 
-[System.Serializable]
+[DataContract]
 public class FrameInfo
 {
+    [DataMember]
     public string name;
+    [DataMember]
     public string path;
+    [DataMember]
     public int frameCount;
+    [DataMember]
     public Vector2 size;
+    [DataMember]
     public Vector2 pivot;
 }

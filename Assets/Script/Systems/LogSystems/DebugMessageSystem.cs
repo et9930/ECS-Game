@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DebugMessageSystem : ReactiveSystem<GameEntity>
 {
+    private readonly GameContext _context;
+
     public DebugMessageSystem(Contexts contexts) : base(contexts.game)
     {
+        _context = contexts.game;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -28,7 +31,7 @@ public class DebugMessageSystem : ReactiveSystem<GameEntity>
         {
             // we can safely access their DebugMessage component
             // then grab the string data and print it
-            Debug.Log(e.debugMessage.message);
+            _context.logService.instance.LogMessage(e.debugMessage.message);
             e.isDestroy = true;
         }
     }

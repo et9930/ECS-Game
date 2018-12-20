@@ -18,23 +18,27 @@ public static class GameComponentsLookup {
     public const int LoadingSceneProcess = 7;
     public const int LoadScene = 8;
     public const int LoginInfo = 9;
-    public const int MaxSpeed = 10;
-    public const int MouseDown = 11;
-    public const int MousePosition = 12;
-    public const int MouseUp = 13;
-    public const int MoveTarget = 14;
-    public const int Moving = 15;
-    public const int Name = 16;
-    public const int Position = 17;
-    public const int RightMouse = 18;
-    public const int SignInInfo = 19;
-    public const int Speed = 20;
-    public const int Sprite = 21;
-    public const int UiLayerConfig = 22;
-    public const int UiLayers = 23;
-    public const int View = 24;
+    public const int LogService = 10;
+    public const int MaxSpeed = 11;
+    public const int MouseDown = 12;
+    public const int MouseInputService = 13;
+    public const int MousePosition = 14;
+    public const int MouseUp = 15;
+    public const int MoveTarget = 16;
+    public const int Moving = 17;
+    public const int Name = 18;
+    public const int Position = 19;
+    public const int PositionListener = 20;
+    public const int RightMouse = 21;
+    public const int SignInInfo = 22;
+    public const int Speed = 23;
+    public const int Sprite = 24;
+    public const int UiLayerConfig = 25;
+    public const int UiLayers = 26;
+    public const int View = 27;
+    public const int ViewService = 28;
 
-    public const int TotalComponents = 25;
+    public const int TotalComponents = 29;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -47,21 +51,25 @@ public static class GameComponentsLookup {
         "LoadingSceneProcess",
         "LoadScene",
         "LoginInfo",
+        "LogService",
         "MaxSpeed",
         "MouseDown",
+        "MouseInputService",
         "MousePosition",
         "MouseUp",
         "MoveTarget",
         "Moving",
         "Name",
         "Position",
+        "PositionListener",
         "RightMouse",
         "SignInInfo",
         "Speed",
         "Sprite",
         "UiLayerConfig",
         "UiLayers",
-        "View"
+        "View",
+        "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -75,20 +83,24 @@ public static class GameComponentsLookup {
         typeof(LoadingSceneProcessComponent),
         typeof(LoadSceneComponent),
         typeof(LoginInfoComponent),
+        typeof(LogServiceComponent),
         typeof(MaxSpeedComponent),
         typeof(MouseDownComponent),
+        typeof(MouseInputServiceComponent),
         typeof(MousePositionComponent),
         typeof(MouseUpComponent),
         typeof(MoveTargetComponent),
         typeof(MovingComponent),
         typeof(NameComponent),
         typeof(PositionComponent),
+        typeof(PositionListenerComponent),
         typeof(RightMouseComponent),
         typeof(SignInInfoComponent),
         typeof(SpeedComponent),
         typeof(SpriteComponent),
         typeof(UiLayerConfigComponent),
         typeof(UiLayersComponent),
-        typeof(ViewComponent)
+        typeof(ViewComponent),
+        typeof(ViewServiceComponent)
     };
 }

@@ -23,31 +23,31 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
-        var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePosition = _context.mouseInputService.instance.GetMousePosition();
 
         // Left Mouse
-        if(Input.GetMouseButtonDown(0))
+        if(_context.mouseInputService.instance.GetLeftMouseDown())
         {
             _leftMouseEntity.ReplaceMouseDown(mousePosition);
         }
-        if(Input.GetMouseButtonUp(0))
+        if(_context.mouseInputService.instance.GetLeftMouseUp())
         {
             _leftMouseEntity.ReplaceMouseUp(mousePosition);
         }
-        if (Input.GetMouseButton(0))    
+        if (_context.mouseInputService.instance.GetLeftMouse())    
         {
             _leftMouseEntity.ReplaceMousePosition(mousePosition);
         }
         // Right Mouse
-        if (Input.GetMouseButtonDown(1))
+        if (_context.mouseInputService.instance.GetRightMouseDown())
         {
             _rightMouseEntity.ReplaceMouseDown(mousePosition);
         }
-        if (Input.GetMouseButtonUp(1))
+        if (_context.mouseInputService.instance.GetRightMouseUp())
         {
             _rightMouseEntity.ReplaceMouseUp(mousePosition);
         }
-        if (Input.GetMouseButton(1))
+        if (_context.mouseInputService.instance.GetRightMouse())
         {
             _rightMouseEntity.ReplaceMousePosition(mousePosition);
         }

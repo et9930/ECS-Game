@@ -23,8 +23,8 @@ public class MoveSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            var deltaX = e.moveTarget.value.x - e.position.value.x;
-            var deltaY = e.moveTarget.value.y - e.position.value.y;
+            var deltaX = e.moveTarget.value.X - e.position.value.X;
+            var deltaY = e.moveTarget.value.Y - e.position.value.Y;
             var delta = Mathf.Sqrt(Mathf.Pow(deltaX, 2) + Mathf.Pow(deltaY, 2));
 
             if (delta <= e.speed.value * Time.deltaTime)
@@ -39,7 +39,7 @@ public class MoveSystem : ReactiveSystem<GameEntity>
             {
                 var deltaSpeedX = e.speed.value * deltaX / delta;
                 var deltaSpeedY = e.speed.value * deltaY / delta;
-                var newPosition = e.position.value + Time.deltaTime * new Vector2(deltaSpeedX, deltaSpeedY);
+                var newPosition = e.position.value + Time.deltaTime * new System.Numerics.Vector2(deltaSpeedX, deltaSpeedY);
                 e.ReplacePosition(newPosition);
             }        
         }

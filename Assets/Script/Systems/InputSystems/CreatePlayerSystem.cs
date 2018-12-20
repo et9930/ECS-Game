@@ -25,12 +25,13 @@ public class CreatePlayerSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             var player = _context.CreateEntity();
-            player.AddPosition(e.mouseDown.position);
             player.AddMoveTarget(e.mouseDown.position);
             player.AddSprite(_context.imageAssetEntity.imageAsset.infos.infos[0].animationInfos[0].frameInfos[0].path);
             player.AddMaxSpeed(30);
             player.AddAcceleration(5);
             player.AddSpeed(0);
+            player.AddPosition(e.mouseDown.position);
+
         }
     }
 

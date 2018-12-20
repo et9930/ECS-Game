@@ -11,14 +11,14 @@ public partial class GameEntity {
     public MouseUpComponent mouseUp { get { return (MouseUpComponent)GetComponent(GameComponentsLookup.MouseUp); } }
     public bool hasMouseUp { get { return HasComponent(GameComponentsLookup.MouseUp); } }
 
-    public void AddMouseUp(UnityEngine.Vector2 newPosition) {
+    public void AddMouseUp(System.Numerics.Vector2 newPosition) {
         var index = GameComponentsLookup.MouseUp;
         var component = (MouseUpComponent)CreateComponent(index, typeof(MouseUpComponent));
         component.position = newPosition;
         AddComponent(index, component);
     }
 
-    public void ReplaceMouseUp(UnityEngine.Vector2 newPosition) {
+    public void ReplaceMouseUp(System.Numerics.Vector2 newPosition) {
         var index = GameComponentsLookup.MouseUp;
         var component = (MouseUpComponent)CreateComponent(index, typeof(MouseUpComponent));
         component.position = newPosition;

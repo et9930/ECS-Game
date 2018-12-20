@@ -21,7 +21,7 @@ public class RenderPositionSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            e.view.gameObject.transform.position = e.position.value;
+            e.view.instance.Position = e.position.value;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using UnityEngine;
+using System.Numerics;
 
 [Game]
 public class MoveTargetComponent : IComponent

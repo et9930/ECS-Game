@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameLauncher : MonoBehaviour
 {
-    Systems _systems;
+    private Systems _systems;
 
     void Start()
     {
@@ -11,9 +11,15 @@ public class GameLauncher : MonoBehaviour
         // get a reference to the contexts
         var contexts = Contexts.sharedInstance;
 
+        var services = new Services(
+            new UnityDebugLogService(),
+            new UnityViewService(),
+            new UnityMouseInputService()
+        );
+
         // create the systems by creating individual features
         _systems = new Feature("Systems")
-            .Add(new GameWorld(contexts));
+            .Add(new GameWorld(contexts, services));
 
         // call Initialize() on all of the IInitializeSystems
         _systems.Initialize();

@@ -1,7 +1,10 @@
 ﻿public class GameWorld : Feature
 {
-    public GameWorld(Contexts contexts) : base("Game World")
+    public GameWorld(Contexts contexts, Services services) : base("Game World")
     {
+        Add(new ServiceRegistrationSystems(contexts, services));
+        Add(new GameEventSystems(contexts));
+
         Add(new AnimationSystems(contexts));
         Add(new DisplaySystems(contexts));
         Add(new InputSystems(contexts));
