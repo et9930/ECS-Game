@@ -2,5 +2,7 @@
 
 public interface IViewService
 {
-    void LoadAsset(Contexts contexts, IEntity entity, string assetName);
+    void InitializeViewRoot(string rootName);
+    void InitializeView(Contexts contexts, IEntity entity, string objectName);
+    void LoadSprite(Contexts contexts, IEntity entity, string objectName, string assetName);
 }

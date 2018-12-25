@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class SwitchSceneSystem : ReactiveSystem<GameEntity>
 {
+    private readonly GameContext _context;
+
     public SwitchSceneSystem(Contexts contexts) : base(contexts.game)
     {
-
+        _context = contexts.game;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -23,8 +25,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            SceneManager.LoadScene("LoadingScene");  
-            
+            _context.sceneService.instance.SwitchScene(e.loadScene.name, new string[2], _context);
             e.isDestroy = true;
         }
     }

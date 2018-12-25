@@ -12,22 +12,22 @@ public partial class GameContext {
     public ImageAssetComponent imageAsset { get { return imageAssetEntity.imageAsset; } }
     public bool hasImageAsset { get { return imageAssetEntity != null; } }
 
-    public GameEntity SetImageAsset(Infos newInfos) {
+    public GameEntity SetImageAsset(ImageInfos newImageInfos) {
         if (hasImageAsset) {
             throw new Entitas.EntitasException("Could not set ImageAsset!\n" + this + " already has an entity with ImageAssetComponent!",
                 "You should check if the context already has a imageAssetEntity before setting it or use context.ReplaceImageAsset().");
         }
         var entity = CreateEntity();
-        entity.AddImageAsset(newInfos);
+        entity.AddImageAsset(newImageInfos);
         return entity;
     }
 
-    public void ReplaceImageAsset(Infos newInfos) {
+    public void ReplaceImageAsset(ImageInfos newImageInfos) {
         var entity = imageAssetEntity;
         if (entity == null) {
-            entity = SetImageAsset(newInfos);
+            entity = SetImageAsset(newImageInfos);
         } else {
-            entity.ReplaceImageAsset(newInfos);
+            entity.ReplaceImageAsset(newImageInfos);
         }
     }
 
@@ -49,17 +49,17 @@ public partial class GameEntity {
     public ImageAssetComponent imageAsset { get { return (ImageAssetComponent)GetComponent(GameComponentsLookup.ImageAsset); } }
     public bool hasImageAsset { get { return HasComponent(GameComponentsLookup.ImageAsset); } }
 
-    public void AddImageAsset(Infos newInfos) {
+    public void AddImageAsset(ImageInfos newImageInfos) {
         var index = GameComponentsLookup.ImageAsset;
         var component = (ImageAssetComponent)CreateComponent(index, typeof(ImageAssetComponent));
-        component.infos = newInfos;
+        component.imageInfos = newImageInfos;
         AddComponent(index, component);
     }
 
-    public void ReplaceImageAsset(Infos newInfos) {
+    public void ReplaceImageAsset(ImageInfos newImageInfos) {
         var index = GameComponentsLookup.ImageAsset;
         var component = (ImageAssetComponent)CreateComponent(index, typeof(ImageAssetComponent));
-        component.infos = newInfos;
+        component.imageInfos = newImageInfos;
         ReplaceComponent(index, component);
     }
 

@@ -3,29 +3,38 @@ using UnityEngine;
 
 public class UnityViewService : IViewService
 {
-    public void LoadAsset(Contexts contexts, IEntity entity, string assetName)
+    private GameObject viewRoot;
+
+    public void InitializeViewRoot(string rootName)
     {
-        var viewGo = new GameObject();
-
-        var viewSr = viewGo.GetComponent<SpriteRenderer>();
-        if (viewSr == null)
+        viewRoot = GameObject.Find(rootName);
+        if (viewRoot == null)
         {
-            viewSr = viewGo.AddComponent<SpriteRenderer>();
+            viewRoot = new GameObject(rootName);
+            Object.DontDestroyOnLoad(viewRoot);
         }
-        viewSr.sprite = Resources.Load<Sprite>(assetName);
+    }
 
-        var viewController = viewGo.GetComponent<IViewController>();
-        if (viewController == null)
-        {
-            viewController = viewGo.AddComponent<UnityViewController>();
-        }
+    public void InitializeView(Contexts contexts, IEntity entity, string objectName)
+    {
+        var viewGo = new GameObject(objectName);
+        viewGo.transform.SetParent(viewRoot.transform);
+        viewGo.AddComponent<SpriteRenderer>();
+        var viewController = viewGo.AddComponent<UnityViewController>();
         viewController.InitializeView(contexts, entity);
-
         viewGo.AddComponent<PositionListener>();
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)
         {
             listener.RegisterListeners(entity);
         }
+    }
+
+    public void LoadSprite(Contexts contexts, IEntity entity, string objectName, string assetName)
+    {
+        var viewTf = viewRoot.transform.Find(objectName);
+        var viewGo = viewTf.gameObject;
+        var viewSr = viewGo.GetComponent<SpriteRenderer>();
+        viewSr.sprite = Resources.Load<Sprite>(assetName);
     }
 }

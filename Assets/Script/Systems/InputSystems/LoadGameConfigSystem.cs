@@ -1,4 +1,9 @@
-﻿using Entitas;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using Entitas;
 using UnityEngine;
 
 public class LoadGameConfigSystem : IInitializeSystem
@@ -12,14 +17,22 @@ public class LoadGameConfigSystem : IInitializeSystem
 
     public void Initialize()
     {
-        // Animation Image Asset
-        Object asset = Resources.Load("Image/AnimationInfos");
-        _context.ReplaceImageAsset((Infos)asset);
-
+        // Animation Image Info
+        var strImageInfo = _context.loadConfigService.instance.LoadJsonFile("Json/AnimationInfos");
+        _context.ReplaceImageAsset(Utilities.ParseJson<ImageInfos>(strImageInfo));
+        
         // UI Layer Config
-        var configObj = Resources.Load("Json/UILayer");
-        var jsonString = configObj.ToString();
-        _context.ReplaceUiLayerConfig(JsonUtility.FromJson<UiLayers>(jsonString));
+        var strUiLayer = _context.loadConfigService.instance.LoadJsonFile("Json/UILayer");
+        _context.ReplaceUiLayerConfig(Utilities.ParseJson<UiLayerInfos>(strUiLayer));
 
+        // UI Config
+        var dictionary = new Dictionary<string, UiInfo>();
+        var strUiConfig = _context.loadConfigService.instance.LoadJsonFile("Json/UIConfig");
+        var tempConfig = Utilities.ParseJson<UiInfoList>(strUiConfig);
+        foreach (var config in tempConfig.UIConfigs)
+        {
+            dictionary[config.UiName] = config;
+        }
+        _context.ReplaceUiConfig(dictionary);
     }
 }

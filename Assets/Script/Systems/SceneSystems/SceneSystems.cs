@@ -7,6 +7,8 @@
 
         //Reactive Systems
         Add(new SwitchSceneSystem(contexts));
+        Add(new OpenUiSystem(contexts));
+        Add(new CloseUiSystem(contexts));
 
         //Cleanup Systems
     }

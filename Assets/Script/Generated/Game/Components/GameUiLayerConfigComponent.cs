@@ -12,7 +12,7 @@ public partial class GameContext {
     public UiLayerConfigComponent uiLayerConfig { get { return uiLayerConfigEntity.uiLayerConfig; } }
     public bool hasUiLayerConfig { get { return uiLayerConfigEntity != null; } }
 
-    public GameEntity SetUiLayerConfig(UiLayers newConfig) {
+    public GameEntity SetUiLayerConfig(UiLayerInfos newConfig) {
         if (hasUiLayerConfig) {
             throw new Entitas.EntitasException("Could not set UiLayerConfig!\n" + this + " already has an entity with UiLayerConfigComponent!",
                 "You should check if the context already has a uiLayerConfigEntity before setting it or use context.ReplaceUiLayerConfig().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceUiLayerConfig(UiLayers newConfig) {
+    public void ReplaceUiLayerConfig(UiLayerInfos newConfig) {
         var entity = uiLayerConfigEntity;
         if (entity == null) {
             entity = SetUiLayerConfig(newConfig);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public UiLayerConfigComponent uiLayerConfig { get { return (UiLayerConfigComponent)GetComponent(GameComponentsLookup.UiLayerConfig); } }
     public bool hasUiLayerConfig { get { return HasComponent(GameComponentsLookup.UiLayerConfig); } }
 
-    public void AddUiLayerConfig(UiLayers newConfig) {
+    public void AddUiLayerConfig(UiLayerInfos newConfig) {
         var index = GameComponentsLookup.UiLayerConfig;
         var component = (UiLayerConfigComponent)CreateComponent(index, typeof(UiLayerConfigComponent));
         component.config = newConfig;
         AddComponent(index, component);
     }
 
-    public void ReplaceUiLayerConfig(UiLayers newConfig) {
+    public void ReplaceUiLayerConfig(UiLayerInfos newConfig) {
         var index = GameComponentsLookup.UiLayerConfig;
         var component = (UiLayerConfigComponent)CreateComponent(index, typeof(UiLayerConfigComponent));
         component.config = newConfig;

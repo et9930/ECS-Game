@@ -7,11 +7,11 @@ using Entitas.CodeGeneration.Attributes;
 [Game, Unique]
 public class ImageAssetComponent : IComponent
 {
-    public Infos infos;
+    public ImageInfos imageInfos;
 }
 
 [DataContract]
-public class Infos
+public class ImageInfos
 {
     [DataMember]
     public List<CharacterInfo> infos;

@@ -15,30 +15,38 @@ public static class GameComponentsLookup {
     public const int ImageAsset = 4;
     public const int Layer = 5;
     public const int LeftMouse = 6;
-    public const int LoadingSceneProcess = 7;
-    public const int LoadScene = 8;
-    public const int LoginInfo = 9;
-    public const int LogService = 10;
-    public const int MaxSpeed = 11;
-    public const int MouseDown = 12;
-    public const int MouseInputService = 13;
-    public const int MousePosition = 14;
-    public const int MouseUp = 15;
-    public const int MoveTarget = 16;
-    public const int Moving = 17;
-    public const int Name = 18;
-    public const int Position = 19;
-    public const int PositionListener = 20;
-    public const int RightMouse = 21;
-    public const int SignInInfo = 22;
-    public const int Speed = 23;
-    public const int Sprite = 24;
-    public const int UiLayerConfig = 25;
-    public const int UiLayers = 26;
-    public const int View = 27;
-    public const int ViewService = 28;
+    public const int LoadConfigService = 7;
+    public const int LoadingSceneProcess = 8;
+    public const int LoadScene = 9;
+    public const int LoginInfo = 10;
+    public const int LogService = 11;
+    public const int MaxSpeed = 12;
+    public const int MouseDown = 13;
+    public const int MouseInputService = 14;
+    public const int MousePosition = 15;
+    public const int MouseUp = 16;
+    public const int MoveTarget = 17;
+    public const int Moving = 18;
+    public const int Name = 19;
+    public const int Position = 20;
+    public const int PositionListener = 21;
+    public const int RightMouse = 22;
+    public const int SceneService = 23;
+    public const int SignInInfo = 24;
+    public const int Speed = 25;
+    public const int Sprite = 26;
+    public const int Text = 27;
+    public const int TextListener = 28;
+    public const int UiClose = 29;
+    public const int UiConfig = 30;
+    public const int UiLayerConfig = 31;
+    public const int UiOpen = 32;
+    public const int UiRootId = 33;
+    public const int UiText = 34;
+    public const int View = 35;
+    public const int ViewService = 36;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 37;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -48,6 +56,7 @@ public static class GameComponentsLookup {
         "ImageAsset",
         "Layer",
         "LeftMouse",
+        "LoadConfigService",
         "LoadingSceneProcess",
         "LoadScene",
         "LoginInfo",
@@ -63,11 +72,18 @@ public static class GameComponentsLookup {
         "Position",
         "PositionListener",
         "RightMouse",
+        "SceneService",
         "SignInInfo",
         "Speed",
         "Sprite",
+        "Text",
+        "TextListener",
+        "UiClose",
+        "UiConfig",
         "UiLayerConfig",
-        "UiLayers",
+        "UiOpen",
+        "UiRootId",
+        "UiText",
         "View",
         "ViewService"
     };
@@ -80,6 +96,7 @@ public static class GameComponentsLookup {
         typeof(ImageAssetComponent),
         typeof(LayerComponent),
         typeof(LeftMouseComponent),
+        typeof(LoadConfigServiceComponent),
         typeof(LoadingSceneProcessComponent),
         typeof(LoadSceneComponent),
         typeof(LoginInfoComponent),
@@ -95,11 +112,18 @@ public static class GameComponentsLookup {
         typeof(PositionComponent),
         typeof(PositionListenerComponent),
         typeof(RightMouseComponent),
+        typeof(SceneServiceComponent),
         typeof(SignInInfoComponent),
         typeof(SpeedComponent),
         typeof(SpriteComponent),
+        typeof(TextComponent),
+        typeof(TextListenerComponent),
+        typeof(UiCloseComponent),
+        typeof(UiConfigComponent),
         typeof(UiLayerConfigComponent),
-        typeof(UiLayersComponent),
+        typeof(UiOpenComponent),
+        typeof(UiRootIdComponent),
+        typeof(UiTextComponent),
         typeof(ViewComponent),
         typeof(ViewServiceComponent)
     };

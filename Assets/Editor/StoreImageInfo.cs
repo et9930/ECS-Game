@@ -13,12 +13,12 @@ public class StoreImageInfo : EditorWindow
     public static float Progress = 0;
     public static string currect_path = "";
     public static bool isShow = false;
-    private static List<CharacterInfo> characterInfos = new List<CharacterInfo>();
+    private static List<CharacterInfo> characterInfos;
     
-    [MenuItem("Tools/Store Image Info In Excel File")]
+    [MenuItem("Tools/Store Image Info In Json File")]
     public static void StoreImageInfoFunc()
     {
-
+        characterInfos = new List<CharacterInfo>();
         isShow = true;
         try
         {
@@ -37,7 +37,7 @@ public class StoreImageInfo : EditorWindow
             Debug.LogError(e.Message + '\n' + e.StackTrace);
         }
 
-        EditorUtility.DisplayProgressBar("Progress", "Write In Asset File", 1);
+        EditorUtility.DisplayProgressBar("Progress", "Write In Json File", 1);
         WriteInJsonFile();
 
         EditorUtility.ClearProgressBar();
@@ -46,10 +46,10 @@ public class StoreImageInfo : EditorWindow
 
     private static void WriteInJsonFile()
     {
-        var infos = new Infos {infos = characterInfos};
+        var infos = new ImageInfos {infos = characterInfos};
         var outputPath = resourcesPath + "Json/AnimationInfos.json";
         //序列化
-        DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(Infos));
+        DataContractJsonSerializer js = new DataContractJsonSerializer(typeof(ImageInfos));
         MemoryStream msObj = new MemoryStream();
         //将序列化之后的Json格式数据写入流中
         js.WriteObject(msObj, infos);

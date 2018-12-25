@@ -8,21 +8,28 @@ public class GameLauncher : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(Camera.main.gameObject);
         // get a reference to the contexts
         var contexts = Contexts.sharedInstance;
 
         var services = new Services(
             new UnityDebugLogService(),
             new UnityViewService(),
-            new UnityMouseInputService()
+            new UnityMouseInputService(),
+            new UnityLoadConfigService(),
+            new UnitySceneService()
         );
 
         // create the systems by creating individual features
         _systems = new Feature("Systems")
             .Add(new GameWorld(contexts, services));
-
+#if UNITY_EDITOR
+        DontDestroyOnLoad(GameObject.Find("Systems"));
+#endif
         // call Initialize() on all of the IInitializeSystems
         _systems.Initialize();
+
+        
     }
 
     void Update()

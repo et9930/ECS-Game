@@ -3,9 +3,8 @@ using Entitas;
 using UnityEngine;
 
 
-public class AddViewSystem : ReactiveSystem<GameEntity>
+public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 {
-    readonly Transform _viewContainer = new GameObject("Game Views").transform;
     private readonly Contexts _contexts;
     private readonly GameContext _context;
 
@@ -13,6 +12,11 @@ public class AddViewSystem : ReactiveSystem<GameEntity>
     {
         _contexts = contexts;
         _context = contexts.game;
+    }
+
+    public void Initialize()
+    {
+        _context.viewService.instance.InitializeViewRoot("Game Views");
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -29,7 +33,8 @@ public class AddViewSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            _context.viewService.instance.LoadAsset(_contexts, e, e.sprite.path);
+            _context.viewService.instance.InitializeView(_contexts, e, e.name.text);
+            _context.viewService.instance.LoadSprite(_contexts, e, e.name.text, e.sprite.path);
         }
     }
 }

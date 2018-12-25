@@ -10,5 +10,6 @@ public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
         Add(new PositionEventSystem(contexts)); // priority: 0
+        Add(new TextEventSystem(contexts)); // priority: 0
     }
 }

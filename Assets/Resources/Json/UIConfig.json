@@ -1,0 +1,34 @@
+{
+	"UIConfigs": [
+		{
+			"Components": [
+				{
+					"ComponentName": "BackgroundImage",
+					"ComponentPath": "LoadingProcess\/BackgroundImage",
+					"ComponentType": "Image"
+				},
+				{
+					"ComponentName": "ProcessBarBackImg",
+					"ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
+					"ComponentType": "Image"
+				},
+				{
+					"ComponentName": "ProcessBarFillImg",
+					"ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
+					"ComponentType": "Image"
+				},
+				{
+					"ComponentName": "RandomTital",
+					"ComponentPath": "LoadingProcess\/RandomText\/RandomTital",
+					"ComponentType": "Text"
+				},
+				{
+					"ComponentName": "Text",
+					"ComponentPath": "LoadingProcess\/RandomText\/Text",
+					"ComponentType": "Text"
+				}
+			],
+			"UiName": "LoadingProcess"
+		}
+	]
+}

@@ -1,23 +1,28 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
 [Game, Unique]
 public class UiLayerConfigComponent : IComponent
 {
-    public UiLayers config;
+    public UiLayerInfos config;
 }
 
-[System.Serializable]
-public class UiLayers
+[DataContract]
+public class UiLayerInfos
 {
+    [DataMember]
     public List<UiLayerInfo> UILayers;
 }
 
-[System.Serializable]
+[DataContract]
 public class UiLayerInfo
 {
+    [DataMember]
     public string Name;
+    [DataMember]
     public int PlaneDistance;
+    [DataMember]
     public int OrderInLayer;
 }
