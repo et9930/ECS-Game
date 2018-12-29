@@ -19,9 +19,8 @@ public class UnityViewService : IViewService
     {
         var viewGo = new GameObject(objectName);
         viewGo.transform.SetParent(viewRoot.transform);
+        viewGo.transform.position = Utilities.ToUnityEngineVector2(((GameEntity) entity).position.value);
         viewGo.AddComponent<SpriteRenderer>();
-        var viewController = viewGo.AddComponent<UnityViewController>();
-        viewController.InitializeView(contexts, entity);
         viewGo.AddComponent<PositionListener>();
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)

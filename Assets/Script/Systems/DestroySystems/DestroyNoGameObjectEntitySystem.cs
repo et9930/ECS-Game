@@ -15,7 +15,7 @@ public class DestroyNoGameObjectEntitySystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isDestroy && !entity.hasView;
+        return entity.isDestroy;
     }
 
     protected override void Execute(List<GameEntity> entities)

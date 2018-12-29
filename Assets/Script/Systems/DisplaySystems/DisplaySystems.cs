@@ -4,7 +4,6 @@
     {
         //Reactive Systems
         Add(new AddViewSystem(contexts));
-        Add(new RenderPositionSystem(contexts));
 
         //Cleanup Systems
     }

@@ -26,7 +26,7 @@ public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasSprite && !entity.hasView;
+        return entity.hasSprite;
     }
 
     protected override void Execute(List<GameEntity> entities)

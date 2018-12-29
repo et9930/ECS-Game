@@ -55,17 +55,14 @@ public static class GameComponentsLookup {
     public const int TextListener = 44;
     public const int UiClose = 45;
     public const int UiConfig = 46;
-    public const int UiImage = 47;
-    public const int UiLayerConfig = 48;
-    public const int UiOpen = 49;
-    public const int UiRootId = 50;
-    public const int UiText = 51;
-    public const int UuidToEntity = 52;
-    public const int Velocity = 53;
-    public const int View = 54;
-    public const int ViewService = 55;
+    public const int UiLayerConfig = 47;
+    public const int UiOpen = 48;
+    public const int UiRootId = 49;
+    public const int UuidToEntity = 50;
+    public const int Velocity = 51;
+    public const int ViewService = 52;
 
-    public const int TotalComponents = 56;
+    public const int TotalComponents = 53;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -115,14 +112,11 @@ public static class GameComponentsLookup {
         "TextListener",
         "UiClose",
         "UiConfig",
-        "UiImage",
         "UiLayerConfig",
         "UiOpen",
         "UiRootId",
-        "UiText",
         "UuidToEntity",
         "Velocity",
-        "View",
         "ViewService"
     };
 
@@ -174,14 +168,11 @@ public static class GameComponentsLookup {
         typeof(TextListenerComponent),
         typeof(UiCloseComponent),
         typeof(UiConfigComponent),
-        typeof(UiImageComponent),
         typeof(UiLayerConfigComponent),
         typeof(UiOpenComponent),
         typeof(UiRootIdComponent),
-        typeof(UiTextComponent),
         typeof(UuidToEntityComponent),
         typeof(VelocityComponent),
-        typeof(ViewComponent),
         typeof(ViewServiceComponent)
     };
 }

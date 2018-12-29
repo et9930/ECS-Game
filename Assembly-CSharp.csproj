@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>6</LangVersion>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_15;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENTITAS_DISABLE_DEEP_PROFILING</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_15;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENTITAS_DISABLE_DEEP_PROFILING</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -60,87 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Generated\Game\Components\GameImageAssetComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingUiRandomInfoComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameSceneConfigComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiConfigComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameKeyComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLeftMouseComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingSceneProcessComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingSceneTextImageComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GamePhysicalConstantComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameRightMouseComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameCoroutineServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameKeyInputServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadConfigServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLogServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseInputServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameSceneServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameViewServiceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUuidToEntityComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAccelerationComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameActiveComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAddForceComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAffectedByFrictionComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAffectedByGravityComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameDebugMessageComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameDestroyComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameFrictionComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLayerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMassComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMaxSpeedComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseDownComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMousePositionComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseUpComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMoveTargetComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameMovingComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameNameComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheGroundComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GamePositionComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameSignInInfoComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameSpriteComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameTextComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiCloseComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiImageComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiOpenComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiRootIdComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameUiTextComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameVelocityComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameViewComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameActiveListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GamePositionListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameTextListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneProcessListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneTextImageListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Game\GameComponentsLookup.cs" />
-    <Compile Include="Assets\Script\Generated\Game\GameAttribute.cs" />
-    <Compile Include="Assets\Script\Generated\Game\GameContext.cs" />
-    <Compile Include="Assets\Script\Generated\Game\GameMatcher.cs" />
-    <Compile Include="Assets\Script\Generated\Contexts.cs" />
-    <Compile Include="Assets\Script\Generated\Game\GameEntity.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Components\ActiveListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Components\PositionListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Components\TextListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneProcessListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneTextImageListenerComponent.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Interfaces\IActiveListener.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Interfaces\IPositionListener.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Interfaces\ITextListener.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneProcessListener.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneTextImageListener.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Systems\ActiveEventSystem.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Systems\PositionEventSystem.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Systems\TextEventSystem.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneProcessEventSystem.cs" />
-    <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneTextImageEventSystem.cs" />
-    <Compile Include="Assets\Script\Generated\Events\GameEventSystems.cs" />
-    <Compile Include="Assets\Script\Generated\Feature.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\DesperateDevs\Compile.cs" />
     <Compile Include="Assets\Script\Components\AccelerationComponent.cs" />
     <Compile Include="Assets\Script\Components\ActiveComponent.cs" />
@@ -167,10 +86,8 @@
     <Compile Include="Assets\Script\Components\SpriteComponent.cs" />
     <Compile Include="Assets\Script\Components\TextComponent.cs" />
     <Compile Include="Assets\Script\Components\UiCloseComponent.cs" />
-    <Compile Include="Assets\Script\Components\UiImageComponent.cs" />
     <Compile Include="Assets\Script\Components\UiOpenComponent.cs" />
     <Compile Include="Assets\Script\Components\UiRootIdComponent.cs" />
-    <Compile Include="Assets\Script\Components\UITextComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\ImageAssetComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\LoadingUiRandomInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\SceneConfigComponent.cs" />
@@ -192,16 +109,83 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\ViewServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\UuidToEntityComponent.cs" />
     <Compile Include="Assets\Script\Components\VelocityComponent.cs" />
-    <Compile Include="Assets\Script\Components\ViewComponent.cs" />
-    <Compile Include="Assets\Script\Controllers\ControllerInterfaces\IBaseComponentController.cs" />
-    <Compile Include="Assets\Script\Controllers\ControllerInterfaces\IImageController.cs" />
-    <Compile Include="Assets\Script\Controllers\ControllerInterfaces\ITextController.cs" />
-    <Compile Include="Assets\Script\Controllers\ControllerInterfaces\IViewController.cs" />
-    <Compile Include="Assets\Script\Controllers\UnityController\UnityBaseComponentController.cs" />
-    <Compile Include="Assets\Script\Controllers\UnityController\UnityImageController.cs" />
-    <Compile Include="Assets\Script\Controllers\UnityController\UnityTextController.cs" />
-    <Compile Include="Assets\Script\Controllers\UnityController\UnityViewController.cs" />
     <Compile Include="Assets\Script\GameLauncher.cs" />
+    <Compile Include="Assets\Script\Generated\Contexts.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\ActiveListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneProcessListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneTextImageListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\PositionListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\TextListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\GameEventSystems.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IActiveListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneProcessListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneTextImageListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IPositionListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\ITextListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\ActiveEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneProcessEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneTextImageEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\PositionEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\TextEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Feature.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAccelerationComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameActiveComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameActiveListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAddForceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAffectedByFrictionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAffectedByGravityComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneProcessListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneTextImageListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameCoroutineServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameDebugMessageComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameDestroyComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameFrictionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameImageAssetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameKeyComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameKeyInputServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLayerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLeftMouseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadConfigServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingSceneProcessComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingSceneTextImageComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingUiRandomInfoComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLogServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMassComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMaxSpeedComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseDownComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseInputServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMousePositionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMouseUpComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMoveTargetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMovingComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNameComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheGroundComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePhysicalConstantComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePositionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePositionListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameRightMouseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSceneConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSceneServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSignInInfoComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSpriteComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameTextComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameTextListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiCloseComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiOpenComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiRootIdComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUuidToEntityComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameVelocityComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameViewServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\GameAttribute.cs" />
+    <Compile Include="Assets\Script\Generated\Game\GameComponentsLookup.cs" />
+    <Compile Include="Assets\Script\Generated\Game\GameContext.cs" />
+    <Compile Include="Assets\Script\Generated\Game\GameEntity.cs" />
+    <Compile Include="Assets\Script\Generated\Game\GameMatcher.cs" />
     <Compile Include="Assets\Script\Listeners\ActiveListener.cs" />
     <Compile Include="Assets\Script\Listeners\ListenerInterfaces\IEventListener.cs" />
     <Compile Include="Assets\Script\Listeners\ListenerList.cs" />
@@ -235,7 +219,6 @@
     <Compile Include="Assets\Script\Systems\DestroySystems\DestroySystems.cs" />
     <Compile Include="Assets\Script\Systems\DisplaySystems\AddViewSystem.cs" />
     <Compile Include="Assets\Script\Systems\DisplaySystems\DisplaySystems.cs" />
-    <Compile Include="Assets\Script\Systems\DisplaySystems\RenderPositionSystem.cs" />
     <Compile Include="Assets\Script\Systems\GameWorld.cs" />
     <Compile Include="Assets\Script\Systems\HTCSystems\HTCSystems.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\CreatePlayerSystem.cs" />
