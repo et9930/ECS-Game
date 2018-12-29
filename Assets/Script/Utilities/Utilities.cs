@@ -2,9 +2,12 @@
 using System.Runtime.Serialization.Json;
 using System.Text;
 using UnityEngine;
+using Random = System.Random;
 
 public static class Utilities
 {
+    public static Random random = new Random();
+
     public static System.Numerics.Vector2 ToSystemNumericsVector2(UnityEngine.Vector2 value)
     {
         return new System.Numerics.Vector2(value.x, value.y);
@@ -56,5 +59,20 @@ public static class Utilities
     public static UnityEngine.Color ToUnityEngineColor(System.Numerics.Vector3 value)
     {
         return new Color(value.X, value.Y, value.Z);
+    }
+
+    public static int RandomInt(int min, int max)
+    {
+        return random.Next(min, max);
+    }
+
+    public static float GetDeltaTime()
+    {
+        return Time.deltaTime;
+    }
+
+    public static float GetFixedDeltaTime()
+    {
+        return Time.fixedDeltaTime;
     }
 }

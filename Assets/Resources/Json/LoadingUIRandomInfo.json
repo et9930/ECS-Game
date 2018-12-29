@@ -1,0 +1,31 @@
+{
+	"RandomTexts": [
+		{
+			"Title": "001",
+			"Text": "test 001"
+		},
+		{
+			"Title": "002",
+			"Text": "test 002"
+		},
+		{
+			"Title": "003",
+			"Text": "test 003"
+		},
+		{
+			"Title": "004",
+			"Text": "test 004"
+		}
+	],
+	"RandomImages": [
+		{
+			"Path": "UI/LoadingProcess/Random001"
+		},
+		{
+			"Path": "UI/LoadingProcess/Random002"
+		},
+		{
+			"Path": "UI/LoadingProcess/Random003"
+		}
+	]
+}

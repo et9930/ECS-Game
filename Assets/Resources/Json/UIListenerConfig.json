@@ -1,0 +1,51 @@
+{
+	"UIListener": [
+		{
+			"ComponentName": "LoadingProcess",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "BackgroundImage",
+			"Listener": [
+				"Active",
+				"LoadingSceneImage"
+			]
+		},
+		{
+			"ComponentName": "ProcessBarBackImg",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "ProcessNumber",
+			"Listener": [
+				"Active",
+				"LoadingSceneProcessText"
+			]
+		},
+		{
+			"ComponentName": "ProcessBarFillImg",
+			"Listener": [
+				"Active",
+				"LoadingSceneProcess"
+			]
+		},
+		{
+			"ComponentName": "RandomTitle",
+			"Listener": [
+				"Active",
+				"LoadingSceneTitle"
+			]
+		},
+		{
+			"ComponentName": "RandomText",
+			"Listener": [
+				"Active",
+				"LoadingSceneText"
+			]
+		}
+	]
+}

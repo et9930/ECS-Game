@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using UnityEditor;
@@ -11,14 +12,19 @@ public class StoreUIInfo : EditorWindow
 {
     public const string resourcesPath = "Assets/Resources/";
     public const string UiPath = "Assets/Resources/Prefab/UI/";
+    public const string ListenerPath = "Json/UIListenerConfig";
     public static float Progress = 0;
     public static string currect_path = "";
     public static bool isShow = false;
     private static List<UiInfo> uiInfos;
+    private static UIListenerList uiListenerList;
+
+    
 
     [MenuItem("Tools/Store UI Info In Json File")]
     public static void StoreUIInfoFunc()
     {
+        LoadListenerConfig();
         uiInfos = new List<UiInfo>();
         isShow = true;
         try
@@ -45,6 +51,17 @@ public class StoreUIInfo : EditorWindow
         EditorUtility.ClearProgressBar();
         isShow = false;
     
+    }
+
+    public static void LoadListenerConfig()
+    {
+        var configObj = Resources.Load(ListenerPath);
+        var jsonString = configObj.ToString();
+        using (var ms = new MemoryStream(Encoding.Unicode.GetBytes(jsonString)))
+        {
+            var deseralizer = new DataContractJsonSerializer(typeof(UIListenerList));
+            uiListenerList = (UIListenerList)deseralizer.ReadObject(ms);//反序列化ReadObject
+        }
     }
 
     private static void WriteInJsonFile()
@@ -76,6 +93,7 @@ public class StoreUIInfo : EditorWindow
         var prefab = AssetDatabase.LoadAssetAtPath(path, typeof(GameObject)) as GameObject;
         var transform = prefab.transform;
         uiInfo.UiName = prefab.name;
+        uiInfo.UiLayer = "NormalLayer";
 
         DealChildren(transform, ref uiInfo.Components, "");
         
@@ -84,10 +102,9 @@ public class StoreUIInfo : EditorWindow
 
     public static void DealChildren(Transform transform, ref List<ComponentInfo> components, string rootPath)
     {
-        var component = GetComponentInfo(transform.gameObject, rootPath);
-        if (component.ComponentType != "null")
+        if (transform.childCount == 0 || rootPath == "")
         {
-            components.Add(component);
+            components.Add(GetComponentInfo(transform.gameObject, rootPath));
         }
 
         if (transform.childCount > 0)
@@ -104,44 +121,34 @@ public class StoreUIInfo : EditorWindow
         var componentInfo = new ComponentInfo();
         componentInfo.ComponentName = gameObject.name;
         componentInfo.ComponentPath = rootPath + gameObject.name;
-
-        if (gameObject.GetComponent<Text>() != null)
+        foreach (var uiListener in uiListenerList.UIListener)
         {
-            componentInfo.ComponentType = "Text";
-            return componentInfo;
+            if (uiListener.ComponentName == componentInfo.ComponentName)
+            {
+                componentInfo.Listener = uiListener.Listener;
+            }
         }
 
-        if (gameObject.GetComponent<Image>() != null)
+        if (componentInfo.Listener == null)
         {
-            componentInfo.ComponentType = "Image";
-            return componentInfo;
+            componentInfo.Listener = new List<string>();
         }
-
-        if (gameObject.GetComponent<Button>() != null)
-        {
-            componentInfo.ComponentType = "Button";
-            return componentInfo;
-        }
-
-        if (gameObject.GetComponent<Toggle>() != null)
-        {
-            componentInfo.ComponentType = "Toggle";
-            return componentInfo;
-        }
-
-        if (gameObject.GetComponent<InputField>() != null)
-        {
-            componentInfo.ComponentType = "InputField";
-            return componentInfo;
-        }
-
-        if (gameObject.GetComponent<Slider>() != null)
-        {
-            componentInfo.ComponentType = "Slider";
-            return componentInfo;
-        }
-
-        componentInfo.ComponentType = "null";
         return componentInfo;
     }
+}
+
+[DataContract]
+public class UIListenerList
+{
+    [DataMember]
+    public List<UIListener> UIListener;
+}
+
+[DataContract]
+public class UIListener
+{
+    [DataMember]
+    public string ComponentName;
+    [DataMember]
+    public List<string> Listener;
 }

@@ -25,7 +25,10 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            e.AddUiRootId(_context.sceneService.instance.OpenUI(e.name.text, "NormalLayer", _context));
+            GameEntity rootEntity = null;
+            var id = _context.sceneService.instance.OpenUI(e.name.text, "NormalLayer", _context, ref rootEntity);
+            _context.uuidToEntity.dic[id] = rootEntity;
+            e.AddUiRootId(id);
             e.isUiOpen = false;
         }
     }

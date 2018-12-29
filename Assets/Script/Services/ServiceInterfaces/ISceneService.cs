@@ -1,7 +1,12 @@
-﻿public interface ISceneService
+﻿using System.Collections;
+using System.Collections.Generic;
+
+public interface ISceneService
 {
     void InitializeLayers(UiLayerInfos uiLayerInfos);
-    void SwitchScene(string sceneName, string[] uiNameList, GameContext context);
-    int OpenUI(string uiName, string layer, GameContext context);
+    void OpenScene(string sceneName, GameContext context);
+    IEnumerable<float> OpenSceneAsync(string sceneName, GameContext context);
+    int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity);
     void CloseUI(int id);
+    void AllowSceneActive(bool active);
 }

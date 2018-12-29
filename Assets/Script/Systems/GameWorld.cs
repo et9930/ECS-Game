@@ -14,7 +14,6 @@
         
         Add(new DamageSystems(contexts));
         Add(new HTCSystems(contexts));
-        Add(new MovementSystems(contexts));
         Add(new NinjutsuSystems(contexts));
         Add(new PerceptionSystems(contexts));
         Add(new TaijutsuSystems(contexts));

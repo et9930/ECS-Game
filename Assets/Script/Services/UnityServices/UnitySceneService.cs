@@ -1,14 +1,18 @@
-﻿using System.Collections.Generic;
-using Assets.Script.Controllers.UnityController;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 public class UnitySceneService : ISceneService
 {
     private Dictionary<string, GameObject> _uiLayers = new Dictionary<string, GameObject>();
     private Dictionary<int, GameObject> _uiDictionary = new Dictionary<int, GameObject>();
     private GameObject _layersRoot;
+    private AsyncOperation _openSceneOperation;
 
     public void InitializeLayers(UiLayerInfos uiLayerInfos)
     {
@@ -42,16 +46,31 @@ public class UnitySceneService : ISceneService
         }
     }
 
-    public void SwitchScene(string sceneName, string[] uiNameList, GameContext context)
+    public void OpenScene(string sceneName, GameContext context)
     {
-        SceneManager.LoadScene("LoadingScene");
-        OpenUI("LoadingProcess", "TopLayer", context);
-        
+        SceneManager.LoadScene(sceneName);
+    }
 
+    public IEnumerable<float>  OpenSceneAsync(string sceneName, GameContext context)
+    {
+        _openSceneOperation = null;
+        _openSceneOperation = SceneManager.LoadSceneAsync("LoginScene");
+        _openSceneOperation.allowSceneActivation = false;
+        
+        while (_openSceneOperation.progress < 0.9)
+        {
+            yield return _openSceneOperation.progress;
+        }
+        yield return 0.9f;
 
     }
 
-    public int OpenUI(string uiName, string layer, GameContext context)
+    public void AllowSceneActive(bool active)
+    {
+        _openSceneOperation.allowSceneActivation = active;
+    }
+
+    public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity)
     {
         var uiGo = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/UI/" + uiName));
         var rectTransform = uiGo.GetComponent<RectTransform>();
@@ -66,12 +85,12 @@ public class UnitySceneService : ISceneService
 
         _uiDictionary[uiInstanceId] = uiGo;
 
-        OpenComponents(uiName, context, uiGo, uiInstanceId);
+        OpenChildren(uiName, context, uiGo, uiInstanceId, ref rootEntity);
 
         return uiInstanceId;
     }
 
-    private void OpenComponents(string uiName, GameContext context, GameObject uiGo, int uiInstanceId)
+    private void OpenChildren(string uiName, GameContext context, GameObject uiGo, int uiInstanceId, ref GameEntity rootEntity)
     {
         var componentInfo = context.uiConfig.UiInfos[uiName];
         foreach (var component in componentInfo.Components)
@@ -79,10 +98,21 @@ public class UnitySceneService : ISceneService
             var e = context.CreateEntity();
             e.AddName(component.ComponentName);
             e.AddUiRootId(uiInstanceId);
-            GameObject componentGo = null;
-            if (component.ComponentType == "Text")
+            
+            GameObject componentGo;
+            if (uiName == component.ComponentPath)
             {
-                componentGo = OpenTextComponent(uiName, context, uiGo, e, component);
+                componentGo = uiGo;
+                rootEntity = e;
+            }
+            else
+            {
+                componentGo = uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
+            }
+
+            foreach (var listener in component.Listener)
+            {
+                componentGo.AddComponent(ListenerList.dictionary[listener]);
             }
 
             if (componentGo != null)
@@ -96,20 +126,10 @@ public class UnitySceneService : ISceneService
         }
     }
 
-    private GameObject OpenTextComponent(string uiName, GameContext context, GameObject uiGo, GameEntity e, ComponentInfo component)
-    {
-        e.AddText("ECS-Game");
-        var gameObject = uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
-        var textController = gameObject.AddComponent<UnityTextController>();
-        textController.InitializeComponent(context, e);
-        gameObject.AddComponent<TextListener>();
-        return gameObject;
-    }
-
     public void CloseUI(int id)
     {
         GameObject.Destroy(_uiDictionary[id]);
     }
 
-
+    
 }

@@ -1,6 +1,8 @@
-﻿using Entitas;
+﻿using System.Numerics;
+using Entitas;
 
 [Game]
-public class AccelerationComponent : IComponent {
-    public float value;
+public class AccelerationComponent : IComponent
+{
+    public Vector2 value;
 }

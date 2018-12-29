@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class SetMoveTargetSystem : ReactiveSystem<GameEntity>
@@ -28,9 +29,7 @@ public class SetMoveTargetSystem : ReactiveSystem<GameEntity>
             foreach (var player in players)
             {
                 if (!player.hasAcceleration) continue;
-                player.ReplaceMoveTarget(e.mouseDown.position);
-                player.isChangingSpeed = true;
-                player.isMoving = true;
+                player.ReplaceAddForce(new Vector2(5, 0), 5);
             }
         }
     }

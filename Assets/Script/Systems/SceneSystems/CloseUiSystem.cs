@@ -26,7 +26,7 @@ public class CloseUiSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             _context.sceneService.instance.CloseUI(e.uiRootId.value);
-
+            _context.uuidToEntity.dic.Remove(e.uiRootId.value);
             foreach (var uiEntity in _context.GetEntities(GameMatcher.UiRootId))
             {
                 if (uiEntity.uiRootId.value == e.uiRootId.value)

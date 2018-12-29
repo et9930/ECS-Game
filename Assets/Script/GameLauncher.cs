@@ -4,12 +4,13 @@ using UnityEngine;
 public class GameLauncher : MonoBehaviour
 {
     private Systems _systems;
+    private Systems _physicalSystems;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(Camera.main.gameObject);
-        // get a reference to the contexts
+
         var contexts = Contexts.sharedInstance;
 
         var services = new Services(
@@ -17,32 +18,40 @@ public class GameLauncher : MonoBehaviour
             new UnityViewService(),
             new UnityMouseInputService(),
             new UnityLoadConfigService(),
-            new UnitySceneService()
+            new UnitySceneService(),
+            new GameObject("CoroutineBaseGameObject").AddComponent<UnityCoroutineService>(),
+            new UnityKeyInputService()
         );
 
-        // create the systems by creating individual features
         _systems = new Feature("Systems")
             .Add(new GameWorld(contexts, services));
-#if UNITY_EDITOR
-        DontDestroyOnLoad(GameObject.Find("Systems"));
-#endif
-        // call Initialize() on all of the IInitializeSystems
         _systems.Initialize();
 
-        
+        _physicalSystems = new Feature("Physical Systems")
+            .Add(new PhysicalSystems(contexts));
+        _physicalSystems.Initialize();
+
+#if UNITY_EDITOR
+        DontDestroyOnLoad(GameObject.Find("Systems"));
+        DontDestroyOnLoad(GameObject.Find("Physical Systems"));
+#endif
     }
 
     void Update()
     {
-        // call Execute() on all the IExecuteSystems and 
-        // ReactiveSystems that were triggered last frame
         _systems.Execute();
-        // call cleanup() on all the ICleanupSystems
         _systems.Cleanup();
+    }
+
+    void FixedUpdate()
+    {
+        _physicalSystems.Execute();
+        _physicalSystems.Cleanup();
     }
 
     private void OnDestroy()
     {
         _systems.TearDown();
+        _physicalSystems.TearDown();
     }
 }

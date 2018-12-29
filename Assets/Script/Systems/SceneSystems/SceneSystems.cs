@@ -3,7 +3,7 @@
     public SceneSystems(Contexts contexts) : base("Scene Systems")
     {
         //Initialize Systems
-        Add(new InitLayersSystem(contexts));
+        Add(new InitSceneSystem(contexts));
 
         //Reactive Systems
         Add(new SwitchSceneSystem(contexts));

@@ -1,1 +1,168 @@
-{"infos":[{"animationInfos":[{"animationName":"2founut10","frameInfos":[{"frameCount":0,"name":"2founut10_0000","path":"Image\/Minato\/2founut10_0000","pivot":{"X":50.9638519,"Y":10.4592295},"size":{"X":86,"Y":194}},{"frameCount":2,"name":"2founut10_0002","path":"Image\/Minato\/2founut10_0002","pivot":{"X":48.1778069,"Y":19.9006939},"size":{"X":85,"Y":209}},{"frameCount":4,"name":"2founut10_0004","path":"Image\/Minato\/2founut10_0004","pivot":{"X":62.5,"Y":3.05501175},"size":{"X":125,"Y":192}},{"frameCount":6,"name":"2founut10_0006","path":"Image\/Minato\/2founut10_0006","pivot":{"X":59.2362823,"Y":9.362111},"size":{"X":119,"Y":197}},{"frameCount":8,"name":"2founut10_0008","path":"Image\/Minato\/2founut10_0008","pivot":{"X":80.42106,"Y":22.4210453},"size":{"X":114,"Y":198}},{"frameCount":11,"name":"2founut10_0011","path":"Image\/Minato\/2founut10_0011","pivot":{"X":85.2882,"Y":8.186453},"size":{"X":116,"Y":183}},{"frameCount":12,"name":"2founut10_0012","path":"Image\/Minato\/2founut10_0012","pivot":{"X":86.04114,"Y":7.99108934},"size":{"X":121,"Y":193}},{"frameCount":16,"name":"2founut10_0016","path":"Image\/Minato\/2founut10_0016","pivot":{"X":91.319664,"Y":9.418021},"size":{"X":131,"Y":189}},{"frameCount":17,"name":"2founut10_0017","path":"Image\/Minato\/2founut10_0017","pivot":{"X":85.13825,"Y":7.15632343},"size":{"X":115,"Y":191}},{"frameCount":18,"name":"2founut10_0018","path":"Image\/Minato\/2founut10_0018","pivot":{"X":85.6012344,"Y":6.50385332},"size":{"X":128,"Y":183}},{"frameCount":21,"name":"2founut10_0021","path":"Image\/Minato\/2founut10_0021","pivot":{"X":85.63305,"Y":9.654333},"size":{"X":117,"Y":184}},{"frameCount":23,"name":"2founut10_0023","path":"Image\/Minato\/2founut10_0023","pivot":{"X":85.52703,"Y":8.623679},"size":{"X":114,"Y":193}},{"frameCount":24,"name":"2founut10_0024","path":"Image\/Minato\/2founut10_0024","pivot":{"X":84.45286,"Y":7.27944565},"size":{"X":117,"Y":188}},{"frameCount":32,"name":"2founut10_0032","path":"Image\/Minato\/2founut10_0032","pivot":{"X":88.16249,"Y":9.117096},"size":{"X":118,"Y":184}},{"frameCount":35,"name":"2founut10_0035","path":"Image\/Minato\/2founut10_0035","pivot":{"X":84.63692,"Y":10.4186544},"size":{"X":111,"Y":178}},{"frameCount":36,"name":"2founut10_0036","path":"Image\/Minato\/2founut10_0036","pivot":{"X":87.47591,"Y":9.521645},"size":{"X":118,"Y":181}},{"frameCount":39,"name":"2founut10_0039","path":"Image\/Minato\/2founut10_0039","pivot":{"X":97.03931,"Y":10.0168848},"size":{"X":133,"Y":188}},{"frameCount":41,"name":"2founut10_0041","path":"Image\/Minato\/2founut10_0041","pivot":{"X":113.385422,"Y":11.0511208},"size":{"X":152,"Y":186}},{"frameCount":42,"name":"2founut10_0042","path":"Image\/Minato\/2founut10_0042","pivot":{"X":109.315872,"Y":9.762955},"size":{"X":149,"Y":182}},{"frameCount":43,"name":"2founut10_0043","path":"Image\/Minato\/2founut10_0043","pivot":{"X":106.382813,"Y":6.7350173},"size":{"X":184,"Y":175}},{"frameCount":44,"name":"2founut10_0044","path":"Image\/Minato\/2founut10_0044","pivot":{"X":117.774094,"Y":11.9276733},"size":{"X":193,"Y":181}},{"frameCount":47,"name":"2founut10_0047","path":"Image\/Minato\/2founut10_0047","pivot":{"X":99.64996,"Y":6.18687344},"size":{"X":177,"Y":175}}]}],"characterName":"Minato"}]}
+{
+	"infos": [
+		{
+			"animationInfos": [
+				{
+					"animationName": "2founut10",
+					"frameInfos": [
+						{
+							"frameCount": 0,
+							"name": "2founut10_0000",
+							"path": "Image\/Minato\/2founut10_0000",
+							"pivot": { "X": 50.9638519, "Y": 10.4592295 },
+							"size": { "X": 86, "Y": 194 }
+						},
+						{
+							"frameCount": 2,
+							"name": "2founut10_0002",
+							"path": "Image\/Minato\/2founut10_0002",
+							"pivot": { "X": 48.1778069, "Y": 19.9006939 },
+							"size": { "X": 85, "Y": 209 }
+						},
+						{
+							"frameCount": 4,
+							"name": "2founut10_0004",
+							"path": "Image\/Minato\/2founut10_0004",
+							"pivot": { "X": 62.5, "Y": 3.05501175 },
+							"size": { "X": 125, "Y": 192 }
+						},
+						{
+							"frameCount": 6,
+							"name": "2founut10_0006",
+							"path": "Image\/Minato\/2founut10_0006",
+							"pivot": { "X": 59.2362823, "Y": 9.362111 },
+							"size": { "X": 119, "Y": 197 }
+						},
+						{
+							"frameCount": 8,
+							"name": "2founut10_0008",
+							"path": "Image\/Minato\/2founut10_0008",
+							"pivot": { "X": 80.42106, "Y": 22.4210453 },
+							"size": { "X": 114, "Y": 198 }
+						},
+						{
+							"frameCount": 11,
+							"name": "2founut10_0011",
+							"path": "Image\/Minato\/2founut10_0011",
+							"pivot": { "X": 85.2882, "Y": 8.186453 },
+							"size": { "X": 116, "Y": 183 }
+						},
+						{
+							"frameCount": 12,
+							"name": "2founut10_0012",
+							"path": "Image\/Minato\/2founut10_0012",
+							"pivot": { "X": 86.04114, "Y": 7.99108934 },
+							"size": { "X": 121, "Y": 193 }
+						},
+						{
+							"frameCount": 16,
+							"name": "2founut10_0016",
+							"path": "Image\/Minato\/2founut10_0016",
+							"pivot": { "X": 91.319664, "Y": 9.418021 },
+							"size": { "X": 131, "Y": 189 }
+						},
+						{
+							"frameCount": 17,
+							"name": "2founut10_0017",
+							"path": "Image\/Minato\/2founut10_0017",
+							"pivot": { "X": 85.13825, "Y": 7.15632343 },
+							"size": { "X": 115, "Y": 191 }
+						},
+						{
+							"frameCount": 18,
+							"name": "2founut10_0018",
+							"path": "Image\/Minato\/2founut10_0018",
+							"pivot": { "X": 85.6012344, "Y": 6.50385332 },
+							"size": { "X": 128, "Y": 183 }
+						},
+						{
+							"frameCount": 21,
+							"name": "2founut10_0021",
+							"path": "Image\/Minato\/2founut10_0021",
+							"pivot": { "X": 85.63305, "Y": 9.654333 },
+							"size": { "X": 117, "Y": 184 }
+						},
+						{
+							"frameCount": 23,
+							"name": "2founut10_0023",
+							"path": "Image\/Minato\/2founut10_0023",
+							"pivot": { "X": 85.52703, "Y": 8.623679 },
+							"size": { "X": 114, "Y": 193 }
+						},
+						{
+							"frameCount": 24,
+							"name": "2founut10_0024",
+							"path": "Image\/Minato\/2founut10_0024",
+							"pivot": { "X": 84.45286, "Y": 7.27944565 },
+							"size": { "X": 117, "Y": 188 }
+						},
+						{
+							"frameCount": 32,
+							"name": "2founut10_0032",
+							"path": "Image\/Minato\/2founut10_0032",
+							"pivot": { "X": 88.16249, "Y": 9.117096 },
+							"size": { "X": 118, "Y": 184 }
+						},
+						{
+							"frameCount": 35,
+							"name": "2founut10_0035",
+							"path": "Image\/Minato\/2founut10_0035",
+							"pivot": { "X": 84.63692, "Y": 10.4186544 },
+							"size": { "X": 111, "Y": 178 }
+						},
+						{
+							"frameCount": 36,
+							"name": "2founut10_0036",
+							"path": "Image\/Minato\/2founut10_0036",
+							"pivot": { "X": 87.47591, "Y": 9.521645 },
+							"size": { "X": 118, "Y": 181 }
+						},
+						{
+							"frameCount": 39,
+							"name": "2founut10_0039",
+							"path": "Image\/Minato\/2founut10_0039",
+							"pivot": { "X": 97.03931, "Y": 10.0168848 },
+							"size": { "X": 133, "Y": 188 }
+						},
+						{
+							"frameCount": 41,
+							"name": "2founut10_0041",
+							"path": "Image\/Minato\/2founut10_0041",
+							"pivot": { "X": 113.385422, "Y": 11.0511208 },
+							"size": { "X": 152, "Y": 186 }
+						},
+						{
+							"frameCount": 42,
+							"name": "2founut10_0042",
+							"path": "Image\/Minato\/2founut10_0042",
+							"pivot": { "X": 109.315872, "Y": 9.762955 },
+							"size": { "X": 149, "Y": 182 }
+						},
+						{
+							"frameCount": 43,
+							"name": "2founut10_0043",
+							"path": "Image\/Minato\/2founut10_0043",
+							"pivot": { "X": 106.382813, "Y": 6.7350173 },
+							"size": { "X": 184, "Y": 175 }
+						},
+						{
+							"frameCount": 44,
+							"name": "2founut10_0044",
+							"path": "Image\/Minato\/2founut10_0044",
+							"pivot": { "X": 117.774094, "Y": 11.9276733 },
+							"size": { "X": 193, "Y": 181 }
+						},
+						{
+							"frameCount": 47,
+							"name": "2founut10_0047",
+							"path": "Image\/Minato\/2founut10_0047",
+							"pivot": { "X": 99.64996, "Y": 6.18687344 },
+							"size": { "X": 177, "Y": 175 }
+						}
+					]
+				}
+			],
+			"characterName": "Minato"
+		}
+	]
+}

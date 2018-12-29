@@ -34,5 +34,14 @@ public class LoadGameConfigSystem : IInitializeSystem
             dictionary[config.UiName] = config;
         }
         _context.ReplaceUiConfig(dictionary);
+
+        // Scene Config
+        var strSceneConfig = _context.loadConfigService.instance.LoadJsonFile("Json/SceneConfig");
+        _context.ReplaceSceneConfig(Utilities.ParseJson<SceneConfigs>(strSceneConfig));
+
+        // Loading UI Random Infos
+        var strLoadingUiRandomInfo = _context.loadConfigService.instance.LoadJsonFile("Json/LoadingUIRandomInfo");
+        var tempInfos = Utilities.ParseJson<LoadingUiRandomInfo>(strLoadingUiRandomInfo);
+        _context.ReplaceLoadingUiRandomInfo(tempInfos.RandomTexts, tempInfos.RandomImages);
     }
 }

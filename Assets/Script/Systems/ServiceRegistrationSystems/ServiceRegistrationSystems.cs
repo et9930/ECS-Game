@@ -6,6 +6,8 @@
         Add(new RegisterViewServiceSystem(contexts, services.View));
         Add(new RegisterMouseInputServiceSystem(contexts, services.MouseInput));
         Add(new RegisterLoadConfigServiceSystem(contexts, services.LoadConfig));
-        Add(new RegisterUiServiceSystem(contexts, services.scene));
+        Add(new RegisterUiServiceSystem(contexts, services.Scene));
+        Add(new RegisterCoroutineServiceSystem(contexts, services.Coroutine));
+        Add(new RegisterKeyInputServiceSystem(contexts, services.KeyInput));
     }
 }
