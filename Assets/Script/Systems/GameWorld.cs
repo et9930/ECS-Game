@@ -11,7 +11,8 @@
         Add(new LogSystems(contexts));        
         Add(new NetworkSystems(contexts));
         Add(new SceneSystems(contexts));
-        
+
+        Add(new PlayerControlSystems(contexts));
         Add(new DamageSystems(contexts));
         Add(new HTCSystems(contexts));
         Add(new NinjutsuSystems(contexts));

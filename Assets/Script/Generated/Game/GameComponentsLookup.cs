@@ -17,52 +17,54 @@ public static class GameComponentsLookup {
     public const int AnyLoadingSceneProcessListener = 6;
     public const int AnyLoadingSceneTextImageListener = 7;
     public const int CoroutineService = 8;
-    public const int DebugMessage = 9;
-    public const int Destroy = 10;
-    public const int Friction = 11;
-    public const int ImageAsset = 12;
-    public const int Key = 13;
-    public const int KeyInputService = 14;
-    public const int Layer = 15;
-    public const int LeftMouse = 16;
-    public const int LoadConfigService = 17;
-    public const int LoadingSceneProcess = 18;
-    public const int LoadingSceneTextImage = 19;
-    public const int LoadingUiRandomInfo = 20;
-    public const int LoadScene = 21;
-    public const int LoginInfo = 22;
-    public const int LogService = 23;
-    public const int Mass = 24;
-    public const int MaxSpeed = 25;
-    public const int MouseDown = 26;
-    public const int MouseInputService = 27;
-    public const int MousePosition = 28;
-    public const int MouseUp = 29;
-    public const int MoveTarget = 30;
-    public const int Moving = 31;
-    public const int Name = 32;
-    public const int OnTheGround = 33;
-    public const int OnTheWall = 34;
-    public const int PhysicalConstant = 35;
-    public const int Position = 36;
-    public const int PositionListener = 37;
-    public const int RightMouse = 38;
-    public const int SceneConfig = 39;
-    public const int SceneService = 40;
-    public const int SignInInfo = 41;
-    public const int Sprite = 42;
-    public const int Text = 43;
-    public const int TextListener = 44;
-    public const int UiClose = 45;
-    public const int UiConfig = 46;
-    public const int UiLayerConfig = 47;
-    public const int UiOpen = 48;
-    public const int UiRootId = 49;
-    public const int UuidToEntity = 50;
-    public const int Velocity = 51;
-    public const int ViewService = 52;
+    public const int CurrentPlayerId = 9;
+    public const int DebugMessage = 10;
+    public const int Destroy = 11;
+    public const int Friction = 12;
+    public const int ImageAsset = 13;
+    public const int Key = 14;
+    public const int KeyInputService = 15;
+    public const int Layer = 16;
+    public const int LeftMouse = 17;
+    public const int LoadConfigService = 18;
+    public const int LoadingSceneProcess = 19;
+    public const int LoadingSceneTextImage = 20;
+    public const int LoadingUiRandomInfo = 21;
+    public const int LoadScene = 22;
+    public const int LoginInfo = 23;
+    public const int LogService = 24;
+    public const int Mass = 25;
+    public const int MaxSpeed = 26;
+    public const int MouseDown = 27;
+    public const int MouseInputService = 28;
+    public const int MousePosition = 29;
+    public const int MouseUp = 30;
+    public const int MoveTarget = 31;
+    public const int Moving = 32;
+    public const int Name = 33;
+    public const int OnTheGround = 34;
+    public const int OnTheWall = 35;
+    public const int PhysicalConstant = 36;
+    public const int PlayerId = 37;
+    public const int Position = 38;
+    public const int PositionListener = 39;
+    public const int RightMouse = 40;
+    public const int SceneConfig = 41;
+    public const int SceneService = 42;
+    public const int SignInInfo = 43;
+    public const int Sprite = 44;
+    public const int Text = 45;
+    public const int TextListener = 46;
+    public const int UiClose = 47;
+    public const int UiConfig = 48;
+    public const int UiLayerConfig = 49;
+    public const int UiOpen = 50;
+    public const int UiRootId = 51;
+    public const int UuidToEntity = 52;
+    public const int Velocity = 53;
+    public const int ViewService = 54;
 
-    public const int TotalComponents = 53;
+    public const int TotalComponents = 55;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -74,6 +76,7 @@ public static class GameComponentsLookup {
         "AnyLoadingSceneProcessListener",
         "AnyLoadingSceneTextImageListener",
         "CoroutineService",
+        "CurrentPlayerId",
         "DebugMessage",
         "Destroy",
         "Friction",
@@ -101,6 +104,7 @@ public static class GameComponentsLookup {
         "OnTheGround",
         "OnTheWall",
         "PhysicalConstant",
+        "PlayerId",
         "Position",
         "PositionListener",
         "RightMouse",
@@ -130,6 +134,7 @@ public static class GameComponentsLookup {
         typeof(AnyLoadingSceneProcessListenerComponent),
         typeof(AnyLoadingSceneTextImageListenerComponent),
         typeof(CoroutineServiceComponent),
+        typeof(CurrentPlayerIdComponent),
         typeof(DebugMessageComponent),
         typeof(DestroyComponent),
         typeof(FrictionComponent),
@@ -157,6 +162,7 @@ public static class GameComponentsLookup {
         typeof(OnTheGroundComponent),
         typeof(OnTheWallComponent),
         typeof(PhysicalConstantComponent),
+        typeof(PlayerIdComponent),
         typeof(PositionComponent),
         typeof(PositionListenerComponent),
         typeof(RightMouseComponent),
