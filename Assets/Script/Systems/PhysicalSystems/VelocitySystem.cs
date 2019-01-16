@@ -16,8 +16,8 @@ public class VelocitySystem : IExecuteSystem
             if (e.isMoving)
             {
                 var newPosition = e.position.value;
-                newPosition.X += e.velocity.value.X * Utilities.GetFixedDeltaTime();
-                newPosition.Y += e.velocity.value.Y * Utilities.GetFixedDeltaTime();
+                newPosition.X += e.velocity.value.X * _context.timeService.instance.GetFixedDeltaTime();
+                newPosition.Y += e.velocity.value.Y * _context.timeService.instance.GetFixedDeltaTime();
                 e.ReplacePosition(newPosition);
             }
         }

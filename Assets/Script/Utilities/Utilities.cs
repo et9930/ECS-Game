@@ -18,6 +18,11 @@ public static class Utilities
         return new UnityEngine.Vector2(value.X, value.Y);
     }
 
+    public static UnityEngine.Vector3 ToUnityEngineVector3(System.Numerics.Vector3 value)
+    {
+        return new UnityEngine.Vector3(value.X, value.Y, value.Z);
+    }
+
     public static T ParseJson<T>(string strJson)
     {
         T obj;
@@ -66,13 +71,8 @@ public static class Utilities
         return random.Next(min, max);
     }
 
-    public static float GetDeltaTime()
+    public static Vector2 Vector3PositionToVector2Position(System.Numerics.Vector2 value)
     {
-        return Time.deltaTime;
-    }
-
-    public static float GetFixedDeltaTime()
-    {
-        return Time.fixedDeltaTime;
+        return new Vector2();
     }
 }

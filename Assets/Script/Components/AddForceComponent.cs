@@ -4,6 +4,6 @@ using Entitas;
 [Game]
 public class AddForceComponent : IComponent
 {
-    public Vector2 ForceValue;
+    public Vector3 ForceValue;
     public float DurationTime;
 }

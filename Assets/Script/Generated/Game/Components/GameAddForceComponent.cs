@@ -11,7 +11,7 @@ public partial class GameEntity {
     public AddForceComponent addForce { get { return (AddForceComponent)GetComponent(GameComponentsLookup.AddForce); } }
     public bool hasAddForce { get { return HasComponent(GameComponentsLookup.AddForce); } }
 
-    public void AddAddForce(System.Numerics.Vector2 newForceValue, float newDurationTime) {
+    public void AddAddForce(System.Numerics.Vector3 newForceValue, float newDurationTime) {
         var index = GameComponentsLookup.AddForce;
         var component = (AddForceComponent)CreateComponent(index, typeof(AddForceComponent));
         component.ForceValue = newForceValue;
@@ -19,7 +19,7 @@ public partial class GameEntity {
         AddComponent(index, component);
     }
 
-    public void ReplaceAddForce(System.Numerics.Vector2 newForceValue, float newDurationTime) {
+    public void ReplaceAddForce(System.Numerics.Vector3 newForceValue, float newDurationTime) {
         var index = GameComponentsLookup.AddForce;
         var component = (AddForceComponent)CreateComponent(index, typeof(AddForceComponent));
         component.ForceValue = newForceValue;

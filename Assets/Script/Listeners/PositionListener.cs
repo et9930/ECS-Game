@@ -12,8 +12,8 @@ public class PositionListener : MonoBehaviour, IEventListener, IPositionListener
         _entity.AddPositionListener(this);
     }
 
-    public void OnPosition(GameEntity entity, System.Numerics.Vector2 value)
+    public void OnPosition(GameEntity entity, System.Numerics.Vector3 value)
     {
-        transform.position = Utilities.ToUnityEngineVector2(value);
+        transform.position = Utilities.ToUnityEngineVector3(value);
     }
 }

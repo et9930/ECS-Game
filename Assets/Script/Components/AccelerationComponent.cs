@@ -4,5 +4,5 @@ using Entitas;
 [Game]
 public class AccelerationComponent : IComponent
 {
-    public Vector2 value;
+    public Vector3 value;
 }

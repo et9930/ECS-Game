@@ -27,16 +27,16 @@ public class CreatePlayerSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            var player = _context.CreateEntity();
-            player.AddMoveTarget(e.mouseDown.position);
-            player.AddSprite(_context.imageAssetEntity.imageAsset.imageInfos.infos[0].animationInfos[0].frameInfos[0].path);
-            player.AddMaxSpeed(30);
-            player.AddAcceleration(Vector2.Zero);
-            player.AddVelocity(Vector2.Zero);
-            player.AddPosition(e.mouseDown.position);
-            player.AddName(index.ToString());
-            index++;
-            player.AddMass(10);
+//            var player = _context.CreateEntity();
+//            player.AddMoveTarget(e.mouseDown.position);
+//            player.AddSprite(_context.imageAssetEntity.imageAsset.imageInfos.infos[0].animationInfos[0].frameInfos[0].path);
+//            player.AddMaxSpeed(30);
+//            player.AddAcceleration(Vector2.Zero);
+//            player.AddVelocity(Vector2.Zero);
+//            player.AddPosition(e.mouseDown.position);
+//            player.AddName(index.ToString());
+//            index++;
+//            player.AddMass(10);
             
         }
     }

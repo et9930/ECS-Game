@@ -20,7 +20,8 @@ public class GameLauncher : MonoBehaviour
             new UnityLoadConfigService(),
             new UnitySceneService(),
             new GameObject("CoroutineBaseGameObject").AddComponent<UnityCoroutineService>(),
-            new UnityKeyInputService()
+            new UnityKeyInputService(),
+            new UnityTimeService()
         );
 
         _systems = new Feature("Systems")

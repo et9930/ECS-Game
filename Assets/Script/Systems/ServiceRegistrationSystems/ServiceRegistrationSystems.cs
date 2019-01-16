@@ -9,5 +9,6 @@
         Add(new RegisterUiServiceSystem(contexts, services.Scene));
         Add(new RegisterCoroutineServiceSystem(contexts, services.Coroutine));
         Add(new RegisterKeyInputServiceSystem(contexts, services.KeyInput));
+        Add(new RegisterTimeServiceSystem(contexts, services));
     }
 }

@@ -11,14 +11,14 @@ public partial class GameEntity {
     public MoveTargetComponent moveTarget { get { return (MoveTargetComponent)GetComponent(GameComponentsLookup.MoveTarget); } }
     public bool hasMoveTarget { get { return HasComponent(GameComponentsLookup.MoveTarget); } }
 
-    public void AddMoveTarget(System.Numerics.Vector2 newValue) {
+    public void AddMoveTarget(System.Numerics.Vector3 newValue) {
         var index = GameComponentsLookup.MoveTarget;
         var component = (MoveTargetComponent)CreateComponent(index, typeof(MoveTargetComponent));
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceMoveTarget(System.Numerics.Vector2 newValue) {
+    public void ReplaceMoveTarget(System.Numerics.Vector3 newValue) {
         var index = GameComponentsLookup.MoveTarget;
         var component = (MoveTargetComponent)CreateComponent(index, typeof(MoveTargetComponent));
         component.value = newValue;

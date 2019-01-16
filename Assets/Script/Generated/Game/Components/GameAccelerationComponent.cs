@@ -11,14 +11,14 @@ public partial class GameEntity {
     public AccelerationComponent acceleration { get { return (AccelerationComponent)GetComponent(GameComponentsLookup.Acceleration); } }
     public bool hasAcceleration { get { return HasComponent(GameComponentsLookup.Acceleration); } }
 
-    public void AddAcceleration(System.Numerics.Vector2 newValue) {
+    public void AddAcceleration(System.Numerics.Vector3 newValue) {
         var index = GameComponentsLookup.Acceleration;
         var component = (AccelerationComponent)CreateComponent(index, typeof(AccelerationComponent));
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceAcceleration(System.Numerics.Vector2 newValue) {
+    public void ReplaceAcceleration(System.Numerics.Vector3 newValue) {
         var index = GameComponentsLookup.Acceleration;
         var component = (AccelerationComponent)CreateComponent(index, typeof(AccelerationComponent));
         component.value = newValue;

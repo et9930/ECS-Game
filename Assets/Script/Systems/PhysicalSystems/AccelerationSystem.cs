@@ -17,8 +17,8 @@ public class AccelerationSystem : IExecuteSystem
             if (e.acceleration.value.Length() > 0.0f)
             {
                 var newSpeed = e.velocity.value;
-                newSpeed.X += e.acceleration.value.X * Utilities.GetFixedDeltaTime();
-                newSpeed.Y += e.acceleration.value.Y * Utilities.GetFixedDeltaTime();
+                newSpeed.X += e.acceleration.value.X * _context.timeService.instance.GetFixedDeltaTime();
+                newSpeed.Y += e.acceleration.value.Y * _context.timeService.instance.GetFixedDeltaTime();
                 e.isMoving = newSpeed.Length() > 0.0f;
                 e.ReplaceVelocity(newSpeed);
             }

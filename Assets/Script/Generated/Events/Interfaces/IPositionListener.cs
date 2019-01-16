@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IPositionListener {
-    void OnPosition(GameEntity entity, System.Numerics.Vector2 value);
+    void OnPosition(GameEntity entity, System.Numerics.Vector3 value);
 }

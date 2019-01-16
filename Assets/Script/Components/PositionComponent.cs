@@ -5,5 +5,5 @@ using Entitas.CodeGeneration.Attributes;
 [Game, Event(EventTarget.Self)]
 public class PositionComponent : IComponent
 {
-    public Vector2 value;
+    public Vector3 value;
 }

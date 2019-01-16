@@ -29,7 +29,7 @@ public class SetMoveTargetSystem : ReactiveSystem<GameEntity>
             foreach (var player in players)
             {
                 if (!player.hasAcceleration) continue;
-                player.ReplaceAddForce(new Vector2(5, 0), 5);
+                player.ReplaceAddForce(new Vector3(5, 0, 0), 5);
             }
         }
     }
