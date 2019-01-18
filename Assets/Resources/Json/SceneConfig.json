@@ -5,6 +5,12 @@
 			"Uis": [
 				"LoadingProcess"
 			]
+		},
+		{
+			"SceneName": "BattleScene",
+			"Uis": [
+				
+			]
 		}
 	]
 }

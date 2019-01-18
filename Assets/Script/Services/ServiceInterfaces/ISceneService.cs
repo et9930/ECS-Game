@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 
 public interface ISceneService
 {
@@ -9,4 +10,5 @@ public interface ISceneService
     int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity);
     void CloseUI(int id);
     void AllowSceneActive(bool active);
+    void MoveMainCamera(Vector3 position);
 }

@@ -7,8 +7,6 @@
 
         //Reactive Systems
         Add(new EmitInputSystem(contexts));
-        Add(new CreatePlayerSystem(contexts));
-        Add(new SetMoveTargetSystem(contexts));
 
         //Cleanup Systems
     }

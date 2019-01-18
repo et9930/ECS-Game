@@ -36,6 +36,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>
 
         // open loading scene
         _context.sceneService.instance.OpenScene("LoadingScene", _context);
+        _context.ReplaceCurrentScene("LoadingScene");
         yield return _context.coroutineService.instance.WaitForEndOfFrame();
         GameEntity loadingProcessRootEntity = null;
         var loadingProcessUiId = _context.sceneService.instance.OpenUI("LoadingProcess", "TopLayer", _context, ref loadingProcessRootEntity);
@@ -52,7 +53,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>
 
 
         // load new scene
-        foreach (var value in _context.sceneService.instance.OpenSceneAsync("LoginScene", _context))
+        foreach (var value in _context.sceneService.instance.OpenSceneAsync("BattleScene", _context))
         {
             if (value >= 0.9f)
             {
@@ -83,6 +84,13 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>
 
         // switch to new scene
         _context.sceneService.instance.AllowSceneActive(true);
+        _context.ReplaceCurrentScene(sceneName);
 
+        // test
+        _context.ReplaceCurrentPlayerId(100);
+        _context.ReplaceCurrentMapName("ProvingGroundMap");
+        _context.ReplaceCurrentScene("BattleScene");
+        _context.CreateEntity().ReplaceLoadPlayer(100, "Minato");
+        
     }
 }

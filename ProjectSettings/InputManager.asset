@@ -13,9 +13,9 @@ InputManager:
     positiveButton: d
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.001
-    sensitivity: 3
+    sensitivity: 1000
     snap: 1
     invert: 0
     type: 0
@@ -23,15 +23,15 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Vertical
-    descriptiveName: "\u5411\u4E0A\u79FB\u52A8"
-    descriptiveNegativeName: "\u5411\u4E0B\u79FB\u52A8"
-    negativeButton: s
-    positiveButton: w
+    descriptiveName: "\u5411\u4E0B\u79FB\u52A8"
+    descriptiveNegativeName: "\u5411\u4E0A\u79FB\u52A8"
+    negativeButton: w
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: 0.001
-    sensitivity: 3
+    sensitivity: 1000
     snap: 1
     invert: 0
     type: 0

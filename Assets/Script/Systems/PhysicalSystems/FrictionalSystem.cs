@@ -11,7 +11,9 @@ public class FrictionalSystem : IExecuteSystem
 
     public void Execute()
     {
-        foreach (var e in _context.GetGroup(GameMatcher.OnTheGround))
+        if (_context.currentScene.name != "BattleScene") return;
+
+        foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.OnTheGround, GameMatcher.Acceleration, GameMatcher.Velocity)))
         {
             if (e.velocity.value.X > 0.0f)
             {

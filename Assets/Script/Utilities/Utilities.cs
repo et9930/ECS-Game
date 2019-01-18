@@ -71,8 +71,8 @@ public static class Utilities
         return random.Next(min, max);
     }
 
-    public static Vector2 Vector3PositionToVector2Position(System.Numerics.Vector2 value)
+    public static Vector2 Vector3PositionToVector2Position(System.Numerics.Vector3 value)
     {
-        return new Vector2();
+        return new Vector2(value.X, value.Y - value.Z - 3);
     }
 }

@@ -9,6 +9,8 @@
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
         Add(new CloseUiSystem(contexts));
+        Add(new LoadPlayerSystem(contexts));
+        Add(new MoveMainCameraSystem(contexts));
 
         //Cleanup Systems
     }

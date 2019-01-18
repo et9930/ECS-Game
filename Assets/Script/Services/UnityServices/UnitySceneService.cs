@@ -48,10 +48,10 @@ public class UnitySceneService : ISceneService
         SceneManager.LoadScene(sceneName);
     }
 
-    public IEnumerable<float>  OpenSceneAsync(string sceneName, GameContext context)
+    public IEnumerable<float> OpenSceneAsync(string sceneName, GameContext context)
     {
         _openSceneOperation = null;
-        _openSceneOperation = SceneManager.LoadSceneAsync("LoginScene");
+        _openSceneOperation = SceneManager.LoadSceneAsync(sceneName);
         _openSceneOperation.allowSceneActivation = false;
         
         while (_openSceneOperation.progress < 0.9)
@@ -65,6 +65,11 @@ public class UnitySceneService : ISceneService
     public void AllowSceneActive(bool active)
     {
         _openSceneOperation.allowSceneActivation = active;
+    }
+
+    public void MoveMainCamera(System.Numerics.Vector3 position)
+    {
+        Camera.main.transform.position = Utilities.ToUnityEngineVector3(position);
     }
 
     public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity)

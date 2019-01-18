@@ -34,6 +34,7 @@ public class AddForceSystem : ReactiveSystem<GameEntity>
         var addForceAcceleration = e.acceleration.value;
         addForceAcceleration.X += e.addForce.ForceValue.X / e.mass.value;
         addForceAcceleration.Y += e.addForce.ForceValue.Y / e.mass.value;
+        addForceAcceleration.Z += e.addForce.ForceValue.Z / e.mass.value;
         e.ReplaceAcceleration(addForceAcceleration);
 
         yield return _context.coroutineService.instance.WaitForSeconds(e.addForce.DurationTime);
@@ -41,6 +42,7 @@ public class AddForceSystem : ReactiveSystem<GameEntity>
         var removeForceAcceleration = e.acceleration.value;
         removeForceAcceleration.X -= e.addForce.ForceValue.X / e.mass.value;
         removeForceAcceleration.Y -= e.addForce.ForceValue.Y / e.mass.value;
+        removeForceAcceleration.Z -= e.addForce.ForceValue.Y / e.mass.value;
         e.ReplaceAcceleration(removeForceAcceleration);
 
         e.RemoveAddForce();

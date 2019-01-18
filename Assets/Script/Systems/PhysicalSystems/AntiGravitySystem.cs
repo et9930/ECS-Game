@@ -11,6 +11,8 @@ public class AntiGravitySystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.currentScene.name != "BattleScene") return;
+
         foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.AffectedByGravity, GameMatcher.Acceleration)))
         {
             if (e.isOnTheGround || e.isOnTheWall)

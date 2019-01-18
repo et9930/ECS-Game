@@ -13,6 +13,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyLoadingSceneProcessEventSystem(contexts)); // priority: 0
         Add(new AnyLoadingSceneTextImageEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
+        Add(new ScaleEventSystem(contexts)); // priority: 0
         Add(new TextEventSystem(contexts)); // priority: 0
     }
 }

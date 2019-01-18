@@ -11,7 +11,9 @@ public class GravitySystem : IExecuteSystem
 
     public void Execute()
     {
-        foreach (var e in _context.GetGroup(GameMatcher.AffectedByGravity))
+        if (_context.currentScene.name != "BattleScene") return;
+
+        foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.AffectedByGravity, GameMatcher.Acceleration)))
         {
             if (e.isAffectedByGravity)
             {

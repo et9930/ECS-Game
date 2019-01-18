@@ -43,5 +43,15 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strLoadingUiRandomInfo = _context.loadConfigService.instance.LoadJsonFile("Json/LoadingUIRandomInfo");
         var tempInfos = Utilities.ParseJson<LoadingUiRandomInfo>(strLoadingUiRandomInfo);
         _context.ReplaceLoadingUiRandomInfo(tempInfos.RandomTexts, tempInfos.RandomImages);
+
+        // Character Base Attributes
+        var strCharacterBaseAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/CharacterBaseAttributes");
+        var tempAttributes = Utilities.ParseJson<CharacterBaseAttributes>(strCharacterBaseAttributes);
+        _context.ReplaceCharacterBaseAttributes(tempAttributes);
+
+        // Map Config
+        var strMapConfig = _context.loadConfigService.instance.LoadJsonFile("Json/MapConfig");
+        var tempMapConfig = Utilities.ParseJson<MapConfigList>(strMapConfig);
+        _context.ReplaceMapConfig(tempMapConfig);
     }
 }

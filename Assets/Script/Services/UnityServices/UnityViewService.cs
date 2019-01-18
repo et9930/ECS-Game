@@ -19,9 +19,15 @@ public class UnityViewService : IViewService
     {
         var viewGo = new GameObject(objectName);
         viewGo.transform.SetParent(viewRoot.transform);
-        viewGo.transform.position = Utilities.ToUnityEngineVector3(((GameEntity) entity).position.value);
-        viewGo.AddComponent<SpriteRenderer>();
+
+        viewGo.transform.position = Utilities.Vector3PositionToVector2Position(((GameEntity) entity).position.value);
+        viewGo.transform.localScale = Utilities.ToUnityEngineVector2(((GameEntity) entity).scale.value);
+
+        var sr = viewGo.AddComponent<SpriteRenderer>();
+        sr.sortingOrder = 1;
+
         viewGo.AddComponent<PositionListener>();
+        viewGo.AddComponent<ScaleListener>();
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)
         {

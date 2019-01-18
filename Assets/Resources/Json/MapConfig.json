@@ -1,0 +1,15 @@
+{
+  "list": [
+    {
+      "Key": "ProvingGroundMap",
+      "Value": {
+        "CameraMinX": -55,
+        "CameraMaxX": 30,
+        "CharacterMinX": -63.5,
+        "CharacterMaxX": 38.5,
+        "CharacterMinZ": 0,
+        "CharacterMaxZ": 2 
+      } 
+    }
+  ] 
+}

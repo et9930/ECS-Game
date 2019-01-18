@@ -14,5 +14,7 @@
         Add(new AccelerationSystem(contexts));
 
         Add(new VelocitySystem(contexts));
+
+        Add(new AddPhysicalComponentSystem(contexts));
     }
 }
