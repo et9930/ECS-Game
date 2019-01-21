@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using UnityEditor;
@@ -9,16 +10,16 @@ using UnityEngine;
 public class StoreImageInfo : EditorWindow
 {
     public const string resourcesPath = "Assets/Resources/";
-    public const string ImagePath = "Assets/Resources/Image/";
+    public const string ImagePath = "Assets/Resources/Image/Character/";
     public static float Progress = 0;
     public static string currect_path = "";
     public static bool isShow = false;
-    private static List<CharacterInfo> characterInfos;
+    private static Dictionary<string, CharacterInfo> characterInfos;
     
     [MenuItem("Tools/Store Image Info In Json File")]
     public static void StoreImageInfoFunc()
     {
-        characterInfos = new List<CharacterInfo>();
+        characterInfos = new Dictionary<string, CharacterInfo>();
         isShow = true;
         try
         {
@@ -29,7 +30,8 @@ public class StoreImageInfo : EditorWindow
                 currect_path = dirs[i];
                 EditorUtility.DisplayProgressBar("Progress", currect_path, Progress);
 
-                characterInfos.Add(DealDir(dirs[i]));                
+                var characterInfo = DealDir(dirs[i]);
+                characterInfos.Add(characterInfo.characterName, characterInfo);                
             }
         }
         catch (Exception e)
@@ -41,7 +43,9 @@ public class StoreImageInfo : EditorWindow
         WriteInJsonFile();
 
         EditorUtility.ClearProgressBar();
-        isShow = false;        
+        isShow = false;     
+        
+        Debug.Log("Store Image Info In Json File Over.");
     }
 
     private static void WriteInJsonFile()
@@ -73,7 +77,7 @@ public class StoreImageInfo : EditorWindow
     public static CharacterInfo DealDir(string dirPath)
     {                
         var characterInfo = new CharacterInfo();
-        characterInfo.animationInfos = new List<AnimationInfo>();
+        characterInfo.animationInfos = new Dictionary<string, AnimationInfo>();
         characterInfo.characterName = dirPath.Substring(ImagePath.Length);
         AnimationInfo animInfo = null;
         var animName = "";
@@ -83,22 +87,27 @@ public class StoreImageInfo : EditorWindow
             for (int i = 0; i < pngPaths.Length; i++)
             {
                 var tmp = Path.GetFileNameWithoutExtension(pngPaths[i]);
-                var _index = tmp.IndexOf('_');
+                var _index = tmp.LastIndexOf('_');
                 tmp = tmp.Substring(0, _index);
                 if (!tmp.Equals(animName))
                 {
                     if (animInfo != null)
                     {
-                        characterInfo.animationInfos.Add(animInfo);
+                        characterInfo.animationInfos.Add(animInfo.animationName, animInfo);
                     }
                     animInfo = new AnimationInfo();
-                    animInfo.frameInfos = new List<FrameInfo>();
+                    animInfo.maxFrame = 0;
+                    animInfo.frameInfos = new Dictionary<int, FrameInfo>();
                     animName = tmp;
                     animInfo.animationName = animName;
                 }
-                animInfo.frameInfos.Add(DealPng(pngPaths[i]));
+
+                var frameInfo = DealPng(pngPaths[i], ref animInfo.maxFrame);
+                animInfo.frameInfos.Add(frameInfo.frameCount, frameInfo);
             }
-            characterInfo.animationInfos.Add(animInfo);
+
+            if (animInfo != null)
+                characterInfo.animationInfos.Add(animInfo.animationName, animInfo);
         }
         catch (Exception e)
         {
@@ -108,14 +117,20 @@ public class StoreImageInfo : EditorWindow
         return characterInfo;
     }
 
-    public static FrameInfo DealPng(string pngPath)
+    public static FrameInfo DealPng(string pngPath, ref int maxFrame)
     {
         var info = new FrameInfo();
         Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(pngPath);
         info.name = Path.GetFileNameWithoutExtension(pngPath);
         info.path = Path.GetDirectoryName(pngPath).Substring(resourcesPath.Length).Replace('\\', '/') + "/" + info.name;
-        var _index = info.name.IndexOf('_');
+        var _index = info.name.LastIndexOf('_');
         info.frameCount = int.Parse(info.name.Substring(_index + 1));
+
+        if (maxFrame < info.frameCount)
+        {
+            maxFrame = info.frameCount;
+        }
+
         info.pivot = Utilities.ToSystemNumericsVector2(sprite.pivot);
         info.size.X = sprite.texture.width;
         info.size.Y = sprite.texture.height;

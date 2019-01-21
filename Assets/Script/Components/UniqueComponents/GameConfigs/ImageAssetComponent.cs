@@ -14,7 +14,7 @@ public class ImageAssetComponent : IComponent
 public class ImageInfos
 {
     [DataMember]
-    public List<CharacterInfo> infos;
+    public Dictionary<string, CharacterInfo> infos;
 }
 
 [DataContract]
@@ -23,7 +23,7 @@ public class CharacterInfo
     [DataMember]
     public string characterName;
     [DataMember]
-    public List<AnimationInfo> animationInfos;
+    public Dictionary<string, AnimationInfo> animationInfos;
 }
 
 [DataContract]
@@ -32,7 +32,9 @@ public class AnimationInfo
     [DataMember]
     public string animationName;
     [DataMember]
-    public List<FrameInfo> frameInfos;
+    public int maxFrame;
+    [DataMember]
+    public Dictionary<int, FrameInfo> frameInfos;
 }
 
 [DataContract]

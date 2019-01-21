@@ -50,7 +50,9 @@ public class StoreUIInfo : EditorWindow
 
         EditorUtility.ClearProgressBar();
         isShow = false;
-    
+
+        Debug.Log("Store UI Info In Json File Over.");
+
     }
 
     public static void LoadListenerConfig()

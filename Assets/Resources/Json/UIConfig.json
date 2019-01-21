@@ -1,41 +1,50 @@
 {
-	"UIConfigs": [
-		{
-			"Components": [
-				{ "ComponentName": "LoadingProcess", "ComponentPath": "LoadingProcess", "Listener": ["Active"] },
-				{
-					"ComponentName": "BackgroundImage",
-					"ComponentPath": "LoadingProcess\/BackgroundImage",
-					"Listener": ["Active", "LoadingSceneImage"]
-				},
-				{
-					"ComponentName": "ProcessBarBackImg",
-					"ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
-					"Listener": ["Active"]
-				},
-				{
-					"ComponentName": "ProcessBarFillImg",
-					"ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
-					"Listener": ["Active", "LoadingSceneProcess"]
-				},
-				{
-					"ComponentName": "ProcessNumber",
-					"ComponentPath": "LoadingProcess\/ProcessBar\/ProcessNumber",
-					"Listener": ["Active", "LoadingSceneProcessText"]
-				},
-				{
-					"ComponentName": "RandomTitle",
-					"ComponentPath": "LoadingProcess\/RandomInfo\/RandomTitle",
-					"Listener": ["Active", "LoadingSceneTitle"]
-				},
-				{
-					"ComponentName": "RandomText",
-					"ComponentPath": "LoadingProcess\/RandomInfo\/RandomText",
-					"Listener": ["Active", "LoadingSceneText"]
-				}
-			],
-			"UiLayer": "NormalLayer",
-			"UiName": "LoadingProcess"
-		}
-	]
+  "UIConfigs": [
+    {
+      "Components": [
+        { "ComponentName": "GameState", "ComponentPath": "GameState", "Listener": ["Active"] },
+        { "ComponentName": "FpsValue", "ComponentPath": "GameState\/Fps\/FpsValue", "Listener": ["Active", "Fps"] },
+        { "ComponentName": "Network", "ComponentPath": "GameState\/Network", "Listener": [] }
+      ],
+      "UiLayer": "TopLayer",
+      "UiName": "GameState"
+    },
+    {
+      "Components": [
+        { "ComponentName": "LoadingProcess", "ComponentPath": "LoadingProcess", "Listener": ["Active"] },
+        {
+          "ComponentName": "BackgroundImage",
+          "ComponentPath": "LoadingProcess\/BackgroundImage",
+          "Listener": ["Active", "LoadingSceneImage"]
+        },
+        {
+          "ComponentName": "ProcessBarBackImg",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "ProcessBarFillImg",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
+          "Listener": ["Active", "LoadingSceneProcess"]
+        },
+        {
+          "ComponentName": "ProcessNumber",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessNumber",
+          "Listener": ["Active", "LoadingSceneProcessText"]
+        },
+        {
+          "ComponentName": "RandomTitle",
+          "ComponentPath": "LoadingProcess\/RandomInfo\/RandomTitle",
+          "Listener": ["Active", "LoadingSceneTitle"]
+        },
+        {
+          "ComponentName": "RandomText",
+          "ComponentPath": "LoadingProcess\/RandomInfo\/RandomText",
+          "Listener": ["Active", "LoadingSceneText"]
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "LoadingProcess"
+    }
+  ]
 }

@@ -26,7 +26,7 @@ public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasSprite;
+        return entity.hasSprite && !entity.isView;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -35,6 +35,7 @@ public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             _context.viewService.instance.InitializeView(_contexts, e, e.name.text);
             _context.viewService.instance.LoadSprite(_contexts, e, e.name.text, e.sprite.path);
+            e.isView = true;
         }
     }
 }

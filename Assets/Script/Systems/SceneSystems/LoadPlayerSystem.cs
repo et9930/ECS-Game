@@ -30,10 +30,11 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.ReplacePlayerId(e.loadPlayer.playerId);
             newPlayer.ReplaceName(e.loadPlayer.playerName);
 //            _context.coroutineService.instance.StartCoroutine(LoadPlayer(newPlayer));
-
-            newPlayer.ReplaceSprite(_context.imageAsset.imageInfos.infos[0].animationInfos[0].frameInfos[0].path);
+            newPlayer.ReplaceAnimation("idle", true);
+//            newPlayer.ReplaceSprite(_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].frameInfos[0].path);
             newPlayer.ReplacePosition(Vector3.Zero);
             newPlayer.ReplaceScale(new Vector2(1.5f, 1.5f));
+            newPlayer.ReplaceToward(false);
 
             newPlayer.isInitializePhysical = true;
 

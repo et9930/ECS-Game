@@ -1,16 +1,16 @@
 {
-	"Scenes": [
-		{
-			"SceneName": "LoadingScene",
-			"Uis": [
-				"LoadingProcess"
-			]
-		},
-		{
-			"SceneName": "BattleScene",
-			"Uis": [
-				
-			]
-		}
-	]
+  "Scenes": [
+    {
+      "SceneName": "LoadingScene",
+      "Uis": [
+        "LoadingProcess"
+      ]
+    },
+    {
+      "SceneName": "BattleScene",
+      "Uis": [
+
+      ]
+    }
+  ]
 }

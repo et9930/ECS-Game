@@ -21,4 +21,9 @@ public class UnityTimeService : ITimeService
     {
         Time.timeScale = value;
     }
+
+    public float GetRealTimeSinceStartup()
+    {
+        return Time.realtimeSinceStartup;
+    }
 }

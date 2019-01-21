@@ -2,8 +2,6 @@
 {
     public GameWorld(Contexts contexts, Services services) : base("Game World")
     {
-        Add(new GameInitializeSystem(contexts));
-
         Add(new ServiceRegistrationSystems(contexts, services));
         Add(new GameEventSystems(contexts));
 

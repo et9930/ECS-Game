@@ -17,18 +17,18 @@ public class MoveMainCameraSystem : IExecuteSystem
         var currentMapConfig = _context.mapConfig.list.list[_context.currentMapName.value];
         foreach (var e in _context.GetGroup(GameMatcher.PlayerId))
         {
-            if (e.playerId.value == _context.currentPlayerId.value)
-            {
-                var tempPosition = new Vector3(e.position.value.X, 0, -10);
+            if (e.playerId.value != _context.currentPlayerId.value)
+                continue;
 
-                if (e.position.value.X < currentMapConfig.CameraMinX)
-                    tempPosition.X = currentMapConfig.CameraMinX;
+            var tempPosition = new Vector3(e.position.value.X, 0, -10);
 
-                if (e.position.value.X > currentMapConfig.CameraMaxX)
-                    tempPosition.X = currentMapConfig.CameraMaxX;
+            if (e.position.value.X < currentMapConfig.CameraMinX)
+                tempPosition.X = currentMapConfig.CameraMinX;
 
-                _context.sceneService.instance.MoveMainCamera(tempPosition);
-            }
+            if (e.position.value.X > currentMapConfig.CameraMaxX)
+                tempPosition.X = currentMapConfig.CameraMaxX;
+
+            _context.sceneService.instance.MoveMainCamera(tempPosition);
         }
     }
 }

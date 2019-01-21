@@ -46,6 +46,19 @@
 				"Active",
 				"LoadingSceneText"
 			]
+		},
+		{
+			"ComponentName": "GameState",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "FpsValue",
+			"Listener": [
+				"Active",
+				"Fps"
+			]
 		}
 	]
 }

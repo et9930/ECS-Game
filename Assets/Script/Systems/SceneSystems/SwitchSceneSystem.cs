@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using Entitas;
 
-public class SwitchSceneSystem : ReactiveSystem<GameEntity>
+public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 {
     private readonly GameContext _context;
 
     public SwitchSceneSystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
+    }
+
+    public void Initialize()
+    {
+        _context.ReplaceCurrentScene("LaunchScene");
+        _context.ReplaceLoadScene("BattleScene");
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -93,4 +99,6 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>
         _context.CreateEntity().ReplaceLoadPlayer(100, "Minato");
         
     }
+
+
 }

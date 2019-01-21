@@ -25,9 +25,12 @@ public class UnityViewService : IViewService
 
         var sr = viewGo.AddComponent<SpriteRenderer>();
         sr.sortingOrder = 1;
+        sr.flipX = ((GameEntity) entity).toward.left;
 
         viewGo.AddComponent<PositionListener>();
         viewGo.AddComponent<ScaleListener>();
+        viewGo.AddComponent<TowardListener>();
+
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)
         {

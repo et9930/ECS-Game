@@ -1,168 +1,893 @@
 {
-	"infos": [
-		{
-			"animationInfos": [
-				{
-					"animationName": "2founut10",
-					"frameInfos": [
-						{
-							"frameCount": 0,
-							"name": "2founut10_0000",
-							"path": "Image\/Minato\/2founut10_0000",
-							"pivot": { "X": 50.9638519, "Y": 10.4592295 },
-							"size": { "X": 86, "Y": 194 }
-						},
-						{
-							"frameCount": 2,
-							"name": "2founut10_0002",
-							"path": "Image\/Minato\/2founut10_0002",
-							"pivot": { "X": 48.1778069, "Y": 19.9006939 },
-							"size": { "X": 85, "Y": 209 }
-						},
-						{
-							"frameCount": 4,
-							"name": "2founut10_0004",
-							"path": "Image\/Minato\/2founut10_0004",
-							"pivot": { "X": 62.5, "Y": 3.05501175 },
-							"size": { "X": 125, "Y": 192 }
-						},
-						{
-							"frameCount": 6,
-							"name": "2founut10_0006",
-							"path": "Image\/Minato\/2founut10_0006",
-							"pivot": { "X": 59.2362823, "Y": 9.362111 },
-							"size": { "X": 119, "Y": 197 }
-						},
-						{
-							"frameCount": 8,
-							"name": "2founut10_0008",
-							"path": "Image\/Minato\/2founut10_0008",
-							"pivot": { "X": 80.42106, "Y": 22.4210453 },
-							"size": { "X": 114, "Y": 198 }
-						},
-						{
-							"frameCount": 11,
-							"name": "2founut10_0011",
-							"path": "Image\/Minato\/2founut10_0011",
-							"pivot": { "X": 85.2882, "Y": 8.186453 },
-							"size": { "X": 116, "Y": 183 }
-						},
-						{
-							"frameCount": 12,
-							"name": "2founut10_0012",
-							"path": "Image\/Minato\/2founut10_0012",
-							"pivot": { "X": 86.04114, "Y": 7.99108934 },
-							"size": { "X": 121, "Y": 193 }
-						},
-						{
-							"frameCount": 16,
-							"name": "2founut10_0016",
-							"path": "Image\/Minato\/2founut10_0016",
-							"pivot": { "X": 91.319664, "Y": 9.418021 },
-							"size": { "X": 131, "Y": 189 }
-						},
-						{
-							"frameCount": 17,
-							"name": "2founut10_0017",
-							"path": "Image\/Minato\/2founut10_0017",
-							"pivot": { "X": 85.13825, "Y": 7.15632343 },
-							"size": { "X": 115, "Y": 191 }
-						},
-						{
-							"frameCount": 18,
-							"name": "2founut10_0018",
-							"path": "Image\/Minato\/2founut10_0018",
-							"pivot": { "X": 85.6012344, "Y": 6.50385332 },
-							"size": { "X": 128, "Y": 183 }
-						},
-						{
-							"frameCount": 21,
-							"name": "2founut10_0021",
-							"path": "Image\/Minato\/2founut10_0021",
-							"pivot": { "X": 85.63305, "Y": 9.654333 },
-							"size": { "X": 117, "Y": 184 }
-						},
-						{
-							"frameCount": 23,
-							"name": "2founut10_0023",
-							"path": "Image\/Minato\/2founut10_0023",
-							"pivot": { "X": 85.52703, "Y": 8.623679 },
-							"size": { "X": 114, "Y": 193 }
-						},
-						{
-							"frameCount": 24,
-							"name": "2founut10_0024",
-							"path": "Image\/Minato\/2founut10_0024",
-							"pivot": { "X": 84.45286, "Y": 7.27944565 },
-							"size": { "X": 117, "Y": 188 }
-						},
-						{
-							"frameCount": 32,
-							"name": "2founut10_0032",
-							"path": "Image\/Minato\/2founut10_0032",
-							"pivot": { "X": 88.16249, "Y": 9.117096 },
-							"size": { "X": 118, "Y": 184 }
-						},
-						{
-							"frameCount": 35,
-							"name": "2founut10_0035",
-							"path": "Image\/Minato\/2founut10_0035",
-							"pivot": { "X": 84.63692, "Y": 10.4186544 },
-							"size": { "X": 111, "Y": 178 }
-						},
-						{
-							"frameCount": 36,
-							"name": "2founut10_0036",
-							"path": "Image\/Minato\/2founut10_0036",
-							"pivot": { "X": 87.47591, "Y": 9.521645 },
-							"size": { "X": 118, "Y": 181 }
-						},
-						{
-							"frameCount": 39,
-							"name": "2founut10_0039",
-							"path": "Image\/Minato\/2founut10_0039",
-							"pivot": { "X": 97.03931, "Y": 10.0168848 },
-							"size": { "X": 133, "Y": 188 }
-						},
-						{
-							"frameCount": 41,
-							"name": "2founut10_0041",
-							"path": "Image\/Minato\/2founut10_0041",
-							"pivot": { "X": 113.385422, "Y": 11.0511208 },
-							"size": { "X": 152, "Y": 186 }
-						},
-						{
-							"frameCount": 42,
-							"name": "2founut10_0042",
-							"path": "Image\/Minato\/2founut10_0042",
-							"pivot": { "X": 109.315872, "Y": 9.762955 },
-							"size": { "X": 149, "Y": 182 }
-						},
-						{
-							"frameCount": 43,
-							"name": "2founut10_0043",
-							"path": "Image\/Minato\/2founut10_0043",
-							"pivot": { "X": 106.382813, "Y": 6.7350173 },
-							"size": { "X": 184, "Y": 175 }
-						},
-						{
-							"frameCount": 44,
-							"name": "2founut10_0044",
-							"path": "Image\/Minato\/2founut10_0044",
-							"pivot": { "X": 117.774094, "Y": 11.9276733 },
-							"size": { "X": 193, "Y": 181 }
-						},
-						{
-							"frameCount": 47,
-							"name": "2founut10_0047",
-							"path": "Image\/Minato\/2founut10_0047",
-							"pivot": { "X": 99.64996, "Y": 6.18687344 },
-							"size": { "X": 177, "Y": 175 }
-						}
-					]
-				}
-			],
-			"characterName": "Minato"
-		}
-	]
+  "infos": [
+    {
+      "Key": "Minato",
+      "Value": {
+        "animationInfos": [
+          {
+            "Key": "attack_1",
+            "Value": {
+              "animationName": "attack_1",
+              "frameInfos": [
+                {
+                  "Key": 4,
+                  "Value": {
+                    "frameCount": 4,
+                    "name": "attack_1_0004",
+                    "path": "Image\/Character\/Minato\/attack_1_0004",
+                    "pivot": { "X": 65, "Y": 143.5 },
+                    "size": { "X": 130, "Y": 287 }
+                  }
+                },
+                {
+                  "Key": 6,
+                  "Value": {
+                    "frameCount": 6,
+                    "name": "attack_1_0006",
+                    "path": "Image\/Character\/Minato\/attack_1_0006",
+                    "pivot": { "X": 67.5, "Y": 145 },
+                    "size": { "X": 135, "Y": 290 }
+                  }
+                },
+                {
+                  "Key": 14,
+                  "Value": {
+                    "frameCount": 14,
+                    "name": "attack_1_0014",
+                    "path": "Image\/Character\/Minato\/attack_1_0014",
+                    "pivot": { "X": 105.5, "Y": 136 },
+                    "size": { "X": 211, "Y": 272 }
+                  }
+                },
+                {
+                  "Key": 25,
+                  "Value": {
+                    "frameCount": 25,
+                    "name": "attack_1_0025",
+                    "path": "Image\/Character\/Minato\/attack_1_0025",
+                    "pivot": { "X": 71, "Y": 141.5 },
+                    "size": { "X": 142, "Y": 283 }
+                  }
+                }
+              ],
+              "maxFrame": 25
+            }
+          },
+          {
+            "Key": "attack_2",
+            "Value": {
+              "animationName": "attack_2",
+              "frameInfos": [
+                {
+                  "Key": 2,
+                  "Value": {
+                    "frameCount": 2,
+                    "name": "attack_2_0002",
+                    "path": "Image\/Character\/Minato\/attack_2_0002",
+                    "pivot": { "X": 95.5, "Y": 112 },
+                    "size": { "X": 191, "Y": 224 }
+                  }
+                },
+                {
+                  "Key": 5,
+                  "Value": {
+                    "frameCount": 5,
+                    "name": "attack_2_0005",
+                    "path": "Image\/Character\/Minato\/attack_2_0005",
+                    "pivot": { "X": 88, "Y": 122 },
+                    "size": { "X": 176, "Y": 244 }
+                  }
+                },
+                {
+                  "Key": 6,
+                  "Value": {
+                    "frameCount": 6,
+                    "name": "attack_2_0006",
+                    "path": "Image\/Character\/Minato\/attack_2_0006",
+                    "pivot": { "X": 129, "Y": 139.5 },
+                    "size": { "X": 258, "Y": 279 }
+                  }
+                },
+                {
+                  "Key": 8,
+                  "Value": {
+                    "frameCount": 8,
+                    "name": "attack_2_0008",
+                    "path": "Image\/Character\/Minato\/attack_2_0008",
+                    "pivot": { "X": 94.5, "Y": 114 },
+                    "size": { "X": 189, "Y": 228 }
+                  }
+                },
+                {
+                  "Key": 10,
+                  "Value": {
+                    "frameCount": 10,
+                    "name": "attack_2_0010",
+                    "path": "Image\/Character\/Minato\/attack_2_0010",
+                    "pivot": { "X": 93.5, "Y": 101.5 },
+                    "size": { "X": 187, "Y": 203 }
+                  }
+                },
+                {
+                  "Key": 11,
+                  "Value": {
+                    "frameCount": 11,
+                    "name": "attack_2_0011",
+                    "path": "Image\/Character\/Minato\/attack_2_0011",
+                    "pivot": { "X": 137, "Y": 92.5 },
+                    "size": { "X": 274, "Y": 185 }
+                  }
+                },
+                {
+                  "Key": 15,
+                  "Value": {
+                    "frameCount": 15,
+                    "name": "attack_2_0015",
+                    "path": "Image\/Character\/Minato\/attack_2_0015",
+                    "pivot": { "X": 102, "Y": 114 },
+                    "size": { "X": 204, "Y": 228 }
+                  }
+                },
+                {
+                  "Key": 20,
+                  "Value": {
+                    "frameCount": 20,
+                    "name": "attack_2_0020",
+                    "path": "Image\/Character\/Minato\/attack_2_0020",
+                    "pivot": { "X": 85, "Y": 102 },
+                    "size": { "X": 170, "Y": 204 }
+                  }
+                },
+                {
+                  "Key": 24,
+                  "Value": {
+                    "frameCount": 24,
+                    "name": "attack_2_0024",
+                    "path": "Image\/Character\/Minato\/attack_2_0024",
+                    "pivot": { "X": 69, "Y": 101 },
+                    "size": { "X": 138, "Y": 202 }
+                  }
+                },
+                {
+                  "Key": 32,
+                  "Value": {
+                    "frameCount": 32,
+                    "name": "attack_2_0032",
+                    "path": "Image\/Character\/Minato\/attack_2_0032",
+                    "pivot": { "X": 74, "Y": 121 },
+                    "size": { "X": 148, "Y": 242 }
+                  }
+                }
+              ],
+              "maxFrame": 32
+            }
+          },
+          {
+            "Key": "attack_3",
+            "Value": {
+              "animationName": "attack_3",
+              "frameInfos": [
+                {
+                  "Key": 2,
+                  "Value": {
+                    "frameCount": 2,
+                    "name": "attack_3_0002",
+                    "path": "Image\/Character\/Minato\/attack_3_0002",
+                    "pivot": { "X": 84.5, "Y": 97.5 },
+                    "size": { "X": 169, "Y": 195 }
+                  }
+                },
+                {
+                  "Key": 3,
+                  "Value": {
+                    "frameCount": 3,
+                    "name": "attack_3_0003",
+                    "path": "Image\/Character\/Minato\/attack_3_0003",
+                    "pivot": { "X": 114.5, "Y": 100.5 },
+                    "size": { "X": 229, "Y": 201 }
+                  }
+                },
+                {
+                  "Key": 5,
+                  "Value": {
+                    "frameCount": 5,
+                    "name": "attack_3_0005",
+                    "path": "Image\/Character\/Minato\/attack_3_0005",
+                    "pivot": { "X": 119.5, "Y": 124.5 },
+                    "size": { "X": 239, "Y": 249 }
+                  }
+                },
+                {
+                  "Key": 7,
+                  "Value": {
+                    "frameCount": 7,
+                    "name": "attack_3_0007",
+                    "path": "Image\/Character\/Minato\/attack_3_0007",
+                    "pivot": { "X": 87, "Y": 149 },
+                    "size": { "X": 174, "Y": 298 }
+                  }
+                },
+                {
+                  "Key": 10,
+                  "Value": {
+                    "frameCount": 10,
+                    "name": "attack_3_0010",
+                    "path": "Image\/Character\/Minato\/attack_3_0010",
+                    "pivot": { "X": 81, "Y": 130 },
+                    "size": { "X": 162, "Y": 260 }
+                  }
+                },
+                {
+                  "Key": 12,
+                  "Value": {
+                    "frameCount": 12,
+                    "name": "attack_3_0012",
+                    "path": "Image\/Character\/Minato\/attack_3_0012",
+                    "pivot": { "X": 93.5, "Y": 134.5 },
+                    "size": { "X": 187, "Y": 269 }
+                  }
+                },
+                {
+                  "Key": 26,
+                  "Value": {
+                    "frameCount": 26,
+                    "name": "attack_3_0026",
+                    "path": "Image\/Character\/Minato\/attack_3_0026",
+                    "pivot": { "X": 90, "Y": 114 },
+                    "size": { "X": 180, "Y": 228 }
+                  }
+                },
+                {
+                  "Key": 30,
+                  "Value": {
+                    "frameCount": 30,
+                    "name": "attack_3_0030",
+                    "path": "Image\/Character\/Minato\/attack_3_0030",
+                    "pivot": { "X": 74.5, "Y": 122.5 },
+                    "size": { "X": 149, "Y": 245 }
+                  }
+                },
+                {
+                  "Key": 32,
+                  "Value": {
+                    "frameCount": 32,
+                    "name": "attack_3_0032",
+                    "path": "Image\/Character\/Minato\/attack_3_0032",
+                    "pivot": { "X": 69.5, "Y": 135 },
+                    "size": { "X": 139, "Y": 270 }
+                  }
+                }
+              ],
+              "maxFrame": 32
+            }
+          },
+          {
+            "Key": "attack_4",
+            "Value": {
+              "animationName": "attack_4",
+              "frameInfos": [
+                {
+                  "Key": 3,
+                  "Value": {
+                    "frameCount": 3,
+                    "name": "attack_4_0003",
+                    "path": "Image\/Character\/Minato\/attack_4_0003",
+                    "pivot": { "X": 77, "Y": 125.5 },
+                    "size": { "X": 154, "Y": 251 }
+                  }
+                },
+                {
+                  "Key": 4,
+                  "Value": {
+                    "frameCount": 4,
+                    "name": "attack_4_0004",
+                    "path": "Image\/Character\/Minato\/attack_4_0004",
+                    "pivot": { "X": 143.5, "Y": 89 },
+                    "size": { "X": 287, "Y": 178 }
+                  }
+                },
+                {
+                  "Key": 6,
+                  "Value": {
+                    "frameCount": 6,
+                    "name": "attack_4_0006",
+                    "path": "Image\/Character\/Minato\/attack_4_0006",
+                    "pivot": { "X": 81, "Y": 113.5 },
+                    "size": { "X": 162, "Y": 227 }
+                  }
+                },
+                {
+                  "Key": 8,
+                  "Value": {
+                    "frameCount": 8,
+                    "name": "attack_4_0008",
+                    "path": "Image\/Character\/Minato\/attack_4_0008",
+                    "pivot": { "X": 113, "Y": 74 },
+                    "size": { "X": 226, "Y": 148 }
+                  }
+                },
+                {
+                  "Key": 9,
+                  "Value": {
+                    "frameCount": 9,
+                    "name": "attack_4_0009",
+                    "path": "Image\/Character\/Minato\/attack_4_0009",
+                    "pivot": { "X": 95.5, "Y": 116.5 },
+                    "size": { "X": 191, "Y": 233 }
+                  }
+                },
+                {
+                  "Key": 15,
+                  "Value": {
+                    "frameCount": 15,
+                    "name": "attack_4_0015",
+                    "path": "Image\/Character\/Minato\/attack_4_0015",
+                    "pivot": { "X": 105, "Y": 123 },
+                    "size": { "X": 210, "Y": 246 }
+                  }
+                },
+                {
+                  "Key": 20,
+                  "Value": {
+                    "frameCount": 20,
+                    "name": "attack_4_0020",
+                    "path": "Image\/Character\/Minato\/attack_4_0020",
+                    "pivot": { "X": 133, "Y": 74.5 },
+                    "size": { "X": 266, "Y": 149 }
+                  }
+                },
+                {
+                  "Key": 21,
+                  "Value": {
+                    "frameCount": 21,
+                    "name": "attack_4_0021",
+                    "path": "Image\/Character\/Minato\/attack_4_0021",
+                    "pivot": { "X": 150, "Y": 113.5 },
+                    "size": { "X": 300, "Y": 227 }
+                  }
+                },
+                {
+                  "Key": 24,
+                  "Value": {
+                    "frameCount": 24,
+                    "name": "attack_4_0024",
+                    "path": "Image\/Character\/Minato\/attack_4_0024",
+                    "pivot": { "X": 95, "Y": 118 },
+                    "size": { "X": 190, "Y": 236 }
+                  }
+                },
+                {
+                  "Key": 26,
+                  "Value": {
+                    "frameCount": 26,
+                    "name": "attack_4_0026",
+                    "path": "Image\/Character\/Minato\/attack_4_0026",
+                    "pivot": { "X": 132.5, "Y": 94.5 },
+                    "size": { "X": 265, "Y": 189 }
+                  }
+                },
+                {
+                  "Key": 28,
+                  "Value": {
+                    "frameCount": 28,
+                    "name": "attack_4_0028",
+                    "path": "Image\/Character\/Minato\/attack_4_0028",
+                    "pivot": { "X": 102, "Y": 84.5 },
+                    "size": { "X": 204, "Y": 169 }
+                  }
+                }
+              ],
+              "maxFrame": 28
+            }
+          },
+          {
+            "Key": "attack_5",
+            "Value": {
+              "animationName": "attack_5",
+              "frameInfos": [
+                {
+                  "Key": 7,
+                  "Value": {
+                    "frameCount": 7,
+                    "name": "attack_5_0007",
+                    "path": "Image\/Character\/Minato\/attack_5_0007",
+                    "pivot": { "X": 99.5, "Y": 92 },
+                    "size": { "X": 199, "Y": 184 }
+                  }
+                },
+                {
+                  "Key": 12,
+                  "Value": {
+                    "frameCount": 12,
+                    "name": "attack_5_0012",
+                    "path": "Image\/Character\/Minato\/attack_5_0012",
+                    "pivot": { "X": 135.5, "Y": 121.5 },
+                    "size": { "X": 271, "Y": 243 }
+                  }
+                },
+                {
+                  "Key": 14,
+                  "Value": {
+                    "frameCount": 14,
+                    "name": "attack_5_0014",
+                    "path": "Image\/Character\/Minato\/attack_5_0014",
+                    "pivot": { "X": 135.5, "Y": 126 },
+                    "size": { "X": 271, "Y": 252 }
+                  }
+                },
+                {
+                  "Key": 20,
+                  "Value": {
+                    "frameCount": 20,
+                    "name": "attack_5_0020",
+                    "path": "Image\/Character\/Minato\/attack_5_0020",
+                    "pivot": { "X": 110, "Y": 129.5 },
+                    "size": { "X": 220, "Y": 259 }
+                  }
+                },
+                {
+                  "Key": 26,
+                  "Value": {
+                    "frameCount": 26,
+                    "name": "attack_5_0026",
+                    "path": "Image\/Character\/Minato\/attack_5_0026",
+                    "pivot": { "X": 78.5, "Y": 143.5 },
+                    "size": { "X": 157, "Y": 287 }
+                  }
+                }
+              ],
+              "maxFrame": 26
+            }
+          },
+          {
+            "Key": "call",
+            "Value": {
+              "animationName": "call",
+              "frameInfos": [
+                {
+                  "Key": 1,
+                  "Value": {
+                    "frameCount": 1,
+                    "name": "call_0001",
+                    "path": "Image\/Character\/Minato\/call_0001",
+                    "pivot": { "X": 76.5, "Y": 144.5 },
+                    "size": { "X": 153, "Y": 289 }
+                  }
+                },
+                {
+                  "Key": 3,
+                  "Value": {
+                    "frameCount": 3,
+                    "name": "call_0003",
+                    "path": "Image\/Character\/Minato\/call_0003",
+                    "pivot": { "X": 68.5, "Y": 144 },
+                    "size": { "X": 137, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 4,
+                  "Value": {
+                    "frameCount": 4,
+                    "name": "call_0004",
+                    "path": "Image\/Character\/Minato\/call_0004",
+                    "pivot": { "X": 70, "Y": 142.5 },
+                    "size": { "X": 140, "Y": 285 }
+                  }
+                },
+                {
+                  "Key": 5,
+                  "Value": {
+                    "frameCount": 5,
+                    "name": "call_0005",
+                    "path": "Image\/Character\/Minato\/call_0005",
+                    "pivot": { "X": 68, "Y": 142 },
+                    "size": { "X": 136, "Y": 284 }
+                  }
+                }
+              ],
+              "maxFrame": 5
+            }
+          },
+          {
+            "Key": "idle",
+            "Value": {
+              "animationName": "idle",
+              "frameInfos": [
+                {
+                  "Key": 0,
+                  "Value": {
+                    "frameCount": 0,
+                    "name": "idle_0000",
+                    "path": "Image\/Character\/Minato\/idle_0000",
+                    "pivot": { "X": 49.83279, "Y": 4.09788036 },
+                    "size": { "X": 155, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 2,
+                  "Value": {
+                    "frameCount": 2,
+                    "name": "idle_0002",
+                    "path": "Image\/Character\/Minato\/idle_0002",
+                    "pivot": { "X": 52.3988266, "Y": 4.61990356 },
+                    "size": { "X": 157, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 7,
+                  "Value": {
+                    "frameCount": 7,
+                    "name": "idle_0007",
+                    "path": "Image\/Character\/Minato\/idle_0007",
+                    "pivot": { "X": 59.0089722, "Y": 4.09788036 },
+                    "size": { "X": 165, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 10,
+                  "Value": {
+                    "frameCount": 10,
+                    "name": "idle_0010",
+                    "path": "Image\/Character\/Minato\/idle_0010",
+                    "pivot": { "X": 66.38037, "Y": 4.268622 },
+                    "size": { "X": 173, "Y": 300 }
+                  }
+                },
+                {
+                  "Key": 12,
+                  "Value": {
+                    "frameCount": 12,
+                    "name": "idle_0012",
+                    "path": "Image\/Character\/Minato\/idle_0012",
+                    "pivot": { "X": 67.2320251, "Y": 4.08366 },
+                    "size": { "X": 174, "Y": 287 }
+                  }
+                },
+                {
+                  "Key": 14,
+                  "Value": {
+                    "frameCount": 14,
+                    "name": "idle_0014",
+                    "path": "Image\/Character\/Minato\/idle_0014",
+                    "pivot": { "X": 66.76668, "Y": 3.86664 },
+                    "size": { "X": 173, "Y": 300 }
+                  }
+                },
+                {
+                  "Key": 17,
+                  "Value": {
+                    "frameCount": 17,
+                    "name": "idle_0017",
+                    "path": "Image\/Character\/Minato\/idle_0017",
+                    "pivot": { "X": 59.4600029, "Y": 3.711955 },
+                    "size": { "X": 165, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 22,
+                  "Value": {
+                    "frameCount": 22,
+                    "name": "idle_0022",
+                    "path": "Image\/Character\/Minato\/idle_0022",
+                    "pivot": { "X": 52.3880234, "Y": 3.711955 },
+                    "size": { "X": 157, "Y": 288 }
+                  }
+                },
+                {
+                  "Key": 24,
+                  "Value": {
+                    "frameCount": 24,
+                    "name": "idle_0024",
+                    "path": "Image\/Character\/Minato\/idle_0024",
+                    "pivot": { "X": 50.87601, "Y": 3.711955 },
+                    "size": { "X": 155, "Y": 288 }
+                  }
+                }
+              ],
+              "maxFrame": 24
+            }
+          },
+          {
+            "Key": "move",
+            "Value": {
+              "animationName": "move",
+              "frameInfos": [
+                {
+                  "Key": 0,
+                  "Value": {
+                    "frameCount": 0,
+                    "name": "move_0000",
+                    "path": "Image\/Character\/Minato\/move_0000",
+                    "pivot": { "X": 125.5, "Y": 114 },
+                    "size": { "X": 251, "Y": 228 }
+                  }
+                },
+                {
+                  "Key": 3,
+                  "Value": {
+                    "frameCount": 3,
+                    "name": "move_0003",
+                    "path": "Image\/Character\/Minato\/move_0003",
+                    "pivot": { "X": 107.5, "Y": 106.5 },
+                    "size": { "X": 215, "Y": 213 }
+                  }
+                },
+                {
+                  "Key": 5,
+                  "Value": {
+                    "frameCount": 5,
+                    "name": "move_0005",
+                    "path": "Image\/Character\/Minato\/move_0005",
+                    "pivot": { "X": 111.5, "Y": 108 },
+                    "size": { "X": 223, "Y": 216 }
+                  }
+                },
+                {
+                  "Key": 9,
+                  "Value": {
+                    "frameCount": 9,
+                    "name": "move_0009",
+                    "path": "Image\/Character\/Minato\/move_0009",
+                    "pivot": { "X": 129.5, "Y": 111.5 },
+                    "size": { "X": 259, "Y": 223 }
+                  }
+                },
+                {
+                  "Key": 12,
+                  "Value": {
+                    "frameCount": 12,
+                    "name": "move_0012",
+                    "path": "Image\/Character\/Minato\/move_0012",
+                    "pivot": { "X": 99, "Y": 109.5 },
+                    "size": { "X": 198, "Y": 219 }
+                  }
+                },
+                {
+                  "Key": 13,
+                  "Value": {
+                    "frameCount": 13,
+                    "name": "move_0013",
+                    "path": "Image\/Character\/Minato\/move_0013",
+                    "pivot": { "X": 103.5, "Y": 112.5 },
+                    "size": { "X": 207, "Y": 225 }
+                  }
+                }
+              ],
+              "maxFrame": 13
+            }
+          },
+          {
+            "Key": "skill_3",
+            "Value": {
+              "animationName": "skill_3",
+              "frameInfos": [
+                {
+                  "Key": 0,
+                  "Value": {
+                    "frameCount": 0,
+                    "name": "skill_3_0000",
+                    "path": "Image\/Character\/Minato\/skill_3_0000",
+                    "pivot": { "X": 43, "Y": 97 },
+                    "size": { "X": 86, "Y": 194 }
+                  }
+                },
+                {
+                  "Key": 2,
+                  "Value": {
+                    "frameCount": 2,
+                    "name": "skill_3_0002",
+                    "path": "Image\/Character\/Minato\/skill_3_0002",
+                    "pivot": { "X": 42.5, "Y": 104.5 },
+                    "size": { "X": 85, "Y": 209 }
+                  }
+                },
+                {
+                  "Key": 4,
+                  "Value": {
+                    "frameCount": 4,
+                    "name": "skill_3_0004",
+                    "path": "Image\/Character\/Minato\/skill_3_0004",
+                    "pivot": { "X": 62.5, "Y": 96 },
+                    "size": { "X": 125, "Y": 192 }
+                  }
+                },
+                {
+                  "Key": 6,
+                  "Value": {
+                    "frameCount": 6,
+                    "name": "skill_3_0006",
+                    "path": "Image\/Character\/Minato\/skill_3_0006",
+                    "pivot": { "X": 59.5, "Y": 98.5 },
+                    "size": { "X": 119, "Y": 197 }
+                  }
+                },
+                {
+                  "Key": 8,
+                  "Value": {
+                    "frameCount": 8,
+                    "name": "skill_3_0008",
+                    "path": "Image\/Character\/Minato\/skill_3_0008",
+                    "pivot": { "X": 57, "Y": 99 },
+                    "size": { "X": 114, "Y": 198 }
+                  }
+                },
+                {
+                  "Key": 11,
+                  "Value": {
+                    "frameCount": 11,
+                    "name": "skill_3_0011",
+                    "path": "Image\/Character\/Minato\/skill_3_0011",
+                    "pivot": { "X": 58, "Y": 91.5 },
+                    "size": { "X": 116, "Y": 183 }
+                  }
+                },
+                {
+                  "Key": 12,
+                  "Value": {
+                    "frameCount": 12,
+                    "name": "skill_3_0012",
+                    "path": "Image\/Character\/Minato\/skill_3_0012",
+                    "pivot": { "X": 60.5, "Y": 96.5 },
+                    "size": { "X": 121, "Y": 193 }
+                  }
+                },
+                {
+                  "Key": 16,
+                  "Value": {
+                    "frameCount": 16,
+                    "name": "skill_3_0016",
+                    "path": "Image\/Character\/Minato\/skill_3_0016",
+                    "pivot": { "X": 65.5, "Y": 94.5 },
+                    "size": { "X": 131, "Y": 189 }
+                  }
+                },
+                {
+                  "Key": 17,
+                  "Value": {
+                    "frameCount": 17,
+                    "name": "skill_3_0017",
+                    "path": "Image\/Character\/Minato\/skill_3_0017",
+                    "pivot": { "X": 57.5, "Y": 95.5 },
+                    "size": { "X": 115, "Y": 191 }
+                  }
+                },
+                {
+                  "Key": 18,
+                  "Value": {
+                    "frameCount": 18,
+                    "name": "skill_3_0018",
+                    "path": "Image\/Character\/Minato\/skill_3_0018",
+                    "pivot": { "X": 64, "Y": 91.5 },
+                    "size": { "X": 128, "Y": 183 }
+                  }
+                },
+                {
+                  "Key": 21,
+                  "Value": {
+                    "frameCount": 21,
+                    "name": "skill_3_0021",
+                    "path": "Image\/Character\/Minato\/skill_3_0021",
+                    "pivot": { "X": 58.5, "Y": 92 },
+                    "size": { "X": 117, "Y": 184 }
+                  }
+                },
+                {
+                  "Key": 23,
+                  "Value": {
+                    "frameCount": 23,
+                    "name": "skill_3_0023",
+                    "path": "Image\/Character\/Minato\/skill_3_0023",
+                    "pivot": { "X": 57, "Y": 96.5 },
+                    "size": { "X": 114, "Y": 193 }
+                  }
+                },
+                {
+                  "Key": 24,
+                  "Value": {
+                    "frameCount": 24,
+                    "name": "skill_3_0024",
+                    "path": "Image\/Character\/Minato\/skill_3_0024",
+                    "pivot": { "X": 58.5, "Y": 94 },
+                    "size": { "X": 117, "Y": 188 }
+                  }
+                },
+                {
+                  "Key": 32,
+                  "Value": {
+                    "frameCount": 32,
+                    "name": "skill_3_0032",
+                    "path": "Image\/Character\/Minato\/skill_3_0032",
+                    "pivot": { "X": 59, "Y": 92 },
+                    "size": { "X": 118, "Y": 184 }
+                  }
+                },
+                {
+                  "Key": 35,
+                  "Value": {
+                    "frameCount": 35,
+                    "name": "skill_3_0035",
+                    "path": "Image\/Character\/Minato\/skill_3_0035",
+                    "pivot": { "X": 55.5, "Y": 89 },
+                    "size": { "X": 111, "Y": 178 }
+                  }
+                },
+                {
+                  "Key": 36,
+                  "Value": {
+                    "frameCount": 36,
+                    "name": "skill_3_0036",
+                    "path": "Image\/Character\/Minato\/skill_3_0036",
+                    "pivot": { "X": 59, "Y": 90.5 },
+                    "size": { "X": 118, "Y": 181 }
+                  }
+                },
+                {
+                  "Key": 39,
+                  "Value": {
+                    "frameCount": 39,
+                    "name": "skill_3_0039",
+                    "path": "Image\/Character\/Minato\/skill_3_0039",
+                    "pivot": { "X": 66.5, "Y": 94 },
+                    "size": { "X": 133, "Y": 188 }
+                  }
+                },
+                {
+                  "Key": 41,
+                  "Value": {
+                    "frameCount": 41,
+                    "name": "skill_3_0041",
+                    "path": "Image\/Character\/Minato\/skill_3_0041",
+                    "pivot": { "X": 76, "Y": 93 },
+                    "size": { "X": 152, "Y": 186 }
+                  }
+                },
+                {
+                  "Key": 42,
+                  "Value": {
+                    "frameCount": 42,
+                    "name": "skill_3_0042",
+                    "path": "Image\/Character\/Minato\/skill_3_0042",
+                    "pivot": { "X": 74.5, "Y": 91 },
+                    "size": { "X": 149, "Y": 182 }
+                  }
+                },
+                {
+                  "Key": 43,
+                  "Value": {
+                    "frameCount": 43,
+                    "name": "skill_3_0043",
+                    "path": "Image\/Character\/Minato\/skill_3_0043",
+                    "pivot": { "X": 92, "Y": 87.5 },
+                    "size": { "X": 184, "Y": 175 }
+                  }
+                },
+                {
+                  "Key": 44,
+                  "Value": {
+                    "frameCount": 44,
+                    "name": "skill_3_0044",
+                    "path": "Image\/Character\/Minato\/skill_3_0044",
+                    "pivot": { "X": 96.5, "Y": 90.5 },
+                    "size": { "X": 193, "Y": 181 }
+                  }
+                },
+                {
+                  "Key": 47,
+                  "Value": {
+                    "frameCount": 47,
+                    "name": "skill_3_0047",
+                    "path": "Image\/Character\/Minato\/skill_3_0047",
+                    "pivot": { "X": 88.5, "Y": 87.5 },
+                    "size": { "X": 177, "Y": 175 }
+                  }
+                }
+              ],
+              "maxFrame": 47
+            }
+          }
+        ],
+        "characterName": "Minato"
+      }
+    }
+  ]
 }

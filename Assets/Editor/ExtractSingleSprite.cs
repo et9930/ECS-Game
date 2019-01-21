@@ -55,6 +55,8 @@ public class ExtractSingleSprite : EditorWindow
         }        
         EditorUtility.ClearProgressBar();
         isShow = false;
+
+        Debug.Log("Extract Single Sprite Over.");
     }
 
     void OnInspectorUpdate()

@@ -32,6 +32,15 @@ public class MovementControlSystem : IExecuteSystem
                     var tmpHorizontal = _context.key.value.Horizontal * _context.characterBaseAttributes.list.list[e.name.text].baseVelocity;
                     var tmpVertical = _context.key.value.Vertical * _context.characterBaseAttributes.list.list[e.name.text].baseVelocity;
                     e.ReplaceVelocity(new Vector3(tmpHorizontal, 0, tmpVertical));
+
+                    if (_context.key.value.Horizontal > 0)
+                    {
+                        e.ReplaceToward(false);
+                    }
+                    else if (_context.key.value.Horizontal < 0)
+                    {
+                        e.ReplaceToward(true);
+                    }
                 }
             }
         }

@@ -8,13 +8,16 @@ public static class ListenerList
     {
         { "LoadingSceneImage", typeof(LoadingSceneImageListener) },
         { "LoadingSceneProcess", typeof(LoadingSceneProcessListener) },
+        { "LoadingSceneProcessText", typeof(LoadingSceneProcessTextListener) },
         { "LoadingSceneText", typeof(LoadingSceneTextListener) },
         { "LoadingSceneTitle", typeof(LoadingSceneTitleListener) },
-        { "LoadingSceneProcessText", typeof(LoadingSceneProcessTextListener) },
 
         { "Active", typeof(ActiveListener) },
+        { "Fps", typeof(FpsListener) },
         { "Position", typeof(PositionListener) },
+        { "Scale", typeof(ScaleListener) },
         { "Text", typeof(TextListener) },
+        { "Toward", typeof(TowardListener) },
     };
 }
 
