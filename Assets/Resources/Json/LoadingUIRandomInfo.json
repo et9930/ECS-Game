@@ -18,14 +18,14 @@
 		}
 	],
 	"RandomImages": [
-		{
-			"Path": "UI/LoadingProcess/Random001"
-		},
-		{
-			"Path": "UI/LoadingProcess/Random002"
-		},
-		{
-			"Path": "UI/LoadingProcess/Random003"
-		}
+    {
+      "Path": "Image/UI/LoadingProcess/Random001"
+    },
+    {
+      "Path": "Image/UI/LoadingProcess/Random002"
+    },
+    {
+      "Path": "Image/UI/LoadingProcess/Random003"
+    }
 	]
 }

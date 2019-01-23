@@ -272,6 +272,8 @@
     <Compile Include="Assets\Script\Services\UnityServices\UnitySceneService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityTimeService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityViewService.cs" />
+    <Compile Include="Assets\Script\Systems\AnimationEventSystems\AnimationEventSystems.cs" />
+    <Compile Include="Assets\Script\Systems\AnimationEventSystems\CharacterMinatoAESystem.cs" />
     <Compile Include="Assets\Script\Systems\AnimationSystems\AnimationSystems.cs" />
     <Compile Include="Assets\Script\Systems\AnimationSystems\ChangeAnimationSystem.cs" />
     <Compile Include="Assets\Script\Systems\AnimationSystems\PlayAnimationSystem.cs" />

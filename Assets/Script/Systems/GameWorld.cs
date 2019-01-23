@@ -6,6 +6,7 @@
         Add(new GameEventSystems(contexts));
 
         Add(new AnimationSystems(contexts));
+        Add(new AnimationEventSystems(contexts));
         Add(new DisplaySystems(contexts));
         Add(new InputSystems(contexts));
         Add(new LogSystems(contexts));        
