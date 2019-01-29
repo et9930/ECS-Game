@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
+using Vector3 = System.Numerics.Vector3;
 
 public class StoreImageInfo : EditorWindow
 {
@@ -15,10 +16,21 @@ public class StoreImageInfo : EditorWindow
     public static string currect_path = "";
     public static bool isShow = false;
     private static Dictionary<string, CharacterInfo> characterInfos;
-    
+    private static ImageInfos old;
+
     [MenuItem("Tools/Store Image Info In Json File")]
     public static void StoreImageInfoFunc()
     {
+        
+        var configObj = Resources.Load("Json/AnimationInfos");
+        var old_str = configObj.ToString();
+
+        using (var ms = new MemoryStream(Encoding.Unicode.GetBytes(old_str)))
+        {
+            var deseralizer = new DataContractJsonSerializer(typeof(ImageInfos));
+            old = (ImageInfos)deseralizer.ReadObject(ms);//反序列化ReadObject
+        }
+
         characterInfos = new Dictionary<string, CharacterInfo>();
         isShow = true;
         try
@@ -40,12 +52,45 @@ public class StoreImageInfo : EditorWindow
         }
 
         EditorUtility.DisplayProgressBar("Progress", "Write In Json File", 1);
+        CheckOldForceInfo();
         WriteInJsonFile();
 
         EditorUtility.ClearProgressBar();
         isShow = false;     
         
         Debug.Log("Store Image Info In Json File Over.");
+    }
+
+    private static void CheckOldForceInfo()
+    {
+        if (old == null)
+        {
+            return;
+        }
+        foreach (var characterInfo in old.infos)
+        {
+            foreach (var animationInfo in characterInfo.Value.animationInfos)
+            {
+                foreach (var frameInfo in animationInfo.Value.frameInfos)
+                {
+                    if (frameInfo.Value.force == null)
+                    {
+                        continue;
+                    }
+                    if (frameInfo.Value.force.value != Vector3.Zero)
+                    {
+                        characterInfos[characterInfo.Key].animationInfos[animationInfo.Key].frameInfos[frameInfo.Key]
+                            .force = frameInfo.Value.force;
+                    }
+
+                }
+
+                if (characterInfos[characterInfo.Key].animationInfos[animationInfo.Key].maxFrame <
+                    animationInfo.Value.maxFrame)
+                    characterInfos[characterInfo.Key].animationInfos[animationInfo.Key].maxFrame =
+                        animationInfo.Value.maxFrame;
+            }
+        }
     }
 
     private static void WriteInJsonFile()
@@ -106,8 +151,11 @@ public class StoreImageInfo : EditorWindow
                 animInfo.frameInfos.Add(frameInfo.frameCount, frameInfo);
             }
 
+
             if (animInfo != null)
+            {
                 characterInfo.animationInfos.Add(animInfo.animationName, animInfo);
+            }
         }
         catch (Exception e)
         {
@@ -134,6 +182,11 @@ public class StoreImageInfo : EditorWindow
         info.pivot = Utilities.ToSystemNumericsVector2(sprite.pivot);
         info.size.X = sprite.texture.width;
         info.size.Y = sprite.texture.height;
+
+        info.force = new ForceInfo();
+        info.force.value = Vector3.Zero;
+        info.force.direction = false;
+        info.force.duration = 0.0f;
         return info;
     }
 }

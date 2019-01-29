@@ -18,8 +18,15 @@ public class AntiGravitySystem : IExecuteSystem
             if (e.isOnTheGround || e.isOnTheWall)
             { 
                 var newAcceleration = e.acceleration.value;
-                newAcceleration.Y += -_context.physicalConstant.gravity;
+                newAcceleration.Y = 0;
                 e.ReplaceAcceleration(newAcceleration);
+
+                if(e.isOnTheGround)
+                {
+                    var newVelocity = e.velocity.value;
+                    newVelocity.Y = 0;
+                    e.ReplaceVelocity(newVelocity);
+                }
             }
             else
             {

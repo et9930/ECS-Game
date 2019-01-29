@@ -50,4 +50,17 @@ public class FrameInfo
     public Vector2 size;
     [DataMember]
     public Vector2 pivot;
+    [DataMember]
+    public ForceInfo force;
+}
+
+[DataContract]
+public class ForceInfo
+{
+    [DataMember]
+    public bool direction;
+    [DataMember]
+    public Vector3 value;
+    [DataMember]
+    public float duration;
 }

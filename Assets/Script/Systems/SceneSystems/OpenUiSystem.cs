@@ -13,11 +13,15 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     public void Initialize()
     {
+        var layerConfig = _context.uiLayerConfig.config;
+        _context.sceneService.instance.InitializeLayers(layerConfig);
+        _context.uiLayerConfigEntity.isDestroy = true;
+
         _context.ReplaceUuidToEntity(new Dictionary<int, GameEntity>());
+
         var e = _context.CreateEntity();
         e.isUiOpen = true;
         e.ReplaceName("GameState");
-
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

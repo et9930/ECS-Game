@@ -20,5 +20,5 @@ public class CharacterBaseAttributes
 public class Attributes
 {
     [DataMember]
-    public int baseVelocity;
+    public float baseVelocity;
 }

@@ -33,6 +33,7 @@ public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         foreach (var e in entities)
         {
+            _context.CreateEntity().ReplaceDebugMessage(e.name.text + " add view");
             _context.viewService.instance.InitializeView(_contexts, e, e.name.text);
             _context.viewService.instance.LoadSprite(_contexts, e, e.name.text, e.sprite.path);
             e.isView = true;

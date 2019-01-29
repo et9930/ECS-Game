@@ -8,7 +8,57 @@
         "CharacterMinX": -63.5,
         "CharacterMaxX": 38.5,
         "CharacterMinZ": 0,
-        "CharacterMaxZ": 2 
+        "CharacterMaxZ": 2,
+        "Camera_1_Position": {
+          "X": -55,
+          "Y": 0,
+          "Z": -10
+        },
+        "Camera_2_Position": {
+          "X": 30,
+          "Y": 0,
+          "Z": -10
+        },
+        "Character_1_InPosition": {
+          "X": -57,
+          "Y": 3,
+          "Z": 1
+        },
+        "Character_2_InPosition": {
+          "X": -60,
+          "Y": 3,
+          "Z": 0
+        },
+        "Character_3_InPosition": {
+          "X": -60,
+          "Y": 3,
+          "Z": 2
+        },
+        "Character_4_InPosition": {
+          "X": -60,
+          "Y": 3,
+          "Z": 1
+        },
+        "Character_5_InPosition": {
+          "X": 32,
+          "Y": 3,
+          "Z": 1
+        },
+        "Character_6_InPosition": {
+          "X": 35,
+          "Y": 3,
+          "Z": 0
+        },
+        "Character_7_InPosition": {
+          "X": 35,
+          "Y": 3,
+          "Z": 2
+        },
+        "Character_8_InPosition": {
+          "X": 35,
+          "Y": 3,
+          "Z": 1
+        }
       } 
     }
   ] 

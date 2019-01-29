@@ -10,5 +10,5 @@ public interface ISceneService
     int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity);
     void CloseUI(int id);
     void AllowSceneActive(bool active);
-    void MoveMainCamera(Vector3 position);
+    Vector3 MainCameraPosition { get; set; }
 }

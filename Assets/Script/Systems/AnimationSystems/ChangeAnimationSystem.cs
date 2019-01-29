@@ -31,6 +31,12 @@ public class ChangeAnimationSystem : ReactiveSystem<GameEntity>
                     continue;
                 }
             }
+            _context.CreateEntity().ReplaceDebugMessage("Change " + e.name.text + " animation to " + e.animation.name);
+            if (e.animation.name == "idle")
+            {
+                e.isBusying = false;
+                e.isMoving = false;
+            }
             e.ReplaceCurrentAnimation(e.animation.name);
             e.ReplaceAnimationFrame(0);
         }

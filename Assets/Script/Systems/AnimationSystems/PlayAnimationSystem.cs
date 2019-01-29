@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
@@ -35,27 +36,49 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
             var lastFrame = e.animationFrame.value;
             var currentFrame = lastFrame + _context.animationFrameRate.value / _context.currentFps.value; ;
 
-            if (animationInfo.frameInfos.ContainsKey((int)currentFrame))
+            if (animationInfo.frameInfos.ContainsKey((int)currentFrame) && (int)lastFrame != (int)currentFrame)
             {
+                // change sprite
                 e.ReplaceSprite(animationInfo.frameInfos[(int)currentFrame].path);
+                // add force
+                if (animationInfo.frameInfos[(int)currentFrame].force.value != Vector3.Zero)
+                {
+                    _context.CreateEntity().ReplaceDebugMessage(e.name.text + " add animation force");
+                    var force = animationInfo.frameInfos[(int) currentFrame].force;
+                    var forceValue = force.value;
+                    if (force.direction != e.toward.left)
+                    {
+                        forceValue.X = -forceValue.X;
+                    }
+                    e.ReplaceAddForce(forceValue, force.duration);
+                }
             }
 
+            // animation event
             if (animationEventInfo != null)
             {
                 if (animationEventInfo.ContainsKey((int)currentFrame) && (int)lastFrame != (int)currentFrame)
                 {
+                    _context.CreateEntity().ReplaceDebugMessage(e.name.text + " animation event");
                     animationEventInfo[(int)currentFrame]();
                 }
             }
+
             
-            if (currentFrame > animationInfo.maxFrame && e.animation.loop)
+            
+            // animation end
+            if (currentFrame > animationInfo.maxFrame)
             {
-                currentFrame = 0;
+                if (e.animation.loop)
+                {
+                    currentFrame = 0;
+                }
+                else
+                {
+                    e.ReplaceAnimation("idle", true);
+                }
             }
-            else
-            {
-                e.ReplaceAnimation("idle", true);
-            }
+
 
             e.ReplaceAnimationFrame(currentFrame);
         }

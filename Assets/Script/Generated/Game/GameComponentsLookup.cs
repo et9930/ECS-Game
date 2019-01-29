@@ -21,71 +21,72 @@ public static class GameComponentsLookup {
     public const int AnyCurrentFpsListener = 10;
     public const int AnyLoadingSceneProcessListener = 11;
     public const int AnyLoadingSceneTextImageListener = 12;
-    public const int CharacterBaseAttributes = 13;
-    public const int CoroutineService = 14;
-    public const int CurrentAnimation = 15;
-    public const int CurrentFps = 16;
-    public const int CurrentMapName = 17;
-    public const int CurrentPlayerId = 18;
-    public const int CurrentScene = 19;
-    public const int DebugMessage = 20;
-    public const int Destroy = 21;
-    public const int Friction = 22;
-    public const int ImageAsset = 23;
-    public const int InitializePhysical = 24;
-    public const int Key = 25;
-    public const int KeyInputService = 26;
-    public const int LastUpdateFpsTime = 27;
-    public const int Layer = 28;
-    public const int LeftMouse = 29;
-    public const int LoadConfigService = 30;
-    public const int LoadingSceneProcess = 31;
-    public const int LoadingSceneTextImage = 32;
-    public const int LoadingUiRandomInfo = 33;
-    public const int LoadPlayer = 34;
-    public const int LoadScene = 35;
-    public const int LoginInfo = 36;
-    public const int LogService = 37;
-    public const int MapConfig = 38;
-    public const int Mass = 39;
-    public const int MaxSpeed = 40;
-    public const int MouseDown = 41;
-    public const int MouseInputService = 42;
-    public const int MousePosition = 43;
-    public const int MouseUp = 44;
-    public const int MoveTarget = 45;
-    public const int Moving = 46;
-    public const int Name = 47;
-    public const int OnTheGround = 48;
-    public const int OnTheWall = 49;
-    public const int PhysicalConstant = 50;
-    public const int Player = 51;
-    public const int PlayerId = 52;
-    public const int Position = 53;
-    public const int PositionListener = 54;
-    public const int RightMouse = 55;
-    public const int Scale = 56;
-    public const int ScaleListener = 57;
-    public const int SceneConfig = 58;
-    public const int SceneService = 59;
-    public const int SignInInfo = 60;
-    public const int Sprite = 61;
-    public const int Text = 62;
-    public const int TextListener = 63;
-    public const int TimeService = 64;
-    public const int Toward = 65;
-    public const int TowardListener = 66;
-    public const int UiClose = 67;
-    public const int UiConfig = 68;
-    public const int UiLayerConfig = 69;
-    public const int UiOpen = 70;
-    public const int UiRootId = 71;
-    public const int UuidToEntity = 72;
-    public const int Velocity = 73;
-    public const int View = 74;
-    public const int ViewService = 75;
+    public const int Busying = 13;
+    public const int CharacterBaseAttributes = 14;
+    public const int CoroutineService = 15;
+    public const int CurrentAnimation = 16;
+    public const int CurrentFps = 17;
+    public const int CurrentMapName = 18;
+    public const int CurrentPlayerId = 19;
+    public const int CurrentScene = 20;
+    public const int DebugMessage = 21;
+    public const int Destroy = 22;
+    public const int Friction = 23;
+    public const int ImageAsset = 24;
+    public const int InitializePhysical = 25;
+    public const int Key = 26;
+    public const int KeyInputService = 27;
+    public const int LastUpdateFpsTime = 28;
+    public const int Layer = 29;
+    public const int LeftMouse = 30;
+    public const int LoadConfigService = 31;
+    public const int LoadingSceneProcess = 32;
+    public const int LoadingSceneTextImage = 33;
+    public const int LoadingUiRandomInfo = 34;
+    public const int LoadPlayer = 35;
+    public const int LoadScene = 36;
+    public const int LoginInfo = 37;
+    public const int LogService = 38;
+    public const int MapConfig = 39;
+    public const int Mass = 40;
+    public const int MaxSpeed = 41;
+    public const int MouseDown = 42;
+    public const int MouseInputService = 43;
+    public const int MousePosition = 44;
+    public const int MouseUp = 45;
+    public const int MoveTarget = 46;
+    public const int Moving = 47;
+    public const int Name = 48;
+    public const int OnTheGround = 49;
+    public const int OnTheWall = 50;
+    public const int PhysicalConstant = 51;
+    public const int Player = 52;
+    public const int PlayerId = 53;
+    public const int Position = 54;
+    public const int PositionListener = 55;
+    public const int RightMouse = 56;
+    public const int Scale = 57;
+    public const int ScaleListener = 58;
+    public const int SceneConfig = 59;
+    public const int SceneService = 60;
+    public const int SignInInfo = 61;
+    public const int Sprite = 62;
+    public const int Text = 63;
+    public const int TextListener = 64;
+    public const int TimeService = 65;
+    public const int Toward = 66;
+    public const int TowardListener = 67;
+    public const int UiClose = 68;
+    public const int UiConfig = 69;
+    public const int UiLayerConfig = 70;
+    public const int UiOpen = 71;
+    public const int UiRootId = 72;
+    public const int UuidToEntity = 73;
+    public const int Velocity = 74;
+    public const int View = 75;
+    public const int ViewService = 76;
 
-    public const int TotalComponents = 76;
+    public const int TotalComponents = 77;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -101,6 +102,7 @@ public static class GameComponentsLookup {
         "AnyCurrentFpsListener",
         "AnyLoadingSceneProcessListener",
         "AnyLoadingSceneTextImageListener",
+        "Busying",
         "CharacterBaseAttributes",
         "CoroutineService",
         "CurrentAnimation",
@@ -180,6 +182,7 @@ public static class GameComponentsLookup {
         typeof(AnyCurrentFpsListenerComponent),
         typeof(AnyLoadingSceneProcessListenerComponent),
         typeof(AnyLoadingSceneTextImageListenerComponent),
+        typeof(BusyingComponent),
         typeof(CharacterBaseAttributesComponent),
         typeof(CoroutineServiceComponent),
         typeof(CurrentAnimationComponent),

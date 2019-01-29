@@ -12,6 +12,7 @@ public class VelocitySystem : IExecuteSystem
     public void Execute()
     {
         if (_context.currentScene.name != "BattleScene") return;
+        if (!_context.hasCurrentMapName) return;
 
         var currentMapConfig = _context.mapConfig.list.list[_context.currentMapName.value];
 
@@ -33,12 +34,21 @@ public class VelocitySystem : IExecuteSystem
 
                 if (newPosition.X > currentMapConfig.CharacterMaxX)
                     newPosition.X = currentMapConfig.CharacterMaxX;
+
+                if (newPosition.Y < 0)
+                    newPosition.Y = 0;
+                
                 
                 if (newPosition.Z < currentMapConfig.CharacterMinZ)
                     newPosition.Z = currentMapConfig.CharacterMinZ;
 
                 if (newPosition.Z > currentMapConfig.CharacterMaxZ)
                     newPosition.Z = currentMapConfig.CharacterMaxZ;
+
+                if (newPosition.Y == 0.0f)
+                {
+                    e.isOnTheGround = true;
+                }
 
                 e.ReplacePosition(newPosition);
             }

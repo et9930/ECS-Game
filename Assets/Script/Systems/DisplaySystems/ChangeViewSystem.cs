@@ -27,7 +27,6 @@ public class ChangeViewSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             _context.viewService.instance.LoadSprite(_contexts, e, e.name.text, e.sprite.path);
-
         }
     }
 }

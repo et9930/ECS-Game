@@ -91,14 +91,5 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         // switch to new scene
         _context.sceneService.instance.AllowSceneActive(true);
         _context.ReplaceCurrentScene(sceneName);
-
-        // test
-        _context.ReplaceCurrentPlayerId(100);
-        _context.ReplaceCurrentMapName("ProvingGroundMap");
-        _context.ReplaceCurrentScene("BattleScene");
-        _context.CreateEntity().ReplaceLoadPlayer(100, "Minato");
-        
     }
-
-
 }

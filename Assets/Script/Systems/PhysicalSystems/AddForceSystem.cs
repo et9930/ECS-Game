@@ -31,20 +31,25 @@ public class AddForceSystem : ReactiveSystem<GameEntity>
 
     private IEnumerator AddForceToEntity(GameEntity e)
     {
+        _context.CreateEntity().ReplaceDebugMessage(e.name.text + " add force " + e.addForce.ForceValue);
+        var forceValue = e.addForce.ForceValue;
+        var durationTime = e.addForce.DurationTime;
         var addForceAcceleration = e.acceleration.value;
-        addForceAcceleration.X += e.addForce.ForceValue.X / e.mass.value;
-        addForceAcceleration.Y += e.addForce.ForceValue.Y / e.mass.value;
-        addForceAcceleration.Z += e.addForce.ForceValue.Z / e.mass.value;
+        addForceAcceleration.X += forceValue.X / e.mass.value;
+        addForceAcceleration.Y += forceValue.Y / e.mass.value;
+        addForceAcceleration.Z += forceValue.Z / e.mass.value;
         e.ReplaceAcceleration(addForceAcceleration);
+        e.RemoveAddForce();
 
-        yield return _context.coroutineService.instance.WaitForSeconds(e.addForce.DurationTime);
+        yield return _context.coroutineService.instance.WaitForSeconds(durationTime);
 
+        _context.CreateEntity().ReplaceDebugMessage(e.name.text + " remove force " + forceValue);
         var removeForceAcceleration = e.acceleration.value;
-        removeForceAcceleration.X -= e.addForce.ForceValue.X / e.mass.value;
-        removeForceAcceleration.Y -= e.addForce.ForceValue.Y / e.mass.value;
-        removeForceAcceleration.Z -= e.addForce.ForceValue.Y / e.mass.value;
+        removeForceAcceleration.X -= forceValue.X / e.mass.value;
+        removeForceAcceleration.Y -= forceValue.Y / e.mass.value;
+        removeForceAcceleration.Z -= forceValue.Z / e.mass.value;
         e.ReplaceAcceleration(removeForceAcceleration);
 
-        e.RemoveAddForce();
+        
     }
 }

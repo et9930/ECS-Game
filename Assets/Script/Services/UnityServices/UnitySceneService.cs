@@ -67,9 +67,9 @@ public class UnitySceneService : ISceneService
         _openSceneOperation.allowSceneActivation = active;
     }
 
-    public void MoveMainCamera(System.Numerics.Vector3 position)
-    {
-        Camera.main.transform.position = Utilities.ToUnityEngineVector3(position);
+    public System.Numerics.Vector3 MainCameraPosition {
+        get { return Utilities.ToSystemNumericsVector3(Camera.main.transform.position); }
+        set { Camera.main.transform.position = Utilities.ToUnityEngineVector3(value); }
     }
 
     public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity)

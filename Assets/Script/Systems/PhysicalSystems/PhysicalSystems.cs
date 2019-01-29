@@ -8,13 +8,10 @@
         // Reactive Systems
         Add(new GravitySystem(contexts));
         Add(new AntiGravitySystem(contexts));
-
         Add(new AddForceSystem(contexts));
-
         Add(new AccelerationSystem(contexts));
-
+        Add(new FrictionalSystem(contexts));
         Add(new VelocitySystem(contexts));
-
         Add(new AddPhysicalComponentSystem(contexts));
     }
 }
