@@ -2,49 +2,186 @@
   "UIConfigs": [
     {
       "Components": [
-        { "ComponentName": "GameState", "ComponentPath": "GameState", "Listener": ["Active"] },
-        { "ComponentName": "FpsValue", "ComponentPath": "GameState\/Fps\/FpsValue", "Listener": ["Active", "Fps"] },
-        { "ComponentName": "Network", "ComponentPath": "GameState\/Network", "Listener": [] }
+        { "ComponentName": "GameState", "ComponentPath": "GameState", "LinkEntity": false, "Listener": ["Active"] },
+        { "ComponentName": "Fps", "ComponentPath": "GameState\/Fps", "LinkEntity": false, "Listener": [] },
+        {
+          "ComponentName": "FpsValue",
+          "ComponentPath": "GameState\/Fps\/FpsValue",
+          "LinkEntity": false,
+          "Listener": ["Active", "Fps"]
+        }, { "ComponentName": "Network", "ComponentPath": "GameState\/Network", "LinkEntity": false, "Listener": [] }
       ],
       "UiLayer": "TopLayer",
       "UiName": "GameState"
     },
     {
       "Components": [
-        { "ComponentName": "LoadingProcess", "ComponentPath": "LoadingProcess", "Listener": ["Active"] },
+        {
+          "ComponentName": "LoadingProcess",
+          "ComponentPath": "LoadingProcess",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
         {
           "ComponentName": "BackgroundImage",
           "ComponentPath": "LoadingProcess\/BackgroundImage",
+          "LinkEntity": false,
           "Listener": ["Active", "LoadingSceneImage"]
+        },
+        {
+          "ComponentName": "ProcessBar",
+          "ComponentPath": "LoadingProcess\/ProcessBar",
+          "LinkEntity": false,
+          "Listener": []
         },
         {
           "ComponentName": "ProcessBarBackImg",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
+          "LinkEntity": false,
           "Listener": ["Active"]
         },
         {
           "ComponentName": "ProcessBarFillImg",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
+          "LinkEntity": false,
           "Listener": ["Active", "LoadingSceneProcess"]
         },
         {
           "ComponentName": "ProcessNumber",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessNumber",
+          "LinkEntity": false,
           "Listener": ["Active", "LoadingSceneProcessText"]
+        },
+        {
+          "ComponentName": "RandomInfo",
+          "ComponentPath": "LoadingProcess\/RandomInfo",
+          "LinkEntity": false,
+          "Listener": []
         },
         {
           "ComponentName": "RandomTitle",
           "ComponentPath": "LoadingProcess\/RandomInfo\/RandomTitle",
+          "LinkEntity": false,
           "Listener": ["Active", "LoadingSceneTitle"]
         },
         {
           "ComponentName": "RandomText",
           "ComponentPath": "LoadingProcess\/RandomInfo\/RandomText",
+          "LinkEntity": false,
           "Listener": ["Active", "LoadingSceneText"]
         }
       ],
       "UiLayer": "NormalLayer",
       "UiName": "LoadingProcess"
+    },
+    {
+      "Components": [
+        { "ComponentName": "PlayerInfo", "ComponentPath": "PlayerInfo", "LinkEntity": false, "Listener": ["Active"] },
+        {
+          "ComponentName": "PlayerInfoBottomImg",
+          "ComponentPath": "PlayerInfo\/PlayerInfoBottomImg",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "PlayerState",
+          "ComponentPath": "PlayerInfo\/PlayerState",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "BurnState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/BurnState",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "NearDeathState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/NearDeathState",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "NormalState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/NormalState",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "PoisonedState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/PoisonedState",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "TaiRyoKuValue",
+          "ComponentPath": "PlayerInfo\/TaiRyoKuValue",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "TaiRyoKuValueImg",
+          "ComponentPath": "PlayerInfo\/TaiRyoKuValue\/TaiRyoKuValueImg",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "TaiRyoKuValueTxt",
+          "ComponentPath": "PlayerInfo\/TaiRyoKuValue\/TaiRyoKuValueTxt",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "ChaKuRaValue",
+          "ComponentPath": "PlayerInfo\/ChaKuRaValue",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "ChaKuRaValueImg",
+          "ComponentPath": "PlayerInfo\/ChaKuRaValue\/ChaKuRaValueImg",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "ChaKuRaValueTxt",
+          "ComponentPath": "PlayerInfo\/ChaKuRaValue\/ChaKuRaValueTxt",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "HealthValue",
+          "ComponentPath": "PlayerInfo\/HealthValue",
+          "LinkEntity": false,
+          "Listener": []
+        },
+        {
+          "ComponentName": "HealthValueImg",
+          "ComponentPath": "PlayerInfo\/HealthValue\/HealthValueImg",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "HealthValueTxt",
+          "ComponentPath": "PlayerInfo\/HealthValue\/HealthValueTxt",
+          "LinkEntity": false,
+          "Listener": ["Active"]
+        },
+        {
+          "ComponentName": "TestButton",
+          "ComponentPath": "PlayerInfo\/TestButton",
+          "LinkEntity": true,
+          "Listener": []
+        },
+        {
+          "ComponentName": "Text",
+          "ComponentPath": "PlayerInfo\/TestButton\/Text",
+          "LinkEntity": false,
+          "Listener": []
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PlayerInfo"
     }
   ]
 }

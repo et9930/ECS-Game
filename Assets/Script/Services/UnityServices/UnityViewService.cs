@@ -24,9 +24,10 @@ public class UnityViewService : IViewService
         viewGo.transform.localScale = Utilities.ToUnityEngineVector2(((GameEntity) entity).scale.value);
 
         var sr = viewGo.AddComponent<SpriteRenderer>();
-        sr.sortingOrder = 1;
+        sr.sortingOrder = 0;
         sr.flipX = ((GameEntity) entity).toward.left;
 
+        viewGo.AddComponent<HierarchyListener>();
         viewGo.AddComponent<PositionListener>();
         viewGo.AddComponent<ScaleListener>();
         viewGo.AddComponent<TowardListener>();

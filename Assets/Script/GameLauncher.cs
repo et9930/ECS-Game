@@ -4,12 +4,13 @@ using UnityEngine;
 public class GameLauncher : MonoBehaviour
 {
     private Systems _systems;
-    private Systems _physicalSystems;
+//    private Systems _physicalSystems;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(Camera.main.gameObject);
+        DontDestroyOnLoad(GameObject.Find("EventSystem"));
 
         var contexts = Contexts.sharedInstance;
 
@@ -28,13 +29,12 @@ public class GameLauncher : MonoBehaviour
             .Add(new GameWorld(contexts, services));
         _systems.Initialize();
 
-        _physicalSystems = new Feature("Physical Systems")
-            .Add(new PhysicalSystems(contexts));
-        _physicalSystems.Initialize();
+//        _physicalSystems = new Feature("Physical Systems")
+//            .
+//        _physicalSystems.Initialize();
 
 #if UNITY_EDITOR
         DontDestroyOnLoad(GameObject.Find("Systems"));
-        DontDestroyOnLoad(GameObject.Find("Physical Systems"));
 #endif
     }
 
@@ -46,13 +46,13 @@ public class GameLauncher : MonoBehaviour
 
     void FixedUpdate()
     {
-        _physicalSystems.Execute();
-        _physicalSystems.Cleanup();
+//        _physicalSystems.Execute();
+//        _physicalSystems.Cleanup();
     }
 
     private void OnDestroy()
     {
         _systems.TearDown();
-        _physicalSystems.TearDown();
+//        _physicalSystems.TearDown();
     }
 }

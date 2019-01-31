@@ -14,6 +14,7 @@ public static class ListenerList
 
         { "Active", typeof(ActiveListener) },
         { "Fps", typeof(FpsListener) },
+        { "Hierarchy", typeof(HierarchyListener) },
         { "Position", typeof(PositionListener) },
         { "Scale", typeof(ScaleListener) },
         { "Text", typeof(TextListener) },

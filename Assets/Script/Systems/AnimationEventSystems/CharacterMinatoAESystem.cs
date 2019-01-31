@@ -27,16 +27,16 @@ public class CharacterMinatoAESystem : ReactiveSystem<GameEntity>
         characterDic["Minato"] = new CharacterEvent {animationDic = new Dictionary<string, AnimationEvent>()};
         var animationDic = characterDic["Minato"].animationDic;
 
-        // idle AE
-        animationDic["idle"] = new AnimationEvent {frameDic = new Dictionary<int, Action>()};
-
-        var frameDic = animationDic["idle"].frameDic;
-        frameDic[_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].maxFrame] = OnMinatoIdleOver;
+//        // idle AE
+//        animationDic["idle"] = new AnimationEvent {frameDic = new Dictionary<int, Action>()};
+//
+//        var frameDic = animationDic["idle"].frameDic;
+//        frameDic[_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].maxFrame] = OnMinatoIdleOver;
 
     }
 
     public void OnMinatoIdleOver()
     {
-        _context.CreateEntity().ReplaceDebugMessage("OnMinatoIdleOver");
+//        _context.CreateEntity().ReplaceDebugMessage("OnMinatoIdleOver");
     }
 }

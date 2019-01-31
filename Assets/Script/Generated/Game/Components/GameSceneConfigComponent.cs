@@ -12,22 +12,22 @@ public partial class GameContext {
     public SceneConfigComponent sceneConfig { get { return sceneConfigEntity.sceneConfig; } }
     public bool hasSceneConfig { get { return sceneConfigEntity != null; } }
 
-    public GameEntity SetSceneConfig(SceneConfigs newSceneConfig) {
+    public GameEntity SetSceneConfig(System.Collections.Generic.Dictionary<string, Scene> newDic) {
         if (hasSceneConfig) {
             throw new Entitas.EntitasException("Could not set SceneConfig!\n" + this + " already has an entity with SceneConfigComponent!",
                 "You should check if the context already has a sceneConfigEntity before setting it or use context.ReplaceSceneConfig().");
         }
         var entity = CreateEntity();
-        entity.AddSceneConfig(newSceneConfig);
+        entity.AddSceneConfig(newDic);
         return entity;
     }
 
-    public void ReplaceSceneConfig(SceneConfigs newSceneConfig) {
+    public void ReplaceSceneConfig(System.Collections.Generic.Dictionary<string, Scene> newDic) {
         var entity = sceneConfigEntity;
         if (entity == null) {
-            entity = SetSceneConfig(newSceneConfig);
+            entity = SetSceneConfig(newDic);
         } else {
-            entity.ReplaceSceneConfig(newSceneConfig);
+            entity.ReplaceSceneConfig(newDic);
         }
     }
 
@@ -49,17 +49,17 @@ public partial class GameEntity {
     public SceneConfigComponent sceneConfig { get { return (SceneConfigComponent)GetComponent(GameComponentsLookup.SceneConfig); } }
     public bool hasSceneConfig { get { return HasComponent(GameComponentsLookup.SceneConfig); } }
 
-    public void AddSceneConfig(SceneConfigs newSceneConfig) {
+    public void AddSceneConfig(System.Collections.Generic.Dictionary<string, Scene> newDic) {
         var index = GameComponentsLookup.SceneConfig;
         var component = (SceneConfigComponent)CreateComponent(index, typeof(SceneConfigComponent));
-        component.SceneConfig = newSceneConfig;
+        component.dic = newDic;
         AddComponent(index, component);
     }
 
-    public void ReplaceSceneConfig(SceneConfigs newSceneConfig) {
+    public void ReplaceSceneConfig(System.Collections.Generic.Dictionary<string, Scene> newDic) {
         var index = GameComponentsLookup.SceneConfig;
         var component = (SceneConfigComponent)CreateComponent(index, typeof(SceneConfigComponent));
-        component.SceneConfig = newSceneConfig;
+        component.dic = newDic;
         ReplaceComponent(index, component);
     }
 

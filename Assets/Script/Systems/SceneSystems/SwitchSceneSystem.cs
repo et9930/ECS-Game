@@ -59,13 +59,13 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
 
         // load new scene
-        foreach (var value in _context.sceneService.instance.OpenSceneAsync("BattleScene", _context))
+        foreach (var value in _context.sceneService.instance.OpenSceneAsync(sceneName, _context))
         {
             if (value >= 0.9f)
             {
                 break;
             }
-            while (displayProgress < value)
+            while (displayProgress < value * 5 / 9)
             {
                 
                 displayProgress += 0.01f;
@@ -73,6 +73,21 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                 yield return _context.coroutineService.instance.WaitForEndOfFrame();
             }
             yield return _context.coroutineService.instance.WaitForEndOfFrame();
+        }
+
+        // open ui
+        var uis = _context.sceneConfig.dic[sceneName].Uis;
+        for(var i = 0; i < uis.Count; i++)
+        {
+            var ui = _context.CreateEntity();
+            ui.isUiOpen = true;
+            ui.ReplaceName(uis[i]);
+            while (displayProgress < 0.5f + ((0.4f / uis.Count)* i))
+            {
+                displayProgress += 0.01f;
+                _context.ReplaceLoadingSceneProcess(displayProgress);
+                yield return _context.coroutineService.instance.WaitForEndOfFrame();
+            }
         }
 
         while (displayProgress < 0.99f)

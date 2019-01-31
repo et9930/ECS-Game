@@ -104,10 +104,10 @@ public class StoreUIInfo : EditorWindow
 
     public static void DealChildren(Transform transform, ref List<ComponentInfo> components, string rootPath)
     {
-        if (transform.childCount == 0 || rootPath == "")
-        {
+//        if (transform.childCount == 0 || rootPath == "")
+//        {
             components.Add(GetComponentInfo(transform.gameObject, rootPath));
-        }
+//        }
 
         if (transform.childCount > 0)
         {
@@ -116,6 +116,8 @@ public class StoreUIInfo : EditorWindow
                 DealChildren(transform.GetChild(i), ref components, rootPath+transform.gameObject.name+"/");
             }
         }
+
+
     }
 
     public static ComponentInfo GetComponentInfo(GameObject gameObject, string rootPath)
@@ -135,6 +137,16 @@ public class StoreUIInfo : EditorWindow
         {
             componentInfo.Listener = new List<string>();
         }
+
+        if (gameObject.GetComponent<Button>() == null && gameObject.GetComponent<InputField>() == null)
+        {
+            componentInfo.LinkEntity = false;
+        }
+        else
+        {
+            componentInfo.LinkEntity = true;
+        }
+
         return componentInfo;
     }
 }

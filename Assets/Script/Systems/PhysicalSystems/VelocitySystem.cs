@@ -25,9 +25,9 @@ public class VelocitySystem : IExecuteSystem
             if (e.isMoving)
             {
                 var newPosition = e.position.value;
-                newPosition.X += e.velocity.value.X * _context.timeService.instance.GetFixedDeltaTime();
-                newPosition.Y += e.velocity.value.Y * _context.timeService.instance.GetFixedDeltaTime();
-                newPosition.Z += e.velocity.value.Z * _context.timeService.instance.GetFixedDeltaTime();
+                newPosition.X += e.velocity.value.X * _context.timeService.instance.GetDeltaTime();
+                newPosition.Y += e.velocity.value.Y * _context.timeService.instance.GetDeltaTime();
+                newPosition.Z += e.velocity.value.Z * _context.timeService.instance.GetDeltaTime();
 
                 if (newPosition.X < currentMapConfig.CharacterMinX)
                     newPosition.X = currentMapConfig.CharacterMinX;
@@ -44,11 +44,6 @@ public class VelocitySystem : IExecuteSystem
 
                 if (newPosition.Z > currentMapConfig.CharacterMaxZ)
                     newPosition.Z = currentMapConfig.CharacterMaxZ;
-
-                if (newPosition.Y == 0.0f)
-                {
-                    e.isOnTheGround = true;
-                }
 
                 e.ReplacePosition(newPosition);
             }

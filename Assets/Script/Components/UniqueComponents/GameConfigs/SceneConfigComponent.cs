@@ -6,14 +6,14 @@ using Entitas.CodeGeneration.Attributes;
 [Game, Unique]
 public class SceneConfigComponent : IComponent
 {
-    public SceneConfigs SceneConfig;
+    public Dictionary<string, Scene> dic;
 }
 
 [DataContract]
 public class SceneConfigs
 {
     [DataMember]
-    public List<Scene> Scenes;
+    public Dictionary<string, Scene> Scenes;
 }
 
 [DataContract]

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class NormalAttackControlSystem : IExecuteSystem
@@ -14,13 +15,17 @@ public class NormalAttackControlSystem : IExecuteSystem
     {
         if (_context.key.value.TaijutsuAttack)
         {
-            foreach (var e in _context.GetGroup(GameMatcher.PlayerId))
+            foreach (var e in _context.GetGroup(GameMatcher.Id))
             {
-                if (e.playerId.value == _context.currentPlayerId.value)
+                if (e.id.value == _context.currentPlayerId.value)
                 {
-                    if (!e.isBusying)
+                    if (e.isShadow)
+                        continue;
+
+                    if (!e.isBusying && e.isOnTheGround)
                     {
-                        e.ReplaceAnimation("attack_1", false);
+                        e.ReplaceVelocity(Vector3.Zero);
+                        e.ReplaceAnimation("skill_3", false);
                         e.isBusying = true;
                     }
                 }

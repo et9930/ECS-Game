@@ -57,4 +57,16 @@ public class MapConfig
     [DataMember]
     public Vector3 Character_8_InPosition;
 
+    [DataMember]
+    public List<DisplayHierarchy> CharacterDisplayHierarchy;
+
+}
+
+[DataContract]
+public class DisplayHierarchy
+{
+    [DataMember]
+    public float Z;
+    [DataMember]
+    public float Hierarchy;
 }

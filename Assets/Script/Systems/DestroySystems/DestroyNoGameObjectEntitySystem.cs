@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-public class DestroyNoGameObjectEntitySystem : ReactiveSystem<GameEntity>
+public class DestroyEntitisSystem : ReactiveSystem<GameEntity>
 {
-    public DestroyNoGameObjectEntitySystem(Contexts contexts) : base(contexts.game)
+    public DestroyEntitisSystem(Contexts contexts) : base(contexts.game)
     {
 
     }
@@ -22,6 +22,10 @@ public class DestroyNoGameObjectEntitySystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
+            if (e.isLinked)
+            {
+                
+            }
             e.Destroy();
         }
     }

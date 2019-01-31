@@ -17,9 +17,12 @@ public class MoveMainCameraSystem : IExecuteSystem
 
         var currentMapConfig = _context.mapConfig.list.list[_context.currentMapName.value];
 
-        foreach (var e in _context.GetGroup(GameMatcher.PlayerId))
+        foreach (var e in _context.GetGroup(GameMatcher.Id))
         {
-            if (e.playerId.value != _context.currentPlayerId.value)
+            if (e.isShadow)
+                continue;
+            
+            if (e.id.value != _context.currentPlayerId.value)
                 continue;
 
             var lastPosition = _context.sceneService.instance.MainCameraPosition;

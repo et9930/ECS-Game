@@ -54,7 +54,7 @@
                   }
                 }
               ],
-              "maxFrame": 25
+              "maxFrame": 28
             }
           },
           {
@@ -102,7 +102,7 @@
                     "frameCount": 8,
                     "name": "attack_2_0008",
                     "path": "Image\/Character\/Minato\/attack_2_0008",
-                    "pivot": { "X": 94.5, "Y": 1.983637 },
+                    "pivot": { "X": 94.5, "Y": -35.7282257 },
                     "size": { "X": 189, "Y": 228 }
                   }
                 },
@@ -113,7 +113,7 @@
                     "frameCount": 10,
                     "name": "attack_2_0010",
                     "path": "Image\/Character\/Minato\/attack_2_0010",
-                    "pivot": { "X": 93.5, "Y": -6.54503059 },
+                    "pivot": { "X": 93.5, "Y": -30.1261063 },
                     "size": { "X": 187, "Y": 203 }
                   }
                 },
@@ -124,7 +124,7 @@
                     "frameCount": 11,
                     "name": "attack_2_0011",
                     "path": "Image\/Character\/Minato\/attack_2_0011",
-                    "pivot": { "X": 137, "Y": -12.6563082 },
+                    "pivot": { "X": 137, "Y": -47.70839 },
                     "size": { "X": 274, "Y": 185 }
                   }
                 },
@@ -135,7 +135,7 @@
                     "frameCount": 15,
                     "name": "attack_2_0015",
                     "path": "Image\/Character\/Minato\/attack_2_0015",
-                    "pivot": { "X": 102, "Y": -10.7219257 },
+                    "pivot": { "X": 102, "Y": -27.316946 },
                     "size": { "X": 204, "Y": 228 }
                   }
                 },
@@ -173,7 +173,7 @@
                   }
                 }
               ],
-              "maxFrame": 32
+              "maxFrame": 35
             }
           },
           {
@@ -248,40 +248,40 @@
                   }
                 },
                 {
-                  "Key": 26,
+                  "Key": 16,
                   "Value": {
                     "force": { "direction": false, "duration": 0, "value": { "X": 0, "Y": 0, "Z": 0 } },
-                    "frameCount": 26,
-                    "name": "attack_3_0026",
-                    "path": "Image\/Character\/Minato\/attack_3_0026",
+                    "frameCount": 16,
+                    "name": "attack_3_0016",
+                    "path": "Image\/Character\/Minato\/attack_3_0016",
                     "pivot": { "X": 90, "Y": 8.596619 },
                     "size": { "X": 180, "Y": 228 }
                   }
                 },
                 {
-                  "Key": 30,
+                  "Key": 20,
                   "Value": {
                     "force": { "direction": false, "duration": 0, "value": { "X": 0, "Y": 0, "Z": 0 } },
-                    "frameCount": 30,
-                    "name": "attack_3_0030",
-                    "path": "Image\/Character\/Minato\/attack_3_0030",
+                    "frameCount": 20,
+                    "name": "attack_3_0020",
+                    "path": "Image\/Character\/Minato\/attack_3_0020",
                     "pivot": { "X": 74.5, "Y": 9.798317 },
                     "size": { "X": 149, "Y": 245 }
                   }
                 },
                 {
-                  "Key": 32,
+                  "Key": 22,
                   "Value": {
                     "force": { "direction": false, "duration": 0, "value": { "X": 0, "Y": 0, "Z": 0 } },
-                    "frameCount": 32,
-                    "name": "attack_3_0032",
-                    "path": "Image\/Character\/Minato\/attack_3_0032",
+                    "frameCount": 22,
+                    "name": "attack_3_0022",
+                    "path": "Image\/Character\/Minato\/attack_3_0022",
                     "pivot": { "X": 69.5, "Y": 12.6518993 },
                     "size": { "X": 139, "Y": 270 }
                   }
                 }
               ],
-              "maxFrame": 32
+              "maxFrame": 25
             }
           },
           {
@@ -307,7 +307,7 @@
                     "frameCount": 4,
                     "name": "attack_4_0004",
                     "path": "Image\/Character\/Minato\/attack_4_0004",
-                    "pivot": { "X": 143.5, "Y": -27.6594448 },
+                    "pivot": { "X": 143.5, "Y": -66.4472351 },
                     "size": { "X": 287, "Y": 178 }
                   }
                 },
@@ -318,7 +318,7 @@
                     "frameCount": 6,
                     "name": "attack_4_0006",
                     "path": "Image\/Character\/Minato\/attack_4_0006",
-                    "pivot": { "X": 81, "Y": -22.8714485 },
+                    "pivot": { "X": 81, "Y": -51.2690468 },
                     "size": { "X": 162, "Y": 227 }
                   }
                 },
@@ -329,7 +329,7 @@
                     "frameCount": 8,
                     "name": "attack_4_0008",
                     "path": "Image\/Character\/Minato\/attack_4_0008",
-                    "pivot": { "X": 113, "Y": -38.3821335 },
+                    "pivot": { "X": 113, "Y": -52.604763 },
                     "size": { "X": 226, "Y": 148 }
                   }
                 },
@@ -340,7 +340,7 @@
                     "frameCount": 9,
                     "name": "attack_4_0009",
                     "path": "Image\/Character\/Minato\/attack_4_0009",
-                    "pivot": { "X": 95.5, "Y": -16.810442 },
+                    "pivot": { "X": 95.5, "Y": -52.84822 },
                     "size": { "X": 191, "Y": 233 }
                   }
                 },
@@ -351,7 +351,7 @@
                     "frameCount": 15,
                     "name": "attack_4_0015",
                     "path": "Image\/Character\/Minato\/attack_4_0015",
-                    "pivot": { "X": 105, "Y": -28.44525 },
+                    "pivot": { "X": 105, "Y": -59.21974 },
                     "size": { "X": 210, "Y": 246 }
                   }
                 },
@@ -362,7 +362,7 @@
                     "frameCount": 20,
                     "name": "attack_4_0020",
                     "path": "Image\/Character\/Minato\/attack_4_0020",
-                    "pivot": { "X": 133, "Y": -64.08456 },
+                    "pivot": { "X": 133, "Y": -87.68509 },
                     "size": { "X": 266, "Y": 149 }
                   }
                 },
@@ -373,7 +373,7 @@
                     "frameCount": 21,
                     "name": "attack_4_0021",
                     "path": "Image\/Character\/Minato\/attack_4_0021",
-                    "pivot": { "X": 150, "Y": -46.51237 },
+                    "pivot": { "X": 150, "Y": -76.22454 },
                     "size": { "X": 300, "Y": 227 }
                   }
                 },
@@ -384,7 +384,7 @@
                     "frameCount": 24,
                     "name": "attack_4_0024",
                     "path": "Image\/Character\/Minato\/attack_4_0024",
-                    "pivot": { "X": 95, "Y": -32.960083 },
+                    "pivot": { "X": 95, "Y": -54.4317055 },
                     "size": { "X": 190, "Y": 236 }
                   }
                 },
@@ -411,7 +411,7 @@
                   }
                 }
               ],
-              "maxFrame": 28
+              "maxFrame": 31
             }
           },
           {
@@ -647,7 +647,7 @@
                 {
                   "Key": 3,
                   "Value": {
-                    "force": { "direction": false, "duration": 0.01, "value": { "X": 250, "Y": -433, "Z": 0 } },
+                    "force": { "direction": false, "duration": 0.1, "value": { "X": 2500, "Y": -8660, "Z": 0 } },
                     "frameCount": 3,
                     "name": "in_0003",
                     "path": "Image\/Character\/Minato\/in_0003",

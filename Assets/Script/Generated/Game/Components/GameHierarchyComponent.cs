@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public PlayerIdComponent playerId { get { return (PlayerIdComponent)GetComponent(GameComponentsLookup.PlayerId); } }
-    public bool hasPlayerId { get { return HasComponent(GameComponentsLookup.PlayerId); } }
+    public HierarchyComponent hierarchy { get { return (HierarchyComponent)GetComponent(GameComponentsLookup.Hierarchy); } }
+    public bool hasHierarchy { get { return HasComponent(GameComponentsLookup.Hierarchy); } }
 
-    public void AddPlayerId(int newValue) {
-        var index = GameComponentsLookup.PlayerId;
-        var component = (PlayerIdComponent)CreateComponent(index, typeof(PlayerIdComponent));
+    public void AddHierarchy(float newValue) {
+        var index = GameComponentsLookup.Hierarchy;
+        var component = (HierarchyComponent)CreateComponent(index, typeof(HierarchyComponent));
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplacePlayerId(int newValue) {
-        var index = GameComponentsLookup.PlayerId;
-        var component = (PlayerIdComponent)CreateComponent(index, typeof(PlayerIdComponent));
+    public void ReplaceHierarchy(float newValue) {
+        var index = GameComponentsLookup.Hierarchy;
+        var component = (HierarchyComponent)CreateComponent(index, typeof(HierarchyComponent));
         component.value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemovePlayerId() {
-        RemoveComponent(GameComponentsLookup.PlayerId);
+    public void RemoveHierarchy() {
+        RemoveComponent(GameComponentsLookup.Hierarchy);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherPlayerId;
+    static Entitas.IMatcher<GameEntity> _matcherHierarchy;
 
-    public static Entitas.IMatcher<GameEntity> PlayerId {
+    public static Entitas.IMatcher<GameEntity> Hierarchy {
         get {
-            if (_matcherPlayerId == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.PlayerId);
+            if (_matcherHierarchy == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Hierarchy);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherPlayerId = matcher;
+                _matcherHierarchy = matcher;
             }
 
-            return _matcherPlayerId;
+            return _matcherHierarchy;
         }
     }
 }

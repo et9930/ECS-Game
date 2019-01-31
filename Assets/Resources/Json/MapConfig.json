@@ -3,62 +3,77 @@
     {
       "Key": "ProvingGroundMap",
       "Value": {
-        "CameraMinX": -55,
-        "CameraMaxX": 30,
-        "CharacterMinX": -63.5,
-        "CharacterMaxX": 38.5,
-        "CharacterMinZ": 0,
-        "CharacterMaxZ": 2,
+        "CameraMinX": -50,
+        "CameraMaxX": 50,
+        "CharacterMinX": -58.5,
+        "CharacterMaxX": 58.5,
+        "CharacterMinZ": -3.5,
+        "CharacterMaxZ": 0,
         "Camera_1_Position": {
-          "X": -55,
+          "X": -50,
           "Y": 0,
-          "Z": -10
+          "Z": -50
         },
         "Camera_2_Position": {
-          "X": 30,
+          "X": 50,
           "Y": 0,
-          "Z": -10
+          "Z": -50
         },
         "Character_1_InPosition": {
-          "X": -57,
+          "X": -55,
           "Y": 3,
-          "Z": 1
+          "Z": -0.75
         },
         "Character_2_InPosition": {
-          "X": -60,
+          "X": -55,
           "Y": 3,
-          "Z": 0
+          "Z": -2.75
         },
         "Character_3_InPosition": {
-          "X": -60,
+          "X": -57,
           "Y": 3,
-          "Z": 2
+          "Z": -0.75
         },
         "Character_4_InPosition": {
-          "X": -60,
+          "X": -57,
           "Y": 3,
-          "Z": 1
+          "Z": -2.75
         },
         "Character_5_InPosition": {
-          "X": 32,
+          "X": 55,
           "Y": 3,
-          "Z": 1
+          "Z": -0.75
         },
         "Character_6_InPosition": {
-          "X": 35,
+          "X": 55,
           "Y": 3,
-          "Z": 0
+          "Z": -2.75
         },
         "Character_7_InPosition": {
-          "X": 35,
+          "X": 57,
           "Y": 3,
-          "Z": 2
+          "Z": -0.75
         },
         "Character_8_InPosition": {
-          "X": 35,
+          "X": 57,
           "Y": 3,
-          "Z": 1
-        }
+          "Z": -2.75
+        },
+        "CharacterDisplayHierarchy": [
+          {
+            "Z": 0,
+            "Hierarchy": -15
+          },
+          {
+            "Z": -1.5,
+            "Hierarchy": -25
+          },
+          {
+            "Z": -2,
+            "Hierarchy": -35
+          }
+
+        ]
       } 
     }
   ] 

@@ -7,9 +7,14 @@
         Add(new LoadGameConfigSystem(contexts));
 
         Add(new EmitInputSystem(contexts));
+        Add(new ButtonClickEventSystem(contexts));
+
+        Add(new PlayerStateControlSystem(contexts));
 
         Add(new MovementControlSystem(contexts));
         Add(new NormalAttackControlSystem(contexts));
+
+        Add(new PhysicalSystems(contexts));
 
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
@@ -17,14 +22,17 @@
         Add(new InitBattleSceneSystem(contexts));
         Add(new AnimationEventSystems(contexts));
         Add(new LoadPlayerSystem(contexts));
+        Add(new AddShadowSystem(contexts));
+        Add(new ShadowPositionSystem(contexts));
 
+        Add(new DisplayHierarchySystem(contexts));
         Add(new ChangeAnimationSystem(contexts));
         Add(new PlayAnimationSystem(contexts));
         Add(new AddViewSystem(contexts));
         Add(new ChangeViewSystem(contexts));
 
         Add(new DebugMessageSystem(contexts));
-        Add(new DestroyNoGameObjectEntitySystem(contexts));
+        Add(new DestroyEntitisSystem(contexts));
 
         Add(new MoveMainCameraSystem(contexts));
 

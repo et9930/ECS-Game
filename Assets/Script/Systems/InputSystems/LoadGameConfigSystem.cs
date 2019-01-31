@@ -37,7 +37,8 @@ public class LoadGameConfigSystem : IInitializeSystem
 
         // Scene Config
         var strSceneConfig = _context.loadConfigService.instance.LoadJsonFile("Json/SceneConfig");
-        _context.ReplaceSceneConfig(Utilities.ParseJson<SceneConfigs>(strSceneConfig));
+        var sceneConfigs = Utilities.ParseJson<SceneConfigs>(strSceneConfig);
+        _context.ReplaceSceneConfig(sceneConfigs.Scenes);
 
         // Loading UI Random Infos
         var strLoadingUiRandomInfo = _context.loadConfigService.instance.LoadJsonFile("Json/LoadingUIRandomInfo");

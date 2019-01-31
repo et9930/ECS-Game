@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Entitas.Unity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -117,6 +118,17 @@ public class UnitySceneService : ISceneService
                 componentGo.AddComponent(ListenerList.dictionary[listener]);
             }
 
+            if (component.LinkEntity)
+            {
+                if(componentGo.GetComponent<Button>() != null)
+                {
+                    e.ReplaceButtonClickState(false);
+                }
+
+                componentGo.Link(e);
+                e.isLinked = true;
+            }           
+
             if (componentGo != null)
             {
                 var eventListeners = componentGo.GetComponents<IEventListener>();
@@ -130,8 +142,20 @@ public class UnitySceneService : ISceneService
 
     public void CloseUI(int id)
     {
+        UnlinkEntity(_uiDictionary[id].transform);
         GameObject.Destroy(_uiDictionary[id]);
     }
 
-    
+    private void UnlinkEntity(Transform tf)
+    {
+        for (int i = 0; i < tf.childCount; i++)
+        {
+            UnlinkEntity(tf.GetChild(i));
+        }
+
+        if (tf.gameObject.GetEntityLink() != null)
+        {
+            tf.gameObject.Unlink();
+        }
+    }
 }

@@ -14,17 +14,20 @@ public class MovementControlSystem : IExecuteSystem
     
     public void Execute()
     {
-        foreach (var e in _context.GetGroup(GameMatcher.PlayerId))
+        foreach (var e in _context.GetGroup(GameMatcher.Id))
         {
-            if (e.playerId.value == _context.currentPlayerId.value)
+            if (e.id.value == _context.currentPlayerId.value)
             {
-                if (e.isBusying)
-                {
-                    e.isMoving = false;
-                    e.ReplaceVelocity(Vector3.Zero);
+                if (e.isShadow)
                     continue;
-                }
-                if (e.isOnTheGround)
+                
+//                if (e.isBusying)
+//                {
+//                    e.isMoving = false;
+//                    e.ReplaceVelocity(Vector3.Zero);
+//                    continue;
+//                }
+                if (e.isOnTheGround && !e.isBusying)
                 {
                     if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f)
                     {

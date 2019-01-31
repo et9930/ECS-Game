@@ -27,13 +27,14 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             var newPlayer = _context.CreateEntity();
-            newPlayer.ReplacePlayerId(e.loadPlayer.playerId);
+            newPlayer.ReplaceId(e.loadPlayer.playerId);
             newPlayer.ReplaceName(e.loadPlayer.playerName);
 //            _context.coroutineService.instance.StartCoroutine(LoadPlayer(newPlayer));
             newPlayer.ReplaceAnimation("in", false);
 //            newPlayer.ReplaceSprite(_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].frameInfos[0].path);
+            newPlayer.ReplaceHierarchy(0);
             newPlayer.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].Character_1_InPosition);
-            newPlayer.ReplaceScale(new Vector2(1.5f, 1.5f));
+            newPlayer.ReplaceScale(new Vector2(1.0f, 1.0f));
             newPlayer.ReplaceMass(66.5f);
             newPlayer.ReplaceToward(false);
 
@@ -42,6 +43,7 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.isAffectedByGravity = true;
             newPlayer.isOnTheGround = false;
             newPlayer.isBusying = true;
+            newPlayer.isAddShadow = true;
             e.isDestroy = true;
         }
     }

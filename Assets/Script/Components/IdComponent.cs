@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 [Game]
-public class PlayerIdComponent : IComponent
+public class IdComponent : IComponent
 {
     public int value;
 }

@@ -1,32 +1,43 @@
-﻿using Entitas;
+﻿using System.Collections.Generic;
+using Entitas;
 
-public class AntiGravitySystem : IExecuteSystem
+public class AntiGravitySystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _context;
 
-    public AntiGravitySystem(Contexts contexts)
+    public AntiGravitySystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
     }
 
-    public void Execute()
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    {
+        return context.CreateCollector(GameMatcher.OnTheGround);
+    }
+
+    protected override bool Filter(GameEntity entity)
+    {
+        return entity.isOnTheGround && entity.isAffectedByGravity && entity.hasAcceleration;
+    }
+
+    protected override void Execute(List<GameEntity> entities)
     {
         if (_context.currentScene.name != "BattleScene") return;
 
-        foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.AffectedByGravity, GameMatcher.Acceleration)))
+        foreach (var e in entities)
         {
-            if (e.isOnTheGround || e.isOnTheWall)
-            { 
+            if (e.isOnTheGround)
+            {
                 var newAcceleration = e.acceleration.value;
                 newAcceleration.Y = 0;
                 e.ReplaceAcceleration(newAcceleration);
 
-                if(e.isOnTheGround)
+                var newVelocity = e.velocity.value;
+                if (newVelocity.Y < 0)
                 {
-                    var newVelocity = e.velocity.value;
                     newVelocity.Y = 0;
-                    e.ReplaceVelocity(newVelocity);
                 }
+                e.ReplaceVelocity(newVelocity);
             }
             else
             {

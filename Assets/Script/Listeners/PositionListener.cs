@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 using Entitas;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class PositionListener : MonoBehaviour, IEventListener, IPositionListener
 {
@@ -14,6 +15,9 @@ public class PositionListener : MonoBehaviour, IEventListener, IPositionListener
 
     public void OnPosition(GameEntity entity, System.Numerics.Vector3 value)
     {
-        transform.position = Utilities.Vector3PositionToVector2Position(value);
+        var tmp_z = transform.position.z;
+        Vector3 tmpPosition = Utilities.Vector3PositionToVector2Position(value);
+        tmpPosition.z = tmp_z;
+        transform.position = tmpPosition;
     }
 }

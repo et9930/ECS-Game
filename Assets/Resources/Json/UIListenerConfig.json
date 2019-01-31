@@ -1,64 +1,112 @@
 {
-	"UIListener": [
-		{
-			"ComponentName": "LoadingProcess",
-			"Listener": [
-				"Active"
-			]
-		},
-		{
-			"ComponentName": "BackgroundImage",
-			"Listener": [
-				"Active",
-				"LoadingSceneImage"
-			]
-		},
-		{
-			"ComponentName": "ProcessBarBackImg",
-			"Listener": [
-				"Active"
-			]
-		},
-		{
-			"ComponentName": "ProcessNumber",
-			"Listener": [
-				"Active",
-				"LoadingSceneProcessText"
-			]
-		},
-		{
-			"ComponentName": "ProcessBarFillImg",
-			"Listener": [
-				"Active",
-				"LoadingSceneProcess"
-			]
-		},
-		{
-			"ComponentName": "RandomTitle",
-			"Listener": [
-				"Active",
-				"LoadingSceneTitle"
-			]
-		},
-		{
-			"ComponentName": "RandomText",
-			"Listener": [
-				"Active",
-				"LoadingSceneText"
-			]
-		},
-		{
-			"ComponentName": "GameState",
-			"Listener": [
-				"Active"
-			]
-		},
-		{
-			"ComponentName": "FpsValue",
-			"Listener": [
-				"Active",
-				"Fps"
-			]
-		}
-	]
+  "UIListener": [
+    {
+      "ComponentName": "LoadingProcess",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "BackgroundImage",
+      "Listener": [
+        "Active",
+        "LoadingSceneImage"
+      ]
+    },
+    {
+      "ComponentName": "ProcessBarBackImg",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "ProcessNumber",
+      "Listener": [
+        "Active",
+        "LoadingSceneProcessText"
+      ]
+    },
+    {
+      "ComponentName": "ProcessBarFillImg",
+      "Listener": [
+        "Active",
+        "LoadingSceneProcess"
+      ]
+    },
+    {
+      "ComponentName": "RandomTitle",
+      "Listener": [
+        "Active",
+        "LoadingSceneTitle"
+      ]
+    },
+    {
+      "ComponentName": "RandomText",
+      "Listener": [
+        "Active",
+        "LoadingSceneText"
+      ]
+    },
+    {
+      "ComponentName": "GameState",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "FpsValue",
+      "Listener": [
+        "Active",
+        "Fps"
+      ]
+    },
+    {
+      "ComponentName": "PlayerInfo",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "PlayerState",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "TaiRyoKuValueImg",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "TaiRyoKuValueTxt",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "ChaKuRaValueImg",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "ChaKuRaValueTxt",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "HealthValueImg",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "HealthValueTxt",
+      "Listener": [
+        "Active"
+      ]
+    }
+  ]
 }

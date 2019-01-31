@@ -1,16 +1,23 @@
 {
-  "Scenes": [
+  "Scenes": 
+  [
     {
-      "SceneName": "LoadingScene",
-      "Uis": [
-        "LoadingProcess"
-      ]
+      "Key": "LoadingScene",
+      "Value": {
+        "SceneName": "LoadingScene",
+        "Uis": [
+          "LoadingProcess"
+        ]
+      }
     },
     {
-      "SceneName": "BattleScene",
-      "Uis": [
-
-      ]
+      "Key": "BattleScene",
+      "Value": {
+        "SceneName": "BattleScene",
+        "Uis": [
+          "PlayerInfo"
+        ]
+      }
     }
   ]
 }
