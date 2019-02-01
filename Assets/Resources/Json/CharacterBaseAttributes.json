@@ -3,7 +3,10 @@
     {
       "Key": "Minato",
       "Value": {
-        "baseVelocity": 7.5
+        "baseVelocity": 7.5,
+        "baseHealth": 100,
+        "baseChaKuRa": 100,
+        "baseTaiRyoKu": 100 
       }
     }
   ]

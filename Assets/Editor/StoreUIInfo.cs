@@ -130,6 +130,7 @@ public class StoreUIInfo : EditorWindow
             if (uiListener.ComponentName == componentInfo.ComponentName)
             {
                 componentInfo.Listener = uiListener.Listener;
+                componentInfo.Handle = uiListener.Handle;
             }
         }
 
@@ -138,15 +139,11 @@ public class StoreUIInfo : EditorWindow
             componentInfo.Listener = new List<string>();
         }
 
-        if (gameObject.GetComponent<Button>() == null && gameObject.GetComponent<InputField>() == null)
+        if (componentInfo.Handle == null)
         {
-            componentInfo.LinkEntity = false;
+            componentInfo.Handle = new List<string>();
         }
-        else
-        {
-            componentInfo.LinkEntity = true;
-        }
-
+        
         return componentInfo;
     }
 }
@@ -165,4 +162,6 @@ public class UIListener
     public string ComponentName;
     [DataMember]
     public List<string> Listener;
+    [DataMember]
+    public List<string> Handle;
 }

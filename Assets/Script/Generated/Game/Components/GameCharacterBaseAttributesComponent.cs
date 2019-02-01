@@ -12,22 +12,22 @@ public partial class GameContext {
     public CharacterBaseAttributesComponent characterBaseAttributes { get { return characterBaseAttributesEntity.characterBaseAttributes; } }
     public bool hasCharacterBaseAttributes { get { return characterBaseAttributesEntity != null; } }
 
-    public GameEntity SetCharacterBaseAttributes(CharacterBaseAttributes newList) {
+    public GameEntity SetCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
         if (hasCharacterBaseAttributes) {
             throw new Entitas.EntitasException("Could not set CharacterBaseAttributes!\n" + this + " already has an entity with CharacterBaseAttributesComponent!",
                 "You should check if the context already has a characterBaseAttributesEntity before setting it or use context.ReplaceCharacterBaseAttributes().");
         }
         var entity = CreateEntity();
-        entity.AddCharacterBaseAttributes(newList);
+        entity.AddCharacterBaseAttributes(newDic);
         return entity;
     }
 
-    public void ReplaceCharacterBaseAttributes(CharacterBaseAttributes newList) {
+    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
         var entity = characterBaseAttributesEntity;
         if (entity == null) {
-            entity = SetCharacterBaseAttributes(newList);
+            entity = SetCharacterBaseAttributes(newDic);
         } else {
-            entity.ReplaceCharacterBaseAttributes(newList);
+            entity.ReplaceCharacterBaseAttributes(newDic);
         }
     }
 
@@ -49,17 +49,17 @@ public partial class GameEntity {
     public CharacterBaseAttributesComponent characterBaseAttributes { get { return (CharacterBaseAttributesComponent)GetComponent(GameComponentsLookup.CharacterBaseAttributes); } }
     public bool hasCharacterBaseAttributes { get { return HasComponent(GameComponentsLookup.CharacterBaseAttributes); } }
 
-    public void AddCharacterBaseAttributes(CharacterBaseAttributes newList) {
+    public void AddCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
         var index = GameComponentsLookup.CharacterBaseAttributes;
         var component = (CharacterBaseAttributesComponent)CreateComponent(index, typeof(CharacterBaseAttributesComponent));
-        component.list = newList;
+        component.dic = newDic;
         AddComponent(index, component);
     }
 
-    public void ReplaceCharacterBaseAttributes(CharacterBaseAttributes newList) {
+    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
         var index = GameComponentsLookup.CharacterBaseAttributes;
         var component = (CharacterBaseAttributesComponent)CreateComponent(index, typeof(CharacterBaseAttributesComponent));
-        component.list = newList;
+        component.dic = newDic;
         ReplaceComponent(index, component);
     }
 

@@ -35,7 +35,7 @@ public class ComponentInfo
     [DataMember]
     public string ComponentPath;
     [DataMember]
-    public bool LinkEntity;
-    [DataMember]
     public List<string> Listener;
+    [DataMember]
+    public List<string> Handle;
 }

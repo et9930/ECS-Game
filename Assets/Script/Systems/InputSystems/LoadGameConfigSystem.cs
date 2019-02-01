@@ -48,7 +48,7 @@ public class LoadGameConfigSystem : IInitializeSystem
         // Character Base Attributes
         var strCharacterBaseAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/CharacterBaseAttributes");
         var tempAttributes = Utilities.ParseJson<CharacterBaseAttributes>(strCharacterBaseAttributes);
-        _context.ReplaceCharacterBaseAttributes(tempAttributes);
+        _context.ReplaceCharacterBaseAttributes(tempAttributes.list);
 
         // Map Config
         var strMapConfig = _context.loadConfigService.instance.LoadJsonFile("Json/MapConfig");

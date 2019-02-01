@@ -26,17 +26,30 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
+            var characterBaseAttributes = _context.characterBaseAttributes.dic[e.loadPlayer.playerName];
+
             var newPlayer = _context.CreateEntity();
             newPlayer.ReplaceId(e.loadPlayer.playerId);
             newPlayer.ReplaceName(e.loadPlayer.playerName);
-//            _context.coroutineService.instance.StartCoroutine(LoadPlayer(newPlayer));
             newPlayer.ReplaceAnimation("in", false);
-//            newPlayer.ReplaceSprite(_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].frameInfos[0].path);
             newPlayer.ReplaceHierarchy(0);
             newPlayer.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].Character_1_InPosition);
             newPlayer.ReplaceScale(new Vector2(1.0f, 1.0f));
             newPlayer.ReplaceMass(66.5f);
             newPlayer.ReplaceToward(false);
+
+            newPlayer.ReplaceHealth(
+                characterBaseAttributes.baseHealth, 
+                characterBaseAttributes.baseHealth, 
+                characterBaseAttributes.baseHealth);
+
+            newPlayer.ReplaceChaKuRa(characterBaseAttributes.baseChaKuRa);
+
+            newPlayer.ReplaceTaiRyoKu(
+                characterBaseAttributes.deathTaiRyoKu,
+                characterBaseAttributes.tiredTaiRyoKu,
+                characterBaseAttributes.baseTaiRyoKu,
+                characterBaseAttributes.baseTaiRyoKu);
 
             newPlayer.isInitializePhysical = true;
 
@@ -47,11 +60,5 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             e.isDestroy = true;
         }
     }
-
-//    private IEnumerator LoadPlayer(GameEntity newPlayer)
-//    {
-//        
-//
-//    }
 
 }

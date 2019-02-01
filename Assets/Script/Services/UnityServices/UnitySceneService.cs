@@ -118,16 +118,27 @@ public class UnitySceneService : ISceneService
                 componentGo.AddComponent(ListenerList.dictionary[listener]);
             }
 
-            if (component.LinkEntity)
+            if (component.Handle.Count > 0)
             {
-                if(componentGo.GetComponent<Button>() != null)
+                foreach (var handle in component.Handle)
                 {
-                    e.ReplaceButtonClickState(false);
+                    componentGo.AddComponent(HandleList.dictionary[handle]);
                 }
 
                 componentGo.Link(e);
                 e.isLinked = true;
-            }           
+            }
+
+//            if (component.LinkEntity)
+//            {
+//                if(componentGo.GetComponent<Button>() != null)
+//                {
+//                    e.ReplaceClickState(false);
+//                }
+//
+//                componentGo.Link(e);
+//                e.isLinked = true;
+//            }           
 
             if (componentGo != null)
             {
@@ -155,6 +166,7 @@ public class UnitySceneService : ISceneService
 
         if (tf.gameObject.GetEntityLink() != null)
         {
+            ((GameEntity) tf.gameObject.GetEntityLink().entity).isLinked = false;
             tf.gameObject.Unlink();
         }
     }

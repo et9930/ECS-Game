@@ -6,4 +6,9 @@ public class UnityDebugLogService : ILogService
     {
         Debug.Log(message);
     }
+
+    public void ErrorMessage(string message)
+    {
+        Debug.LogError(message);
+    }
 }

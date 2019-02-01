@@ -73,40 +73,46 @@
       ]
     },
     {
-      "ComponentName": "TaiRyoKuValueImg",
+      "ComponentName": "PlayerTaiRyoKuValue",
       "Listener": [
         "Active"
       ]
     },
     {
-      "ComponentName": "TaiRyoKuValueTxt",
+      "ComponentName": "PlayerChaKuRaValue",
       "Listener": [
         "Active"
       ]
     },
     {
-      "ComponentName": "ChaKuRaValueImg",
+      "ComponentName": "PlayerHealthValue",
       "Listener": [
-        "Active"
+        "Active",
+        "PlayerHealth"
       ]
     },
     {
-      "ComponentName": "ChaKuRaValueTxt",
+      "ComponentName": "PlayerHeadShot",
       "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "HealthValueImg",
-      "Listener": [
-        "Active"
+        "Active",
+        "PlayerHeadShot"
+      ],
+      "Handle": [
+        "MouseInOut",
+        "Click"
       ]
     },
     {
       "ComponentName": "HealthValueTxt",
+      "Handle": [
+        "MouseInOut"
+      ]
+    },
+    {
+      "ComponentName": "HealthPopUpWindow",
       "Listener": [
         "Active"
-      ]
+      ] 
     }
   ]
 }
