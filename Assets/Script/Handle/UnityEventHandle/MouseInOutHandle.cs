@@ -12,7 +12,7 @@ public class MouseInOutHandle : MonoBehaviour, IPointerEnterHandler, IPointerExi
         _entity = (GameEntity) gameObject.GetEntityLink().entity;
         _entity?.ReplaceMouseInState(false);
         var image = GetComponent<Image>();
-        if (image != null)
+        if (image != null && _entity.isAnomalyButton)
         {
             image.alphaHitTestMinimumThreshold = 0.5f;
         }

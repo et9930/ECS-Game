@@ -35,6 +35,8 @@ public class ComponentInfo
     [DataMember]
     public string ComponentPath;
     [DataMember]
+    public bool AnomalyButton;
+    [DataMember]
     public List<string> Listener;
     [DataMember]
     public List<string> Handle;

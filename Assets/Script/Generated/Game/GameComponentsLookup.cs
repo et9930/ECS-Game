@@ -19,91 +19,92 @@ public static class GameComponentsLookup {
     public const int AnimationEventFunc = 8;
     public const int AnimationFrame = 9;
     public const int AnimationFrameRate = 10;
-    public const int AnyCurrentFpsListener = 11;
-    public const int AnyHealthListener = 12;
-    public const int AnyLoadingSceneProcessListener = 13;
-    public const int AnyLoadingSceneTextImageListener = 14;
-    public const int AnyLoadPlayerListener = 15;
-    public const int AnyTaiRyoKuListener = 16;
-    public const int Busying = 17;
-    public const int ChaKuRa = 18;
-    public const int CharacterBaseAttributes = 19;
-    public const int ClickEventFunc = 20;
-    public const int ClickState = 21;
-    public const int CoroutineService = 22;
-    public const int CurrentAnimation = 23;
-    public const int CurrentFps = 24;
-    public const int CurrentMapName = 25;
-    public const int CurrentPlayerId = 26;
-    public const int CurrentScene = 27;
-    public const int DebugMessage = 28;
-    public const int Destroy = 29;
-    public const int ErrorMessage = 30;
-    public const int Friction = 31;
-    public const int Gravity = 32;
-    public const int Health = 33;
-    public const int Hierarchy = 34;
-    public const int HierarchyListener = 35;
-    public const int Id = 36;
-    public const int ImageAsset = 37;
-    public const int InitializePhysical = 38;
-    public const int Key = 39;
-    public const int KeyInputService = 40;
-    public const int LastUpdateFpsTime = 41;
-    public const int Layer = 42;
-    public const int LeftMouse = 43;
-    public const int Linked = 44;
-    public const int LoadConfigService = 45;
-    public const int LoadingSceneProcess = 46;
-    public const int LoadingSceneTextImage = 47;
-    public const int LoadingUiRandomInfo = 48;
-    public const int LoadPlayer = 49;
-    public const int LoadScene = 50;
-    public const int LoginInfo = 51;
-    public const int LogService = 52;
-    public const int MapConfig = 53;
-    public const int Mass = 54;
-    public const int MaxSpeed = 55;
-    public const int MouseDown = 56;
-    public const int MouseInOutEventFunc = 57;
-    public const int MouseInputService = 58;
-    public const int MouseInState = 59;
-    public const int MousePosition = 60;
-    public const int MouseUp = 61;
-    public const int MoveTarget = 62;
-    public const int Moving = 63;
-    public const int Name = 64;
-    public const int OnTheGround = 65;
-    public const int OnTheWall = 66;
-    public const int PhysicalConstant = 67;
-    public const int Player = 68;
-    public const int Position = 69;
-    public const int PositionListener = 70;
-    public const int RightMouse = 71;
-    public const int Scale = 72;
-    public const int ScaleListener = 73;
-    public const int SceneConfig = 74;
-    public const int SceneService = 75;
-    public const int Shadow = 76;
-    public const int SignInInfo = 77;
-    public const int Sprite = 78;
-    public const int TaiRyoKu = 79;
-    public const int Text = 80;
-    public const int TextListener = 81;
-    public const int TimeService = 82;
-    public const int Toward = 83;
-    public const int TowardListener = 84;
-    public const int UiClose = 85;
-    public const int UiConfig = 86;
-    public const int UiLayerConfig = 87;
-    public const int UiOpen = 88;
-    public const int UiRootId = 89;
-    public const int UuidToEntity = 90;
-    public const int Velocity = 91;
-    public const int View = 92;
-    public const int ViewService = 93;
+    public const int AnomalyButton = 11;
+    public const int AnyCurrentFpsListener = 12;
+    public const int AnyHealthListener = 13;
+    public const int AnyLoadingSceneProcessListener = 14;
+    public const int AnyLoadingSceneTextImageListener = 15;
+    public const int AnyLoadPlayerListener = 16;
+    public const int AnyTaiRyoKuListener = 17;
+    public const int Busying = 18;
+    public const int ChaKuRa = 19;
+    public const int CharacterBaseAttributes = 20;
+    public const int ClickEventFunc = 21;
+    public const int ClickState = 22;
+    public const int CoroutineService = 23;
+    public const int CurrentAnimation = 24;
+    public const int CurrentFps = 25;
+    public const int CurrentMapName = 26;
+    public const int CurrentPlayerId = 27;
+    public const int CurrentScene = 28;
+    public const int DebugMessage = 29;
+    public const int Destroy = 30;
+    public const int ErrorMessage = 31;
+    public const int Friction = 32;
+    public const int Gravity = 33;
+    public const int Health = 34;
+    public const int Hierarchy = 35;
+    public const int HierarchyListener = 36;
+    public const int Id = 37;
+    public const int ImageAsset = 38;
+    public const int InitializePhysical = 39;
+    public const int Key = 40;
+    public const int KeyInputService = 41;
+    public const int LastUpdateFpsTime = 42;
+    public const int Layer = 43;
+    public const int LeftMouse = 44;
+    public const int Linked = 45;
+    public const int LoadConfigService = 46;
+    public const int LoadingSceneProcess = 47;
+    public const int LoadingSceneTextImage = 48;
+    public const int LoadingUiRandomInfo = 49;
+    public const int LoadPlayer = 50;
+    public const int LoadScene = 51;
+    public const int LoginInfo = 52;
+    public const int LogService = 53;
+    public const int MapConfig = 54;
+    public const int Mass = 55;
+    public const int MaxSpeed = 56;
+    public const int MouseDown = 57;
+    public const int MouseInOutEventFunc = 58;
+    public const int MouseInputService = 59;
+    public const int MouseInState = 60;
+    public const int MousePosition = 61;
+    public const int MouseUp = 62;
+    public const int MoveTarget = 63;
+    public const int Moving = 64;
+    public const int Name = 65;
+    public const int OnTheGround = 66;
+    public const int OnTheWall = 67;
+    public const int PhysicalConstant = 68;
+    public const int Player = 69;
+    public const int Position = 70;
+    public const int PositionListener = 71;
+    public const int RightMouse = 72;
+    public const int Scale = 73;
+    public const int ScaleListener = 74;
+    public const int SceneConfig = 75;
+    public const int SceneService = 76;
+    public const int Shadow = 77;
+    public const int SignInInfo = 78;
+    public const int Sprite = 79;
+    public const int TaiRyoKu = 80;
+    public const int Text = 81;
+    public const int TextListener = 82;
+    public const int TimeService = 83;
+    public const int Toward = 84;
+    public const int TowardListener = 85;
+    public const int UiClose = 86;
+    public const int UiConfig = 87;
+    public const int UiLayerConfig = 88;
+    public const int UiOpen = 89;
+    public const int UiRootId = 90;
+    public const int UuidToEntity = 91;
+    public const int Velocity = 92;
+    public const int View = 93;
+    public const int ViewService = 94;
 
-    public const int TotalComponents = 94;
+    public const int TotalComponents = 95;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -117,6 +118,7 @@ public static class GameComponentsLookup {
         "AnimationEventFunc",
         "AnimationFrame",
         "AnimationFrameRate",
+        "AnomalyButton",
         "AnyCurrentFpsListener",
         "AnyHealthListener",
         "AnyLoadingSceneProcessListener",
@@ -214,6 +216,7 @@ public static class GameComponentsLookup {
         typeof(AnimationEventFuncComponent),
         typeof(AnimationFrameComponent),
         typeof(AnimationFrameRateComponent),
+        typeof(AnomalyButtonComponent),
         typeof(AnyCurrentFpsListenerComponent),
         typeof(AnyHealthListenerComponent),
         typeof(AnyLoadingSceneProcessListenerComponent),

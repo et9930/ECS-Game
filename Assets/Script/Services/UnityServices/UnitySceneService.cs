@@ -129,6 +129,8 @@ public class UnitySceneService : ISceneService
                 e.isLinked = true;
             }
 
+            e.isAnomalyButton = component.AnomalyButton;
+            
 //            if (component.LinkEntity)
 //            {
 //                if(componentGo.GetComponent<Button>() != null)

@@ -93,6 +93,7 @@
     },
     {
       "ComponentName": "PlayerHeadShot",
+      "AnomalyButton": true,
       "Listener": [
         "Active",
         "PlayerHeadShot"

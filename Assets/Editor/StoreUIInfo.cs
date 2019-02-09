@@ -125,12 +125,13 @@ public class StoreUIInfo : EditorWindow
         var componentInfo = new ComponentInfo();
         componentInfo.ComponentName = gameObject.name;
         componentInfo.ComponentPath = rootPath + gameObject.name;
-        foreach (var uiListener in uiListenerList.UIListener)
+        foreach (var uiInfo in uiListenerList.UIListener)
         {
-            if (uiListener.ComponentName == componentInfo.ComponentName)
+            if (uiInfo.ComponentName == componentInfo.ComponentName)
             {
-                componentInfo.Listener = uiListener.Listener;
-                componentInfo.Handle = uiListener.Handle;
+                componentInfo.Listener = uiInfo.Listener;
+                componentInfo.Handle = uiInfo.Handle;
+                componentInfo.AnomalyButton = uiInfo.AnomalyButton;
             }
         }
 
@@ -164,4 +165,6 @@ public class UIListener
     public List<string> Listener;
     [DataMember]
     public List<string> Handle;
+    [DataMember]
+    public bool AnomalyButton;
 }
