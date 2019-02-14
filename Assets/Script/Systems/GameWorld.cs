@@ -16,7 +16,11 @@
 
         //  input deal systems
         Add(new MovementControlSystem(contexts));
+        Add(new JumpControlSystem(contexts));
         Add(new NormalAttackControlSystem(contexts));
+
+        //  HTC systems
+        Add(new HealthRecoverSystem(contexts));
 
         //  physical systems
         Add(new PhysicalSystems(contexts));

@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly OnTheGroundComponent onTheGroundComponent = new OnTheGroundComponent();
+    public OnTheGroundComponent onTheGround { get { return (OnTheGroundComponent)GetComponent(GameComponentsLookup.OnTheGround); } }
+    public bool hasOnTheGround { get { return HasComponent(GameComponentsLookup.OnTheGround); } }
 
-    public bool isOnTheGround {
-        get { return HasComponent(GameComponentsLookup.OnTheGround); }
-        set {
-            if (value != isOnTheGround) {
-                var index = GameComponentsLookup.OnTheGround;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : onTheGroundComponent;
+    public void AddOnTheGround(bool newValue) {
+        var index = GameComponentsLookup.OnTheGround;
+        var component = (OnTheGroundComponent)CreateComponent(index, typeof(OnTheGroundComponent));
+        component.value = newValue;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplaceOnTheGround(bool newValue) {
+        var index = GameComponentsLookup.OnTheGround;
+        var component = (OnTheGroundComponent)CreateComponent(index, typeof(OnTheGroundComponent));
+        component.value = newValue;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveOnTheGround() {
+        RemoveComponent(GameComponentsLookup.OnTheGround);
     }
 }
 

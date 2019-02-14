@@ -16,46 +16,35 @@ public class MovementControlSystem : IExecuteSystem
     {
         foreach (var e in _context.GetGroup(GameMatcher.Id))
         {
-            if (e.id.value == _context.currentPlayerId.value)
+            if (e.id.value != _context.currentPlayerId.value) continue;
+            if (e.isShadow) continue;
+            if (!e.onTheGround.value || e.isBusying) continue;
+
+            if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f)
             {
-                if (e.isShadow)
-                    continue;
-                
-//                if (e.isBusying)
-//                {
-//                    e.isMoving = false;
-//                    e.ReplaceVelocity(Vector3.Zero);
-//                    continue;
-//                }
-                if (e.isOnTheGround && !e.isBusying)
-                {
-                    if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f)
-                    {
-                        e.isMoving = true;
-                        if(e.currentAnimation.name == "idle")
-                            e.ReplaceAnimation("move", true);
+                e.isMoving = true;
+                if(e.currentAnimation.name == "idle")
+                    e.ReplaceAnimation("move", true);
                         
-                    }
-                    else
-                    {
-                        e.isMoving = false;
-                        if(e.currentAnimation.name == "move")
-                            e.ReplaceAnimation("idle", true);
-                    }
+            }
+            else
+            {
+                e.isMoving = false;
+                if(e.currentAnimation.name == "move")
+                    e.ReplaceAnimation("idle", true);
+            }
 
-                    var tmpHorizontal = _context.key.value.Horizontal * _context.characterBaseAttributes.dic[e.name.text].baseVelocity;
-                    var tmpVertical = _context.key.value.Vertical * _context.characterBaseAttributes.dic[e.name.text].baseVelocity;
-                    e.ReplaceVelocity(new Vector3(tmpHorizontal, 0, tmpVertical));
+            var tmpHorizontal = _context.key.value.Horizontal * _context.characterBaseAttributes.dic[e.name.text].baseVelocity;
+            var tmpVertical = _context.key.value.Vertical * _context.characterBaseAttributes.dic[e.name.text].baseVelocity;
+            e.ReplaceVelocity(new Vector3(tmpHorizontal, 0, tmpVertical));
 
-                    if (_context.key.value.Horizontal > 0)
-                    {
-                        e.ReplaceToward(false);
-                    }
-                    else if (_context.key.value.Horizontal < 0)
-                    {
-                        e.ReplaceToward(true);
-                    }
-                }
+            if (_context.key.value.Horizontal > 0)
+            {
+                e.ReplaceToward(false);
+            }
+            else if (_context.key.value.Horizontal < 0)
+            {
+                e.ReplaceToward(true);
             }
         }
     }

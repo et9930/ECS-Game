@@ -19,12 +19,16 @@ public class PlayerStateControlSystem : IExecuteSystem
             if (e.position.value.Y > 0)
             {
                 _context.CreateEntity().ReplaceDebugMessage(e.name.text + " leave ground");
-                e.isOnTheGround = false;
+                e.ReplaceOnTheGround(false);
+
+//                _context.CreateEntity().ReplaceDebugMessage(_context.timeService.instance.GetRealTimeSinceStartup() + "");
             }
 
             if (e.position.value.Y <= 0)
             {
-                e.isOnTheGround = true;
+                e.ReplaceOnTheGround(true);
+//                _context.CreateEntity().ReplaceDebugMessage(_context.timeService.instance.GetRealTimeSinceStartup() + "");
+
             }
         }
     }

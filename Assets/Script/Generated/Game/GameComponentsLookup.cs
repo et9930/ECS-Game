@@ -21,90 +21,95 @@ public static class GameComponentsLookup {
     public const int AnimationFrameRate = 10;
     public const int AnomalyButton = 11;
     public const int AnyCurrentFpsListener = 12;
-    public const int AnyHealthListener = 13;
-    public const int AnyLoadingSceneProcessListener = 14;
-    public const int AnyLoadingSceneTextImageListener = 15;
-    public const int AnyLoadPlayerListener = 16;
-    public const int AnyTaiRyoKuListener = 17;
-    public const int Busying = 18;
-    public const int ChaKuRa = 19;
-    public const int CharacterBaseAttributes = 20;
-    public const int ClickEventFunc = 21;
-    public const int ClickState = 22;
-    public const int CoroutineService = 23;
-    public const int CurrentAnimation = 24;
-    public const int CurrentFps = 25;
-    public const int CurrentMapName = 26;
-    public const int CurrentPlayerId = 27;
-    public const int CurrentScene = 28;
-    public const int DebugMessage = 29;
-    public const int Destroy = 30;
-    public const int ErrorMessage = 31;
-    public const int Friction = 32;
-    public const int Gravity = 33;
-    public const int Health = 34;
-    public const int Hierarchy = 35;
-    public const int HierarchyListener = 36;
-    public const int Id = 37;
-    public const int ImageAsset = 38;
-    public const int InitializePhysical = 39;
-    public const int Key = 40;
-    public const int KeyInputService = 41;
-    public const int LastUpdateFpsTime = 42;
-    public const int Layer = 43;
-    public const int LeftMouse = 44;
-    public const int Linked = 45;
-    public const int LoadConfigService = 46;
-    public const int LoadingSceneProcess = 47;
-    public const int LoadingSceneTextImage = 48;
-    public const int LoadingUiRandomInfo = 49;
-    public const int LoadPlayer = 50;
-    public const int LoadScene = 51;
-    public const int LoginInfo = 52;
-    public const int LogService = 53;
-    public const int MapConfig = 54;
-    public const int Mass = 55;
-    public const int MaxSpeed = 56;
-    public const int MouseDown = 57;
-    public const int MouseInOutEventFunc = 58;
-    public const int MouseInputService = 59;
-    public const int MouseInState = 60;
-    public const int MousePosition = 61;
-    public const int MouseUp = 62;
-    public const int MoveTarget = 63;
-    public const int Moving = 64;
-    public const int Name = 65;
-    public const int OnTheGround = 66;
-    public const int OnTheWall = 67;
-    public const int PhysicalConstant = 68;
-    public const int Player = 69;
-    public const int Position = 70;
-    public const int PositionListener = 71;
-    public const int RightMouse = 72;
-    public const int Scale = 73;
-    public const int ScaleListener = 74;
-    public const int SceneConfig = 75;
-    public const int SceneService = 76;
-    public const int Shadow = 77;
-    public const int SignInInfo = 78;
-    public const int Sprite = 79;
-    public const int TaiRyoKu = 80;
-    public const int Text = 81;
-    public const int TextListener = 82;
-    public const int TimeService = 83;
-    public const int Toward = 84;
-    public const int TowardListener = 85;
-    public const int UiClose = 86;
-    public const int UiConfig = 87;
-    public const int UiLayerConfig = 88;
-    public const int UiOpen = 89;
-    public const int UiRootId = 90;
-    public const int UuidToEntity = 91;
-    public const int Velocity = 92;
-    public const int View = 93;
-    public const int ViewService = 94;
+    public const int AnyHealthCurrentListener = 13;
+    public const int AnyHealthRecoverableListener = 14;
+    public const int AnyHealthRecoverSpeedListener = 15;
+    public const int AnyLoadingSceneProcessListener = 16;
+    public const int AnyLoadingSceneTextImageListener = 17;
+    public const int AnyLoadPlayerListener = 18;
+    public const int AnyTaiRyoKuListener = 19;
+    public const int Busying = 20;
+    public const int ChaKuRa = 21;
+    public const int CharacterBaseAttributes = 22;
+    public const int ClickEventFunc = 23;
+    public const int ClickState = 24;
+    public const int CoroutineService = 25;
+    public const int CurrentAnimation = 26;
+    public const int CurrentFps = 27;
+    public const int CurrentMapName = 28;
+    public const int CurrentPlayerId = 29;
+    public const int CurrentScene = 30;
+    public const int DebugMessage = 31;
+    public const int Destroy = 32;
+    public const int ErrorMessage = 33;
+    public const int Friction = 34;
+    public const int Gravity = 35;
+    public const int HealthCurrent = 36;
+    public const int HealthRecoverable = 37;
+    public const int HealthRecoverSpeed = 38;
+    public const int HealthTotal = 39;
+    public const int Hierarchy = 40;
+    public const int HierarchyListener = 41;
+    public const int Id = 42;
+    public const int ImageAsset = 43;
+    public const int InitializePhysical = 44;
+    public const int Key = 45;
+    public const int KeyInputService = 46;
+    public const int LastUpdateFpsTime = 47;
+    public const int Layer = 48;
+    public const int LeftMouse = 49;
+    public const int Linked = 50;
+    public const int LoadConfigService = 51;
+    public const int LoadingSceneProcess = 52;
+    public const int LoadingSceneTextImage = 53;
+    public const int LoadingUiRandomInfo = 54;
+    public const int LoadPlayer = 55;
+    public const int LoadScene = 56;
+    public const int LoginInfo = 57;
+    public const int LogService = 58;
+    public const int MapConfig = 59;
+    public const int Mass = 60;
+    public const int MaxSpeed = 61;
+    public const int MouseDown = 62;
+    public const int MouseInOutEventFunc = 63;
+    public const int MouseInputService = 64;
+    public const int MouseInState = 65;
+    public const int MousePosition = 66;
+    public const int MouseUp = 67;
+    public const int MoveTarget = 68;
+    public const int Moving = 69;
+    public const int Name = 70;
+    public const int OnTheGround = 71;
+    public const int OnTheWall = 72;
+    public const int PhysicalConstant = 73;
+    public const int Player = 74;
+    public const int Position = 75;
+    public const int PositionListener = 76;
+    public const int RightMouse = 77;
+    public const int Scale = 78;
+    public const int ScaleListener = 79;
+    public const int SceneConfig = 80;
+    public const int SceneService = 81;
+    public const int Shadow = 82;
+    public const int SignInInfo = 83;
+    public const int Sprite = 84;
+    public const int TaiRyoKu = 85;
+    public const int Text = 86;
+    public const int TextListener = 87;
+    public const int TimeService = 88;
+    public const int Toward = 89;
+    public const int TowardListener = 90;
+    public const int UiClose = 91;
+    public const int UiConfig = 92;
+    public const int UiLayerConfig = 93;
+    public const int UiOpen = 94;
+    public const int UiRootId = 95;
+    public const int UuidToEntity = 96;
+    public const int Velocity = 97;
+    public const int View = 98;
+    public const int ViewService = 99;
 
-    public const int TotalComponents = 95;
+    public const int TotalComponents = 100;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -120,7 +125,9 @@ public static class GameComponentsLookup {
         "AnimationFrameRate",
         "AnomalyButton",
         "AnyCurrentFpsListener",
-        "AnyHealthListener",
+        "AnyHealthCurrentListener",
+        "AnyHealthRecoverableListener",
+        "AnyHealthRecoverSpeedListener",
         "AnyLoadingSceneProcessListener",
         "AnyLoadingSceneTextImageListener",
         "AnyLoadPlayerListener",
@@ -141,7 +148,10 @@ public static class GameComponentsLookup {
         "ErrorMessage",
         "Friction",
         "Gravity",
-        "Health",
+        "HealthCurrent",
+        "HealthRecoverable",
+        "HealthRecoverSpeed",
+        "HealthTotal",
         "Hierarchy",
         "HierarchyListener",
         "Id",
@@ -218,7 +228,9 @@ public static class GameComponentsLookup {
         typeof(AnimationFrameRateComponent),
         typeof(AnomalyButtonComponent),
         typeof(AnyCurrentFpsListenerComponent),
-        typeof(AnyHealthListenerComponent),
+        typeof(AnyHealthCurrentListenerComponent),
+        typeof(AnyHealthRecoverableListenerComponent),
+        typeof(AnyHealthRecoverSpeedListenerComponent),
         typeof(AnyLoadingSceneProcessListenerComponent),
         typeof(AnyLoadingSceneTextImageListenerComponent),
         typeof(AnyLoadPlayerListenerComponent),
@@ -239,7 +251,10 @@ public static class GameComponentsLookup {
         typeof(ErrorMessageComponent),
         typeof(FrictionComponent),
         typeof(GravityComponent),
-        typeof(HealthComponent),
+        typeof(HealthCurrentComponent),
+        typeof(HealthRecoverableComponent),
+        typeof(HealthRecoverSpeedComponent),
+        typeof(HealthTotalComponent),
         typeof(HierarchyComponent),
         typeof(HierarchyListenerComponent),
         typeof(IdComponent),

@@ -46,6 +46,8 @@ public class VelocitySystem : IExecuteSystem
                     newPosition.Z = currentMapConfig.CharacterMaxZ;
 
                 e.ReplacePosition(newPosition);
+
+//                _context.CreateEntity().ReplaceDebugMessage(newPosition.ToString());
             }
         }
     }

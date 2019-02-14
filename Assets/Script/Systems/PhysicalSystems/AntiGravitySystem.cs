@@ -17,7 +17,7 @@ public class AntiGravitySystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isOnTheGround && entity.isAffectedByGravity && entity.hasAcceleration;
+        return entity.isAffectedByGravity && entity.hasAcceleration;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -26,7 +26,7 @@ public class AntiGravitySystem : ReactiveSystem<GameEntity>
 
         foreach (var e in entities)
         {
-            if (e.isOnTheGround)
+            if (e.onTheGround.value)
             {
                 var newAcceleration = e.acceleration.value;
                 newAcceleration.Y = 0;

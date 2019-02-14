@@ -11,7 +11,9 @@ public sealed class GameEventSystems : Feature {
     public GameEventSystems(Contexts contexts) {
         Add(new ActiveEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentFpsEventSystem(contexts)); // priority: 0
-        Add(new AnyHealthEventSystem(contexts)); // priority: 0
+        Add(new AnyHealthCurrentEventSystem(contexts)); // priority: 0
+        Add(new AnyHealthRecoverableEventSystem(contexts)); // priority: 0
+        Add(new AnyHealthRecoverSpeedEventSystem(contexts)); // priority: 0
         Add(new HierarchyEventSystem(contexts)); // priority: 0
         Add(new AnyLoadingSceneProcessEventSystem(contexts)); // priority: 0
         Add(new AnyLoadingSceneTextImageEventSystem(contexts)); // priority: 0

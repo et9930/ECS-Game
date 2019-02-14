@@ -38,10 +38,10 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.ReplaceMass(66.5f);
             newPlayer.ReplaceToward(false);
 
-            newPlayer.ReplaceHealth(
-                characterBaseAttributes.baseHealth, 
-                characterBaseAttributes.baseHealth, 
-                characterBaseAttributes.baseHealth);
+            newPlayer.ReplaceHealthTotal(characterBaseAttributes.baseHealth);
+            newPlayer.ReplaceHealthRecoverable(characterBaseAttributes.baseHealth);
+            newPlayer.ReplaceHealthRecoverSpeed(3.0f);
+            newPlayer.ReplaceHealthCurrent(characterBaseAttributes.baseHealth);
 
             newPlayer.ReplaceChaKuRa(characterBaseAttributes.baseChaKuRa);
 
@@ -54,7 +54,7 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.isInitializePhysical = true;
 
             newPlayer.isAffectedByGravity = true;
-            newPlayer.isOnTheGround = false;
+            newPlayer.ReplaceOnTheGround(false);
             newPlayer.isBusying = true;
             newPlayer.isAddShadow = true;
             e.isDestroy = true;

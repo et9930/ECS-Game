@@ -19,6 +19,7 @@ public class FrictionalSystem : IExecuteSystem
             if(e.velocity.value.X == 0.0f && e.velocity.value.Z == 0.0f) continue;
             //if(e.isMoving) continue;
             if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f) continue;
+            if (!e.onTheGround.value) continue;
             
             var totalVelocity = (float)Math.Sqrt(Math.Pow(e.velocity.value.X, 2) + Math.Pow(e.velocity.value.Z, 2));
             var totalSlidingFriction = _context.physicalConstant.frictionCoefficient;
