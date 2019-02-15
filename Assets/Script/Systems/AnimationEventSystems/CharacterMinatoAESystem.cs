@@ -33,10 +33,27 @@ public class CharacterMinatoAESystem : ReactiveSystem<GameEntity>
 //        var frameDic = animationDic["idle"].frameDic;
 //        frameDic[_context.imageAsset.imageInfos.infos["Minato"].animationInfos["idle"].maxFrame] = OnMinatoIdleOver;
 
+        // jump AE
+        animationDic["jump_0"] = new AnimationEvent() {frameDic = new Dictionary<int, Action>()};
+
+        var frameDic = animationDic["jump_0"].frameDic;
+        frameDic[_context.imageAsset.imageInfos.infos["Minato"].animationInfos["jump_0"].maxFrame] = OnMinatoStartJumpOver;
+
     }
 
     public void OnMinatoIdleOver()
     {
 //        _context.CreateEntity().ReplaceDebugMessage("OnMinatoIdleOver");
+    }
+
+    public void OnMinatoStartJumpOver()
+    {
+        foreach (var e in _context.GetGroup(GameMatcher.Id))
+        {
+            if (!e.hasName || e.name.text != "Minato" || e.isShadow) continue;
+            if (!e.hasAnimationFrame) continue;
+            
+            e.ReplaceAnimationFrame(e.animationFrame.value - 1);
+        }
     }
 }

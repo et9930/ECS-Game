@@ -11,4 +11,5 @@ public interface ISceneService
     void CloseUI(int id);
     void AllowSceneActive(bool active);
     Vector3 MainCameraPosition { get; set; }
+    void SetUIPosition(string uiName, Vector2 position);
 }

@@ -113,7 +113,19 @@
       "ComponentName": "HealthPopUpWindow",
       "Listener": [
         "Active"
-      ] 
+      ]
+    },
+    {
+      "ComponentName": "JumpForceVerticalDirectionArrow",
+      "Listener": [
+        "JumpVerticalDirectionArrow"
+      ]
+    },
+    {
+      "ComponentName": "JumpForceProcessBarImage",
+      "Listener": [
+        "JumpForce"
+      ]
     }
   ]
 }

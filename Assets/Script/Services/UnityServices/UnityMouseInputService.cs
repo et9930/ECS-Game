@@ -3,9 +3,14 @@ using Vector2 = System.Numerics.Vector2;
 
 public class UnityMouseInputService : IMouseInputService
 {
-    public Vector2 GetMousePosition()
+    public Vector2 GetMouseWorldPosition()
     {
         return Utilities.ToSystemNumericsVector2(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+    }
+
+    public Vector2 GetMouseScreenPosition()
+    {
+        return Utilities.ToSystemNumericsVector2(Input.mousePosition);
     }
 
     public bool GetLeftMouse()

@@ -27,6 +27,7 @@
 
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
+        Add(new SetUiPositionSystem(contexts));
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
         Add(new AnimationEventSystems(contexts));

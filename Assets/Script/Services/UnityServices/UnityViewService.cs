@@ -1,5 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
+using Vector2 = System.Numerics.Vector2;
+using Vector3 = System.Numerics.Vector3;
 
 public class UnityViewService : IViewService
 {
@@ -46,4 +48,13 @@ public class UnityViewService : IViewService
         var viewSr = viewGo.GetComponent<SpriteRenderer>();
         viewSr.sprite = Resources.Load<Sprite>(assetName);
     }
+
+    public Vector2 WorldPositionToScreenPosition(Vector3 worldPosition)
+    {
+        var unityWorldPosition = Utilities.Vector3PositionToVector2Position(worldPosition);
+        var unityScreenPosition = Camera.main.WorldToScreenPoint(unityWorldPosition);
+        return new Vector2(unityScreenPosition.x, unityScreenPosition.y);
+    }
+
+    public Vector2 ScreenSize => new Vector2(Screen.width, Screen.height);
 }

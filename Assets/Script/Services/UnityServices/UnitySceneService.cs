@@ -73,6 +73,15 @@ public class UnitySceneService : ISceneService
         set { Camera.main.transform.position = Utilities.ToUnityEngineVector3(value); }
     }
 
+    public void SetUIPosition(string uiName, System.Numerics.Vector2 position)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui != null)
+        {
+            ui.transform.localPosition = Utilities.ToUnityEngineVector2(position);
+        }
+    }
+
     public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity)
     {
         var uiGo = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/UI/" + uiName));

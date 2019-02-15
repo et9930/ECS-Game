@@ -34,7 +34,7 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
             }
 
             var lastFrame = e.animationFrame.value;
-            var currentFrame = lastFrame + _context.animationFrameRate.value / _context.currentFps.value; ;
+            var currentFrame = lastFrame + _context.animationFrameRate.value / _context.currentFps.value;
 
             if (animationInfo.frameInfos.ContainsKey((int)currentFrame) && (int)lastFrame != (int)currentFrame)
             {
@@ -64,9 +64,9 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
                 }
             }
 
-            
-            
             // animation end
+            currentFrame = e.animationFrame.value + _context.animationFrameRate.value / _context.currentFps.value;
+
             if (currentFrame > animationInfo.maxFrame)
             {
                 if (e.animation.loop)

@@ -29,34 +29,37 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
     public void Execute()
     {
         // mouse input
-        var mousePosition = _context.mouseInputService.instance.GetMousePosition();
+        var mouseWorldPosition = _context.mouseInputService.instance.GetMouseWorldPosition();
+
+        // Current Position
+        _context.ReplaceMouseCurrentPosition(_context.mouseInputService.instance.GetMouseScreenPosition());
 
         // Left Mouse
         if(_context.mouseInputService.instance.GetLeftMouseDown())
         {
-            _leftMouseEntity.ReplaceMouseDown(mousePosition);
+            _leftMouseEntity.ReplaceMouseDown(mouseWorldPosition);
         }
         if(_context.mouseInputService.instance.GetLeftMouseUp())
         {
-            _leftMouseEntity.ReplaceMouseUp(mousePosition);
+            _leftMouseEntity.ReplaceMouseUp(mouseWorldPosition);
         }
         if (_context.mouseInputService.instance.GetLeftMouse())    
         {
-            _leftMouseEntity.ReplaceMousePosition(mousePosition);
+            _leftMouseEntity.ReplaceMousePosition(mouseWorldPosition);
         }
 
         // Right Mouse
         if (_context.mouseInputService.instance.GetRightMouseDown())
         {
-            _rightMouseEntity.ReplaceMouseDown(mousePosition);
+            _rightMouseEntity.ReplaceMouseDown(mouseWorldPosition);
         }
         if (_context.mouseInputService.instance.GetRightMouseUp())
         {
-            _rightMouseEntity.ReplaceMouseUp(mousePosition);
+            _rightMouseEntity.ReplaceMouseUp(mouseWorldPosition);
         }
         if (_context.mouseInputService.instance.GetRightMouse())
         {
-            _rightMouseEntity.ReplaceMousePosition(mousePosition);
+            _rightMouseEntity.ReplaceMousePosition(mouseWorldPosition);
         }
 
         // key input

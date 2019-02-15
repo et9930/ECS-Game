@@ -23,6 +23,8 @@ public static class ListenerList
         { "PlayerHealth", typeof(PlayerHealthListener) },
         { "PlayerHeadShot", typeof(PlayerHeadShotListener) },
 
+        { "JumpVerticalDirectionArrow", typeof(JumpVerticalDirectionArrowListener) },
+        { "JumpForce", typeof(JumpForceListener) },
     };
 }
 
