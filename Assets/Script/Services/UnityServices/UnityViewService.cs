@@ -10,11 +10,11 @@ public class UnityViewService : IViewService
     public void InitializeViewRoot(string rootName)
     {
         viewRoot = GameObject.Find(rootName);
-        if (viewRoot == null)
-        {
-            viewRoot = new GameObject(rootName);
-            Object.DontDestroyOnLoad(viewRoot);
-        }
+
+        if (viewRoot != null) return;
+
+        viewRoot = new GameObject(rootName);
+        Object.DontDestroyOnLoad(viewRoot);
     }
 
     public void InitializeView(Contexts contexts, IEntity entity, string objectName)

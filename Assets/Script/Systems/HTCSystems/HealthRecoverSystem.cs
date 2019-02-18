@@ -1,5 +1,4 @@
-﻿
-using Entitas;
+﻿using Entitas;
 
 public class HealthRecoverSystem : IExecuteSystem
 {

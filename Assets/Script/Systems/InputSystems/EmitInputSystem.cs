@@ -158,13 +158,13 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
             _currentKeyState.Jump = false;
         }
 
-        if (_context.keyInputService.instance.GetKeyDown("Squat"))
+        if (_context.keyInputService.instance.GetKeyDown("Make ChaKuRa"))
         {
-            _currentKeyState.Squat = true;
+            _currentKeyState.MakeChaKuRa = true;
         }
-        if (_context.keyInputService.instance.GetKeyUp("Squat"))
+        if (_context.keyInputService.instance.GetKeyUp("Make ChaKuRa"))
         {
-            _currentKeyState.Squat = false;
+            _currentKeyState.MakeChaKuRa = false;
         }
 
         if (_context.keyInputService.instance.GetKeyDown("Slow"))

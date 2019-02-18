@@ -23,15 +23,17 @@ public class Attributes
     public float baseVelocity;
 
     [DataMember]
-    public int baseHealth;
+    public float baseHealth;
     [DataMember]
-    public int baseChaKuRa;
+    public float baseChaKuRa;
     [DataMember]
-    public int baseTaiRyoKu;
+    public float chaKuRaSlewRate;
     [DataMember]
-    public int deathTaiRyoKu;
+    public float baseTaiRyoKu;
     [DataMember]
-    public int tiredTaiRyoKu;
+    public float deathTaiRyoKu;
+    [DataMember]
+    public float tiredTaiRyoKu;
     
 
 }

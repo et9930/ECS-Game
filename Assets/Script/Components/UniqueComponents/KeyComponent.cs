@@ -21,7 +21,7 @@ public class Keys
     public bool SpecialState1;
     public bool SpecialState2;
     public bool Jump;
-    public bool Squat;
+    public bool MakeChaKuRa;
     public bool Slow;
     public bool Submit;
     public bool Cancel;

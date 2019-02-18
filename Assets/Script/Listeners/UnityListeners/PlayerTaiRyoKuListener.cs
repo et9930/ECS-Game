@@ -26,8 +26,8 @@ public class PlayerTaiRyoKuListener : MonoBehaviour, IEventListener, IAnyTaiRyoK
         var taiRyoKuPopUpText = transform.Find("TaiRyoKuPopUpWindow/TaiRyoKuPopUpWindowValue").GetComponent<Text>();
 
         taiRyoKuImg.fillAmount = value / entity.taiRyoKuTotal.value;
-        taiRyoKuTiredTip.SetActive(value < entity.taiRyoKuTired.value && value >= entity.taiRyoKuDeath.value);
-        taiRyoKuDeathTip.SetActive(value < entity.taiRyoKuDeath.value);
+        taiRyoKuTiredTip.SetActive(value <= entity.taiRyoKuTired.value && value > entity.taiRyoKuDeath.value);
+        taiRyoKuDeathTip.SetActive(value <= entity.taiRyoKuDeath.value);
         taiRyoKuPopUpText.text = $"{value,0:F2}\n" +
                                  $"{entity.taiRyoKuRecoverSpeed.value,0:F2}点/秒\n" +
                                  $"{entity.taiRyoKuTotal.value,0:F2}\n" +

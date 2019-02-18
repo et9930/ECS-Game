@@ -20,7 +20,11 @@
         Add(new NormalAttackControlSystem(contexts));
 
         //  HTC systems
+        Add(new MakeChaKuRaSystem(contexts));
+        Add(new TaiRyoKuExpendSystem(contexts));
+        Add(new ChaKuRaExpendSystem(contexts));
         Add(new HealthRecoverSystem(contexts));
+        Add(new TaiRyoKuRecoverSystem(contexts));
 
         //  physical systems
         Add(new PhysicalSystems(contexts));

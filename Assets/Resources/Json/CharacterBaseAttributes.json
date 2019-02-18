@@ -6,7 +6,10 @@
         "baseVelocity": 7.5,
         "baseHealth": 100,
         "baseChaKuRa": 100,
-        "baseTaiRyoKu": 100 
+        "baseTaiRyoKu": 100,
+        "deathTaiRyoKu": -10,
+        "tiredTaiRyoKu": 0,
+        "chaKuRaSlewRate": 5
       }
     }
   ]

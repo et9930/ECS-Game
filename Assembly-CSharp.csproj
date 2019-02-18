@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\Components\BusyingComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaCurrentComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaExpendComponent.cs" />
+    <Compile Include="Assets\Script\Components\ChaKuRaSlewRateComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaTotalComponent.cs" />
     <Compile Include="Assets\Script\Components\ClickStateComponent.cs" />
     <Compile Include="Assets\Script\Components\CurrentAnimationComponent.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Script\Components\LinkedComponent.cs" />
     <Compile Include="Assets\Script\Components\LoadPlayerComponent.cs" />
     <Compile Include="Assets\Script\Components\LoginInfoComponent.cs" />
+    <Compile Include="Assets\Script\Components\MakingChaKuRaComponent.cs" />
     <Compile Include="Assets\Script\Components\MassComponent.cs" />
     <Compile Include="Assets\Script\Components\MaxSpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\MouseDownComponent.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Assets\Script\Components\SpriteComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuDeathComponent.cs" />
+    <Compile Include="Assets\Script\Components\TaiRyoKuExpendComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuRecoverSpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuTiredComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuTotalComponent.cs" />
@@ -165,6 +168,7 @@
     <Compile Include="Assets\Script\Generated\Contexts.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ActiveListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyChaKuRaCurrentListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\AnyChaKuRaSlewRateListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentFpsListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyHealthCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyHealthRecoverableListenerComponent.cs" />
@@ -184,6 +188,7 @@
     <Compile Include="Assets\Script\Generated\Events\GameEventSystems.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IActiveListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyChaKuRaCurrentListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyChaKuRaSlewRateListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentFpsListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyHealthCurrentListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyHealthRecoverableListener.cs" />
@@ -202,6 +207,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ITowardListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ActiveEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyChaKuRaCurrentEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\AnyChaKuRaSlewRateEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentFpsEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyHealthCurrentEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyHealthRecoverableEventSystem.cs" />
@@ -232,6 +238,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnimationFrameRateComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnomalyButtonComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyChaKuRaCurrentListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyChaKuRaSlewRateListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentFpsListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyHealthCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyHealthRecoverableListenerComponent.cs" />
@@ -246,6 +253,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameBusyingComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaExpendComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaSlewRateComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaTotalComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCharacterBaseAttributesComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameClickEventFuncComponent.cs" />
@@ -289,6 +297,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLogServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMakingChaKuRaComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMapConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMassComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMaxSpeedComponent.cs" />
@@ -320,6 +329,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameSpriteComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuDeathComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuExpendComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuRecoverSpeedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuTiredComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuTotalComponent.cs" />
@@ -399,6 +409,8 @@
     <Compile Include="Assets\Script\Systems\GameWorld.cs" />
     <Compile Include="Assets\Script\Systems\HTCSystems\ChaKuRaExpendSystem.cs" />
     <Compile Include="Assets\Script\Systems\HTCSystems\HealthRecoverSystem.cs" />
+    <Compile Include="Assets\Script\Systems\HTCSystems\TaiRyoKuExpendSystem.cs" />
+    <Compile Include="Assets\Script\Systems\HTCSystems\TaiRyoKuRecoverSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\ClickEventSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\EmitInputSystem.cs" />
     <Compile Include="Assets\Script\Systems\InputSystems\LoadGameConfigSystem.cs" />
@@ -416,6 +428,7 @@
     <Compile Include="Assets\Script\Systems\PhysicalSystems\PhysicalSystems.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\VelocitySystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\JumpControlSystem.cs" />
+    <Compile Include="Assets\Script\Systems\PlayerControlSystems\MakeChaKuRaSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\MovementControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\PlayerStateControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
