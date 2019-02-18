@@ -7,6 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 [Entitas.CodeGeneration.Attributes.DontGenerate(false)]
-public sealed class AnyMouseCurrentPositionListenerComponent : Entitas.IComponent {
-    public System.Collections.Generic.List<IAnyMouseCurrentPositionListener> value;
+public sealed class AnyJumpAngleListenerComponent : Entitas.IComponent {
+    public System.Collections.Generic.List<IAnyJumpAngleListener> value;
 }

@@ -39,7 +39,7 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in entities)
         {
             GameEntity rootEntity = null;
-            var id = _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity);
+            var id = e.hasParentEntity ? _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity, e.parentEntity.value) : _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity);
             _context.uuidToEntity.dic[id] = rootEntity;
             e.AddUiRootId(id);
             e.isUiOpen = false;

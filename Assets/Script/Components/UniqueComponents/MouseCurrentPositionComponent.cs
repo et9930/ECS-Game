@@ -2,7 +2,7 @@
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
-[Game, Unique, Event(EventTarget.Any)]
+[Game, Unique]
 public class MouseCurrentPositionComponent : IComponent
 {
     public Vector2 value;

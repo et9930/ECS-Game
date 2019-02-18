@@ -82,7 +82,7 @@ public class UnitySceneService : ISceneService
         }
     }
 
-    public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity)
+    public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var uiGo = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/UI/" + uiName));
         var rectTransform = uiGo.GetComponent<RectTransform>();
@@ -98,6 +98,11 @@ public class UnitySceneService : ISceneService
         _uiDictionary[uiInstanceId] = uiGo;
 
         OpenChildren(uiName, context, uiGo, uiInstanceId, ref rootEntity);
+
+        if (parentEntity != null)
+        {
+            rootEntity?.ReplaceParentEntity(parentEntity);
+        }
 
         return uiInstanceId;
     }

@@ -6,6 +6,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public interface IAnyPositionListener {
-    void OnAnyPosition(GameEntity entity, System.Numerics.Vector3 value);
+public interface IAnyJumpAngleListener {
+    void OnAnyJumpAngle(GameEntity entity, float Vertical, float Horizontal);
 }

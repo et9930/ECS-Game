@@ -24,6 +24,7 @@ public static class ListenerList
         { "PlayerHeadShot", typeof(PlayerHeadShotListener) },
 
         { "JumpVerticalDirectionArrow", typeof(JumpVerticalDirectionArrowListener) },
+        { "JumpHorizontalDirectionArrow", typeof(JumpHorizontalDirectionArrowListener) },
         { "JumpForce", typeof(JumpForceListener) },
     };
 }

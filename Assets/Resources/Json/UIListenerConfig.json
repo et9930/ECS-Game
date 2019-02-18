@@ -122,6 +122,12 @@
       ]
     },
     {
+      "ComponentName": "JumpForceHorizontalDirectionArrow",
+      "Listener": [
+        "JumpHorizontalDirectionArrow"
+      ]
+    },
+    {
       "ComponentName": "JumpForceProcessBarImage",
       "Listener": [
         "JumpForce"

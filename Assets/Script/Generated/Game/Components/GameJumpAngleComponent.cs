@@ -12,22 +12,22 @@ public partial class GameContext {
     public JumpAngleComponent jumpAngle { get { return jumpAngleEntity.jumpAngle; } }
     public bool hasJumpAngle { get { return jumpAngleEntity != null; } }
 
-    public GameEntity SetJumpAngle(float newValue) {
+    public GameEntity SetJumpAngle(float newVertical, float newHorizontal) {
         if (hasJumpAngle) {
             throw new Entitas.EntitasException("Could not set JumpAngle!\n" + this + " already has an entity with JumpAngleComponent!",
                 "You should check if the context already has a jumpAngleEntity before setting it or use context.ReplaceJumpAngle().");
         }
         var entity = CreateEntity();
-        entity.AddJumpAngle(newValue);
+        entity.AddJumpAngle(newVertical, newHorizontal);
         return entity;
     }
 
-    public void ReplaceJumpAngle(float newValue) {
+    public void ReplaceJumpAngle(float newVertical, float newHorizontal) {
         var entity = jumpAngleEntity;
         if (entity == null) {
-            entity = SetJumpAngle(newValue);
+            entity = SetJumpAngle(newVertical, newHorizontal);
         } else {
-            entity.ReplaceJumpAngle(newValue);
+            entity.ReplaceJumpAngle(newVertical, newHorizontal);
         }
     }
 
@@ -49,17 +49,19 @@ public partial class GameEntity {
     public JumpAngleComponent jumpAngle { get { return (JumpAngleComponent)GetComponent(GameComponentsLookup.JumpAngle); } }
     public bool hasJumpAngle { get { return HasComponent(GameComponentsLookup.JumpAngle); } }
 
-    public void AddJumpAngle(float newValue) {
+    public void AddJumpAngle(float newVertical, float newHorizontal) {
         var index = GameComponentsLookup.JumpAngle;
         var component = (JumpAngleComponent)CreateComponent(index, typeof(JumpAngleComponent));
-        component.value = newValue;
+        component.Vertical = newVertical;
+        component.Horizontal = newHorizontal;
         AddComponent(index, component);
     }
 
-    public void ReplaceJumpAngle(float newValue) {
+    public void ReplaceJumpAngle(float newVertical, float newHorizontal) {
         var index = GameComponentsLookup.JumpAngle;
         var component = (JumpAngleComponent)CreateComponent(index, typeof(JumpAngleComponent));
-        component.value = newValue;
+        component.Vertical = newVertical;
+        component.Horizontal = newHorizontal;
         ReplaceComponent(index, component);
     }
 

@@ -19,7 +19,7 @@ public class NormalAttackControlSystem : IExecuteSystem
         {
             if (e.id.value != _context.currentPlayerId.value) continue;
             if (e.isShadow) continue;
-            if (e.isBusying || !e.onTheGround.value) continue;
+            if (e.isBusying || !e.onTheGround.value || e.isJumping) continue;
 
             e.ReplaceVelocity(Vector3.Zero);
             e.ReplaceAnimation("skill_3", false);

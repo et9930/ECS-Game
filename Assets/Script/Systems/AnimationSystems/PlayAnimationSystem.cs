@@ -59,7 +59,7 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
             {
                 if (animationEventInfo.ContainsKey((int)currentFrame) && (int)lastFrame != (int)currentFrame)
                 {
-                    _context.CreateEntity().ReplaceDebugMessage(e.name.text + " animation event");
+                    //_context.CreateEntity().ReplaceDebugMessage(e.name.text + " animation event");
                     animationEventInfo[(int)currentFrame]();
                 }
             }

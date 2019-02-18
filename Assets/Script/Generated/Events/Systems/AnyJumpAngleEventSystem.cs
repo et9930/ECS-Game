@@ -6,36 +6,36 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public sealed class AnyPositionEventSystem : Entitas.ReactiveSystem<GameEntity> {
+public sealed class AnyJumpAngleEventSystem : Entitas.ReactiveSystem<GameEntity> {
 
     readonly Entitas.IGroup<GameEntity> _listeners;
     readonly System.Collections.Generic.List<GameEntity> _entityBuffer;
-    readonly System.Collections.Generic.List<IAnyPositionListener> _listenerBuffer;
+    readonly System.Collections.Generic.List<IAnyJumpAngleListener> _listenerBuffer;
 
-    public AnyPositionEventSystem(Contexts contexts) : base(contexts.game) {
-        _listeners = contexts.game.GetGroup(GameMatcher.AnyPositionListener);
+    public AnyJumpAngleEventSystem(Contexts contexts) : base(contexts.game) {
+        _listeners = contexts.game.GetGroup(GameMatcher.AnyJumpAngleListener);
         _entityBuffer = new System.Collections.Generic.List<GameEntity>();
-        _listenerBuffer = new System.Collections.Generic.List<IAnyPositionListener>();
+        _listenerBuffer = new System.Collections.Generic.List<IAnyJumpAngleListener>();
     }
 
     protected override Entitas.ICollector<GameEntity> GetTrigger(Entitas.IContext<GameEntity> context) {
         return Entitas.CollectorContextExtension.CreateCollector(
-            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.Position)
+            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.JumpAngle)
         );
     }
 
     protected override bool Filter(GameEntity entity) {
-        return entity.hasPosition;
+        return entity.hasJumpAngle;
     }
 
     protected override void Execute(System.Collections.Generic.List<GameEntity> entities) {
         foreach (var e in entities) {
-            var component = e.position;
+            var component = e.jumpAngle;
             foreach (var listenerEntity in _listeners.GetEntities(_entityBuffer)) {
                 _listenerBuffer.Clear();
-                _listenerBuffer.AddRange(listenerEntity.anyPositionListener.value);
+                _listenerBuffer.AddRange(listenerEntity.anyJumpAngleListener.value);
                 foreach (var listener in _listenerBuffer) {
-                    listener.OnAnyPosition(e, component.value);
+                    listener.OnAnyJumpAngle(e, component.Vertical, component.Horizontal);
                 }
             }
         }

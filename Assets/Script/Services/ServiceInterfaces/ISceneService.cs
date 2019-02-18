@@ -7,7 +7,7 @@ public interface ISceneService
     void InitializeLayers(UiLayerInfos uiLayerInfos);
     void OpenScene(string sceneName, GameContext context);
     IEnumerable<float> OpenSceneAsync(string sceneName, GameContext context);
-    int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity);
+    int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null);
     void CloseUI(int id);
     void AllowSceneActive(bool active);
     Vector3 MainCameraPosition { get; set; }
