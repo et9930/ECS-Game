@@ -31,3 +31,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/Assets/Resources/Output
+/Assets/Resources/Output.meta
