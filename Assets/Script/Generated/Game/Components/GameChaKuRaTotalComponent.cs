@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public ChaKuRaComponent chaKuRa { get { return (ChaKuRaComponent)GetComponent(GameComponentsLookup.ChaKuRa); } }
-    public bool hasChaKuRa { get { return HasComponent(GameComponentsLookup.ChaKuRa); } }
+    public ChaKuRaTotalComponent chaKuRaTotal { get { return (ChaKuRaTotalComponent)GetComponent(GameComponentsLookup.ChaKuRaTotal); } }
+    public bool hasChaKuRaTotal { get { return HasComponent(GameComponentsLookup.ChaKuRaTotal); } }
 
-    public void AddChaKuRa(int newValue) {
-        var index = GameComponentsLookup.ChaKuRa;
-        var component = (ChaKuRaComponent)CreateComponent(index, typeof(ChaKuRaComponent));
+    public void AddChaKuRaTotal(float newValue) {
+        var index = GameComponentsLookup.ChaKuRaTotal;
+        var component = (ChaKuRaTotalComponent)CreateComponent(index, typeof(ChaKuRaTotalComponent));
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceChaKuRa(int newValue) {
-        var index = GameComponentsLookup.ChaKuRa;
-        var component = (ChaKuRaComponent)CreateComponent(index, typeof(ChaKuRaComponent));
+    public void ReplaceChaKuRaTotal(float newValue) {
+        var index = GameComponentsLookup.ChaKuRaTotal;
+        var component = (ChaKuRaTotalComponent)CreateComponent(index, typeof(ChaKuRaTotalComponent));
         component.value = newValue;
         ReplaceComponent(index, component);
     }
 
-    public void RemoveChaKuRa() {
-        RemoveComponent(GameComponentsLookup.ChaKuRa);
+    public void RemoveChaKuRaTotal() {
+        RemoveComponent(GameComponentsLookup.ChaKuRaTotal);
     }
 }
 
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherChaKuRa;
+    static Entitas.IMatcher<GameEntity> _matcherChaKuRaTotal;
 
-    public static Entitas.IMatcher<GameEntity> ChaKuRa {
+    public static Entitas.IMatcher<GameEntity> ChaKuRaTotal {
         get {
-            if (_matcherChaKuRa == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.ChaKuRa);
+            if (_matcherChaKuRaTotal == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.ChaKuRaTotal);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherChaKuRa = matcher;
+                _matcherChaKuRaTotal = matcher;
             }
 
-            return _matcherChaKuRa;
+            return _matcherChaKuRaTotal;
         }
     }
 }

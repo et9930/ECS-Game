@@ -10,6 +10,7 @@ public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
         Add(new ActiveEventSystem(contexts)); // priority: 0
+        Add(new AnyChaKuRaCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentFpsEventSystem(contexts)); // priority: 0
         Add(new AnyHealthCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyHealthRecoverableEventSystem(contexts)); // priority: 0
@@ -22,7 +23,8 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyLoadPlayerEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
-        Add(new AnyTaiRyoKuEventSystem(contexts)); // priority: 0
+        Add(new AnyTaiRyoKuCurrentEventSystem(contexts)); // priority: 0
+        Add(new AnyTaiRyoKuRecoverSpeedEventSystem(contexts)); // priority: 0
         Add(new TextEventSystem(contexts)); // priority: 0
         Add(new TowardEventSystem(contexts)); // priority: 0
     }

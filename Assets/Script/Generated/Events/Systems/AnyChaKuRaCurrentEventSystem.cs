@@ -6,36 +6,36 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public sealed class AnyTaiRyoKuEventSystem : Entitas.ReactiveSystem<GameEntity> {
+public sealed class AnyChaKuRaCurrentEventSystem : Entitas.ReactiveSystem<GameEntity> {
 
     readonly Entitas.IGroup<GameEntity> _listeners;
     readonly System.Collections.Generic.List<GameEntity> _entityBuffer;
-    readonly System.Collections.Generic.List<IAnyTaiRyoKuListener> _listenerBuffer;
+    readonly System.Collections.Generic.List<IAnyChaKuRaCurrentListener> _listenerBuffer;
 
-    public AnyTaiRyoKuEventSystem(Contexts contexts) : base(contexts.game) {
-        _listeners = contexts.game.GetGroup(GameMatcher.AnyTaiRyoKuListener);
+    public AnyChaKuRaCurrentEventSystem(Contexts contexts) : base(contexts.game) {
+        _listeners = contexts.game.GetGroup(GameMatcher.AnyChaKuRaCurrentListener);
         _entityBuffer = new System.Collections.Generic.List<GameEntity>();
-        _listenerBuffer = new System.Collections.Generic.List<IAnyTaiRyoKuListener>();
+        _listenerBuffer = new System.Collections.Generic.List<IAnyChaKuRaCurrentListener>();
     }
 
     protected override Entitas.ICollector<GameEntity> GetTrigger(Entitas.IContext<GameEntity> context) {
         return Entitas.CollectorContextExtension.CreateCollector(
-            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.TaiRyoKu)
+            context, Entitas.TriggerOnEventMatcherExtension.Added(GameMatcher.ChaKuRaCurrent)
         );
     }
 
     protected override bool Filter(GameEntity entity) {
-        return entity.hasTaiRyoKu;
+        return entity.hasChaKuRaCurrent;
     }
 
     protected override void Execute(System.Collections.Generic.List<GameEntity> entities) {
         foreach (var e in entities) {
-            var component = e.taiRyoKu;
+            var component = e.chaKuRaCurrent;
             foreach (var listenerEntity in _listeners.GetEntities(_entityBuffer)) {
                 _listenerBuffer.Clear();
-                _listenerBuffer.AddRange(listenerEntity.anyTaiRyoKuListener.value);
+                _listenerBuffer.AddRange(listenerEntity.anyChaKuRaCurrentListener.value);
                 foreach (var listener in _listenerBuffer) {
-                    listener.OnAnyTaiRyoKu(e, component.death, component.tired, component.current, component.total);
+                    listener.OnAnyChaKuRaCurrent(e, component.value);
                 }
             }
         }

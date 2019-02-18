@@ -43,13 +43,14 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.ReplaceHealthRecoverSpeed(3.0f);
             newPlayer.ReplaceHealthCurrent(characterBaseAttributes.baseHealth);
 
-            newPlayer.ReplaceChaKuRa(characterBaseAttributes.baseChaKuRa);
+            newPlayer.ReplaceChaKuRaTotal(characterBaseAttributes.baseChaKuRa);
+            newPlayer.ReplaceChaKuRaCurrent(characterBaseAttributes.baseChaKuRa);
 
-            newPlayer.ReplaceTaiRyoKu(
-                characterBaseAttributes.deathTaiRyoKu,
-                characterBaseAttributes.tiredTaiRyoKu,
-                characterBaseAttributes.baseTaiRyoKu,
-                characterBaseAttributes.baseTaiRyoKu);
+            newPlayer.ReplaceTaiRyoKuCurrent(characterBaseAttributes.baseTaiRyoKu);
+            newPlayer.ReplaceTaiRyoKuTotal(characterBaseAttributes.baseTaiRyoKu);
+            newPlayer.ReplaceTaiRyoKuTired(characterBaseAttributes.tiredTaiRyoKu);
+            newPlayer.ReplaceTaiRyoKuDeath(characterBaseAttributes.deathTaiRyoKu);
+            newPlayer.ReplaceTaiRyoKuRecoverSpeed(3.0f);
 
             newPlayer.isInitializePhysical = true;
 

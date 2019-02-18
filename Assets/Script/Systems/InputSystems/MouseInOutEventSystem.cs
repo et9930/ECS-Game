@@ -15,7 +15,13 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
     {
         _context.ReplaceMouseInOutEventFunc(new Dictionary<string, Action>(), new Dictionary<string, Action>());
         _context.mouseInOutEventFunc.inDic["HealthValueTxt"] = HealthValueTxtOnMouseIn;
+        _context.mouseInOutEventFunc.inDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseIn;
+        _context.mouseInOutEventFunc.inDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseIn;
+
         _context.mouseInOutEventFunc.outDic["HealthValueTxt"] = HealthValueTxtOnMouseOut;
+        _context.mouseInOutEventFunc.outDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseOut;
+        _context.mouseInOutEventFunc.outDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseOut;
+
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -67,6 +73,54 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         {
             if (!e.hasName || !e.hasActive) continue;
             if (e.name.text != "HealthPopUpWindow") continue;
+
+            e.ReplaceActive(false);
+            return;
+        }
+    }
+
+    private void ChaKuRaValueImgOnMouseIn()
+    {
+        foreach (var e in _context.GetEntities())
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "ChaKuRaPopUpWindow") continue;
+
+            e.ReplaceActive(true);
+            return;
+        }
+    }
+
+    private void ChaKuRaValueImgOnMouseOut()
+    {
+        foreach (var e in _context.GetEntities())
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "ChaKuRaPopUpWindow") continue;
+
+            e.ReplaceActive(false);
+            return;
+        }
+    }
+
+    private void TaiRyoKuValueImgOnMouseIn()
+    {
+        foreach (var e in _context.GetEntities())
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "TaiRyoKuPopUpWindow") continue;
+
+            e.ReplaceActive(true);
+            return;
+        }
+    }
+
+    private void TaiRyoKuValueImgOnMouseOut()
+    {
+        foreach (var e in _context.GetEntities())
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "TaiRyoKuPopUpWindow") continue;
 
             e.ReplaceActive(false);
             return;

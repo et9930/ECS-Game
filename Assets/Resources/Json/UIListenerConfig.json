@@ -75,13 +75,15 @@
     {
       "ComponentName": "PlayerTaiRyoKuValue",
       "Listener": [
-        "Active"
+        "Active",
+        "PlayerTaiRyoKu"
       ]
     },
     {
       "ComponentName": "PlayerChaKuRaValue",
       "Listener": [
-        "Active"
+        "Active",
+        "PlayerChaKuRa"
       ]
     },
     {
@@ -111,6 +113,30 @@
     },
     {
       "ComponentName": "HealthPopUpWindow",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "ChaKuRaValueImg",
+      "Handle": [
+        "MouseInOut"
+      ]
+    },
+    {
+      "ComponentName": "ChaKuRaPopUpWindow",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "TaiRyoKuValueImg",
+      "Handle": [
+        "MouseInOut"
+      ]
+    },
+    {
+      "ComponentName": "TaiRyoKuPopUpWindow",
       "Listener": [
         "Active"
       ]

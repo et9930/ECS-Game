@@ -20,12 +20,14 @@ public static class ListenerList
         { "Text", typeof(TextListener) },
         { "Toward", typeof(TowardListener) },
 
+        { "PlayerChaKuRa", typeof(PlayerChaKuRaListener) },
         { "PlayerHealth", typeof(PlayerHealthListener) },
         { "PlayerHeadShot", typeof(PlayerHeadShotListener) },
+        { "PlayerTaiRyoKu", typeof(PlayerTaiRyoKuListener) },
 
-        { "JumpVerticalDirectionArrow", typeof(JumpVerticalDirectionArrowListener) },
-        { "JumpHorizontalDirectionArrow", typeof(JumpHorizontalDirectionArrowListener) },
         { "JumpForce", typeof(JumpForceListener) },
+        { "JumpHorizontalDirectionArrow", typeof(JumpHorizontalDirectionArrowListener) },
+        { "JumpVerticalDirectionArrow", typeof(JumpVerticalDirectionArrowListener) },
     };
 }
 
