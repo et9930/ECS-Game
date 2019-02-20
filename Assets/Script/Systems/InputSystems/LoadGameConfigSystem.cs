@@ -54,5 +54,10 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strMapConfig = _context.loadConfigService.instance.LoadJsonFile("Json/MapConfig");
         var tempMapConfig = Utilities.ParseJson<MapConfigList>(strMapConfig);
         _context.ReplaceMapConfig(tempMapConfig);
+
+        // Ninjutsu Attributes
+        var strNinjutsuAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/NinjutsuAttributes");
+        var tempNinjutsuAttributes = Utilities.ParseJson<NinjutsuAttributes>(strNinjutsuAttributes);
+        _context.ReplaceNinjutsuAttributes(tempNinjutsuAttributes.dic);
     }
 }

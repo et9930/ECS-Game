@@ -15,7 +15,8 @@
       "Value": {
         "SceneName": "BattleScene",
         "Uis": [
-          "PlayerInfo"
+          "PlayerInfo",
+          "NinjutsuMenu"
         ]
       }
     }

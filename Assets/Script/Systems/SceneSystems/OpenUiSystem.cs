@@ -38,10 +38,16 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         foreach (var e in entities)
         {
-            GameEntity rootEntity = null;
+            var rootEntity = e;
             var id = e.hasParentEntity ? _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity, e.parentEntity.value) : _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity);
             _context.uuidToEntity.dic[id] = rootEntity;
-            e.AddUiRootId(id);
+
+            if (e.hasNinjutsuName)
+            {
+                rootEntity.ReplaceNinjutsuName(e.ninjutsuName.value);
+            }
+
+            e.ReplaceUiRootId(id);
             e.isUiOpen = false;
         }
     }

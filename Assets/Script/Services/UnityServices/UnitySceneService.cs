@@ -73,6 +73,12 @@ public class UnitySceneService : ISceneService
         set { Camera.main.transform.position = Utilities.ToUnityEngineVector3(value); }
     }
 
+    public System.Numerics.Vector2 GetUIPosition(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        return ui != null ? Utilities.ToSystemNumericsVector2(ui.transform.localPosition) : System.Numerics.Vector2.Zero;
+    }
+
     public void SetUIPosition(string uiName, System.Numerics.Vector2 position)
     {
         var ui = GameObject.Find(uiName);
@@ -89,7 +95,15 @@ public class UnitySceneService : ISceneService
         var uiInstanceId = uiGo.GetInstanceID();
 
         uiGo.name = uiName;
-        uiGo.transform.SetParent(_uiLayers[layer].transform);
+        if (parentEntity != null && parentEntity.hasUiRootId)
+        {
+            var parentUI = GameObject.Find(parentEntity.name.text);
+            uiGo.transform.SetParent(parentUI.transform);
+        }
+        else
+        {
+            uiGo.transform.SetParent(_uiLayers[layer].transform);
+        }
         uiGo.transform.localScale = Vector3.one;
         rectTransform.offsetMax = Vector2.zero;
         rectTransform.offsetMin = Vector2.zero;
@@ -112,20 +126,13 @@ public class UnitySceneService : ISceneService
         var componentInfo = context.uiConfig.UiInfos[uiName];
         foreach (var component in componentInfo.Components)
         {
-            var e = context.CreateEntity();
-            e.AddName(component.ComponentName);
-            e.AddUiRootId(uiInstanceId);
+            GameEntity e = null;
+            e = uiName == component.ComponentPath ? rootEntity : context.CreateEntity();
+            e.ReplaceName(component.ComponentName);
+            e.ReplaceUiRootId(uiInstanceId);
             
             GameObject componentGo;
-            if (uiName == component.ComponentPath)
-            {
-                componentGo = uiGo;
-                rootEntity = e;
-            }
-            else
-            {
-                componentGo = uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
-            }
+            componentGo = uiName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
 
             foreach (var listener in component.Listener)
             {

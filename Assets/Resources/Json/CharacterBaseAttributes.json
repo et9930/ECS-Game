@@ -9,7 +9,11 @@
         "baseTaiRyoKu": 100,
         "deathTaiRyoKu": -10,
         "tiredTaiRyoKu": 0,
-        "chaKuRaSlewRate": 5
+        "chaKuRaSlewRate": 5,
+        "ninjutsuList": [
+          "HiRaiShinNoJuTsu",
+          "HiRaiShinNiNoDan"
+        ] 
       }
     }
   ]

@@ -93,45 +93,52 @@ public static class GameComponentsLookup {
     public const int MouseUp = 82;
     public const int MoveTarget = 83;
     public const int Moving = 84;
-    public const int Name = 85;
-    public const int OnTheGround = 86;
-    public const int OnTheWall = 87;
-    public const int ParentEntity = 88;
-    public const int PhysicalConstant = 89;
-    public const int Player = 90;
-    public const int Position = 91;
-    public const int PositionListener = 92;
-    public const int RightMouse = 93;
-    public const int Scale = 94;
-    public const int ScaleListener = 95;
-    public const int SceneConfig = 96;
-    public const int SceneService = 97;
-    public const int SetUiPosition = 98;
-    public const int Shadow = 99;
-    public const int SignInInfo = 100;
-    public const int Sprite = 101;
-    public const int TaiRyoKuCurrent = 102;
-    public const int TaiRyoKuDeath = 103;
-    public const int TaiRyoKuExpend = 104;
-    public const int TaiRyoKuRecoverSpeed = 105;
-    public const int TaiRyoKuTired = 106;
-    public const int TaiRyoKuTotal = 107;
-    public const int Text = 108;
-    public const int TextListener = 109;
-    public const int TimeService = 110;
-    public const int Toward = 111;
-    public const int TowardListener = 112;
-    public const int UiClose = 113;
-    public const int UiConfig = 114;
-    public const int UiLayerConfig = 115;
-    public const int UiOpen = 116;
-    public const int UiRootId = 117;
-    public const int UuidToEntity = 118;
-    public const int Velocity = 119;
-    public const int View = 120;
-    public const int ViewService = 121;
+    public const int MovingUiList = 85;
+    public const int Name = 86;
+    public const int NinjutsuAttributes = 87;
+    public const int NinjutsuMenuOpen = 88;
+    public const int NinjutsuMenuOpenFreezing = 89;
+    public const int NinjutsuName = 90;
+    public const int NinjutsuNameListener = 91;
+    public const int OnTheGround = 92;
+    public const int OnTheWall = 93;
+    public const int ParentEntity = 94;
+    public const int PhysicalConstant = 95;
+    public const int Player = 96;
+    public const int Position = 97;
+    public const int PositionListener = 98;
+    public const int RightMouse = 99;
+    public const int Scale = 100;
+    public const int ScaleListener = 101;
+    public const int SceneConfig = 102;
+    public const int SceneService = 103;
+    public const int SetUiPosition = 104;
+    public const int Shadow = 105;
+    public const int SignInInfo = 106;
+    public const int Sprite = 107;
+    public const int TaiRyoKuCurrent = 108;
+    public const int TaiRyoKuDeath = 109;
+    public const int TaiRyoKuExpend = 110;
+    public const int TaiRyoKuRecoverSpeed = 111;
+    public const int TaiRyoKuTired = 112;
+    public const int TaiRyoKuTotal = 113;
+    public const int Text = 114;
+    public const int TextListener = 115;
+    public const int TimeService = 116;
+    public const int Toward = 117;
+    public const int TowardListener = 118;
+    public const int UiClose = 119;
+    public const int UiConfig = 120;
+    public const int UiLayerConfig = 121;
+    public const int UiMoveAction = 122;
+    public const int UiOpen = 123;
+    public const int UiRootId = 124;
+    public const int UuidToEntity = 125;
+    public const int Velocity = 126;
+    public const int View = 127;
+    public const int ViewService = 128;
 
-    public const int TotalComponents = 122;
+    public const int TotalComponents = 129;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -219,7 +226,13 @@ public static class GameComponentsLookup {
         "MouseUp",
         "MoveTarget",
         "Moving",
+        "MovingUiList",
         "Name",
+        "NinjutsuAttributes",
+        "NinjutsuMenuOpen",
+        "NinjutsuMenuOpenFreezing",
+        "NinjutsuName",
+        "NinjutsuNameListener",
         "OnTheGround",
         "OnTheWall",
         "ParentEntity",
@@ -250,6 +263,7 @@ public static class GameComponentsLookup {
         "UiClose",
         "UiConfig",
         "UiLayerConfig",
+        "UiMoveAction",
         "UiOpen",
         "UiRootId",
         "UuidToEntity",
@@ -344,7 +358,13 @@ public static class GameComponentsLookup {
         typeof(MouseUpComponent),
         typeof(MoveTargetComponent),
         typeof(MovingComponent),
+        typeof(MovingUiListComponent),
         typeof(NameComponent),
+        typeof(NinjutsuAttributesComponent),
+        typeof(NinjutsuMenuOpenComponent),
+        typeof(NinjutsuMenuOpenFreezingComponent),
+        typeof(NinjutsuNameComponent),
+        typeof(NinjutsuNameListenerComponent),
         typeof(OnTheGroundComponent),
         typeof(OnTheWallComponent),
         typeof(ParentEntityComponent),
@@ -375,6 +395,7 @@ public static class GameComponentsLookup {
         typeof(UiCloseComponent),
         typeof(UiConfigComponent),
         typeof(UiLayerConfigComponent),
+        typeof(UiMoveActionComponent),
         typeof(UiOpenComponent),
         typeof(UiRootIdComponent),
         typeof(UuidToEntityComponent),

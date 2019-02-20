@@ -18,6 +18,7 @@ public class Keys
     public bool In3;
     public bool In4;
     public bool In5;
+    public bool In6;
     public bool SpecialState1;
     public bool SpecialState2;
     public bool Jump;

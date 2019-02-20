@@ -15,6 +15,7 @@ public class UiFollowSystem : IExecuteSystem
         foreach (var e in _context.GetGroup(GameMatcher.ParentEntity))
         {
             if (!e.hasUiRootId) continue;
+            if (!e.parentEntity.value.hasPosition) continue;
 
             var parentPosition = e.parentEntity.value.position.value;
             var parentScreenPosition = _context.viewService.instance.WorldPositionToScreenPosition(parentPosition);

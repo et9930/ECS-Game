@@ -6,18 +6,18 @@ using Entitas.CodeGeneration.Attributes;
 [Game, Unique]
 public class CharacterBaseAttributesComponent : IComponent
 {
-    public Dictionary<string, Attributes> dic;
+    public Dictionary<string, Character> dic;
 }
 
 [DataContract]
 public class CharacterBaseAttributes
 {
     [DataMember]
-    public Dictionary<string, Attributes> list;
+    public Dictionary<string, Character> list;
 }
 
 [DataContract]
-public class Attributes
+public class Character
 {
     [DataMember]
     public float baseVelocity;
@@ -34,6 +34,8 @@ public class Attributes
     public float deathTaiRyoKu;
     [DataMember]
     public float tiredTaiRyoKu;
-    
+
+    [DataMember]
+    public List<string> ninjutsuList;
 
 }

@@ -20,6 +20,6 @@ public class PlayerHeadShotListener : MonoBehaviour, IEventListener, IAnyLoadPla
         if (playerId != _context.currentPlayerId.value) return;
 
         var img = GetComponent<Image>();
-        img.sprite = Resources.Load<Sprite>("Image/HeadShot/" + playerName + "HeadShot");
+        img.sprite = Resources.Load<Sprite>("Image/UI/HeadShot/" + playerName + "HeadShot");
     }
 }

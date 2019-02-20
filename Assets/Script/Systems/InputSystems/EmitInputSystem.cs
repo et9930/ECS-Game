@@ -131,6 +131,15 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
             _currentKeyState.In5 = false;
         }
 
+        if (_context.keyInputService.instance.GetKeyDown("In 6"))
+        {
+            _currentKeyState.In6 = true;
+        }
+        if (_context.keyInputService.instance.GetKeyUp("In 6"))
+        {
+            _currentKeyState.In6 = false;
+        }
+
         if (_context.keyInputService.instance.GetKeyDown("Special State 1"))
         {
             _currentKeyState.SpecialState1 = true;

@@ -150,6 +150,22 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
+    m_Name: In 6
+    descriptiveName: "\u53706"
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 5
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
     m_Name: Special State 1
     descriptiveName: "\u7279\u6B8A\u72B6\u60011"
     descriptiveNegativeName: 
@@ -198,8 +214,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Squat
-    descriptiveName: "\u8E72"
+    m_Name: Make ChaKuRa
+    descriptiveName: "\u63D0\u70BC\u67E5\u514B\u62C9"
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: left ctrl

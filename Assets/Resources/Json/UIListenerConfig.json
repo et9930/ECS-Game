@@ -158,6 +158,12 @@
       "Listener": [
         "JumpForce"
       ]
+    },
+    {
+      "ComponentName": "NinjutsuMenuItem",
+      "Listener": [
+        "NinjutsuMenuItem"
+      ] 
     }
   ]
 }

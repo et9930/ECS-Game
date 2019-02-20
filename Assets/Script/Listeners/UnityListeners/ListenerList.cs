@@ -28,6 +28,8 @@ public static class ListenerList
         { "JumpForce", typeof(JumpForceListener) },
         { "JumpHorizontalDirectionArrow", typeof(JumpHorizontalDirectionArrowListener) },
         { "JumpVerticalDirectionArrow", typeof(JumpVerticalDirectionArrowListener) },
+
+        { "NinjutsuMenuItem", typeof(NinjutsuMenuItemListener) },
     };
 }
 

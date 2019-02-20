@@ -123,6 +123,7 @@
     <Compile Include="Assets\Script\Components\TextComponent.cs" />
     <Compile Include="Assets\Script\Components\TowardComponent.cs" />
     <Compile Include="Assets\Script\Components\UiCloseComponent.cs" />
+    <Compile Include="Assets\Script\Components\UiMoveActionComponent.cs" />
     <Compile Include="Assets\Script\Components\UiOpenComponent.cs" />
     <Compile Include="Assets\Script\Components\UiRootIdComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\AnimationEventFuncComponent.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\ImageAssetComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\LoadingUiRandomInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\MapConfigComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\NinjutsuAttributesComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\SceneConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\UiConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\UILayerConfigComponent.cs" />
@@ -151,6 +153,10 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadSceneComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\MovingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenFreezingComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuNameComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\PhysicalConstantComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\RightMouseComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\CoroutineServiceComponent.cs" />
@@ -181,6 +187,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\HierarchyListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\NinjutsuNameListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PositionListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ScaleListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\TextListenerComponent.cs" />
@@ -201,6 +208,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuCurrentListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuRecoverSpeedListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IHierarchyListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjutsuNameListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPositionListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IScaleListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ITextListener.cs" />
@@ -220,6 +228,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuCurrentEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuRecoverSpeedEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\HierarchyEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\NinjutsuNameEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PositionEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ScaleEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\TextEventSystem.cs" />
@@ -310,7 +319,13 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameMouseUpComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMoveTargetComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMovingComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMovingUiListComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameNameComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNinjutsuAttributesComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNinjutsuMenuOpenComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNinjutsuMenuOpenFreezingComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNinjutsuNameComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNinjutsuNameListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheGroundComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityComponent.cs" />
@@ -341,6 +356,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiCloseComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiMoveActionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiOpenComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiRootIdComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUuidToEntityComponent.cs" />
@@ -368,6 +384,7 @@
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneProcessTextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneTextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneTitleListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\NinjutsuMenuItemListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerChaKuRaListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerHeadshotListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerHealthListener.cs" />
@@ -418,6 +435,7 @@
     <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\ErrorMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\LoginSystem.cs" />
+    <Compile Include="Assets\Script\Systems\NinjutsuSystems\AddNinjutsuMenuItemSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AccelerationSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddForceSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddPhysicalComponentSystem.cs" />
@@ -430,6 +448,7 @@
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\JumpControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\MakeChaKuRaSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\MovementControlSystem.cs" />
+    <Compile Include="Assets\Script\Systems\PlayerControlSystems\NinjutsuMenuControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\PlayerStateControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\InitBattleSceneSystem.cs" />
@@ -439,6 +458,7 @@
     <Compile Include="Assets\Script\Systems\SceneSystems\SetUiPositionSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\SwitchSceneSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\UiFollowSystem.cs" />
+    <Compile Include="Assets\Script\Systems\SceneSystems\UiMoveActionSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterCoroutineServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterKeyInputServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLoadConfigServiceSystem.cs" />

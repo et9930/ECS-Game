@@ -1,0 +1,37 @@
+{
+  "dic": 
+  [
+    {
+      "Key": "HiRaiShinNoJuTsu",
+      "Value": {
+        "ninjutsuName": "飞雷神之术",
+        "ninjutsuClass": 1,
+        "ninjutsuNatures": [ 2 ],
+        "ninjutsuTypes": [ 1 ],
+        "ninjutsuRanges": [ 1, 2, 3 ],
+        "ninjutsuEffects": [ 3 ],
+        "ninjutsuDescribe": "飞雷神之术_描述",
+        "ninjutsuFullYin": [ 5, 3, 1 ],
+        "ninjutsuLevelOneYin": [ 5, 1 ],
+        "ninjutsuLevelTwoYin": [ 5, 1 ],
+        "ninjutsuLevelThreeYin": [ 5, 1 ]
+      }
+    },
+    {
+      "Key": "HiRaiShinNiNoDan",
+      "Value": {
+        "ninjutsuName": "飞雷神二段",
+        "ninjutsuClass": 1,
+        "ninjutsuNatures": [ 2 ],
+        "ninjutsuTypes": [ 1 ],
+        "ninjutsuRanges": [ 1, 2, 3 ],
+        "ninjutsuEffects": [ 1 ],
+        "ninjutsuDescribe": "飞雷神二段_描述",
+        "ninjutsuFullYin": [ 5, 3, 1, 4, 2 ],
+        "ninjutsuLevelOneYin": [ 5, 1, 4, 2 ],
+        "ninjutsuLevelTwoYin": [ 5, 1, 2 ],
+        "ninjutsuLevelThreeYin": [ 5, 1, 2 ]
+      }
+    }
+  ]
+}

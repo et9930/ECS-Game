@@ -44,7 +44,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.sceneService.instance.OpenScene("LoadingScene", _context);
         _context.ReplaceCurrentScene("LoadingScene");
         yield return _context.coroutineService.instance.WaitForEndOfFrame();
-        GameEntity loadingProcessRootEntity = null;
+        GameEntity loadingProcessRootEntity = _context.CreateEntity();
         var loadingProcessUiId = _context.sceneService.instance.OpenUI("LoadingProcess", "TopLayer", _context, ref loadingProcessRootEntity);
         loadingProcessRootEntity.ReplaceActive(false);
         _context.uuidToEntity.dic[loadingProcessUiId] = loadingProcessRootEntity;

@@ -122,9 +122,11 @@ public class StoreUIInfo : EditorWindow
 
     public static ComponentInfo GetComponentInfo(GameObject gameObject, string rootPath)
     {
-        var componentInfo = new ComponentInfo();
-        componentInfo.ComponentName = gameObject.name;
-        componentInfo.ComponentPath = rootPath + gameObject.name;
+        var componentInfo = new ComponentInfo
+        {
+            ComponentName = gameObject.name,
+            ComponentPath = rootPath + gameObject.name
+        };
         foreach (var uiInfo in uiListenerList.UIListener)
         {
             if (uiInfo.ComponentName == componentInfo.ComponentName)
@@ -144,7 +146,7 @@ public class StoreUIInfo : EditorWindow
         {
             componentInfo.Handle = new List<string>();
         }
-        
+
         return componentInfo;
     }
 }

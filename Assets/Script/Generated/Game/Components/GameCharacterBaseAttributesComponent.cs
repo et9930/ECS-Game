@@ -12,7 +12,7 @@ public partial class GameContext {
     public CharacterBaseAttributesComponent characterBaseAttributes { get { return characterBaseAttributesEntity.characterBaseAttributes; } }
     public bool hasCharacterBaseAttributes { get { return characterBaseAttributesEntity != null; } }
 
-    public GameEntity SetCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
+    public GameEntity SetCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Character> newDic) {
         if (hasCharacterBaseAttributes) {
             throw new Entitas.EntitasException("Could not set CharacterBaseAttributes!\n" + this + " already has an entity with CharacterBaseAttributesComponent!",
                 "You should check if the context already has a characterBaseAttributesEntity before setting it or use context.ReplaceCharacterBaseAttributes().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
+    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Character> newDic) {
         var entity = characterBaseAttributesEntity;
         if (entity == null) {
             entity = SetCharacterBaseAttributes(newDic);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public CharacterBaseAttributesComponent characterBaseAttributes { get { return (CharacterBaseAttributesComponent)GetComponent(GameComponentsLookup.CharacterBaseAttributes); } }
     public bool hasCharacterBaseAttributes { get { return HasComponent(GameComponentsLookup.CharacterBaseAttributes); } }
 
-    public void AddCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
+    public void AddCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Character> newDic) {
         var index = GameComponentsLookup.CharacterBaseAttributes;
         var component = (CharacterBaseAttributesComponent)CreateComponent(index, typeof(CharacterBaseAttributesComponent));
         component.dic = newDic;
         AddComponent(index, component);
     }
 
-    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Attributes> newDic) {
+    public void ReplaceCharacterBaseAttributes(System.Collections.Generic.Dictionary<string, Character> newDic) {
         var index = GameComponentsLookup.CharacterBaseAttributes;
         var component = (CharacterBaseAttributesComponent)CreateComponent(index, typeof(CharacterBaseAttributesComponent));
         component.dic = newDic;
