@@ -26,6 +26,8 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyPointNinjutsuMenuItemEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
+        Add(new ScrollBarValueEventSystem(contexts)); // priority: 0
+        Add(new SizeEventSystem(contexts)); // priority: 0
         Add(new AnyTaiRyoKuCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyTaiRyoKuRecoverSpeedEventSystem(contexts)); // priority: 0
         Add(new TextEventSystem(contexts)); // priority: 0

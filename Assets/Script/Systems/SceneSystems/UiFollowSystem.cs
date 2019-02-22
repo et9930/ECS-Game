@@ -20,9 +20,11 @@ public class UiFollowSystem : IExecuteSystem
             var parentPosition = e.parentEntity.value.position.value;
 //            _context.CreateEntity().ReplaceDebugMessage("parentPosition " + parentPosition);
             var parentScreenPosition = _context.viewService.instance.WorldPositionToScreenPosition(parentPosition);
-//            _context.CreateEntity().ReplaceDebugMessage("parentScreenPosition " + parentScreenPosition);
-            parentScreenPosition.X -= _context.viewService.instance.ScreenSize.X / 2;
-            parentScreenPosition.Y -= _context.viewService.instance.ScreenSize.Y / 2;
+            _context.CreateEntity().ReplaceDebugMessage("parentScreenPosition " + parentScreenPosition);
+//            parentScreenPosition.X -= _context.viewService.instance.ScreenSize.X / 2;
+            parentScreenPosition.X -= 960;
+            parentScreenPosition.Y -= 540;
+//            parentScreenPosition.Y -= _context.viewService.instance.ScreenSize.Y / 2;
 //            _context.CreateEntity().ReplaceDebugMessage("ScreenSize " + _context.viewService.instance.ScreenSize);
             _context.sceneService.instance.SetUIPosition(e.name.text, parentScreenPosition);
         }

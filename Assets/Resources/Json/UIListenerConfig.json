@@ -175,6 +175,18 @@
       "Listener": [
         "Active",
         "NinjutsuMenuInfo"
+      ]
+    },
+    {
+      "ComponentName": "NinjutsuMenuScrollRect",
+      "Listener": [
+        "Size"
+      ]
+    },
+    {
+      "ComponentName": "NinjutsuMenuScrollbar",
+      "Listener": [
+        "ScrollBarValue"
       ] 
     }
   ]

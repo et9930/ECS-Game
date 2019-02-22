@@ -17,6 +17,8 @@ public static class ListenerList
         { "Hierarchy", typeof(HierarchyListener) },
         { "Position", typeof(PositionListener) },
         { "Scale", typeof(ScaleListener) },
+        { "ScrollBarValue", typeof(ScrollBarValueListener) },
+        { "Size", typeof(SizeListener) },
         { "Text", typeof(TextListener) },
         { "Toward", typeof(TowardListener) },
 

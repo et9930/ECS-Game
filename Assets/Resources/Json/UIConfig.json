@@ -210,7 +210,7 @@
           "ComponentName": "NinjutsuMenuScrollbar",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollbar",
           "Handle": [],
-          "Listener": []
+          "Listener": ["ScrollBarValue"]
         },
         {
           "AnomalyButton": false,
@@ -232,7 +232,7 @@
           "ComponentName": "NinjutsuMenuScrollRect",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect",
           "Handle": [],
-          "Listener": []
+          "Listener": ["Size"]
         },
         {
           "AnomalyButton": false,

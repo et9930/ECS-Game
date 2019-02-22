@@ -110,9 +110,11 @@
     <Compile Include="Assets\Script\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Script\Components\PositionComponent.cs" />
     <Compile Include="Assets\Script\Components\ScaleComponent.cs" />
+    <Compile Include="Assets\Script\Components\ScrollBarValueComponent.cs" />
     <Compile Include="Assets\Script\Components\SetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\ShadowComponent.cs" />
     <Compile Include="Assets\Script\Components\SignInInfoComponent.cs" />
+    <Compile Include="Assets\Script\Components\SizeComponent.cs" />
     <Compile Include="Assets\Script\Components\SpriteComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuDeathComponent.cs" />
@@ -192,6 +194,8 @@
     <Compile Include="Assets\Script\Generated\Events\Components\NinjutsuNameListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PositionListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ScaleListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\ScrollBarValueListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\SizeListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\TextListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\TowardListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\GameEventSystems.cs" />
@@ -214,6 +218,8 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjutsuNameListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPositionListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IScaleListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IScrollBarValueListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\ISizeListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ITextListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ITowardListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ActiveEventSystem.cs" />
@@ -235,6 +241,8 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\NinjutsuNameEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PositionEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ScaleEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\ScrollBarValueEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\SizeEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\TextEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\TowardEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Feature.cs" />
@@ -344,9 +352,13 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameScaleListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSceneConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSceneServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameScrollBarValueComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameScrollBarValueListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameShadowComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSignInInfoComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSizeComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSizeListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSpriteComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuDeathComponent.cs" />
@@ -398,6 +410,8 @@
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerTaiRyoKuListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PositionListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\ScaleListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\ScrollBarValueListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\SizeListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\TextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\TowardListener.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\ICoroutineService.cs" />

@@ -114,33 +114,37 @@ public static class GameComponentsLookup {
     public const int ScaleListener = 103;
     public const int SceneConfig = 104;
     public const int SceneService = 105;
-    public const int SetUiPosition = 106;
-    public const int Shadow = 107;
-    public const int SignInInfo = 108;
-    public const int Sprite = 109;
-    public const int TaiRyoKuCurrent = 110;
-    public const int TaiRyoKuDeath = 111;
-    public const int TaiRyoKuExpend = 112;
-    public const int TaiRyoKuRecoverSpeed = 113;
-    public const int TaiRyoKuTired = 114;
-    public const int TaiRyoKuTotal = 115;
-    public const int Text = 116;
-    public const int TextListener = 117;
-    public const int TimeService = 118;
-    public const int Toward = 119;
-    public const int TowardListener = 120;
-    public const int UiClose = 121;
-    public const int UiConfig = 122;
-    public const int UiLayerConfig = 123;
-    public const int UiMoveAction = 124;
-    public const int UiOpen = 125;
-    public const int UiRootId = 126;
-    public const int UuidToEntity = 127;
-    public const int Velocity = 128;
-    public const int View = 129;
-    public const int ViewService = 130;
+    public const int ScrollBarValue = 106;
+    public const int ScrollBarValueListener = 107;
+    public const int SetUiPosition = 108;
+    public const int Shadow = 109;
+    public const int SignInInfo = 110;
+    public const int Size = 111;
+    public const int SizeListener = 112;
+    public const int Sprite = 113;
+    public const int TaiRyoKuCurrent = 114;
+    public const int TaiRyoKuDeath = 115;
+    public const int TaiRyoKuExpend = 116;
+    public const int TaiRyoKuRecoverSpeed = 117;
+    public const int TaiRyoKuTired = 118;
+    public const int TaiRyoKuTotal = 119;
+    public const int Text = 120;
+    public const int TextListener = 121;
+    public const int TimeService = 122;
+    public const int Toward = 123;
+    public const int TowardListener = 124;
+    public const int UiClose = 125;
+    public const int UiConfig = 126;
+    public const int UiLayerConfig = 127;
+    public const int UiMoveAction = 128;
+    public const int UiOpen = 129;
+    public const int UiRootId = 130;
+    public const int UuidToEntity = 131;
+    public const int Velocity = 132;
+    public const int View = 133;
+    public const int ViewService = 134;
 
-    public const int TotalComponents = 131;
+    public const int TotalComponents = 135;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -249,9 +253,13 @@ public static class GameComponentsLookup {
         "ScaleListener",
         "SceneConfig",
         "SceneService",
+        "ScrollBarValue",
+        "ScrollBarValueListener",
         "SetUiPosition",
         "Shadow",
         "SignInInfo",
+        "Size",
+        "SizeListener",
         "Sprite",
         "TaiRyoKuCurrent",
         "TaiRyoKuDeath",
@@ -383,9 +391,13 @@ public static class GameComponentsLookup {
         typeof(ScaleListenerComponent),
         typeof(SceneConfigComponent),
         typeof(SceneServiceComponent),
+        typeof(ScrollBarValueComponent),
+        typeof(ScrollBarValueListenerComponent),
         typeof(SetUiPositionComponent),
         typeof(ShadowComponent),
         typeof(SignInInfoComponent),
+        typeof(SizeComponent),
+        typeof(SizeListenerComponent),
         typeof(SpriteComponent),
         typeof(TaiRyoKuCurrentComponent),
         typeof(TaiRyoKuDeathComponent),

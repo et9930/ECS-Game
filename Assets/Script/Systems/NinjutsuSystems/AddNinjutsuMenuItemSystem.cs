@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
@@ -26,12 +27,22 @@ public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             GameEntity menuContent = null;
+            GameEntity menuScrollRect = null;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
                 if (ui.name.text != "NinjutsuMenuContent") continue;
                 menuContent = ui;
                 break;
             }
+
+            foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
+            {
+                if (ui.name.text != "NinjutsuMenuScrollRect") continue;
+                menuScrollRect = ui;
+                break;
+            }
+
+            if (menuContent == null || menuScrollRect == null) continue;
 
             foreach (var ninjutsuName in _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList)
             {
@@ -41,6 +52,8 @@ public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
                 itemEntity.ReplaceParentEntity(menuContent);
                 itemEntity.isUiOpen = true;
             }
+
+            menuScrollRect.ReplaceSize(new Vector2(32.5f, _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList.Count * 40.0f));
         }
     }
 }
