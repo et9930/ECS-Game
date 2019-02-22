@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IAnyJumpAngleListener {
-    void OnAnyJumpAngle(GameEntity entity, float Vertical, float Horizontal);
+    void OnAnyJumpAngle(GameEntity entity, float vertical, float horizontal);
 }
