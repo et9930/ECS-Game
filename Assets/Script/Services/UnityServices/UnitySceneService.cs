@@ -34,7 +34,7 @@ public class UnitySceneService : ISceneService
             // create canvas scaler
             var scaler = layerGameObject.AddComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
             scaler.referenceResolution = new Vector2(1920, 1080);
 
             // create graphic raycaster
@@ -105,8 +105,8 @@ public class UnitySceneService : ISceneService
             uiGo.transform.SetParent(_uiLayers[layer].transform);
         }
         uiGo.transform.localScale = Vector3.one;
-        rectTransform.offsetMax = Vector2.zero;
-        rectTransform.offsetMin = Vector2.zero;
+//        rectTransform.offsetMax = Vector2.zero;
+//        rectTransform.offsetMin = Vector2.zero;
         rectTransform.anchoredPosition3D = Vector3.zero;
 
         _uiDictionary[uiInstanceId] = uiGo;
@@ -126,13 +126,11 @@ public class UnitySceneService : ISceneService
         var componentInfo = context.uiConfig.UiInfos[uiName];
         foreach (var component in componentInfo.Components)
         {
-            GameEntity e = null;
-            e = uiName == component.ComponentPath ? rootEntity : context.CreateEntity();
+            var e = uiName == component.ComponentPath ? rootEntity : context.CreateEntity();
             e.ReplaceName(component.ComponentName);
             e.ReplaceUiRootId(uiInstanceId);
-            
-            GameObject componentGo;
-            componentGo = uiName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
+
+            var componentGo = uiName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
 
             foreach (var listener in component.Listener)
             {

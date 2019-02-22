@@ -6,5 +6,5 @@ using Entitas.CodeGeneration.Attributes;
 [Game, Unique]
 public class ClickEventFuncComponent : IComponent
 {
-    public Dictionary<string, Action> clickDic;
+    public Dictionary<string, Action<GameEntity>> clickDic;
 }

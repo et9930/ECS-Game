@@ -246,7 +246,7 @@
           "ComponentName": "NinjutsuMenuInfoWindow",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow",
           "Handle": [],
-          "Listener": []
+          "Listener": ["Active", "NinjutsuMenuInfo"]
         },
         {
           "AnomalyButton": false,
@@ -278,8 +278,8 @@
         },
         {
           "AnomalyButton": false,
-          "ComponentName": "NinjutsuMEnuInfoClass",
-          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMEnuInfoClass",
+          "ComponentName": "NinjutsuMenuInfoClass",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoClass",
           "Handle": [],
           "Listener": []
         },
@@ -287,6 +287,55 @@
           "AnomalyButton": false,
           "ComponentName": "NinjutsuMenuInfoNature",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureFire",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureFire",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureWind",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWind",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureThunder",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureThunder",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureSoil",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureSoil",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureWater",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWater",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureYin",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYin",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureYang",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYang",
           "Handle": [],
           "Listener": []
         },
@@ -306,6 +355,27 @@
         },
         {
           "AnomalyButton": false,
+          "ComponentName": "TypeNin",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeNin",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TypeTai",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeTai",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TypeGen",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeGen",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
           "ComponentName": "NinjutsuMenuInfoRange",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange",
           "Handle": [],
@@ -313,8 +383,56 @@
         },
         {
           "AnomalyButton": false,
+          "ComponentName": "RangeClose",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeClose",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RangeMiddle",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeMiddle",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RangeFar",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeFar",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
           "ComponentName": "NinjutsuMenuInfoEffect",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectAttack",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAttack",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectDefense",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectDefense",
+          "Handle": [],
+          "Listener": []
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectAssist",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAssist",
           "Handle": [],
           "Listener": []
         },
@@ -401,10 +519,10 @@
     {
       "Components": [
         {
-          "AnomalyButton": false,
+          "AnomalyButton": true,
           "ComponentName": "NinjutsuMenuItem",
           "ComponentPath": "NinjutsuMenuItem",
-          "Handle": [],
+          "Handle": ["MouseInOut", "Click"],
           "Listener": ["NinjutsuMenuItem"]
         },
         {

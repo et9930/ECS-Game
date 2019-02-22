@@ -19,13 +19,13 @@ public class NinjutsuMenuControlSystem : IExecuteSystem
             if (_context.movingUiList.list.Contains("NinjutsuMenu")) return;
             if (!_context.isNinjutsuMenuOpen)
             {
-                _context.CreateEntity().ReplaceUiMoveAction("NinjutsuMenu", false, new Vector2(-960, -88), 0.5f);
+                _context.CreateEntity().ReplaceUiMoveAction("NinjutsuMenu", false, new Vector2(-960, -88), 0.3f);
                 _context.isNinjutsuMenuOpen = true;
                 _context.isNinjutsuMenuOpenFreezing = true;
             }
             else
             {
-                _context.CreateEntity().ReplaceUiMoveAction("NinjutsuMenu", false, new Vector2(-960, -600), 0.5f);
+                _context.CreateEntity().ReplaceUiMoveAction("NinjutsuMenu", false, new Vector2(-960, -600), 0.3f);
                 _context.isNinjutsuMenuOpen = false;
                 _context.isNinjutsuMenuOpenFreezing = true;
             }

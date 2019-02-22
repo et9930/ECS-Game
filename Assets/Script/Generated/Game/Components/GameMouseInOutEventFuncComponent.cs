@@ -12,7 +12,7 @@ public partial class GameContext {
     public MouseInOutEventFuncComponent mouseInOutEventFunc { get { return mouseInOutEventFuncEntity.mouseInOutEventFunc; } }
     public bool hasMouseInOutEventFunc { get { return mouseInOutEventFuncEntity != null; } }
 
-    public GameEntity SetMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newInDic, System.Collections.Generic.Dictionary<string, System.Action> newOutDic) {
+    public GameEntity SetMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newInDic, System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newOutDic) {
         if (hasMouseInOutEventFunc) {
             throw new Entitas.EntitasException("Could not set MouseInOutEventFunc!\n" + this + " already has an entity with MouseInOutEventFuncComponent!",
                 "You should check if the context already has a mouseInOutEventFuncEntity before setting it or use context.ReplaceMouseInOutEventFunc().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newInDic, System.Collections.Generic.Dictionary<string, System.Action> newOutDic) {
+    public void ReplaceMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newInDic, System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newOutDic) {
         var entity = mouseInOutEventFuncEntity;
         if (entity == null) {
             entity = SetMouseInOutEventFunc(newInDic, newOutDic);
@@ -49,7 +49,7 @@ public partial class GameEntity {
     public MouseInOutEventFuncComponent mouseInOutEventFunc { get { return (MouseInOutEventFuncComponent)GetComponent(GameComponentsLookup.MouseInOutEventFunc); } }
     public bool hasMouseInOutEventFunc { get { return HasComponent(GameComponentsLookup.MouseInOutEventFunc); } }
 
-    public void AddMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newInDic, System.Collections.Generic.Dictionary<string, System.Action> newOutDic) {
+    public void AddMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newInDic, System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newOutDic) {
         var index = GameComponentsLookup.MouseInOutEventFunc;
         var component = (MouseInOutEventFuncComponent)CreateComponent(index, typeof(MouseInOutEventFuncComponent));
         component.inDic = newInDic;
@@ -57,7 +57,7 @@ public partial class GameEntity {
         AddComponent(index, component);
     }
 
-    public void ReplaceMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newInDic, System.Collections.Generic.Dictionary<string, System.Action> newOutDic) {
+    public void ReplaceMouseInOutEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newInDic, System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newOutDic) {
         var index = GameComponentsLookup.MouseInOutEventFunc;
         var component = (MouseInOutEventFuncComponent)CreateComponent(index, typeof(MouseInOutEventFuncComponent));
         component.inDic = newInDic;

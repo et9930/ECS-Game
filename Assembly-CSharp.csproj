@@ -158,6 +158,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenFreezingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuNameComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\PhysicalConstantComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\PointNinjutsuMenuItemComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\RightMouseComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\CoroutineServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\KeyInputServiceComponent.cs" />
@@ -184,6 +185,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneProcessListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadingSceneTextImageListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyLoadPlayerListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\AnyPointNinjutsuMenuItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\HierarchyListenerComponent.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneProcessListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadingSceneTextImageListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyLoadPlayerListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyPointNinjutsuMenuItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuCurrentListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuRecoverSpeedListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IHierarchyListener.cs" />
@@ -225,6 +228,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneProcessEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadingSceneTextImageEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyLoadPlayerEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\AnyPointNinjutsuMenuItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuCurrentEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuRecoverSpeedEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\HierarchyEventSystem.cs" />
@@ -257,6 +261,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneProcessListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadingSceneTextImageListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyLoadPlayerListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjutsuMenuItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameBusyingComponent.cs" />
@@ -331,6 +336,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePhysicalConstantComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePlayerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePointNinjutsuMenuItemComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePositionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePositionListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameRightMouseComponent.cs" />
@@ -384,6 +390,7 @@
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneProcessTextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneTextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\LoadingSceneTitleListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\NinjutsuMenuInfoListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\NinjutsuMenuItemListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerChaKuRaListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerHeadshotListener.cs" />

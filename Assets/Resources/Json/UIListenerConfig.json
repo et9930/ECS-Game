@@ -161,8 +161,20 @@
     },
     {
       "ComponentName": "NinjutsuMenuItem",
+      "AnomalyButton": true,
       "Listener": [
         "NinjutsuMenuItem"
+      ],
+      "Handle": [
+        "MouseInOut",
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "NinjutsuMenuInfoWindow",
+      "Listener": [
+        "Active",
+        "NinjutsuMenuInfo"
       ] 
     }
   ]

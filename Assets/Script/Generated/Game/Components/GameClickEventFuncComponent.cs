@@ -12,7 +12,7 @@ public partial class GameContext {
     public ClickEventFuncComponent clickEventFunc { get { return clickEventFuncEntity.clickEventFunc; } }
     public bool hasClickEventFunc { get { return clickEventFuncEntity != null; } }
 
-    public GameEntity SetClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newClickDic) {
+    public GameEntity SetClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newClickDic) {
         if (hasClickEventFunc) {
             throw new Entitas.EntitasException("Could not set ClickEventFunc!\n" + this + " already has an entity with ClickEventFuncComponent!",
                 "You should check if the context already has a clickEventFuncEntity before setting it or use context.ReplaceClickEventFunc().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newClickDic) {
+    public void ReplaceClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newClickDic) {
         var entity = clickEventFuncEntity;
         if (entity == null) {
             entity = SetClickEventFunc(newClickDic);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public ClickEventFuncComponent clickEventFunc { get { return (ClickEventFuncComponent)GetComponent(GameComponentsLookup.ClickEventFunc); } }
     public bool hasClickEventFunc { get { return HasComponent(GameComponentsLookup.ClickEventFunc); } }
 
-    public void AddClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newClickDic) {
+    public void AddClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newClickDic) {
         var index = GameComponentsLookup.ClickEventFunc;
         var component = (ClickEventFuncComponent)CreateComponent(index, typeof(ClickEventFuncComponent));
         component.clickDic = newClickDic;
         AddComponent(index, component);
     }
 
-    public void ReplaceClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action> newClickDic) {
+    public void ReplaceClickEventFunc(System.Collections.Generic.Dictionary<string, System.Action<GameEntity>> newClickDic) {
         var index = GameComponentsLookup.ClickEventFunc;
         var component = (ClickEventFuncComponent)CreateComponent(index, typeof(ClickEventFuncComponent));
         component.clickDic = newClickDic;

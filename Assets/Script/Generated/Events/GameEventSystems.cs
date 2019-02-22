@@ -23,6 +23,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyLoadingSceneTextImageEventSystem(contexts)); // priority: 0
         Add(new AnyLoadPlayerEventSystem(contexts)); // priority: 0
         Add(new NinjutsuNameEventSystem(contexts)); // priority: 0
+        Add(new AnyPointNinjutsuMenuItemEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
         Add(new AnyTaiRyoKuCurrentEventSystem(contexts)); // priority: 0

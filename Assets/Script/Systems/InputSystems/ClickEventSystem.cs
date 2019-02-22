@@ -13,7 +13,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     public void Initialize()
     {
-        _context.ReplaceClickEventFunc(new Dictionary<string, Action>());
+        _context.ReplaceClickEventFunc(new Dictionary<string, Action<GameEntity>>());
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -33,7 +33,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             e.ReplaceClickState(false);
             if (_context.clickEventFunc.clickDic.ContainsKey(e.name.text))
             {
-                _context.clickEventFunc.clickDic[e.name.text]();
+                _context.clickEventFunc.clickDic[e.name.text](e);
             }
         }
     }
