@@ -21,7 +21,7 @@ public class JumpControlSystem : IExecuteSystem
             {
                 if (e.id.value != _context.currentPlayerId.value) continue;
                 if (e.isShadow) continue;
-                if (e.isNormalAttacking || !e.onTheGround.value) continue;
+                if (e.isNormalAttacking || !e.onTheGround.value || e.isMakingYin) continue;
 
                 if (!e.isJumping) // Start Jump
                 {

@@ -23,7 +23,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         {
             if (e.id.value != _context.currentPlayerId.value) continue;
             if (e.isShadow) continue;
-            if (e.isNormalAttacking || e.isMakingChaKuRa) continue;
+            if (e.isNormalAttacking || e.isMakingChaKuRa || e.isJumping) continue;
 
             GameEntity yinListUi = null;
 
