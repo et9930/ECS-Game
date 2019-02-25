@@ -50,7 +50,7 @@ public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
                 itemEntity.ReplaceName("NinjutsuMenuItem");
                 itemEntity.ReplaceNinjutsuName(ninjutsuName);
                 itemEntity.ReplaceParentEntity(menuContent);
-                itemEntity.isUiOpen = true;
+                itemEntity.ReplaceUiOpen("NinjutsuMenuItem");
             }
 
             menuScrollRect.ReplaceSize(new Vector2(32.5f, _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList.Count * 40.0f));

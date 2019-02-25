@@ -82,23 +82,56 @@ public class UnitySceneService : ISceneService
     public void SetUIPosition(string uiName, System.Numerics.Vector2 position)
     {
         var ui = GameObject.Find(uiName);
-        if (ui != null)
-        {
-            ui.transform.localPosition = Utilities.ToUnityEngineVector2(position);
-        }
+        if (ui == null) return;
+        
+        ui.transform.localPosition = Utilities.ToUnityEngineVector2(position);
     }
 
-    public int OpenUI(string uiName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
+    public float GetUIAlpha(string uiName)
     {
-        var uiGo = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/UI/" + uiName));
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return 0.0f;
+
+        var canvasGroup = ui.GetComponent<CanvasGroup>();
+        if (canvasGroup)
+        {
+            return canvasGroup.alpha;
+        }
+
+        return ui.activeSelf ? 1.0f : 0.0f;
+    }
+
+    public void SetUIAlpha(string uiName, float value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+
+        var canvasGroup = ui.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = ui.AddComponent<CanvasGroup>();
+        }
+
+        canvasGroup.alpha = value;
+    }
+
+    public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
+    {
+        var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);
+        var uiGo = GameObject.Instantiate(prefab);
+
         var rectTransform = uiGo.GetComponent<RectTransform>();
         var uiInstanceId = uiGo.GetInstanceID();
 
-        uiGo.name = uiName;
+        if (uiName != null)
+        {
+            uiGo.name = uiName;
+        }
+        
         if (parentEntity != null && parentEntity.hasUiRootId)
         {
-            var parentUI = GameObject.Find(parentEntity.name.text);
-            uiGo.transform.SetParent(parentUI.transform);
+            var parentUI = _uiDictionary[parentEntity.uiRootId.value].transform.Find(parentEntity.name.text);
+            uiGo.transform.SetParent(parentUI);
         }
         else
         {
@@ -107,11 +140,11 @@ public class UnitySceneService : ISceneService
         uiGo.transform.localScale = Vector3.one;
 //        rectTransform.offsetMax = Vector2.zero;
 //        rectTransform.offsetMin = Vector2.zero;
-        rectTransform.anchoredPosition3D = Vector3.zero;
+        rectTransform.anchoredPosition3D = prefab.GetComponent<RectTransform>().anchoredPosition3D;
 
         _uiDictionary[uiInstanceId] = uiGo;
 
-        OpenChildren(uiName, context, uiGo, uiInstanceId, ref rootEntity);
+        OpenChildren(prefabName, context, uiGo, uiInstanceId, ref rootEntity);
 
         if (parentEntity != null)
         {
@@ -121,16 +154,16 @@ public class UnitySceneService : ISceneService
         return uiInstanceId;
     }
 
-    private void OpenChildren(string uiName, GameContext context, GameObject uiGo, int uiInstanceId, ref GameEntity rootEntity)
+    private void OpenChildren(string prefabName, GameContext context, GameObject uiGo, int uiInstanceId, ref GameEntity rootEntity)
     {
-        var componentInfo = context.uiConfig.UiInfos[uiName];
+        var componentInfo = context.uiConfig.UiInfos[prefabName];
         foreach (var component in componentInfo.Components)
         {
-            var e = uiName == component.ComponentPath ? rootEntity : context.CreateEntity();
+            var e = prefabName == component.ComponentPath ? rootEntity : context.CreateEntity();
             e.ReplaceName(component.ComponentName);
             e.ReplaceUiRootId(uiInstanceId);
 
-            var componentGo = uiName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(uiName.Length + 1)).gameObject;
+            var componentGo = prefabName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(prefabName.Length + 1)).gameObject;
 
             foreach (var listener in component.Listener)
             {

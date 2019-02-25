@@ -17,6 +17,7 @@
         //  input deal systems
         Add(new MovementControlSystem(contexts));
         Add(new JumpControlSystem(contexts));
+        Add(new MakeYinSystem(contexts));
         Add(new NormalAttackControlSystem(contexts));
         Add(new NinjutsuMenuControlSystem(contexts));
 
@@ -34,6 +35,7 @@
         Add(new OpenUiSystem(contexts));
         Add(new UiFollowSystem(contexts));
         Add(new UiMoveActionSystem(contexts));
+        Add(new UiFadeInOutActionSystem(contexts));
         Add(new SetUiPositionSystem(contexts));
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));

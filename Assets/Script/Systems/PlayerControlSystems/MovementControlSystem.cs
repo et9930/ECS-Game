@@ -18,7 +18,7 @@ public class MovementControlSystem : IExecuteSystem
         {
             if (e.id.value != _context.currentPlayerId.value) continue;
             if (e.isShadow) continue;
-            if (!e.onTheGround.value || e.isBusying || e.isJumping) continue;
+            if (!e.onTheGround.value || e.isNormalAttacking || e.isJumping) continue;
 
             if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f)
             {

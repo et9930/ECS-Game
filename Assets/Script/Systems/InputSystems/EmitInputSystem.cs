@@ -140,6 +140,15 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
             _currentKeyState.In6 = false;
         }
 
+        if (_context.keyInputService.instance.GetKeyDown("In Complete"))
+        {
+            _currentKeyState.InComplete = true;
+        }
+        if (_context.keyInputService.instance.GetKeyUp("In Complete"))
+        {
+            _currentKeyState.InComplete = false;
+        }
+
         if (_context.keyInputService.instance.GetKeyDown("Special State 1"))
         {
             _currentKeyState.SpecialState1 = true;

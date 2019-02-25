@@ -32,14 +32,12 @@ public class UiMoveActionSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         foreach (var e in entities)
         {
-            if (!_context.movingUiList.list.Contains(e.uiMoveAction.uiName))
-            {
-                _context.movingUiList.list.Add(e.uiMoveAction.uiName);
-                _context.coroutineService.instance.StartCoroutine(MoveUi(e.uiMoveAction.uiName, e.uiMoveAction.moveFor ? e.uiMoveAction.moveLocation : e.uiMoveAction.moveLocation - _context.sceneService.instance.GetUIPosition(e.uiMoveAction.uiName), e.uiMoveAction.moveDuration));
-            }
-            e.isDestroy = true;
+            if (_context.movingUiList.list.Contains(e.uiMoveAction.uiName)) continue;
+            _context.movingUiList.list.Add(e.uiMoveAction.uiName);
+            _context.coroutineService.instance.StartCoroutine(MoveUi(e.uiMoveAction.uiName, e.uiMoveAction.moveFor ? e.uiMoveAction.moveLocation : e.uiMoveAction.moveLocation - _context.sceneService.instance.GetUIPosition(e.uiMoveAction.uiName), e.uiMoveAction.moveDuration));
+            e.RemoveUiMoveAction();
         }
-    }
+    }   
 
     private IEnumerator MoveUi(string uiName, Vector2 forLocation, float time)
     {

@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly BusyingComponent busyingComponent = new BusyingComponent();
+    static readonly NormalAttackingComponent normalAttackingComponent = new NormalAttackingComponent();
 
-    public bool isBusying {
-        get { return HasComponent(GameComponentsLookup.Busying); }
+    public bool isNormalAttacking {
+        get { return HasComponent(GameComponentsLookup.NormalAttacking); }
         set {
-            if (value != isBusying) {
-                var index = GameComponentsLookup.Busying;
+            if (value != isNormalAttacking) {
+                var index = GameComponentsLookup.NormalAttacking;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : busyingComponent;
+                            : normalAttackingComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherBusying;
+    static Entitas.IMatcher<GameEntity> _matcherNormalAttacking;
 
-    public static Entitas.IMatcher<GameEntity> Busying {
+    public static Entitas.IMatcher<GameEntity> NormalAttacking {
         get {
-            if (_matcherBusying == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Busying);
+            if (_matcherNormalAttacking == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.NormalAttacking);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherBusying = matcher;
+                _matcherNormalAttacking = matcher;
             }
 
-            return _matcherBusying;
+            return _matcherNormalAttacking;
         }
     }
 }

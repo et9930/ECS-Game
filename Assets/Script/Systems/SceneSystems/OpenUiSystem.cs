@@ -18,9 +18,10 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.uiLayerConfigEntity.isDestroy = true;
 
         _context.ReplaceUuidToEntity(new Dictionary<int, GameEntity>());
+        _context.ReplaceUiChildList(new Dictionary<int, List<int>>());
 
         var e = _context.CreateEntity();
-        e.isUiOpen = true;
+        e.ReplaceUiOpen("GameState");
         e.ReplaceName("GameState");
     }
 
@@ -31,7 +32,7 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isUiOpen && entity.hasName;
+        return entity.hasUiOpen && entity.hasName;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -39,8 +40,13 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in entities)
         {
             var rootEntity = e;
-            var id = e.hasParentEntity ? _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity, e.parentEntity.value) : _context.sceneService.instance.OpenUI(e.name.text, _context.uiConfig.UiInfos[e.name.text].UiLayer, _context, ref rootEntity);
+            var id = e.hasParentEntity ? _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName, _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity, e.parentEntity.value) : _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName, _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity);
             _context.uuidToEntity.dic[id] = rootEntity;
+            _context.uiChildList.dic[id] = new List<int>();
+            if (e.hasParentEntity && e.parentEntity.value.hasUiRootId)
+            {
+                _context.uiChildList.dic[e.parentEntity.value.uiRootId.value].Add(id);
+            }
 
             if (e.hasNinjutsuName)
             {
@@ -48,7 +54,7 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             }
 
             e.ReplaceUiRootId(id);
-            e.isUiOpen = false;
+            e.RemoveUiOpen();
         }
     }
 

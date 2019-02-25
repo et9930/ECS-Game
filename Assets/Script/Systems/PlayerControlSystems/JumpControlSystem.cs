@@ -21,7 +21,7 @@ public class JumpControlSystem : IExecuteSystem
             {
                 if (e.id.value != _context.currentPlayerId.value) continue;
                 if (e.isShadow) continue;
-                if (e.isBusying || !e.onTheGround.value) continue;
+                if (e.isNormalAttacking || !e.onTheGround.value) continue;
 
                 if (!e.isJumping) // Start Jump
                 {
@@ -29,7 +29,7 @@ public class JumpControlSystem : IExecuteSystem
                     var openJumpUiEntity = _context.CreateEntity();
                     openJumpUiEntity.ReplaceName("JumpUI");
                     openJumpUiEntity.ReplaceParentEntity(e);
-                    openJumpUiEntity.isUiOpen = true;
+                    openJumpUiEntity.ReplaceUiOpen("JumpUI");
                     e.isJumping = true;
                     e.ReplaceAnimation("jump_0", false);
                     _context.ReplaceJumpForce(0.0f);
@@ -159,7 +159,7 @@ public class JumpControlSystem : IExecuteSystem
             {
                 if (e.id.value != _context.currentPlayerId.value) continue;
                 if (e.isShadow) continue;
-                if (e.isBusying || !e.onTheGround.value || !e.isJumping) continue;
+                if (e.isNormalAttacking || !e.onTheGround.value || !e.isJumping) continue;
 
                 e.isJumping = false;
 

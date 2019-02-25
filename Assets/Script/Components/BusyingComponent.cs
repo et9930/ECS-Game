@@ -1,4 +1,4 @@
 ﻿using Entitas;
 
 [Game]
-public class BusyingComponent : IComponent { }
+public class NormalAttackingComponent : IComponent { }

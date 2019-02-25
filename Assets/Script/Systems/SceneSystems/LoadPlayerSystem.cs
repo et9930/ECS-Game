@@ -57,8 +57,9 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
 
             newPlayer.isAffectedByGravity = true;
             newPlayer.ReplaceOnTheGround(false);
-            newPlayer.isBusying = true;
+            newPlayer.isNormalAttacking = true;
             newPlayer.isAddShadow = true;
+            newPlayer.ReplaceYinList(new List<Yin>());
             e.isDestroy = true;
         }
     }

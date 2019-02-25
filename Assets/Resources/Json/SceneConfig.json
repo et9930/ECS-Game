@@ -16,7 +16,8 @@
         "SceneName": "BattleScene",
         "Uis": [
           "PlayerInfo",
-          "NinjutsuMenu"
+          "NinjutsuMenu",
+          "NinjutsuQTE"
         ]
       }
     }

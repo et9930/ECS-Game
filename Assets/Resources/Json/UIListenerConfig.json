@@ -187,6 +187,12 @@
       "ComponentName": "NinjutsuMenuScrollbar",
       "Listener": [
         "ScrollBarValue"
+      ]
+    },
+    {
+      "ComponentName": "NinjutsuQTE",
+      "Listener": [
+        "Active"
       ] 
     }
   ]

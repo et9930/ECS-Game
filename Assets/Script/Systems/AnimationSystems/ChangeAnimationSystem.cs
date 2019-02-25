@@ -34,7 +34,7 @@ public class ChangeAnimationSystem : ReactiveSystem<GameEntity>
             _context.CreateEntity().ReplaceDebugMessage("Change " + e.name.text + " animation to " + e.animation.name);
             if (e.animation.name == "idle")
             {
-                e.isBusying = false;
+                e.isNormalAttacking = false;
                 e.isMoving = false;
             }
             e.ReplaceCurrentAnimation(e.animation.name);

@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly UiOpenComponent uiOpenComponent = new UiOpenComponent();
+    public UiOpenComponent uiOpen { get { return (UiOpenComponent)GetComponent(GameComponentsLookup.UiOpen); } }
+    public bool hasUiOpen { get { return HasComponent(GameComponentsLookup.UiOpen); } }
 
-    public bool isUiOpen {
-        get { return HasComponent(GameComponentsLookup.UiOpen); }
-        set {
-            if (value != isUiOpen) {
-                var index = GameComponentsLookup.UiOpen;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : uiOpenComponent;
+    public void AddUiOpen(string newPrefabName) {
+        var index = GameComponentsLookup.UiOpen;
+        var component = (UiOpenComponent)CreateComponent(index, typeof(UiOpenComponent));
+        component.prefabName = newPrefabName;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplaceUiOpen(string newPrefabName) {
+        var index = GameComponentsLookup.UiOpen;
+        var component = (UiOpenComponent)CreateComponent(index, typeof(UiOpenComponent));
+        component.prefabName = newPrefabName;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveUiOpen() {
+        RemoveComponent(GameComponentsLookup.UiOpen);
     }
 }
 
