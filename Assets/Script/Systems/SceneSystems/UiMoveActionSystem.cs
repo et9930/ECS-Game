@@ -60,7 +60,8 @@ public class UiMoveActionSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             yield return _context.coroutineService.instance.WaitForEndOfFrame();
         }
         _context.sceneService.instance.SetUIPosition(uiName, finalPosition);
-        _context.movingUiList.list.Remove(uiName);
+        var success = _context.movingUiList.list.Remove(uiName);
+        _context.CreateEntity().ReplaceDebugMessage(uiName + " move over " + success);
     }
 
 

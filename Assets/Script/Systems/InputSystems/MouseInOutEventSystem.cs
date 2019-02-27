@@ -18,11 +18,13 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context.mouseInOutEventFunc.inDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseIn;
         _context.mouseInOutEventFunc.inDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseIn;
+        _context.mouseInOutEventFunc.inDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseIn;
 
         _context.mouseInOutEventFunc.outDic["HealthValueTxt"] = HealthValueTxtOnMouseOut;
         _context.mouseInOutEventFunc.outDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseOut;
         _context.mouseInOutEventFunc.outDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseOut;
         _context.mouseInOutEventFunc.outDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseOut;
+        _context.mouseInOutEventFunc.outDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseOut;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -151,6 +153,31 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         {
             if (!e.hasName || !e.hasActive) continue;
             if (e.name.text != "NinjutsuMenuInfoWindow") continue;
+
+            e.ReplaceActive(false);
+            return;
+        }
+    }
+
+    private void NinjaItemMenuItemOnMouseIn(GameEntity entity)
+    {
+        _context.ReplacePointNinjaItemMenuItem(entity.ninjaItemName.value);
+        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "NinjaItemMenuInfoWindow") continue;
+
+            e.ReplaceActive(true);
+            return;
+        }
+    }
+
+    private void NinjaItemMenuItemOnMouseOut(GameEntity entity)
+    {
+        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        {
+            if (!e.hasName || !e.hasActive) continue;
+            if (e.name.text != "NinjaItemMenuInfoWindow") continue;
 
             e.ReplaceActive(false);
             return;

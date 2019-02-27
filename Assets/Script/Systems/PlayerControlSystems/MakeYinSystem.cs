@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Linq;
+using System.Numerics;
 using Entitas;
 
 public class MakeYinSystem : IInitializeSystem, IExecuteSystem
@@ -13,7 +14,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
     public void Initialize()
     {
         _context.ReplaceYinFreeze(false, false, false, false, false, false, false);
-        _context.ReplaceMakeYinTime(0.0f);
+        _context.ReplaceMakeYinTime(3.0f);
         _context.ReplaceCurrentInNumber(0);
     }
 
@@ -27,6 +28,16 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             GameEntity yinListUi = null;
 
+            if (e.isMakingYin)
+            {
+                var newValue = _context.makeYinTime.value - _context.timeService.instance.GetDeltaTime();
+                if (newValue < 0.0f)
+                {
+                    newValue = 0.0f;
+                }
+                _context.ReplaceMakeYinTime(newValue);
+            }
+
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
                 if (ui.name.text != "NinjutsuYinList") continue;
@@ -34,10 +45,65 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
                 break;
             }
 
-            if (e.isMakingYin && _context.key.value.InComplete && !_context.yinFreeze.YinCompleteFreezing)
+            // Cancel Make Yin
+            if (e.isMakingYin && _context.key.value.Cancel)
+            {
+                e.isMakingYin = false;
+                foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
+                {
+                    if (ui.name.text != "NinjutsuQTE") continue;
+
+                    ui.ReplaceActive(false);
+                    foreach (var childId in _context.uiChildList.dic[ui.uiRootId.value])
+                    {
+                        var closeUiEntity = _context.CreateEntity();
+                        closeUiEntity.ReplaceUiRootId(childId);
+                        closeUiEntity.isUiClose = true;
+                    }
+                    _context.uiChildList.dic[ui.uiRootId.value].Clear();
+                    break;
+                }
+                e.yinList.list.Clear();
+                _context.ReplaceMakeYinTime(3.0f);
+                _context.ReplaceCurrentInNumber(0);
+            }
+
+            // Make Yin complete
+            if (e.isMakingYin && ((_context.key.value.InComplete && !_context.yinFreeze.YinCompleteFreezing) || _context.makeYinTime.value == 0.0f))
             {
                 // start ninjutsu
                 _context.yinFreeze.YinCompleteFreezing = true;
+
+                // check yin list
+                foreach (var ninjutsuName in _context.characterBaseAttributes.dic[e.name.text].ninjutsuList)
+                {
+                    if (!e.yinList.list.SequenceEqual(_context.ninjutsuAttributes.dic[ninjutsuName].ninjutsuFullYin)) continue;
+
+                    var jutsu = _context.CreateEntity();
+                    jutsu.ReplaceName(ninjutsuName);
+                    jutsu.isJutsu = true;
+                    break;
+                }
+
+                // close ui
+                e.isMakingYin = false;
+                foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
+                {
+                    if (ui.name.text != "NinjutsuQTE") continue;
+
+                    ui.ReplaceActive(false);
+                    foreach (var childId in _context.uiChildList.dic[ui.uiRootId.value])
+                    {
+                        var closeUiEntity = _context.CreateEntity();
+                        closeUiEntity.ReplaceUiRootId(childId);
+                        closeUiEntity.isUiClose = true;
+                    }
+                    _context.uiChildList.dic[ui.uiRootId.value].Clear();
+                    break;
+                }
+                e.yinList.list.Clear();
+                _context.ReplaceMakeYinTime(3.0f);
+                _context.ReplaceCurrentInNumber(0);
             }
 
             if (!_context.key.value.InComplete && _context.yinFreeze.YinCompleteFreezing)
@@ -47,7 +113,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In1 && !_context.yinFreeze.Yin1Freezing)
             {
-                DealKeyDown("Zi", Yin.Zi, e, yinListUi);
+                DealYinKeyDown("Zi", Yin.Zi, e, yinListUi);
                 _context.yinFreeze.Yin1Freezing = true;
             }
 
@@ -58,7 +124,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In2 && !_context.yinFreeze.Yin2Freezing)
             {
-                DealKeyDown("Yin", Yin.Yin, e, yinListUi);
+                DealYinKeyDown("Yin", Yin.Yin, e, yinListUi);
                 _context.yinFreeze.Yin2Freezing = true;
             }
 
@@ -69,7 +135,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In3 && !_context.yinFreeze.Yin3Freezing)
             {
-                DealKeyDown("Chen", Yin.Chen, e, yinListUi);
+                DealYinKeyDown("Chen", Yin.Chen, e, yinListUi);
                 _context.yinFreeze.Yin3Freezing = true;
             }
 
@@ -80,7 +146,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In4 && !_context.yinFreeze.Yin4Freezing)
             {
-                DealKeyDown("Wu", Yin.Wu, e, yinListUi);
+                DealYinKeyDown("Wu", Yin.Wu, e, yinListUi);
                 _context.yinFreeze.Yin4Freezing = true;
             }
 
@@ -91,7 +157,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In5 && !_context.yinFreeze.Yin5Freezing)
             {
-                DealKeyDown("Shen", Yin.Shen, e, yinListUi);
+                DealYinKeyDown("Shen", Yin.Shen, e, yinListUi);
                 _context.yinFreeze.Yin5Freezing = true;
 
             }
@@ -103,7 +169,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
             if (_context.key.value.In6 && !_context.yinFreeze.Yin6Freezing)
             {
-                DealKeyDown("Xu", Yin.Xu, e, yinListUi);
+                DealYinKeyDown("Xu", Yin.Xu, e, yinListUi);
                 _context.yinFreeze.Yin6Freezing = true;
 
             }
@@ -115,7 +181,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         }
     }
 
-    private void DealKeyDown(string yinName, Yin yin, GameEntity e, GameEntity yinListUi)
+    private void DealYinKeyDown(string yinName, Yin yin, GameEntity e, GameEntity yinListUi)
     {
         if (!e.isMakingYin)
         {
@@ -125,10 +191,12 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
                 if (ui.name.text != "NinjutsuQTE") continue;
                 
                 ui.ReplaceActive(true);
+                break;
             }
         }
 
         e.yinList.list.Add(yin);
+        e.ReplaceChaKuRaExpend(1.0f);
 
         var uiName = "NinjutsuYin" + yinName + _context.currentInNumber.value;
         var yinUI = _context.CreateEntity();

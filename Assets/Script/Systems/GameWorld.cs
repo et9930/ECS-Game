@@ -6,6 +6,9 @@
         Add(new ServiceRegistrationSystems(contexts, services));
         Add(new LoadGameConfigSystem(contexts));
 
+        // Game Event
+        
+        
         // Input Systems
         Add(new EmitInputSystem(contexts));
         Add(new ClickEventSystem(contexts));
@@ -20,6 +23,7 @@
         Add(new MakeYinSystem(contexts));
         Add(new NormalAttackControlSystem(contexts));
         Add(new NinjutsuMenuControlSystem(contexts));
+        Add(new NinjaItemMenuControlSystem(contexts));
 
         //  HTC systems
         Add(new MakeChaKuRaSystem(contexts));
@@ -36,10 +40,11 @@
         Add(new UiFollowSystem(contexts));
         Add(new UiMoveActionSystem(contexts));
         Add(new UiFadeInOutActionSystem(contexts));
+        Add(new UiRotateActionSystem(contexts));
         Add(new SetUiPositionSystem(contexts));
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
-        Add(new AddNinjutsuMenuItemSystem(contexts));
+
         Add(new AnimationEventSystems(contexts));
         Add(new LoadPlayerSystem(contexts));
         Add(new AddShadowSystem(contexts));
@@ -56,6 +61,8 @@
         Add(new DebugMessageSystem(contexts));
         Add(new ErrorMessageSystem(contexts));
         Add(new GameEventSystems(contexts));
+        Add(new AddNinjutsuMenuItemSystem(contexts));
+        Add(new AddNinjaItemMenuItemSystem(contexts));
         Add(new DestroyEntitiesSystem(contexts));
 
         // Order Independence Systems

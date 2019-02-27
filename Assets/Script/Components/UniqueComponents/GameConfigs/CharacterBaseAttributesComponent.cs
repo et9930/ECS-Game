@@ -37,5 +37,6 @@ public class Character
 
     [DataMember]
     public List<string> ninjutsuList;
-
+    [DataMember]
+    public List<string> ninjaItemList;
 }

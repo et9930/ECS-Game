@@ -33,6 +33,11 @@ public class UnityMouseInputService : IMouseInputService
         return Input.GetMouseButton(1);
     }
 
+    public float GetMouseScroll()
+    {
+        return Input.mouseScrollDelta.y;
+    }
+
     public bool GetRightMouseDown()
     {
         return Input.GetMouseButtonDown(1);

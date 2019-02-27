@@ -13,6 +13,14 @@
         "ninjutsuList": [
           "HiRaiShinNoJuTsu",
           "HiRaiShinNiNoDan"
+        ],
+        "ninjaItemList": [
+          "HiRaiShinKuNai",
+          "HuuMaShuRiKen",
+          "KiBaKuHuDa",
+          "KuNai",
+          "KuSaNaGiNoTsuRuGi",
+          "ShuRiKen"
         ] 
       }
     }

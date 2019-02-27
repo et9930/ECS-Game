@@ -17,6 +17,8 @@
         "Uis": [
           "PlayerInfo",
           "NinjutsuMenu",
+          "NinjaItemMenu",
+          "NinjaItemMenuInfoWindow",
           "NinjutsuQTE"
         ]
       }

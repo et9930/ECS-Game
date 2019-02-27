@@ -115,6 +115,24 @@ public class UnitySceneService : ISceneService
         canvasGroup.alpha = value;
     }
 
+    public float GetUIAngle(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return 0.0f;
+
+        var rt = ui.GetComponent<RectTransform>();
+        return rt.localRotation.eulerAngles.z;
+    }
+
+    public void SetUIAngle(string uiName, float value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+
+        var rt = ui.GetComponent<RectTransform>();
+        rt.localRotation = Quaternion.Euler(new Vector3(0, 0, value));
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);
@@ -130,8 +148,12 @@ public class UnitySceneService : ISceneService
         
         if (parentEntity != null && parentEntity.hasUiRootId)
         {
-            var parentUI = _uiDictionary[parentEntity.uiRootId.value].transform.Find(parentEntity.name.text);
-            uiGo.transform.SetParent(parentUI);
+            var parentUI = GameObject.Find(parentEntity.name.text);
+            if (parentUI == null)
+            {
+                parentUI = _uiDictionary[parentEntity.uiRootId.value].transform.Find(parentEntity.name.text).gameObject;
+            }
+            uiGo.transform.SetParent(parentUI.transform);
         }
         else
         {
@@ -140,6 +162,7 @@ public class UnitySceneService : ISceneService
         uiGo.transform.localScale = Vector3.one;
 //        rectTransform.offsetMax = Vector2.zero;
 //        rectTransform.offsetMin = Vector2.zero;
+        rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
         rectTransform.anchoredPosition3D = prefab.GetComponent<RectTransform>().anchoredPosition3D;
 
         _uiDictionary[uiInstanceId] = uiGo;

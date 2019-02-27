@@ -11,6 +11,7 @@ public class Keys
 {
     public float Horizontal;
     public float Vertical;
+    public float MouseScroll;
     public bool TaijutsuAttack;
     public bool NinjutsuAttackMenu;
     public bool In1;
@@ -27,7 +28,7 @@ public class Keys
     public bool Slow;
     public bool Submit;
     public bool Cancel;
-    public bool SwitchNinjaItems;
+    public bool NinjaItemMenu;
     public bool AutoDefence;
     public bool Defence;
     public bool Kawarimi;

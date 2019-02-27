@@ -31,7 +31,7 @@ public class UiFadeInOutActionSystem : ReactiveSystem<GameEntity>, IInitializeSy
         foreach (var e in entities)
         {
             if (_context.fadingUiList.list.Contains(e.uiFadeAction.uiName)) continue;
-            _context.movingUiList.list.Add(e.uiFadeAction.uiName);
+            _context.fadingUiList.list.Add(e.uiFadeAction.uiName);
             _context.coroutineService.instance.StartCoroutine(FadeUi(e.uiFadeAction.uiName, e.uiFadeAction.objectiveAlpha, e.uiFadeAction.changeDuration));
             e.RemoveUiFadeAction();
         }

@@ -6,12 +6,6 @@ public static class ListenerList
 {
     public static Dictionary<string, Type> dictionary = new Dictionary<string, Type>()
     {
-        { "LoadingSceneImage", typeof(LoadingSceneImageListener) },
-        { "LoadingSceneProcess", typeof(LoadingSceneProcessListener) },
-        { "LoadingSceneProcessText", typeof(LoadingSceneProcessTextListener) },
-        { "LoadingSceneText", typeof(LoadingSceneTextListener) },
-        { "LoadingSceneTitle", typeof(LoadingSceneTitleListener) },
-
         { "Active", typeof(ActiveListener) },
         { "Fps", typeof(FpsListener) },
         { "Hierarchy", typeof(HierarchyListener) },
@@ -21,6 +15,12 @@ public static class ListenerList
         { "Size", typeof(SizeListener) },
         { "Text", typeof(TextListener) },
         { "Toward", typeof(TowardListener) },
+
+        { "LoadingSceneImage", typeof(LoadingSceneImageListener) },
+        { "LoadingSceneProcess", typeof(LoadingSceneProcessListener) },
+        { "LoadingSceneProcessText", typeof(LoadingSceneProcessTextListener) },
+        { "LoadingSceneText", typeof(LoadingSceneTextListener) },
+        { "LoadingSceneTitle", typeof(LoadingSceneTitleListener) },
 
         { "PlayerChaKuRa", typeof(PlayerChaKuRaListener) },
         { "PlayerHealth", typeof(PlayerHealthListener) },
@@ -33,6 +33,11 @@ public static class ListenerList
 
         { "NinjutsuMenuItem", typeof(NinjutsuMenuItemListener) },
         { "NinjutsuMenuInfo", typeof(NinjutsuMenuInfoListener) },
+
+        { "MakeYinTime", typeof(MakeYinTimeListener) },
+
+        { "NinjaItemMenuItem", typeof(NinjaItemMenuItemListener) },
+        { "NinjaItemMenuInfo", typeof(NinjaItemMenuInfoListener) },
     };
 }
 

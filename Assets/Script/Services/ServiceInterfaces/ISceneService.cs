@@ -15,4 +15,6 @@ public interface ISceneService
     void SetUIPosition(string uiName, Vector2 position);
     float GetUIAlpha(string uiName);
     void SetUIAlpha(string uiName, float value);
+    float GetUIAngle(string uiName);
+    void SetUIAngle(string uiName, float value);
 }

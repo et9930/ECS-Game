@@ -1,0 +1,53 @@
+{
+  "dic": 
+  [
+    {
+      "Key": "HiRaiShinKuNai",
+      "Value": {
+        "ninjaItemName": "飞雷神苦无",
+        "ninjaItemDescribe": "飞雷神苦无_描述",
+        "ninjaItemEffect": "飞雷神苦无_特殊效果"
+      }
+    },
+    {
+      "Key": "HuuMaShuRiKen",
+      "Value": {
+        "ninjaItemName": "风魔手里剑",
+        "ninjaItemDescribe": "风魔手里剑_描述",
+        "ninjaItemEffect": "风魔手里剑_特殊效果"
+      }
+    },
+    {
+      "Key": "KiBaKuHuDa",
+      "Value": {
+        "ninjaItemName": "起爆符",
+        "ninjaItemDescribe": "起爆符_描述",
+        "ninjaItemEffect": "起爆符_特殊效果"
+      }
+    },
+    {
+      "Key": "KuNai",
+      "Value": {
+        "ninjaItemName": "苦无",
+        "ninjaItemDescribe": "苦无_描述",
+        "ninjaItemEffect": "苦无_特殊效果"
+      }
+    },
+    {
+      "Key": "KuSaNaGiNoTsuRuGi",
+      "Value": {
+        "ninjaItemName": "草薙剑",
+        "ninjaItemDescribe": "草薙剑_描述",
+        "ninjaItemEffect": "草薙剑_特殊效果"
+      }
+    },
+    {
+      "Key": "ShuRiKen",
+      "Value": {
+        "ninjaItemName": "手里剑",
+        "ninjaItemDescribe": "手里剑_描述",
+        "ninjaItemEffect": "手里剑_特殊效果"
+      }
+    }
+  ]
+}

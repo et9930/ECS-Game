@@ -34,6 +34,9 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
         // Current Position
         _context.ReplaceMouseCurrentPosition(_context.mouseInputService.instance.GetMouseScreenPosition());
 
+        // mouse scroll
+        _currentKeyState.MouseScroll = _context.mouseInputService.instance.GetMouseScroll();
+
         // Left Mouse
         if(_context.mouseInputService.instance.GetLeftMouseDown())
         {
@@ -212,13 +215,13 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
             _currentKeyState.Cancel = false;
         }
 
-        if (_context.keyInputService.instance.GetKeyDown("Switch Ninja Items"))
+        if (_context.keyInputService.instance.GetKeyDown("Ninja Item Menu"))
         {
-            _currentKeyState.SwitchNinjaItems = true;
+            _currentKeyState.NinjaItemMenu = true;
         }
-        if (_context.keyInputService.instance.GetKeyUp("Switch Ninja Items"))
+        if (_context.keyInputService.instance.GetKeyUp("Ninja Item Menu"))
         {
-            _currentKeyState.SwitchNinjaItems = false;
+            _currentKeyState.NinjaItemMenu = false;
         }
 
         if (_context.keyInputService.instance.GetKeyDown("Auto Defence"))

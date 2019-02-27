@@ -59,5 +59,10 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strNinjutsuAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/NinjutsuAttributes");
         var tempNinjutsuAttributes = Utilities.ParseJson<NinjutsuAttributes>(strNinjutsuAttributes);
         _context.ReplaceNinjutsuAttributes(tempNinjutsuAttributes.dic);
+
+        // Ninja Item Attributes
+        var strNinjaItemAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/NinjaItemAttributes");
+        var tempNinjaItemAttributes = Utilities.ParseJson<NinjaItemAttributes>(strNinjaItemAttributes);
+        _context.ReplaceNinjaItemAttributes(tempNinjaItemAttributes.dic);
     }
 }

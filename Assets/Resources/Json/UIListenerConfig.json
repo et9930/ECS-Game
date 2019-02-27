@@ -193,7 +193,38 @@
       "ComponentName": "NinjutsuQTE",
       "Listener": [
         "Active"
-      ] 
+      ]
+    },
+    {
+      "ComponentName": "NinjutsuQTETime",
+      "Listener": [
+        "MakeYinTime"
+      ]
+    },
+    {
+      "ComponentName": "NinjaItemMenu",
+      "AnomalyButton": true,
+      "Handle": [
+        "MouseInOut"
+      ]
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem",
+      "AnomalyButton": true,
+      "Listener": [
+        "NinjaItemMenuItem"
+      ],
+      "Handle": [
+        "MouseInOut",
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "NinjaItemMenuInfoWindow",
+      "Listener": [
+        "Active",
+        "NinjaItemMenuInfo"
+      ]
     }
   ]
 }
