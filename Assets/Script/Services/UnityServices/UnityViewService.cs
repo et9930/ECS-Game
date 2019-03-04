@@ -57,4 +57,26 @@ public class UnityViewService : IViewService
     }
 
     public Vector2 ScreenSize => new Vector2(Screen.width, Screen.height);
+
+    public Vector2 GetViewSize(string objectName)
+    {
+        var viewTf = viewRoot.transform.Find(objectName);
+        var viewGo = viewTf.gameObject;
+        var viewSr = viewGo.GetComponent<SpriteRenderer>();
+        var spriteSize = viewSr.sprite.rect.size;
+        var localSpriteSize = spriteSize / viewSr.sprite.pixelsPerUnit;
+        var worldSize = localSpriteSize;
+        worldSize.x *= viewTf.lossyScale.x;
+        worldSize.y *= viewTf.lossyScale.y;
+        return Utilities.ToSystemNumericsVector2(worldSize);
+    }
+
+    public Vector2 GetViewPivot(string objectName)
+    {
+        var viewTf = viewRoot.transform.Find(objectName);
+        var viewGo = viewTf.gameObject;
+        var viewSr = viewGo.GetComponent<SpriteRenderer>();
+        var pivot = viewSr.sprite.pivot / viewSr.sprite.pixelsPerUnit;
+        return Utilities.ToSystemNumericsVector2(pivot);
+    }
 }

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Components\AnimationComponent.cs" />
     <Compile Include="Assets\Script\Components\AnimationFrameComponent.cs" />
     <Compile Include="Assets\Script\Components\AnomalyButtonComponent.cs" />
+    <Compile Include="Assets\Script\Components\BoundingBoxComponent.cs" />
     <Compile Include="Assets\Script\Components\BusyingComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaCurrentComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaExpendComponent.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Assets\Script\Components\SignInInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\SizeComponent.cs" />
     <Compile Include="Assets\Script\Components\SpriteComponent.cs" />
+    <Compile Include="Assets\Script\Components\TagComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuDeathComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuExpendComponent.cs" />
@@ -144,6 +146,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentSceneComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\FadingUiListComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CharacterBaseAttributesComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CollisionPairConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\ImageAssetComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\LoadingUiRandomInfoComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\MapConfigComponent.cs" />
@@ -299,6 +302,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjutsuMenuItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameBoundingBoxComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaExpendComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaSlewRateComponent.cs" />
@@ -306,6 +310,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameCharacterBaseAttributesComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameClickEventFuncComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameClickStateComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameCollisionPairConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCoroutineServiceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentAnimationComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentFpsComponent.cs" />
@@ -399,6 +404,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameSizeComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSizeListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSpriteComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameTagComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuDeathComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuExpendComponent.cs" />
@@ -509,6 +515,7 @@
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddForceSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddPhysicalComponentSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AntiGravitySystem.cs" />
+    <Compile Include="Assets\Script\Systems\PhysicalSystems\BoundingBoxPositionSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\FrictionalSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\GravitySystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\InitPhysicalConstantSystem.cs" />

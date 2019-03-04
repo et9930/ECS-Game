@@ -12,6 +12,7 @@
         Add(new AccelerationSystem(contexts));
         Add(new FrictionalSystem(contexts));
         Add(new VelocitySystem(contexts));
+        Add(new BoundingBoxPositionSystem(contexts));
         Add(new AddPhysicalComponentSystem(contexts));
     }
 }
