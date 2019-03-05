@@ -790,18 +790,6 @@
     <Reference Include="Entitas.VisualDebugging.Unity">
       <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus">
-      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/u3d-Excel/EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="Excel">
-      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/u3d-Excel/Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/u3d-Excel/ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/u3d-Excel/System.Data.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/IT99803/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -1153,12 +1141,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{623BB3F0-BB81-0901-B495-2888DD92BD72}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
