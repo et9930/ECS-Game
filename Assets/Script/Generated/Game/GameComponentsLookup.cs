@@ -119,54 +119,55 @@ public static class GameComponentsLookup {
     public const int OnTheWall = 108;
     public const int ParentEntity = 109;
     public const int PhysicalConstant = 110;
-    public const int Player = 111;
-    public const int PointNinjaItemMenuItem = 112;
-    public const int PointNinjutsuMenuItem = 113;
-    public const int Position = 114;
-    public const int PositionListener = 115;
-    public const int RightMouse = 116;
-    public const int RotatingUiList = 117;
-    public const int Scale = 118;
-    public const int ScaleListener = 119;
-    public const int SceneConfig = 120;
-    public const int SceneService = 121;
-    public const int ScrollBarValue = 122;
-    public const int ScrollBarValueListener = 123;
-    public const int SetUiPosition = 124;
-    public const int Shadow = 125;
-    public const int SignInInfo = 126;
-    public const int Size = 127;
-    public const int SizeListener = 128;
-    public const int Sprite = 129;
-    public const int Tag = 130;
-    public const int TaiRyoKuCurrent = 131;
-    public const int TaiRyoKuDeath = 132;
-    public const int TaiRyoKuExpend = 133;
-    public const int TaiRyoKuRecoverSpeed = 134;
-    public const int TaiRyoKuTired = 135;
-    public const int TaiRyoKuTotal = 136;
-    public const int Text = 137;
-    public const int TextListener = 138;
-    public const int TimeService = 139;
-    public const int Toward = 140;
-    public const int TowardListener = 141;
-    public const int UiChildList = 142;
-    public const int UiClose = 143;
-    public const int UiConfig = 144;
-    public const int UiFadeAction = 145;
-    public const int UiLayerConfig = 146;
-    public const int UiMoveAction = 147;
-    public const int UiOpen = 148;
-    public const int UiRootId = 149;
-    public const int UiRotateAction = 150;
-    public const int UuidToEntity = 151;
-    public const int Velocity = 152;
-    public const int View = 153;
-    public const int ViewService = 154;
-    public const int YinFreeze = 155;
-    public const int YinList = 156;
+    public const int PhysicsService = 111;
+    public const int Player = 112;
+    public const int PointNinjaItemMenuItem = 113;
+    public const int PointNinjutsuMenuItem = 114;
+    public const int Position = 115;
+    public const int PositionListener = 116;
+    public const int RightMouse = 117;
+    public const int RotatingUiList = 118;
+    public const int Scale = 119;
+    public const int ScaleListener = 120;
+    public const int SceneConfig = 121;
+    public const int SceneService = 122;
+    public const int ScrollBarValue = 123;
+    public const int ScrollBarValueListener = 124;
+    public const int SetUiPosition = 125;
+    public const int Shadow = 126;
+    public const int SignInInfo = 127;
+    public const int Size = 128;
+    public const int SizeListener = 129;
+    public const int Sprite = 130;
+    public const int Tag = 131;
+    public const int TaiRyoKuCurrent = 132;
+    public const int TaiRyoKuDeath = 133;
+    public const int TaiRyoKuExpend = 134;
+    public const int TaiRyoKuRecoverSpeed = 135;
+    public const int TaiRyoKuTired = 136;
+    public const int TaiRyoKuTotal = 137;
+    public const int Text = 138;
+    public const int TextListener = 139;
+    public const int TimeService = 140;
+    public const int Toward = 141;
+    public const int TowardListener = 142;
+    public const int UiChildList = 143;
+    public const int UiClose = 144;
+    public const int UiConfig = 145;
+    public const int UiFadeAction = 146;
+    public const int UiLayerConfig = 147;
+    public const int UiMoveAction = 148;
+    public const int UiOpen = 149;
+    public const int UiRootId = 150;
+    public const int UiRotateAction = 151;
+    public const int UuidToEntity = 152;
+    public const int Velocity = 153;
+    public const int View = 154;
+    public const int ViewService = 155;
+    public const int YinFreeze = 156;
+    public const int YinList = 157;
 
-    public const int TotalComponents = 157;
+    public const int TotalComponents = 158;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -280,6 +281,7 @@ public static class GameComponentsLookup {
         "OnTheWall",
         "ParentEntity",
         "PhysicalConstant",
+        "PhysicsService",
         "Player",
         "PointNinjaItemMenuItem",
         "PointNinjutsuMenuItem",
@@ -440,6 +442,7 @@ public static class GameComponentsLookup {
         typeof(OnTheWallComponent),
         typeof(ParentEntityComponent),
         typeof(PhysicalConstantComponent),
+        typeof(PhysicsServiceComponent),
         typeof(PlayerComponent),
         typeof(PointNinjaItemMenuItemComponent),
         typeof(PointNinjutsuMenuItemComponent),

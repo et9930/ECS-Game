@@ -5,10 +5,10 @@ public class RegisterTimeServiceSystem : IInitializeSystem
     private readonly GameContext _context;
     private readonly ITimeService _timeService;
 
-    public RegisterTimeServiceSystem(Contexts contexts, Services services)
+    public RegisterTimeServiceSystem(Contexts contexts, ITimeService timeService)
     {
         _context = contexts.game;
-        _timeService = services.Time;
+        _timeService = timeService;
     }
 
     public void Initialize()

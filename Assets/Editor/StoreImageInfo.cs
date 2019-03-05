@@ -6,6 +6,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
+using Vector2 = System.Numerics.Vector2;
 using Vector3 = System.Numerics.Vector3;
 
 public class StoreImageInfo : EditorWindow
@@ -24,6 +25,7 @@ public class StoreImageInfo : EditorWindow
         
         var configObj = Resources.Load("Json/AnimationInfos");
         var old_str = configObj.ToString();
+
 
         using (var ms = new MemoryStream(Encoding.Unicode.GetBytes(old_str)))
         {
@@ -129,9 +131,9 @@ public class StoreImageInfo : EditorWindow
         try
         {
             var pngPaths = Directory.GetFiles(dirPath, "*.png", SearchOption.TopDirectoryOnly);
-            for (int i = 0; i < pngPaths.Length; i++)
+            foreach (var pngPath in pngPaths)
             {
-                var tmp = Path.GetFileNameWithoutExtension(pngPaths[i]);
+                var tmp = Path.GetFileNameWithoutExtension(pngPath);
                 var _index = tmp.LastIndexOf('_');
                 tmp = tmp.Substring(0, _index);
                 if (!tmp.Equals(animName))
@@ -140,14 +142,13 @@ public class StoreImageInfo : EditorWindow
                     {
                         characterInfo.animationInfos.Add(animInfo.animationName, animInfo);
                     }
-                    animInfo = new AnimationInfo();
-                    animInfo.maxFrame = 0;
-                    animInfo.frameInfos = new Dictionary<int, FrameInfo>();
+
+                    animInfo = new AnimationInfo {maxFrame = 0, frameInfos = new Dictionary<int, FrameInfo>()};
                     animName = tmp;
                     animInfo.animationName = animName;
                 }
 
-                var frameInfo = DealPng(pngPaths[i], ref animInfo.maxFrame);
+                var frameInfo = DealPng(pngPath, ref animInfo.maxFrame);
                 animInfo.frameInfos.Add(frameInfo.frameCount, frameInfo);
             }
 
@@ -168,7 +169,8 @@ public class StoreImageInfo : EditorWindow
     public static FrameInfo DealPng(string pngPath, ref int maxFrame)
     {
         var info = new FrameInfo();
-        Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(pngPath);
+        var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(pngPath);
+
         info.name = Path.GetFileNameWithoutExtension(pngPath);
         info.path = Path.GetDirectoryName(pngPath).Substring(resourcesPath.Length).Replace('\\', '/') + "/" + info.name;
         var _index = info.name.LastIndexOf('_');
@@ -183,10 +185,15 @@ public class StoreImageInfo : EditorWindow
         info.size.X = sprite.texture.width;
         info.size.Y = sprite.texture.height;
 
-        info.force = new ForceInfo();
-        info.force.value = Vector3.Zero;
-        info.force.direction = false;
-        info.force.duration = 0.0f;
+        info.force = new ForceInfo {value = Vector3.Zero, direction = false, duration = 0.0f};
+        info.physicsShape = new List<List<Vector2>>();
+        var shapeCount = sprite.GetPhysicsShapeCount();
+        for (var i = 0; i < shapeCount; i++)
+        {
+            var tmpShape = new List<UnityEngine.Vector2>();
+            sprite.GetPhysicsShape(i, tmpShape);
+            info.physicsShape.Add(tmpShape.ConvertAll(Utilities.ToSystemNumericsVector2));
+        }
         return info;
     }
 }

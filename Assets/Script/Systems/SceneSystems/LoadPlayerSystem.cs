@@ -54,12 +54,12 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.ReplaceTaiRyoKuRecoverSpeed(0.1f);
 
             newPlayer.isInitializePhysical = true;
-
             newPlayer.isAffectedByGravity = true;
             newPlayer.ReplaceOnTheGround(false);
             newPlayer.isNormalAttacking = true;
             newPlayer.isAddShadow = true;
             newPlayer.ReplaceYinList(new List<Yin>());
+            newPlayer.ReplaceTag("Character");
             e.isDestroy = true;
         }
     }

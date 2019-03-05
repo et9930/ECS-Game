@@ -183,6 +183,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LoadConfigServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LogServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\MouseInputServiceComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\PhysicsServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\SceneServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\TimeServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\ViewServiceComponent.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePhysicalConstantComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePhysicsServiceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePlayerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePointNinjaItemMenuItemComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePointNinjutsuMenuItemComponent.cs" />
@@ -516,6 +518,7 @@
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddPhysicalComponentSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AntiGravitySystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\BoundingBoxPositionSystem.cs" />
+    <Compile Include="Assets\Script\Systems\PhysicalSystems\CollisionDetectionSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\FrictionalSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\GravitySystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\InitPhysicalConstantSystem.cs" />
@@ -545,6 +548,7 @@
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLoadConfigServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLogServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterMouseInputServiceSystem.cs" />
+    <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterPhysicsServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterTimeServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterUiServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterViewServiceSystem.cs" />

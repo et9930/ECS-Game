@@ -64,5 +64,10 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strNinjaItemAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/NinjaItemAttributes");
         var tempNinjaItemAttributes = Utilities.ParseJson<NinjaItemAttributes>(strNinjaItemAttributes);
         _context.ReplaceNinjaItemAttributes(tempNinjaItemAttributes.dic);
+
+        // Collision Pair
+        var strCollisionPair = _context.loadConfigService.instance.LoadJsonFile("Json/CollisionPairConfig");
+        var tempCollisionPair = Utilities.ParseJson<CollisionPairList>(strCollisionPair);
+        _context.ReplaceCollisionPairConfig(tempCollisionPair.list);
     }
 }

@@ -52,6 +52,8 @@ public class FrameInfo
     public Vector2 pivot;
     [DataMember]
     public ForceInfo force;
+    [DataMember]
+    public List<List<Vector2>> physicsShape;
 }
 
 [DataContract]

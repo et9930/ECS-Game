@@ -33,3 +33,5 @@ sysinfo.txt
 *.unitypackage
 /Assets/Resources/Output
 /Assets/Resources/Output.meta
+/Assets/Resources/Image/ExtractSingleSprite
+/Assets/Resources/Image/ExtractSingleSprite.meta

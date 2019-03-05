@@ -17,7 +17,7 @@ public class BoundingBoxPositionSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasSprite && entity.isView && entity.hasName;
+        return entity.hasSprite && entity.isView && entity.hasName && entity.hasTag;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -38,8 +38,14 @@ public class BoundingBoxPositionSystem : ReactiveSystem<GameEntity>
             }
             var MaxY = position.Y + size.Y * (1 - pivot.Y);
 
-            var MinZ = position.Z - 0.5f;
-            var MaxZ = position.Z + 0.5f;
+            var MinZ = position.Z;
+            var MaxZ = position.Z;
+            if (e.tag.value == "Character")
+            {
+                MinZ -= 0.5f;
+                MaxZ += 0.5f;
+            }
+
 
             e.ReplaceBoundingBox(MinX, MinY, MinZ, MaxX, MaxY, MaxZ);
         }

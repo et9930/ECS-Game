@@ -14,8 +14,9 @@ public class Services
     public readonly ICoroutineService Coroutine;
     public readonly IKeyInputService KeyInput;
     public readonly ITimeService Time;
+    public readonly IPhysicsService Physics;
 
-    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time)
+    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time, IPhysicsService physics)
     {
         Log = log;
         View = view;
@@ -25,5 +26,6 @@ public class Services
         Coroutine = coroutine;
         KeyInput = keyInput;
         Time = time;
+        Physics = physics;
     }
 }
