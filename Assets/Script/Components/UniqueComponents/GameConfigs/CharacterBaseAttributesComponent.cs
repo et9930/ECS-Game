@@ -36,6 +36,10 @@ public class Character
     public float tiredTaiRyoKu;
 
     [DataMember]
+    public int taijutsuAttackNum;
+    [DataMember]
+    public int taijutsuAttackWithWeapon;
+    [DataMember]
     public List<string> ninjutsuList;
     [DataMember]
     public List<string> ninjaItemList;

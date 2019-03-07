@@ -20,9 +20,8 @@ public class NinjutsuMenuControlSystem : IExecuteSystem
 
             GameEntity menu = null;
 
-            foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+            foreach (var e in _context.GetEntitiesWithName("NinjutsuMenu"))
             {
-                if (e.name.text != "NinjutsuMenu") continue;
                 menu = e;
                 break;
             }

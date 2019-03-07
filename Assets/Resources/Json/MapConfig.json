@@ -9,56 +9,60 @@
         "CharacterMaxX": 58.5,
         "CharacterMinZ": -3.5,
         "CharacterMaxZ": 0,
-        "Camera_1_Position": {
-          "X": -50,
-          "Y": 0,
-          "Z": -50
-        },
-        "Camera_2_Position": {
-          "X": 50,
-          "Y": 0,
-          "Z": -50
-        },
-        "Character_1_InPosition": {
-          "X": -55,
-          "Y": 3,
-          "Z": -0.75
-        },
-        "Character_2_InPosition": {
-          "X": -55,
-          "Y": 3,
-          "Z": -2.75
-        },
-        "Character_3_InPosition": {
-          "X": -57,
-          "Y": 3,
-          "Z": -0.75
-        },
-        "Character_4_InPosition": {
-          "X": -57,
-          "Y": 3,
-          "Z": -2.75
-        },
-        "Character_5_InPosition": {
-          "X": 55,
-          "Y": 3,
-          "Z": -0.75
-        },
-        "Character_6_InPosition": {
-          "X": 55,
-          "Y": 3,
-          "Z": -2.75
-        },
-        "Character_7_InPosition": {
-          "X": 57,
-          "Y": 3,
-          "Z": -0.75
-        },
-        "Character_8_InPosition": {
-          "X": 57,
-          "Y": 3,
-          "Z": -2.75
-        },
+        "CameraPosition": [
+          {
+            "X": -50,
+            "Y": 0,
+            "Z": -50
+          },
+          {
+            "X": 50,
+            "Y": 0,
+            "Z": -50
+          }
+        ],
+        "CharacterInPosition": [
+          {
+            "X": -55,
+            "Y": 3,
+            "Z": -0.75
+          },
+          {
+            "X": -55,
+            "Y": 3,
+            "Z": -2.75
+          },
+          {
+            "X": -57,
+            "Y": 3,
+            "Z": -0.75
+          },
+          {
+            "X": -57,
+            "Y": 3,
+            "Z": -2.75
+          },
+          {
+            "X": 55,
+            "Y": 3,
+            "Z": -0.75
+          },
+          {
+            "X": 55,
+            "Y": 3,
+            "Z": -2.75
+          },
+          {
+            "X": 57,
+            "Y": 3,
+            "Z": -0.75
+          },
+          {
+            "X": 57,
+            "Y": 3,
+            "Z": -2.75
+          }
+        ],
         "CharacterDisplayHierarchy": [
           {
             "Z": 0,
@@ -71,10 +75,13 @@
           {
             "Z": -2,
             "Hierarchy": -35
+          },
+          {
+            "Z": -3.5,
+            "Hierarchy": -45
           }
-
         ]
-      } 
+      }
     }
-  ] 
+  ]
 }

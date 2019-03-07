@@ -31,9 +31,9 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             var newPlayer = _context.CreateEntity();
             newPlayer.ReplaceId(e.loadPlayer.playerId);
             newPlayer.ReplaceName(e.loadPlayer.playerName);
-            newPlayer.ReplaceAnimation("in", false);
+            newPlayer.ReplaceAnimation("idle", false);
             newPlayer.ReplaceHierarchy(0);
-            newPlayer.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].Character_1_InPosition);
+            newPlayer.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].CharacterInPosition[0]);
             newPlayer.ReplaceScale(new Vector2(1.0f, 1.0f));
             newPlayer.ReplaceMass(66.5f);
             newPlayer.ReplaceToward(false);

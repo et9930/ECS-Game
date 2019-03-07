@@ -14,6 +14,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     public void Initialize()
     {
         _context.ReplaceClickEventFunc(new Dictionary<string, Action<GameEntity>>());
+        _context.clickEventFunc.clickDic["NinjaItemMenuItem"] = OnNinjaItemMenuItemClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -36,6 +37,25 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                 _context.clickEventFunc.clickDic[e.name.text](e);
             }
         }
+    }
+
+    private void OnNinjaItemMenuItemClick(GameEntity entity)
+    {
+        if (entity.hasActive && entity.active.value) return;
+             
+        foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
+        {
+            if (e.isShadow) continue;
+
+            e.ReplaceUseNinjaItem(entity.ninjaItemName.value);
+        }
+
+        foreach (var e in _context.GetEntitiesWithName("NinjaItemMenuItem"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        entity.ReplaceActive(true);
     }
 
 }

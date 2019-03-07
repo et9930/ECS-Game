@@ -20,6 +20,8 @@ public class ClickHandle : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (eventData.button != PointerEventData.InputButton.Left) return;
+
         if (_entity == null) return;
         if (!_entity.hasClickState) return;
         if (_entity.clickState.value) return;

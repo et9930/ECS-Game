@@ -6,7 +6,22 @@
       "Value": {
         "ninjaItemName": "飞雷神苦无",
         "ninjaItemDescribe": "飞雷神苦无_描述",
-        "ninjaItemEffect": "飞雷神苦无_特殊效果"
+        "ninjaItemEffect": "飞雷神苦无_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 0, 1 ],
+        "weaponMass": 0.75,
+        "weaponMaxDamage": 40,
+        "weaponMinDamage": 10,
+        "disposableWeapon": false,
+        "ninjaItemSpecialEffects": [ 0 ],
+        "throwingWeaponBoundingBoxSize": {
+          "X": 0.2,
+          "Y": 0.03,
+          "Z": 0.15
+        },
+        "throwingWeaponMaxFlyTime": 3,
+        "handHeldWeaponAttackPlusRadius": 0.1,
+        "handHeldWeaponAttackTime": 0.5
       }
     },
     {
@@ -14,7 +29,20 @@
       "Value": {
         "ninjaItemName": "风魔手里剑",
         "ninjaItemDescribe": "风魔手里剑_描述",
-        "ninjaItemEffect": "风魔手里剑_特殊效果"
+        "ninjaItemEffect": "风魔手里剑_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 0 ],
+        "weaponMass": 2.5,
+        "weaponMaxDamage": 50,
+        "weaponMinDamage": 20,
+        "disposableWeapon": false,
+        "ninjaItemSpecialEffects": [],
+        "throwingWeaponBoundingBoxSize": {
+          "X": 0.8,
+          "Y": 0.03,
+          "Z": 0.8
+        },
+        "throwingWeaponMaxFlyTime": 5
       }
     },
     {
@@ -22,7 +50,18 @@
       "Value": {
         "ninjaItemName": "起爆符",
         "ninjaItemDescribe": "起爆符_描述",
-        "ninjaItemEffect": "起爆符_特殊效果"
+        "ninjaItemEffect": "起爆符_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 3, 4 ],
+        "weaponMass": 0.01,
+        "weaponMaxDamage": 70,
+        "weaponMinDamage": 10,
+        "disposableWeapon": true,
+        "ninjaItemSpecialEffects": [],
+        "autoTrigger": false,
+        "triggerTimeDelay": 1,
+        "manualTrigger": true,
+        "manualTriggerMaxDistance": 20
       }
     },
     {
@@ -30,7 +69,22 @@
       "Value": {
         "ninjaItemName": "苦无",
         "ninjaItemDescribe": "苦无_描述",
-        "ninjaItemEffect": "苦无_特殊效果"
+        "ninjaItemEffect": "苦无_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 0, 1 ],
+        "weaponMass": 0.5,
+        "weaponMaxDamage": 35,
+        "weaponMinDamage": 10,
+        "disposableWeapon": false,
+        "ninjaItemSpecialEffects": [],
+        "throwingWeaponBoundingBoxSize": {
+          "X": 0.2,
+          "Y": 0.03,
+          "Z": 0.08
+        },
+        "throwingWeaponMaxFlyTime": 3.5,
+        "handHeldWeaponAttackPlusRadius": 0.1,
+        "handHeldWeaponAttackTime": 0.4
       }
     },
     {
@@ -38,7 +92,16 @@
       "Value": {
         "ninjaItemName": "草薙剑",
         "ninjaItemDescribe": "草薙剑_描述",
-        "ninjaItemEffect": "草薙剑_特殊效果"
+        "ninjaItemEffect": "草薙剑_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 1 ],
+        "weaponMass": 1,
+        "weaponMaxDamage": 45,
+        "weaponMinDamage": 10,
+        "disposableWeapon": false,
+        "ninjaItemSpecialEffects": [],
+        "handHeldWeaponAttackPlusRadius": 0.7,
+        "handHeldWeaponAttackTime": 0.7
       }
     },
     {
@@ -46,7 +109,20 @@
       "Value": {
         "ninjaItemName": "手里剑",
         "ninjaItemDescribe": "手里剑_描述",
-        "ninjaItemEffect": "手里剑_特殊效果"
+        "ninjaItemEffect": "手里剑_特殊效果",
+        "ninjaItemType": 1,
+        "ninjaItemWeaponTypes": [ 0 ],
+        "weaponMass": 0.3,
+        "weaponMaxDamage": 30,
+        "weaponMinDamage": 10,
+        "disposableWeapon": false,
+        "ninjaItemSpecialEffects": [],
+        "throwingWeaponBoundingBoxSize": {
+          "X": 0.1,
+          "Y": 0.03,
+          "Z": 0.1
+        },
+        "throwingWeaponMaxFlyTime": 4.5
       }
     }
   ]

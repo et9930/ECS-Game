@@ -20,9 +20,10 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
-        foreach (var e in _context.GetGroup(GameMatcher.Id))
+        if (!_context.hasCurrentPlayerId) return;
+
+        foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
         {
-            if (e.id.value != _context.currentPlayerId.value) continue;
             if (e.isShadow) continue;
             if (e.isNormalAttacking || e.isMakingChaKuRa || e.isJumping) continue;
 

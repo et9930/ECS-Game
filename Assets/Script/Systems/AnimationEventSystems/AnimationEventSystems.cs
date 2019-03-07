@@ -2,6 +2,6 @@
 {
     public AnimationEventSystems(Contexts contexts) : base("Animation Event Systems")
     {
-        Add(new CharacterMinatoAESystem(contexts));
+        Add(new CharacterNamikazeMinatoAESystem(contexts));
     }
 }

@@ -37,11 +37,11 @@ public class UnityPhysicsService : IPhysicsService
         var pc2 = go2.GetComponent<PolygonCollider2D>();
         if (pc2 == null) pc2 = go2.AddComponent<PolygonCollider2D>();
 
-        pc1.enabled = true;
-        pc2.enabled = true;
+//        pc1.enabled = true;
+//        pc2.enabled = true;
 
-        var tmpSharps1 = _shapeDic[go1.name][entity1.sprite.path.Substring(entity1.sprite.path.LastIndexOf('\\') + 1)];
-        var tmpSharps2 = _shapeDic[go2.name][entity2.sprite.path.Substring(entity2.sprite.path.LastIndexOf('\\') + 1)];
+        var tmpSharps1 = _shapeDic[go1.name][entity1.sprite.path.Substring(entity1.sprite.path.LastIndexOf('/') + 1)];
+        var tmpSharps2 = _shapeDic[go2.name][entity2.sprite.path.Substring(entity2.sprite.path.LastIndexOf('/') + 1)];
 
         for (var i = 0; i < pc1.pathCount; i++)
             pc1.SetPath(i, null);
@@ -55,8 +55,8 @@ public class UnityPhysicsService : IPhysicsService
 
         var hasCollision = pc1.IsTouching(pc2);
 
-        pc1.enabled = false;
-        pc2.enabled = false;
+//        pc1.enabled = false;
+//        pc2.enabled = false;
 
         return hasCollision;
     }

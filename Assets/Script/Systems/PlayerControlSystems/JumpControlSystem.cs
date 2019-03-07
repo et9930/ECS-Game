@@ -13,13 +13,14 @@ public class JumpControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (!_context.hasCurrentPlayerId) return;
+
         if (_context.key.value.Jump)
         {
             if (_context.isJumpFreezing) return;
 
-            foreach (var e in _context.GetGroup(GameMatcher.Id))
+            foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
             {
-                if (e.id.value != _context.currentPlayerId.value) continue;
                 if (e.isShadow) continue;
                 if (e.isNormalAttacking || !e.onTheGround.value || e.isMakingYin) continue;
 
@@ -44,10 +45,8 @@ public class JumpControlSystem : IExecuteSystem
                         _context.RemoveJumpAngle();
                         _context.RemoveJumpForce();
                         e.ReplaceAnimation("jump_1", false);
-                        foreach (var ui in _context.GetGroup(GameMatcher.Name))
+                        foreach (var ui in _context.GetEntitiesWithName("JumpUI"))
                         {
-                            if (ui.name.text != "JumpUI") continue;
-
                             ui.isUiClose = true;
                             break;
                         }
@@ -155,9 +154,8 @@ public class JumpControlSystem : IExecuteSystem
         }
         else // jump button up
         {
-            foreach (var e in _context.GetGroup(GameMatcher.Id))
+            foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
             {
-                if (e.id.value != _context.currentPlayerId.value) continue;
                 if (e.isShadow) continue;
                 if (e.isNormalAttacking || !e.onTheGround.value || !e.isJumping) continue;
 
@@ -169,10 +167,8 @@ public class JumpControlSystem : IExecuteSystem
                 }
                 else // jump
                 {
-                    foreach (var ui in _context.GetGroup(GameMatcher.Name))
+                    foreach (var ui in _context.GetEntitiesWithName("JumpUI"))
                     {
-                        if (ui.name.text != "JumpUI") continue;
-
                         ui.isUiClose = true;
                         break;
                     }

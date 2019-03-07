@@ -60,11 +60,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void HealthValueTxtOnMouseIn(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("HealthPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "HealthPopUpWindow") continue;
-
             e.ReplaceActive(true);
             return;
         }
@@ -72,11 +69,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void HealthValueTxtOnMouseOut(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("HealthPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "HealthPopUpWindow") continue;
-
             e.ReplaceActive(false);
             return;
         }
@@ -84,11 +78,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void ChaKuRaValueImgOnMouseIn(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("ChaKuRaPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "ChaKuRaPopUpWindow") continue;
-
             e.ReplaceActive(true);
             return;
         }
@@ -96,11 +87,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void ChaKuRaValueImgOnMouseOut(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("ChaKuRaPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "ChaKuRaPopUpWindow") continue;
-
             e.ReplaceActive(false);
             return;
         }
@@ -108,11 +96,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void TaiRyoKuValueImgOnMouseIn(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("TaiRyoKuPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "TaiRyoKuPopUpWindow") continue;
-
             e.ReplaceActive(true);
             return;
         }
@@ -120,11 +105,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void TaiRyoKuValueImgOnMouseOut(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("TaiRyoKuPopUpWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "TaiRyoKuPopUpWindow") continue;
-
             e.ReplaceActive(false);
             return;
         }
@@ -132,14 +114,10 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void NinjutsuMenuItemOnMouseIn(GameEntity entity)
     {
-//        if (!_context.isNinjutsuMenuOpen) return;
-
         _context.ReplacePointNinjutsuMenuItem(entity.ninjutsuName.value);
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
-        {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "NinjutsuMenuInfoWindow") continue;
 
+        foreach (var e in _context.GetEntitiesWithName("NinjutsuMenuInfoWindow"))
+        {
             e.ReplaceActive(true);
             return;
         }
@@ -147,13 +125,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void NinjutsuMenuItemOnMouseOut(GameEntity entity)
     {
-//        if (!_context.isNinjutsuMenuOpen) return;
-
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("NinjutsuMenuInfoWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "NinjutsuMenuInfoWindow") continue;
-
             e.ReplaceActive(false);
             return;
         }
@@ -162,11 +135,9 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
     private void NinjaItemMenuItemOnMouseIn(GameEntity entity)
     {
         _context.ReplacePointNinjaItemMenuItem(entity.ninjaItemName.value);
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
-        {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "NinjaItemMenuInfoWindow") continue;
 
+        foreach (var e in _context.GetEntitiesWithName("NinjaItemMenuInfoWindow"))
+        {
             e.ReplaceActive(true);
             return;
         }
@@ -174,11 +145,8 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
     private void NinjaItemMenuItemOnMouseOut(GameEntity entity)
     {
-        foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+        foreach (var e in _context.GetEntitiesWithName("NinjaItemMenuInfoWindow"))
         {
-            if (!e.hasName || !e.hasActive) continue;
-            if (e.name.text != "NinjaItemMenuInfoWindow") continue;
-
             e.ReplaceActive(false);
             return;
         }

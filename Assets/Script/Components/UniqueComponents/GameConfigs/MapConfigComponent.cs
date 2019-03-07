@@ -25,7 +25,6 @@ public class MapConfig
     [DataMember]
     public float CameraMaxX;
 
-
     [DataMember]
     public float CharacterMinX;
     [DataMember]
@@ -36,30 +35,13 @@ public class MapConfig
     public float CharacterMaxZ;
 
     [DataMember]
-    public Vector3 Camera_1_Position;
-    [DataMember]
-    public Vector3 Camera_2_Position;
+    public List<Vector3> CameraPosition;
 
     [DataMember]
-    public Vector3 Character_1_InPosition;
-    [DataMember]
-    public Vector3 Character_2_InPosition;
-    [DataMember]
-    public Vector3 Character_3_InPosition;
-    [DataMember]
-    public Vector3 Character_4_InPosition;
-    [DataMember]
-    public Vector3 Character_5_InPosition;
-    [DataMember]
-    public Vector3 Character_6_InPosition;
-    [DataMember]
-    public Vector3 Character_7_InPosition;
-    [DataMember]
-    public Vector3 Character_8_InPosition;
+    public List<Vector3> CharacterInPosition;
 
     [DataMember]
     public List<DisplayHierarchy> CharacterDisplayHierarchy;
-
 }
 
 [DataContract]

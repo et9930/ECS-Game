@@ -11,11 +11,12 @@ public class MakeChaKuRaSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (!_context.hasCurrentPlayerId) return;
+
         if (!_context.key.value.MakeChaKuRa)
         {
-            foreach (var e in _context.GetGroup(GameMatcher.Id))
+            foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
             {
-                if (e.id.value != _context.currentPlayerId.value) continue;
                 if (!e.isMakingChaKuRa) continue;
                 
                 e.isMakingChaKuRa = false;
@@ -23,9 +24,8 @@ public class MakeChaKuRaSystem : IExecuteSystem
             return;
         }
 
-        foreach (var e in _context.GetGroup(GameMatcher.Id))
+        foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
         {
-            if (e.id.value != _context.currentPlayerId.value) continue;
             if (!e.hasChaKuRaCurrent || !e.hasChaKuRaTotal || !e.hasChaKuRaSlewRate || !e.hasTaiRyoKuCurrent || !e.hasTaiRyoKuDeath) continue;
 
             if (!(e.chaKuRaCurrent.value < e.chaKuRaTotal.value) || !(e.taiRyoKuCurrent.value > e.taiRyoKuDeath.value))

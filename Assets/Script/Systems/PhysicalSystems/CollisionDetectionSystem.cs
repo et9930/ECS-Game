@@ -20,6 +20,7 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
     {
         foreach (var collisionPair in _context.collisionPairConfig.list)
         {
+            var checkedEntityList = new List<GameEntity>();
             foreach (var firstEntity in _context.GetEntitiesWithTag(collisionPair.first))
             {
                 if (!firstEntity.isMoving) continue;
@@ -27,8 +28,10 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
 
                 foreach (var secondEntity in _context.GetEntitiesWithTag(collisionPair.second))
                 {
-                    if (!secondEntity.hasSprite || !secondEntity.hasBoundingBox || !secondEntity.hasName) continue;
+                    if (!secondEntity.hasSprite || !secondEntity.hasBoundingBox || !secondEntity.hasName || firstEntity == secondEntity) continue;
+                    if (checkedEntityList.Contains(secondEntity)) return;
 
+                    // no collision
                     if (firstEntity.boundingBox.minX > secondEntity.boundingBox.maxX) continue;
                     if (firstEntity.boundingBox.maxX < secondEntity.boundingBox.minX) continue;
                     if (firstEntity.boundingBox.minY > secondEntity.boundingBox.maxY) continue;
@@ -36,12 +39,14 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
                     if (firstEntity.boundingBox.minZ > secondEntity.boundingBox.maxZ) continue;
                     if (firstEntity.boundingBox.maxZ < secondEntity.boundingBox.minZ) continue;
 
-                    var hasCollision = _context.physicsService.instance.CheckCollision(firstEntity, secondEntity);
-                    if (hasCollision)
-                    {
+//                    var hasCollision = _context.physicsService.instance.CheckCollision(firstEntity, secondEntity);
+//                    if (hasCollision)
+//                    {
                         _context.CreateEntity().ReplaceDebugMessage(firstEntity.name.text + " and " + secondEntity.name.text + " has collision");
-                    }
+//                    }
                 }
+
+                checkedEntityList.Add(firstEntity);
             }
         }
     }

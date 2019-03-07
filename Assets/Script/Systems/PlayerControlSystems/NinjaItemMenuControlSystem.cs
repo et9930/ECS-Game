@@ -20,9 +20,8 @@ public class NinjaItemMenuControlSystem : IExecuteSystem
 
             GameEntity menu = null;
 
-            foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+            foreach (var e in _context.GetEntitiesWithName("NinjaItemMenu"))
             {
-                if (e.name.text != "NinjaItemMenu") continue;
                 menu = e;
                 break;
             }
@@ -54,9 +53,8 @@ public class NinjaItemMenuControlSystem : IExecuteSystem
         {
             GameEntity menu = null;
 
-            foreach (var e in _context.GetGroup(GameMatcher.UiRootId))
+            foreach (var e in _context.GetEntitiesWithName("NinjaItemMenu"))
             {
-                if (e.name.text != "NinjaItemMenu") continue;
                 menu = e;
                 break;
             }

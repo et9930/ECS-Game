@@ -1,7 +1,7 @@
 {
   "list": [
     {
-      "Key": "Minato",
+      "Key": "NamikazeMinato",
       "Value": {
         "baseVelocity": 7.5,
         "baseHealth": 100,
@@ -10,6 +10,8 @@
         "deathTaiRyoKu": -10,
         "tiredTaiRyoKu": 0,
         "chaKuRaSlewRate": 5,
+        "taijutsuAttackNum": 5,
+        "taijutsuAttackWithWeapon": 1,
         "ninjutsuList": [
           "HiRaiShinNoJuTsu",
           "HiRaiShinNiNoDan"
@@ -21,7 +23,32 @@
           "KuNai",
           "KuSaNaGiNoTsuRuGi",
           "ShuRiKen"
-        ] 
+        ]
+      }
+    },
+    {
+      "Key": "UchihaMadara",
+      "Value": {
+        "baseVelocity": 7.5,
+        "baseHealth": 100,
+        "baseChaKuRa": 100,
+        "baseTaiRyoKu": 100,
+        "deathTaiRyoKu": -10,
+        "tiredTaiRyoKu": 0,
+        "chaKuRaSlewRate": 5,
+        "taijutsuAttackNum": 0,
+        "taijutsuAttackWithWeapon": 0,
+        "ninjutsuList": [
+
+        ],
+        "ninjaItemList": [
+          "HiRaiShinKuNai",
+          "HuuMaShuRiKen",
+          "KiBaKuHuDa",
+          "KuNai",
+          "KuSaNaGiNoTsuRuGi",
+          "ShuRiKen"
+        ]
       }
     }
   ]

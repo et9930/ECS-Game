@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using TMPro;
 
 public class DisplayHierarchySystem : ReactiveSystem<GameEntity>
 {
@@ -29,12 +30,15 @@ public class DisplayHierarchySystem : ReactiveSystem<GameEntity>
         {
             var lastHierarchy = 1.0f;
 
-            foreach (var config in hierarchyConfig)
+            for (int i = 0; i < hierarchyConfig.Count; i++)
             {
-                if (e.position.value.Z < config.Z)
-                {
-                    lastHierarchy = config.Hierarchy;
-                }
+                if (!(e.position.value.Z < hierarchyConfig[i].Z)) continue;
+
+                var minZ = hierarchyConfig[i].Z;
+                var maxZ = hierarchyConfig[i + 1].Z;
+                var minHierarchy = hierarchyConfig[i].Hierarchy;
+                var maxHierarchy = hierarchyConfig[i + 1].Hierarchy;
+                lastHierarchy = minHierarchy + (e.position.value.Z - minZ) * (maxHierarchy - minHierarchy) / (maxZ - minZ);
             }
 
             e.ReplaceHierarchy(lastHierarchy);

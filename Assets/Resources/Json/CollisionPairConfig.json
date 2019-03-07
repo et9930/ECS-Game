@@ -1,5 +1,12 @@
 {
   "list": [
-    { "first": "Weapon", "second": "Character" }
+    {
+      "first": "Weapon",
+      "second": "Character"
+    },
+    {
+      "first": "Character",
+      "second": "Character"
+    }
   ] 
 }

@@ -24,8 +24,9 @@ public class InitBattleSceneSystem : ReactiveSystem<GameEntity>
     {
         _context.ReplaceCurrentPlayerId(100);
         _context.ReplaceCurrentMapName("ProvingGroundMap");
-        _context.CreateEntity().ReplaceLoadPlayer(100, "Minato");
+        _context.CreateEntity().ReplaceLoadPlayer(100, "NamikazeMinato");
+        _context.CreateEntity().ReplaceLoadPlayer(101, "UchihaMadara");
         _context.sceneService.instance.MainCameraPosition =
-            _context.mapConfig.list.list[_context.currentMapName.value].Camera_1_Position;
+            _context.mapConfig.list.list[_context.currentMapName.value].CameraPosition[0];
     }
 }

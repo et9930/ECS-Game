@@ -28,8 +28,8 @@ public class BoundingBoxPositionSystem : ReactiveSystem<GameEntity>
             var size = _context.viewService.instance.GetViewSize(e.name.text);
             var pivot = _context.viewService.instance.GetViewPivot(e.name.text);
 
-            var MinX = position.X - size.X * pivot.X;
-            var MaxX = position.X + size.X * (1 - pivot.X);
+//            var MinX = position.X - size.X * pivot.X;
+//            var MaxX = position.X + size.X * (1 - pivot.X);
 
             var MinY = position.Y - size.Y * pivot.Y;
             if (MinY < 0)
@@ -38,12 +38,16 @@ public class BoundingBoxPositionSystem : ReactiveSystem<GameEntity>
             }
             var MaxY = position.Y + size.Y * (1 - pivot.Y);
 
+            var MinX = position.X;
+            var MaxX = position.X;
             var MinZ = position.Z;
             var MaxZ = position.Z;
             if (e.tag.value == "Character")
             {
-                MinZ -= 0.5f;
-                MaxZ += 0.5f;
+                MinX -= 0.45f;
+                MaxX += 0.45f;
+                MinZ -= 0.1f;
+                MaxZ += 0.1f;
             }
 
 

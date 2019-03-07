@@ -56,10 +56,22 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
+    public const string Id = "Id";
+    public const string Name = "Name";
     public const string Tag = "Tag";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, int>(
+            Id,
+            game.GetGroup(GameMatcher.Id),
+            (e, c) => ((IdComponent)c).value));
+
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
+            Name,
+            game.GetGroup(GameMatcher.Name),
+            (e, c) => ((NameComponent)c).text));
+
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             Tag,
             game.GetGroup(GameMatcher.Tag),
@@ -68,6 +80,14 @@ public partial class Contexts {
 }
 
 public static class ContextsExtensions {
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithId(this GameContext context, int value) {
+        return ((Entitas.EntityIndex<GameEntity, int>)context.GetEntityIndex(Contexts.Id)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithName(this GameContext context, string text) {
+        return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntities(text);
+    }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithTag(this GameContext context, string value) {
         return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Tag)).GetEntities(value);

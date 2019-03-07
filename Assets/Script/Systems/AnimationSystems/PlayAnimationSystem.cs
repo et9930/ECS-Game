@@ -69,7 +69,12 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
 
             if (currentFrame > animationInfo.maxFrame)
             {
-                if (e.animation.loop)
+                if (e.hasNextAnimation)
+                {
+                    e.ReplaceAnimation(e.nextAnimation.value, e.nextAnimation.loop);
+                    e.RemoveNextAnimation();
+                }
+                else if (e.animation.loop)
                 {
                     currentFrame = 0;
                 }

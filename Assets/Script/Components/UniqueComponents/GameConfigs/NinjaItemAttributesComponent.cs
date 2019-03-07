@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
 using System.Runtime.Serialization;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
@@ -25,4 +26,80 @@ public class NinjaItem
     public string ninjaItemDescribe;
     [DataMember]
     public string ninjaItemEffect;
+
+    //-type
+    [DataMember]
+    public NinjaItemType ninjaItemType;
+
+    //---functional
+    [DataMember]
+    public List<NinjaItemFunction> ninjaItemFunctions;
+    [DataMember]
+    public List<float> ninjaItemFunctionValues;
+
+    //---weapon
+    [DataMember]
+    public List<NinjaItemWeaponType> ninjaItemWeaponTypes;
+    [DataMember]
+    public float weaponMass;
+    [DataMember]
+    public float weaponMaxDamage;
+    [DataMember]
+    public float weaponMinDamage;
+    [DataMember]
+    public bool disposableWeapon;
+    [DataMember]
+    public List<NinjaItemSpecialEffect> ninjaItemSpecialEffects;
+
+    //-----throwing weapon
+    [DataMember]
+    public Vector3 throwingWeaponBoundingBoxSize;
+    [DataMember]
+    public float throwingWeaponMaxFlyTime;
+
+    //-----hand held weapon
+    [DataMember]
+    public float handHeldWeaponAttackPlusRadius;
+    [DataMember]
+    public float handHeldWeaponAttackTime;
+
+    //-----explode weapon
+    [DataMember]
+    public bool autoTrigger;
+    [DataMember]
+    public float autoTriggerRadius;
+    [DataMember]
+    public float triggerTimeDelay;
+    [DataMember]
+    public bool manualTrigger;
+    [DataMember]
+    public float manualTriggerMaxDistance;
+
+}
+
+public enum NinjaItemType
+{
+    Functional,
+    Weapon
+}
+
+public enum NinjaItemFunction
+{
+    Health,
+    ChaKuRa,
+    TaiRyuKu
+}
+
+public enum NinjaItemWeaponType
+{
+    Throwing,
+    HandHeld,
+    Placing,
+    Explode
+}
+
+public enum NinjaItemSpecialEffect
+{
+    HiRaiShinMaKinGu,
+
 }
