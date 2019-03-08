@@ -32,6 +32,10 @@
         Add(new HealthRecoverSystem(contexts));
         Add(new TaiRyoKuRecoverSystem(contexts));
 
+        // taijutsu
+        Add(new CheckTaijutsuAttackHitSystem(contexts));
+        Add(new CheckTaijutsuAttackDodgeSystem(contexts));
+
         //  physical systems
         Add(new PhysicalSystems(contexts));
 
@@ -45,7 +49,6 @@
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
 
-        Add(new AnimationEventSystems(contexts));
         Add(new LoadPlayerSystem(contexts));
         Add(new AddShadowSystem(contexts));
         Add(new ShadowPositionSystem(contexts));
@@ -54,6 +57,7 @@
         Add(new DisplayHierarchySystem(contexts));
         Add(new ChangeAnimationSystem(contexts));
         Add(new PlayAnimationSystem(contexts));
+        Add(new AnimationEventSystems(contexts));
         Add(new AddViewSystem(contexts));
         Add(new ChangeViewSystem(contexts));
 

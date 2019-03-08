@@ -1,4 +1,5 @@
 ﻿using Entitas;
+using Entitas.VisualDebugging.Unity;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
 using Vector3 = System.Numerics.Vector3;
@@ -17,17 +18,24 @@ public class UnityViewService : IViewService
         Object.DontDestroyOnLoad(viewRoot);
     }
 
-    public void InitializeView(Contexts contexts, IEntity entity, string objectName)
+    public void InitializeView(GameEntity entity, string objectName)
     {
         var viewGo = new GameObject(objectName);
-        viewGo.transform.SetParent(viewRoot.transform);
+        if (entity.hasParentEntity && GameObject.Find(entity.parentEntity.value.name.text))
+        {
+            viewGo.transform.SetParent(GameObject.Find(entity.parentEntity.value.name.text).transform);
+        }
+        else
+        {
+            viewGo.transform.SetParent(viewRoot.transform);
+        }
 
-        viewGo.transform.position = Utilities.Vector3PositionToVector2Position(((GameEntity) entity).position.value);
-        viewGo.transform.localScale = Utilities.ToUnityEngineVector2(((GameEntity) entity).scale.value);
+        viewGo.transform.position = Utilities.Vector3PositionToVector2Position(entity.position.value);
+        viewGo.transform.localScale = Utilities.ToUnityEngineVector2(entity.scale.value);
 
         var sr = viewGo.AddComponent<SpriteRenderer>();
         sr.sortingOrder = 0;
-        sr.flipX = ((GameEntity) entity).toward.left;
+        sr.flipX = entity.toward.left;
 
         viewGo.AddComponent<HierarchyListener>();
         viewGo.AddComponent<PositionListener>();
@@ -41,12 +49,20 @@ public class UnityViewService : IViewService
         }
     }
 
-    public void LoadSprite(Contexts contexts, IEntity entity, string objectName, string assetName)
+    public void LoadSprite(string objectName, string assetName)
     {
-        var viewTf = viewRoot.transform.Find(objectName);
-        var viewGo = viewTf.gameObject;
+        var viewGo = GameObject.Find(objectName);
         var viewSr = viewGo.GetComponent<SpriteRenderer>();
         viewSr.sprite = Resources.Load<Sprite>(assetName);
+    }
+
+    public void DestroyView(string objectName)
+    {
+        var viewGo = GameObject.Find(objectName);
+        if (viewGo)
+        {
+            GameObject.Destroy(viewGo);
+        }
     }
 
     public Vector2 WorldPositionToScreenPosition(Vector3 worldPosition)

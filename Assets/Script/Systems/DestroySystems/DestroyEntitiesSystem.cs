@@ -3,9 +3,11 @@ using Entitas;
 
 public class DestroyEntitiesSystem : ReactiveSystem<GameEntity>
 {
+    private readonly GameContext _context;
+
     public DestroyEntitiesSystem(Contexts contexts) : base(contexts.game)
     {
-
+        _context = contexts.game;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -22,6 +24,10 @@ public class DestroyEntitiesSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
+            if (e.isView)
+            {
+                _context.viewService.instance.DestroyView(e.name.text);
+            }
             e.Destroy();
         }
     }

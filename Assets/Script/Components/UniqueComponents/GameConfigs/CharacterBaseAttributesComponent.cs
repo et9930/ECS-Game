@@ -21,7 +21,6 @@ public class Character
 {
     [DataMember]
     public float baseVelocity;
-
     [DataMember]
     public float baseHealth;
     [DataMember]
@@ -40,7 +39,27 @@ public class Character
     [DataMember]
     public int taijutsuAttackWithWeapon;
     [DataMember]
+    public float taijutsuAttackRange;
+
+    [DataMember]
     public List<string> ninjutsuList;
     [DataMember]
     public List<string> ninjaItemList;
+
+    [DataMember]
+    public int ninjutsu;
+    [DataMember]
+    public int taijutsu;
+    [DataMember]
+    public int genjutsu;
+    [DataMember]
+    public int yin;
+    [DataMember]
+    public int power;
+    [DataMember]
+    public int speed;
+    [DataMember]
+    public int chakura;
+    [DataMember]
+    public int intelligence;
 }

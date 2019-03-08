@@ -16,5 +16,5 @@ public class CharacterEvent
 
 public class AnimationEvent
 {
-    public Dictionary<int, Action> frameDic;
+    public Dictionary<int, Action<GameEntity>> frameDic;
 }

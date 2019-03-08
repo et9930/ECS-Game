@@ -4,8 +4,9 @@ using Entitas;
 public interface IViewService
 {
     void InitializeViewRoot(string rootName);
-    void InitializeView(Contexts contexts, IEntity entity, string objectName);
-    void LoadSprite(Contexts contexts, IEntity entity, string objectName, string assetName);
+    void InitializeView(GameEntity entity, string objectName);
+    void LoadSprite(string objectName, string assetName);
+    void DestroyView(string objectName);
     Vector2 WorldPositionToScreenPosition(Vector3 worldPosition);
     Vector2 ScreenSize { get; }
     Vector2 GetViewSize(string objectName);

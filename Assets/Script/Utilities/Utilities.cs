@@ -76,4 +76,15 @@ public static class Utilities
     {
         return new Vector2(value.X, value.Y + value.Z - 1.5f);
     }
+
+    public static bool CheckSuccess(float probability)
+    {
+        if (probability <= 0.0f) return false;
+        if (probability >= 1.0f) return true;
+
+        var result = random.NextDouble() <= probability;
+        Debug.Log(probability + " result " + result);
+
+        return result;
+    }
 }

@@ -38,13 +38,15 @@ public class StoreImageInfo : EditorWindow
         try
         {
             var dirs = Directory.GetDirectories(ImagePath, "*", SearchOption.TopDirectoryOnly);
-            for (int i = 0; i < dirs.Length; i++)
+            var list = dirs.ToList();
+            list.Add("Assets/Resources/Image/Effect");
+            for (int i = 0; i < list.Count; i++)
             {
-                Progress = (float)i / (float)dirs.Length;
-                currect_path = dirs[i];
+                Progress = (float)i / (float)list.Count;
+                currect_path = list[i];
                 EditorUtility.DisplayProgressBar("Progress", currect_path, Progress);
 
-                var characterInfo = DealDir(dirs[i]);
+                var characterInfo = DealDir(list[i]);
                 characterInfos.Add(characterInfo.characterName, characterInfo);                
             }
         }
@@ -125,7 +127,7 @@ public class StoreImageInfo : EditorWindow
     {                
         var characterInfo = new CharacterInfo();
         characterInfo.animationInfos = new Dictionary<string, AnimationInfo>();
-        characterInfo.characterName = dirPath.Substring(ImagePath.Length);
+        characterInfo.characterName = dirPath.Substring(dirPath.StartsWith(ImagePath) ? ImagePath.Length : "Assets/Resources/Image/".Length);
         AnimationInfo animInfo = null;
         var animName = "";
         try

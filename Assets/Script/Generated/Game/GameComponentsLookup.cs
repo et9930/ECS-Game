@@ -42,136 +42,139 @@ public static class GameComponentsLookup {
     public const int ChaKuRaSlewRate = 31;
     public const int ChaKuRaTotal = 32;
     public const int CharacterBaseAttributes = 33;
-    public const int ClickEventFunc = 34;
-    public const int ClickState = 35;
-    public const int CollisionPairConfig = 36;
-    public const int CoroutineService = 37;
-    public const int CurrentAnimation = 38;
-    public const int CurrentFps = 39;
-    public const int CurrentInNumber = 40;
-    public const int CurrentMapName = 41;
-    public const int CurrentPlayerId = 42;
-    public const int CurrentScene = 43;
-    public const int CurrentWeapon = 44;
-    public const int DebugMessage = 45;
-    public const int Destroy = 46;
-    public const int ErrorMessage = 47;
-    public const int FadingUiList = 48;
-    public const int Friction = 49;
-    public const int Gravity = 50;
-    public const int HealthCurrent = 51;
-    public const int HealthRecoverable = 52;
-    public const int HealthRecoverSpeed = 53;
-    public const int HealthTotal = 54;
-    public const int Hierarchy = 55;
-    public const int HierarchyListener = 56;
-    public const int Id = 57;
-    public const int ImageAsset = 58;
-    public const int InitializePhysical = 59;
-    public const int JumpAngle = 60;
-    public const int JumpForce = 61;
-    public const int JumpForceIncreasing = 62;
-    public const int JumpFreezing = 63;
-    public const int Jumping = 64;
-    public const int Jutsu = 65;
-    public const int Key = 66;
-    public const int KeyInputService = 67;
-    public const int LastUpdateFpsTime = 68;
-    public const int Layer = 69;
-    public const int LeftMouse = 70;
-    public const int Linked = 71;
-    public const int LoadConfigService = 72;
-    public const int LoadingSceneProcess = 73;
-    public const int LoadingSceneTextImage = 74;
-    public const int LoadingUiRandomInfo = 75;
-    public const int LoadPlayer = 76;
-    public const int LoadScene = 77;
-    public const int LoginInfo = 78;
-    public const int LogService = 79;
-    public const int MakeYinTime = 80;
-    public const int MakingChaKuRa = 81;
-    public const int MakingYin = 82;
-    public const int MapConfig = 83;
-    public const int Mass = 84;
-    public const int MaxSpeed = 85;
-    public const int MouseCurrentPosition = 86;
-    public const int MouseDown = 87;
-    public const int MouseInOutEventFunc = 88;
-    public const int MouseInputService = 89;
-    public const int MouseInState = 90;
-    public const int MousePosition = 91;
-    public const int MouseUp = 92;
-    public const int MoveTarget = 93;
-    public const int Moving = 94;
-    public const int MovingUiList = 95;
-    public const int Name = 96;
-    public const int NextAnimation = 97;
-    public const int NinjaItemAttributes = 98;
-    public const int NinjaItemMenuOpen = 99;
-    public const int NinjaItemMenuOpenFreezing = 100;
-    public const int NinjaItemName = 101;
-    public const int NinjaItemNameListener = 102;
-    public const int NinjutsuAttributes = 103;
-    public const int NinjutsuMenuOpen = 104;
-    public const int NinjutsuMenuOpenFreezing = 105;
-    public const int NinjutsuName = 106;
-    public const int NinjutsuNameListener = 107;
-    public const int NormalAttacking = 108;
-    public const int OnTheGround = 109;
-    public const int OnTheWall = 110;
-    public const int ParentEntity = 111;
-    public const int PhysicalConstant = 112;
-    public const int PhysicsService = 113;
-    public const int Player = 114;
-    public const int PointNinjaItemMenuItem = 115;
-    public const int PointNinjutsuMenuItem = 116;
-    public const int Position = 117;
-    public const int PositionListener = 118;
-    public const int RightMouse = 119;
-    public const int RotatingUiList = 120;
-    public const int Scale = 121;
-    public const int ScaleListener = 122;
-    public const int SceneConfig = 123;
-    public const int SceneService = 124;
-    public const int ScrollBarValue = 125;
-    public const int ScrollBarValueListener = 126;
-    public const int SetUiPosition = 127;
-    public const int Shadow = 128;
-    public const int SignInInfo = 129;
-    public const int Size = 130;
-    public const int SizeListener = 131;
-    public const int Sprite = 132;
-    public const int Tag = 133;
-    public const int TaijutsuAttackFreezing = 134;
-    public const int TaiRyoKuCurrent = 135;
-    public const int TaiRyoKuDeath = 136;
-    public const int TaiRyoKuExpend = 137;
-    public const int TaiRyoKuRecoverSpeed = 138;
-    public const int TaiRyoKuTired = 139;
-    public const int TaiRyoKuTotal = 140;
-    public const int Text = 141;
-    public const int TextListener = 142;
-    public const int TimeService = 143;
-    public const int Toward = 144;
-    public const int TowardListener = 145;
-    public const int UiChildList = 146;
-    public const int UiClose = 147;
-    public const int UiConfig = 148;
-    public const int UiFadeAction = 149;
-    public const int UiLayerConfig = 150;
-    public const int UiMoveAction = 151;
-    public const int UiOpen = 152;
-    public const int UiRootId = 153;
-    public const int UiRotateAction = 154;
-    public const int UseNinjaItem = 155;
-    public const int UuidToEntity = 156;
-    public const int Velocity = 157;
-    public const int View = 158;
-    public const int ViewService = 159;
-    public const int YinFreeze = 160;
-    public const int YinList = 161;
+    public const int CheckTaijutsuAttackHit = 34;
+    public const int ClickEventFunc = 35;
+    public const int ClickState = 36;
+    public const int CollisionPairConfig = 37;
+    public const int CoroutineService = 38;
+    public const int CurrentAnimation = 39;
+    public const int CurrentCollisionEntity = 40;
+    public const int CurrentFps = 41;
+    public const int CurrentInNumber = 42;
+    public const int CurrentMapName = 43;
+    public const int CurrentPlayerId = 44;
+    public const int CurrentScene = 45;
+    public const int CurrentWeapon = 46;
+    public const int DebugMessage = 47;
+    public const int Destroy = 48;
+    public const int ErrorMessage = 49;
+    public const int FadingUiList = 50;
+    public const int Friction = 51;
+    public const int Gravity = 52;
+    public const int HealthCurrent = 53;
+    public const int HealthRecoverable = 54;
+    public const int HealthRecoverSpeed = 55;
+    public const int HealthTotal = 56;
+    public const int Hierarchy = 57;
+    public const int HierarchyListener = 58;
+    public const int Id = 59;
+    public const int ImageAsset = 60;
+    public const int InitializePhysical = 61;
+    public const int JumpAngle = 62;
+    public const int JumpForce = 63;
+    public const int JumpForceIncreasing = 64;
+    public const int JumpFreezing = 65;
+    public const int Jumping = 66;
+    public const int Jutsu = 67;
+    public const int Key = 68;
+    public const int KeyInputService = 69;
+    public const int LastUpdateFpsTime = 70;
+    public const int Layer = 71;
+    public const int LeftMouse = 72;
+    public const int Linked = 73;
+    public const int LoadConfigService = 74;
+    public const int LoadingSceneProcess = 75;
+    public const int LoadingSceneTextImage = 76;
+    public const int LoadingUiRandomInfo = 77;
+    public const int LoadPlayer = 78;
+    public const int LoadScene = 79;
+    public const int LoginInfo = 80;
+    public const int LogService = 81;
+    public const int MakeYinTime = 82;
+    public const int MakingChaKuRa = 83;
+    public const int MakingYin = 84;
+    public const int MapConfig = 85;
+    public const int Mass = 86;
+    public const int MaxSpeed = 87;
+    public const int MouseCurrentPosition = 88;
+    public const int MouseDown = 89;
+    public const int MouseInOutEventFunc = 90;
+    public const int MouseInputService = 91;
+    public const int MouseInState = 92;
+    public const int MousePosition = 93;
+    public const int MouseUp = 94;
+    public const int MoveTarget = 95;
+    public const int Moving = 96;
+    public const int MovingUiList = 97;
+    public const int Name = 98;
+    public const int NextAnimation = 99;
+    public const int NinjaItemAttributes = 100;
+    public const int NinjaItemMenuOpen = 101;
+    public const int NinjaItemMenuOpenFreezing = 102;
+    public const int NinjaItemName = 103;
+    public const int NinjaItemNameListener = 104;
+    public const int NinjutsuAttributes = 105;
+    public const int NinjutsuMenuOpen = 106;
+    public const int NinjutsuMenuOpenFreezing = 107;
+    public const int NinjutsuName = 108;
+    public const int NinjutsuNameListener = 109;
+    public const int NormalAttacking = 110;
+    public const int OnTheGround = 111;
+    public const int OnTheWall = 112;
+    public const int ParentEntity = 113;
+    public const int PhysicalConstant = 114;
+    public const int PhysicsService = 115;
+    public const int Player = 116;
+    public const int PointNinjaItemMenuItem = 117;
+    public const int PointNinjutsuMenuItem = 118;
+    public const int Position = 119;
+    public const int PositionListener = 120;
+    public const int RightMouse = 121;
+    public const int RotatingUiList = 122;
+    public const int Scale = 123;
+    public const int ScaleListener = 124;
+    public const int SceneConfig = 125;
+    public const int SceneService = 126;
+    public const int ScrollBarValue = 127;
+    public const int ScrollBarValueListener = 128;
+    public const int SetUiPosition = 129;
+    public const int Shadow = 130;
+    public const int SignInInfo = 131;
+    public const int Size = 132;
+    public const int SizeListener = 133;
+    public const int Sprite = 134;
+    public const int Tag = 135;
+    public const int TaijutsuAttackFreezing = 136;
+    public const int TaijutsuAttackHit = 137;
+    public const int TaiRyoKuCurrent = 138;
+    public const int TaiRyoKuDeath = 139;
+    public const int TaiRyoKuExpend = 140;
+    public const int TaiRyoKuRecoverSpeed = 141;
+    public const int TaiRyoKuTired = 142;
+    public const int TaiRyoKuTotal = 143;
+    public const int Text = 144;
+    public const int TextListener = 145;
+    public const int TimeService = 146;
+    public const int Toward = 147;
+    public const int TowardListener = 148;
+    public const int UiChildList = 149;
+    public const int UiClose = 150;
+    public const int UiConfig = 151;
+    public const int UiFadeAction = 152;
+    public const int UiLayerConfig = 153;
+    public const int UiMoveAction = 154;
+    public const int UiOpen = 155;
+    public const int UiRootId = 156;
+    public const int UiRotateAction = 157;
+    public const int UseNinjaItem = 158;
+    public const int UuidToEntity = 159;
+    public const int Velocity = 160;
+    public const int View = 161;
+    public const int ViewService = 162;
+    public const int YinFreeze = 163;
+    public const int YinList = 164;
 
-    public const int TotalComponents = 162;
+    public const int TotalComponents = 165;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -208,11 +211,13 @@ public static class GameComponentsLookup {
         "ChaKuRaSlewRate",
         "ChaKuRaTotal",
         "CharacterBaseAttributes",
+        "CheckTaijutsuAttackHit",
         "ClickEventFunc",
         "ClickState",
         "CollisionPairConfig",
         "CoroutineService",
         "CurrentAnimation",
+        "CurrentCollisionEntity",
         "CurrentFps",
         "CurrentInNumber",
         "CurrentMapName",
@@ -309,6 +314,7 @@ public static class GameComponentsLookup {
         "Sprite",
         "Tag",
         "TaijutsuAttackFreezing",
+        "TaijutsuAttackHit",
         "TaiRyoKuCurrent",
         "TaiRyoKuDeath",
         "TaiRyoKuExpend",
@@ -373,11 +379,13 @@ public static class GameComponentsLookup {
         typeof(ChaKuRaSlewRateComponent),
         typeof(ChaKuRaTotalComponent),
         typeof(CharacterBaseAttributesComponent),
+        typeof(CheckTaijutsuAttackHitComponent),
         typeof(ClickEventFuncComponent),
         typeof(ClickStateComponent),
         typeof(CollisionPairConfigComponent),
         typeof(CoroutineServiceComponent),
         typeof(CurrentAnimationComponent),
+        typeof(CurrentCollisionEntityComponent),
         typeof(CurrentFpsComponent),
         typeof(CurrentInNumberComponent),
         typeof(CurrentMapNameComponent),
@@ -474,6 +482,7 @@ public static class GameComponentsLookup {
         typeof(SpriteComponent),
         typeof(TagComponent),
         typeof(TaijutsuAttackFreezingComponent),
+        typeof(TaijutsuAttackHitComponent),
         typeof(TaiRyoKuCurrentComponent),
         typeof(TaiRyoKuDeathComponent),
         typeof(TaiRyoKuExpendComponent),

@@ -24,7 +24,7 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
         {
 
             var animationInfo = _context.imageAsset.imageInfos.infos[e.name.text].animationInfos[e.currentAnimation.name];
-            Dictionary<int, Action> animationEventInfo = null;
+            Dictionary<int, Action<GameEntity>> animationEventInfo = null;
             if (_context.animationEventFunc.characterDic.ContainsKey(e.name.text))
             {
                 if (_context.animationEventFunc.characterDic[e.name.text].animationDic.ContainsKey(e.currentAnimation.name))
@@ -60,7 +60,7 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
                 if (animationEventInfo.ContainsKey((int)currentFrame) && (int)lastFrame != (int)currentFrame)
                 {
                     //_context.CreateEntity().ReplaceDebugMessage(e.name.text + " animation event");
-                    animationEventInfo[(int)currentFrame]();
+                    animationEventInfo[(int)currentFrame](e);
                 }
             }
 

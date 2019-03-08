@@ -12,6 +12,7 @@
         "chaKuRaSlewRate": 5,
         "taijutsuAttackNum": 5,
         "taijutsuAttackWithWeapon": 1,
+        "taijutsuAttackRange": 1.34,
         "ninjutsuList": [
           "HiRaiShinNoJuTsu",
           "HiRaiShinNiNoDan"
@@ -23,7 +24,15 @@
           "KuNai",
           "KuSaNaGiNoTsuRuGi",
           "ShuRiKen"
-        ]
+        ],
+        "ninjutsu": 10,
+        "taijutsu": 9,
+        "genjutsu": 8,
+        "yin": 10,
+        "power": 7,
+        "speed": 10,
+        "chakura": 7,
+        "intelligence": 10 
       }
     },
     {
@@ -38,6 +47,7 @@
         "chaKuRaSlewRate": 5,
         "taijutsuAttackNum": 0,
         "taijutsuAttackWithWeapon": 0,
+        "taijutsuAttackRange": 0.74,
         "ninjutsuList": [
 
         ],
@@ -48,7 +58,15 @@
           "KuNai",
           "KuSaNaGiNoTsuRuGi",
           "ShuRiKen"
-        ]
+        ],
+        "ninjutsu": 10,
+        "taijutsu": 9,
+        "genjutsu": 10,
+        "yin": 10,
+        "power": 9,
+        "speed": 9,
+        "chakura": 8,
+        "intelligence": 10
       }
     }
   ]
