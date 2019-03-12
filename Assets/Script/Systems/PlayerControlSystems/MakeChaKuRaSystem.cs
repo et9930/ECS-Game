@@ -12,46 +12,40 @@ public class MakeChaKuRaSystem : IExecuteSystem
     public void Execute()
     {
         if (!_context.hasCurrentPlayerId) return;
+        var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
 
         if (!_context.key.value.MakeChaKuRa)
-        {
-            foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
-            {
-                if (!e.isMakingChaKuRa) continue;
-                
-                e.isMakingChaKuRa = false;
-            }
+        { 
+            if (!currentPlayer.isMakingChaKuRa) return;
+            currentPlayer.isMakingChaKuRa = false;
             return;
         }
 
-        foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
+        if (!currentPlayer.hasChaKuRaCurrent || !currentPlayer.hasChaKuRaTotal || !currentPlayer.hasChaKuRaSlewRate || !currentPlayer.hasTaiRyoKuCurrent || !currentPlayer.hasTaiRyoKuDeath) return;
+
+        if (!(currentPlayer.chaKuRaCurrent.value < currentPlayer.chaKuRaTotal.value) || !(currentPlayer.taiRyoKuCurrent.value > currentPlayer.taiRyoKuDeath.value))
         {
-            if (!e.hasChaKuRaCurrent || !e.hasChaKuRaTotal || !e.hasChaKuRaSlewRate || !e.hasTaiRyoKuCurrent || !e.hasTaiRyoKuDeath) continue;
-
-            if (!(e.chaKuRaCurrent.value < e.chaKuRaTotal.value) || !(e.taiRyoKuCurrent.value > e.taiRyoKuDeath.value))
-            {
-                e.isMakingChaKuRa = false;
-                continue;
-            }
-
-            e.isMakingChaKuRa = true;
-
-            var expendTaiRyoKu = _context.timeService.instance.GetDeltaTime() * 1.0f;
-            if (e.taiRyoKuCurrent.value - e.taiRyoKuDeath.value < expendTaiRyoKu)
-            {
-                expendTaiRyoKu = e.taiRyoKuCurrent.value - e.taiRyoKuDeath.value;
-            }
-
-            var addChaKuRa = expendTaiRyoKu * e.chaKuRaSlewRate.value;
-            if (e.chaKuRaTotal.value - e.chaKuRaCurrent.value < addChaKuRa)
-            {
-                addChaKuRa = e.chaKuRaTotal.value - e.chaKuRaCurrent.value;
-                expendTaiRyoKu = addChaKuRa / e.chaKuRaSlewRate.value;
-            }
-
-            e.ReplaceChaKuRaCurrent(e.chaKuRaCurrent.value + addChaKuRa);
-            e.ReplaceTaiRyoKuCurrent(e.taiRyoKuCurrent.value - expendTaiRyoKu);
-            
+            currentPlayer.isMakingChaKuRa = false;
+            return;
         }
+
+        currentPlayer.isMakingChaKuRa = true;
+
+        var expendTaiRyoKu = _context.timeService.instance.GetDeltaTime() * 1.0f;
+        if (currentPlayer.taiRyoKuCurrent.value - currentPlayer.taiRyoKuDeath.value < expendTaiRyoKu)
+        {
+            expendTaiRyoKu = currentPlayer.taiRyoKuCurrent.value - currentPlayer.taiRyoKuDeath.value;
+        }
+
+        var addChaKuRa = expendTaiRyoKu * currentPlayer.chaKuRaSlewRate.value;
+        if (currentPlayer.chaKuRaTotal.value - currentPlayer.chaKuRaCurrent.value < addChaKuRa)
+        {
+            addChaKuRa = currentPlayer.chaKuRaTotal.value - currentPlayer.chaKuRaCurrent.value;
+            expendTaiRyoKu = addChaKuRa / currentPlayer.chaKuRaSlewRate.value;
+        }
+
+        currentPlayer.ReplaceChaKuRaCurrent(currentPlayer.chaKuRaCurrent.value + addChaKuRa);
+        currentPlayer.ReplaceTaiRyoKuCurrent(currentPlayer.taiRyoKuCurrent.value - expendTaiRyoKu);
+            
     }
 }

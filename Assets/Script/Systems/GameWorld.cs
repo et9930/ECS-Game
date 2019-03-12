@@ -30,11 +30,14 @@
         Add(new TaiRyoKuExpendSystem(contexts));
         Add(new ChaKuRaExpendSystem(contexts));
         Add(new HealthRecoverSystem(contexts));
+        Add(new HealthReduceSystem(contexts));
         Add(new TaiRyoKuRecoverSystem(contexts));
 
         // taijutsu
         Add(new CheckTaijutsuAttackHitSystem(contexts));
         Add(new CheckTaijutsuAttackDodgeSystem(contexts));
+        Add(new CheckTaijutsuAttackDefendSystem(contexts));
+        Add(new CalculateTaijutsuAttackDamageSystem(contexts));
 
         //  physical systems
         Add(new PhysicalSystems(contexts));
@@ -52,6 +55,9 @@
         Add(new LoadPlayerSystem(contexts));
         Add(new AddShadowSystem(contexts));
         Add(new ShadowPositionSystem(contexts));
+
+        //
+        Add(new PerceptionPositionSystem(contexts));
 
         // Display Systems
         Add(new DisplayHierarchySystem(contexts));

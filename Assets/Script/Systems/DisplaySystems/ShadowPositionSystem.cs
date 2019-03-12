@@ -27,14 +27,14 @@ public class ShadowPositionSystem : ReactiveSystem<GameEntity>
         {
             foreach (var shadow in _context.GetGroup(GameMatcher.Shadow))
             {
-                if (shadow.id.value != e.id.value) continue;
+                if (shadow.parentEntity.value != e) continue;
 
                 var shadowPosition = e.position.value;
                 shadowPosition.Y = 0;
                 shadow.ReplacePosition(shadowPosition);
 
                 var shadowHierarchy = e.hierarchy.value;
-                shadowHierarchy += 0.1f;
+                shadowHierarchy += 0.01f;
                 shadow.ReplaceHierarchy(shadowHierarchy);
             }
         }

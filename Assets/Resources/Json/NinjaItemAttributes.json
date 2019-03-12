@@ -21,6 +21,7 @@
         },
         "throwingWeaponMaxFlyTime": 3,
         "handHeldWeaponAttackPlusRadius": 0.1,
+        "handHeldWeaponHurt": 20,
         "handHeldWeaponAttackTime": 0.5
       }
     },
@@ -84,6 +85,7 @@
         },
         "throwingWeaponMaxFlyTime": 3.5,
         "handHeldWeaponAttackPlusRadius": 0.1,
+        "handHeldWeaponHurt": 18,
         "handHeldWeaponAttackTime": 0.4
       }
     },
@@ -101,6 +103,7 @@
         "disposableWeapon": false,
         "ninjaItemSpecialEffects": [],
         "handHeldWeaponAttackPlusRadius": 0.7,
+        "handHeldWeaponHurt": 23,
         "handHeldWeaponAttackTime": 0.7
       }
     },

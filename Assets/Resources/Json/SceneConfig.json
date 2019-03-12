@@ -19,7 +19,8 @@
           "NinjutsuMenu",
           "NinjaItemMenu",
           "NinjaItemMenuInfoWindow",
-          "NinjutsuQTE"
+          "NinjutsuQTE",
+          "PerceptionPositionExist"
         ]
       }
     }

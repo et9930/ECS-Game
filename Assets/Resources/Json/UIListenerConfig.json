@@ -225,6 +225,36 @@
         "Active",
         "NinjaItemMenuInfo"
       ]
+    },
+    {
+      "ComponentName": "PerceptionPositionExistLeft",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "PerceptionPositionExistRight",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "PerceptionPositionExistItem",
+      "Listener": [
+        "PerceptionPositionExist"
+      ]
+    },
+    {
+      "ComponentName": "PerceptionPositionAccurateItemRight",
+      "Listener": [
+        "PerceptionPositionAccurate"
+      ]
+    },
+    {
+      "ComponentName": "PerceptionPositionAccurateItemLeft",
+      "Listener": [
+        "PerceptionPositionAccurate"
+      ]
     }
   ]
 }

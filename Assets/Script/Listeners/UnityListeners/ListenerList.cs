@@ -38,6 +38,9 @@ public static class ListenerList
 
         { "NinjaItemMenuItem", typeof(NinjaItemMenuItemListener) },
         { "NinjaItemMenuInfo", typeof(NinjaItemMenuInfoListener) },
+
+        { "PerceptionPositionExist", typeof(PerceptionPositionExistListener) },
+        { "PerceptionPositionAccurate", typeof(PerceptionPositionAccurateListener) },
     };
 }
 

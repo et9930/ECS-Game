@@ -61,6 +61,8 @@ public class NinjaItem
     [DataMember]
     public float handHeldWeaponAttackPlusRadius;
     [DataMember]
+    public float handHeldWeaponHurt;
+    [DataMember]
     public float handHeldWeaponAttackTime;
 
     //-----explode weapon

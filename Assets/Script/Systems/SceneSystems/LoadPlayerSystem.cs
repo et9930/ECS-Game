@@ -53,6 +53,8 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             newPlayer.ReplaceTaiRyoKuDeath(characterBaseAttributes.deathTaiRyoKu);
             newPlayer.ReplaceTaiRyoKuRecoverSpeed(0.1f);
 
+            newPlayer.ReplaceAntiPerceptionLevel(characterBaseAttributes.antiPerceptionLevel);
+
             newPlayer.isInitializePhysical = true;
             newPlayer.isAffectedByGravity = true;
             newPlayer.ReplaceOnTheGround(false);

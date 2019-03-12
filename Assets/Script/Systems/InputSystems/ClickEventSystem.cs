@@ -42,13 +42,9 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     private void OnNinjaItemMenuItemClick(GameEntity entity)
     {
         if (entity.hasActive && entity.active.value) return;
-             
-        foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
-        {
-            if (e.isShadow) continue;
 
-            e.ReplaceUseNinjaItem(entity.ninjaItemName.value);
-        }
+        var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
 
         foreach (var e in _context.GetEntitiesWithName("NinjaItemMenuItem"))
         {

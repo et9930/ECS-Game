@@ -151,7 +151,16 @@ public class UnitySceneService : ISceneService
             var parentUI = GameObject.Find(parentEntity.name.text);
             if (parentUI == null)
             {
-                parentUI = _uiDictionary[parentEntity.uiRootId.value].transform.Find(parentEntity.name.text).gameObject;
+                var tempTF = _uiDictionary[parentEntity.uiRootId.value].transform.Find(parentEntity.name.text);
+                if (tempTF != null)
+                {
+                    parentUI = tempTF.gameObject;
+                }
+            }
+
+            if (parentUI == null)
+            {
+                parentUI = RecursiveFind(parentEntity.name.text, _uiDictionary[parentEntity.uiRootId.value]);
             }
             uiGo.transform.SetParent(parentUI.transform);
         }
@@ -246,5 +255,34 @@ public class UnitySceneService : ISceneService
             ((GameEntity) tf.gameObject.GetEntityLink().entity).isLinked = false;
             tf.gameObject.Unlink();
         }
+    }
+
+    private GameObject RecursiveFind(string name, GameObject rootGameObject)
+    {
+        var stack = new Stack<GameObject>();
+
+        for (int i = 0; i < rootGameObject.transform.childCount; i++)
+        {
+            var go = rootGameObject.transform.GetChild(i).gameObject;
+            if (go.name == name)
+            {
+                return go;
+            }
+            else
+            {
+                stack.Push(go);
+            }
+        }
+
+        while (stack.Count > 0)
+        {
+            var go = RecursiveFind(name, stack.Pop());
+            if (go != null)
+            {
+                return go;
+            }
+        }
+
+        return null;
     }
 }

@@ -4,6 +4,6 @@ using Entitas.CodeGeneration.Attributes;
 [Game]
 public class IdComponent : IComponent
 {
-    [EntityIndex]
+    [PrimaryEntityIndex]
     public int value;
 }

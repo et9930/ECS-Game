@@ -18,40 +18,37 @@ public class NormalAttackControlSystem : IExecuteSystem
             if (_context.isTaijutsuAttackFreezing) return;
             _context.isTaijutsuAttackFreezing = true;
 
-            foreach (var e in _context.GetEntitiesWithId(_context.currentPlayerId.value))
-            {
-                if (e.isShadow) continue;
-                if (!e.onTheGround.value || e.isJumping || e.isMakingYin) continue;
+            var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+            if (!currentPlayer.onTheGround.value || currentPlayer.isJumping || currentPlayer.isMakingYin) return;
 
-                if (!e.isNormalAttacking)
+            if (!currentPlayer.isNormalAttacking)
+            {
+                if (currentPlayer.hasCurrentWeapon)
                 {
-                    if (e.hasCurrentWeapon)
-                    {
-                        e.ReplaceAnimation("attack_" + _context.characterBaseAttributes.dic[e.name.text].taijutsuAttackWithWeapon, false);
-                    }
-                    else
-                    {
-                        e.ReplaceAnimation("attack_1", false);
-                    }
-                    e.ReplaceVelocity(Vector3.Zero);
-                    e.isNormalAttacking = true;
+                    currentPlayer.ReplaceAnimation("attack_" + _context.characterBaseAttributes.dic[currentPlayer.name.text].taijutsuAttackWithWeapon, false);
                 }
                 else
                 {
-                    if (e.hasCurrentWeapon) return;
-
-                    var currentAttackAnimationName = e.animation.name;
-                    if (!currentAttackAnimationName.StartsWith("attack_")) return;
-
-                    var _index = currentAttackAnimationName.LastIndexOf('_');
-                    var currentAttackIndex = int.Parse(currentAttackAnimationName.Substring(_index + 1));
-
-                    if (currentAttackIndex >= _context.characterBaseAttributes.dic[e.name.text].taijutsuAttackNum) return;
-
-                    e.ReplaceNextAnimation("attack_" + (currentAttackIndex + 1), false);
+                    currentPlayer.ReplaceAnimation("attack_1", false);
                 }
-
+                currentPlayer.ReplaceVelocity(Vector3.Zero);
+                currentPlayer.isNormalAttacking = true;
             }
+            else
+            {
+                if (currentPlayer.hasCurrentWeapon) return;
+
+                var currentAttackAnimationName = currentPlayer.animation.name;
+                if (!currentAttackAnimationName.StartsWith("attack_")) return;
+
+                var _index = currentAttackAnimationName.LastIndexOf('_');
+                var currentAttackIndex = int.Parse(currentAttackAnimationName.Substring(_index + 1));
+
+                if (currentAttackIndex >= _context.characterBaseAttributes.dic[currentPlayer.name.text].taijutsuAttackNum) return;
+
+                currentPlayer.ReplaceNextAnimation("attack_" + (currentAttackIndex + 1), false);
+            }
+
         }
         else
         {

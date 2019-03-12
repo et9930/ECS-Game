@@ -26,7 +26,7 @@ public class AddShadowSystem : ReactiveSystem<GameEntity>
         {
             var newShadow = _context.CreateEntity();
             newShadow.isShadow = true;
-            newShadow.ReplaceId(e.id.value);
+            newShadow.ReplaceParentEntity(e);
             newShadow.ReplaceName(e.name.text + " Shadow");
             newShadow.ReplaceHierarchy(e.hierarchy.value);
             var newShadowPosition = e.position.value;

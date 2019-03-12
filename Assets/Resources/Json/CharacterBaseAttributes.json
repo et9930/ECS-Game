@@ -32,7 +32,9 @@
         "power": 7,
         "speed": 10,
         "chakura": 7,
-        "intelligence": 10 
+        "intelligence": 10,
+        "perceptionLevel": 8,
+        "antiPerceptionLevel": 2
       }
     },
     {
@@ -66,7 +68,9 @@
         "power": 9,
         "speed": 9,
         "chakura": 8,
-        "intelligence": 10
+        "intelligence": 10,
+        "perceptionLevel": 6,
+        "antiPerceptionLevel": 2
       }
     }
   ]

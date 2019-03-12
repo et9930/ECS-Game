@@ -62,4 +62,9 @@ public class Character
     public int chakura;
     [DataMember]
     public int intelligence;
+
+    [DataMember]
+    public int perceptionLevel;
+    [DataMember]
+    public int antiPerceptionLevel;
 }
