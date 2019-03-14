@@ -24,6 +24,10 @@ public class UiFollowSystem : IExecuteSystem
 //            parentScreenPosition.X -= _context.viewService.instance.ScreenSize.X / 2;
             parentScreenPosition.X -= 960;
             parentScreenPosition.Y -= 540;
+            if (e.hasUiExcursion)
+            {
+                parentScreenPosition += e.uiExcursion.value;
+            }
 //            parentScreenPosition.Y -= _context.viewService.instance.ScreenSize.Y / 2;
 //            _context.CreateEntity().ReplaceDebugMessage("ScreenSize " + _context.viewService.instance.ScreenSize);
             _context.sceneService.instance.SetUIPosition(e.name.text, parentScreenPosition);

@@ -41,6 +41,7 @@ public static class ListenerList
 
         { "PerceptionPositionExist", typeof(PerceptionPositionExistListener) },
         { "PerceptionPositionAccurate", typeof(PerceptionPositionAccurateListener) },
+        { "PerceptionHTC", typeof(PerceptionHTCListener) }
     };
 }
 

@@ -118,6 +118,7 @@
     <Compile Include="Assets\Script\Components\OnTheGroundComponent.cs" />
     <Compile Include="Assets\Script\Components\OnTheWallComponent.cs" />
     <Compile Include="Assets\Script\Components\ParentEntityComponent.cs" />
+    <Compile Include="Assets\Script\Components\PerceptionHTCItemComponent.cs" />
     <Compile Include="Assets\Script\Components\PerceptionLevelComponent.cs" />
     <Compile Include="Assets\Script\Components\PerceptionPositionAccurateItemComponent.cs" />
     <Compile Include="Assets\Script\Components\PerceptionPositionExistItemComponent.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Assets\Script\Components\TextComponent.cs" />
     <Compile Include="Assets\Script\Components\TowardComponent.cs" />
     <Compile Include="Assets\Script\Components\UiCloseComponent.cs" />
+    <Compile Include="Assets\Script\Components\UiExcursionComponent.cs" />
     <Compile Include="Assets\Script\Components\UiFadeActionComponent.cs" />
     <Compile Include="Assets\Script\Components\UiMoveActionComponent.cs" />
     <Compile Include="Assets\Script\Components\UiOpenComponent.cs" />
@@ -156,6 +158,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPlayerIdComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentSceneComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\FadingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\FinalPerceptionLevelComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CharacterBaseAttributesComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CollisionPairConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\ImageAssetComponent.cs" />
@@ -184,6 +187,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemMenuOpenFreezingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenFreezingComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\PerceptionHTCComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\PerceptionPositionAccurateComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\PerceptionPositionExistComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\PhysicalConstantComponent.cs" />
@@ -230,6 +234,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\HierarchyListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\NinjaItemNameListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\NinjutsuNameListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\PerceptionHTCItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PerceptionPositionAccurateItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PerceptionPositionExistItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PositionListenerComponent.cs" />
@@ -259,6 +264,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IHierarchyListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjaItemNameListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjutsuNameListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionHTCItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionPositionAccurateItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionPositionExistItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPositionListener.cs" />
@@ -287,6 +293,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\HierarchyEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\NinjaItemNameEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\NinjutsuNameEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionHTCItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionPositionAccurateItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionPositionExistItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PositionEventSystem.cs" />
@@ -349,6 +356,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameDestroyComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameErrorMessageComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameFadingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameFinalPerceptionLevelComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameFrictionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameGravityComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameHealthCurrentComponent.cs" />
@@ -413,6 +421,9 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheGroundComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCItemComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionLevelComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionPositionAccurateComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionPositionAccurateItemComponent.cs" />
@@ -458,6 +469,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiChildListComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiCloseComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiConfigComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameUiExcursionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiFadeActionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameUiMoveActionComponent.cs" />
@@ -497,6 +509,7 @@
     <Compile Include="Assets\Script\Listeners\UnityListeners\NinjaItemMenuItemListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\NinjutsuMenuInfoListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\NinjutsuMenuItemListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\PerceptionHTCListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PerceptionPositionAccurateListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PerceptionPositionExistListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\PlayerChaKuRaListener.cs" />
@@ -556,6 +569,8 @@
     <Compile Include="Assets\Script\Systems\NinjaItemSystems\AddNinjaItemMenuItemSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjaItemSystems\UseNinjaItemSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\AddNinjutsuMenuItemSystem.cs" />
+    <Compile Include="Assets\Script\Systems\PerceptionSystems\CheckPerceptionLevelSystem.cs" />
+    <Compile Include="Assets\Script\Systems\PerceptionSystems\PerceptionHTCSystem.cs" />
     <Compile Include="Assets\Script\Systems\PerceptionSystems\PerceptionPositionSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AccelerationSystem.cs" />
     <Compile Include="Assets\Script\Systems\PhysicalSystems\AddForceSystem.cs" />
@@ -576,6 +591,7 @@
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\NinjutsuMenuControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\NormalAttackControlSystem.cs" />
     <Compile Include="Assets\Script\Systems\PlayerControlSystems\PlayerStateControlSystem.cs" />
+    <Compile Include="Assets\Script\Systems\SceneSystems\ChangeUiParentSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\InitBattleSceneSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\LoadPlayerSystem.cs" />

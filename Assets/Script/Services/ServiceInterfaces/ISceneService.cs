@@ -17,4 +17,5 @@ public interface ISceneService
     void SetUIAlpha(string uiName, float value);
     float GetUIAngle(string uiName);
     void SetUIAngle(string uiName, float value);
+    void SetParent(int child, string parent);
 }

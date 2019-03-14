@@ -25,6 +25,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyMakeYinTimeEventSystem(contexts)); // priority: 0
         Add(new NinjaItemNameEventSystem(contexts)); // priority: 0
         Add(new NinjutsuNameEventSystem(contexts)); // priority: 0
+        Add(new PerceptionHTCItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionAccurateItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionExistItemEventSystem(contexts)); // priority: 0
         Add(new AnyPointNinjaItemMenuItemEventSystem(contexts)); // priority: 0

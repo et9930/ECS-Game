@@ -9,6 +9,7 @@ public interface IViewService
     void DestroyView(string objectName);
     Vector2 WorldPositionToScreenPosition(Vector3 worldPosition);
     Vector2 ScreenSize { get; }
+    float GetViewPixelsPerUnit(string objectName);
     Vector2 GetViewSize(string objectName);
     Vector2 GetViewPivot(string objectName);
 }

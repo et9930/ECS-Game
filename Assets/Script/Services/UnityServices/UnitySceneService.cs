@@ -133,6 +133,14 @@ public class UnitySceneService : ISceneService
         rt.localRotation = Quaternion.Euler(new Vector3(0, 0, value));
     }
 
+    public void SetParent(int child, string parent)
+    {
+        var ui = GameObject.Find(parent);
+        if (ui == null) return;
+
+        _uiDictionary[child].transform.SetParent(ui.transform);
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);
@@ -192,7 +200,10 @@ public class UnitySceneService : ISceneService
         foreach (var component in componentInfo.Components)
         {
             var e = prefabName == component.ComponentPath ? rootEntity : context.CreateEntity();
-            e.ReplaceName(component.ComponentName);
+            if (!e.hasName)
+            {
+                e.ReplaceName(component.ComponentName);
+            }
             e.ReplaceUiRootId(uiInstanceId);
 
             var componentGo = prefabName == component.ComponentPath ? uiGo : uiGo.transform.Find(component.ComponentPath.Substring(prefabName.Length + 1)).gameObject;

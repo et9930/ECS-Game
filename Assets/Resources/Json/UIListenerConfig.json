@@ -255,6 +255,12 @@
       "Listener": [
         "PerceptionPositionAccurate"
       ]
+    },
+    {
+      "ComponentName": "PerceptionHTCItem",
+      "Listener": [
+        "PerceptionHTC"
+      ]
     }
   ]
 }

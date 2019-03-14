@@ -74,6 +74,15 @@ public class UnityViewService : IViewService
 
     public Vector2 ScreenSize => new Vector2(Screen.width, Screen.height);
 
+
+    public float GetViewPixelsPerUnit(string objectName)
+    {
+        var viewTf = viewRoot.transform.Find(objectName);
+        var viewGo = viewTf.gameObject;
+        var viewSr = viewGo.GetComponent<SpriteRenderer>();
+        return viewSr.sprite.pixelsPerUnit;
+    }
+
     public Vector2 GetViewSize(string objectName)
     {
         var viewTf = viewRoot.transform.Find(objectName);

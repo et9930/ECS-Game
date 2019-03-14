@@ -40,7 +40,12 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in entities)
         {
             var rootEntity = e;
-            var id = e.hasParentEntity ? _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName, _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity, e.parentEntity.value) : _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName, _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity);
+            var id = e.hasParentEntity
+                ? _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName,
+                    _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity,
+                    e.parentEntity.value)
+                : _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName,
+                    _context.uiConfig.UiInfos[e.uiOpen.prefabName].UiLayer, _context, ref rootEntity);
             _context.uuidToEntity.dic[id] = rootEntity;
             _context.uiChildList.dic[id] = new List<int>();
             if (e.hasParentEntity && e.parentEntity.value.hasUiRootId)
@@ -48,15 +53,13 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                 _context.uiChildList.dic[e.parentEntity.value.uiRootId.value].Add(id);
             }
 
-            if (e.hasNinjutsuName)
-            {
-                rootEntity.ReplaceNinjutsuName(e.ninjutsuName.value);
-            }
+//            if (e.hasNinjutsuName)
+//            {
+//                rootEntity.ReplaceNinjutsuName(e.ninjutsuName.value);
+//            }
 
             e.ReplaceUiRootId(id);
             e.RemoveUiOpen();
         }
     }
-
-
 }

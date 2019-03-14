@@ -48,6 +48,7 @@
         Add(new UiMoveActionSystem(contexts));
         Add(new UiFadeInOutActionSystem(contexts));
         Add(new UiRotateActionSystem(contexts));
+        Add(new ChangeUiParentSystem(contexts));
         Add(new SetUiPositionSystem(contexts));
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
@@ -57,7 +58,9 @@
         Add(new ShadowPositionSystem(contexts));
 
         //
+        Add(new CheckPerceptionLevelSystem(contexts));
         Add(new PerceptionPositionSystem(contexts));
+        Add(new PerceptionHTCSystem(contexts));
 
         // Display Systems
         Add(new DisplayHierarchySystem(contexts));
