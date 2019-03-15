@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class AddShadowSystem : ReactiveSystem<GameEntity>
@@ -32,6 +33,7 @@ public class AddShadowSystem : ReactiveSystem<GameEntity>
             var newShadowPosition = e.position.value;
             newShadowPosition.Y = 0;
             newShadow.ReplacePosition(newShadowPosition);
+            newShadow.ReplaceRotation(e.rotation.value);
             newShadow.ReplaceToward(false);
             newShadow.ReplaceScale(e.scale.value);
             newShadow.ReplaceSprite("Image/Character/Shadow");

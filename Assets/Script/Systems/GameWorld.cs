@@ -24,6 +24,10 @@
         Add(new NormalAttackControlSystem(contexts));
         Add(new NinjutsuMenuControlSystem(contexts));
         Add(new NinjaItemMenuControlSystem(contexts));
+        Add(new UseNinjaItemSystem(contexts));
+        Add(new PlayerTryThrowWeaponSystem(contexts));
+        Add(new ThrowWeaponSystem(contexts));
+        Add(new ThrowingWeaponManageSystem(contexts));
 
         //  HTC systems
         Add(new MakeChaKuRaSystem(contexts));
@@ -53,8 +57,6 @@
         Add(new CloseUiSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
 
-        Add(new LoadPlayerSystem(contexts));
-        Add(new AddShadowSystem(contexts));
         Add(new ShadowPositionSystem(contexts));
 
         //
@@ -77,6 +79,10 @@
         Add(new AddNinjutsuMenuItemSystem(contexts));
         Add(new AddNinjaItemMenuItemSystem(contexts));
         Add(new DestroyEntitiesSystem(contexts));
+
+        Add(new LoadPlayerSystem(contexts));
+        Add(new AddShadowSystem(contexts));
+
 
         // Order Independence Systems
         Add(new MoveMainCameraSystem(contexts));

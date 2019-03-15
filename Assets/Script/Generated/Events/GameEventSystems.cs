@@ -13,12 +13,14 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyChaKuRaCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaSlewRateEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentFpsEventSystem(contexts)); // priority: 0
+        Add(new AnyCurrentWeaponEventSystem(contexts)); // priority: 0
         Add(new AnyHealthCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyHealthRecoverableEventSystem(contexts)); // priority: 0
         Add(new AnyHealthRecoverSpeedEventSystem(contexts)); // priority: 0
         Add(new HierarchyEventSystem(contexts)); // priority: 0
         Add(new AnyJumpAngleEventSystem(contexts)); // priority: 0
         Add(new AnyJumpForceEventSystem(contexts)); // priority: 0
+        Add(new LeftNumberEventSystem(contexts)); // priority: 0
         Add(new AnyLoadingSceneProcessEventSystem(contexts)); // priority: 0
         Add(new AnyLoadingSceneTextImageEventSystem(contexts)); // priority: 0
         Add(new AnyLoadPlayerEventSystem(contexts)); // priority: 0
@@ -31,6 +33,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyPointNinjaItemMenuItemEventSystem(contexts)); // priority: 0
         Add(new AnyPointNinjutsuMenuItemEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
+        Add(new RotationEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
         Add(new ScrollBarValueEventSystem(contexts)); // priority: 0
         Add(new SizeEventSystem(contexts)); // priority: 0

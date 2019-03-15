@@ -40,4 +40,6 @@ public class ComponentInfo
     public List<string> Listener;
     [DataMember]
     public List<string> Handle;
+    [DataMember]
+    public bool asParent;
 }

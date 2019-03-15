@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaItemNameListener, IActiveListener
+public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaItemNameListener, IActiveListener, ILeftNumberListener
 {
     private GameContext _context;
     private GameEntity _entity;
@@ -13,6 +13,7 @@ public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaIt
         _entity = (GameEntity) entity;
         _entity.AddNinjaItemNameListener(this);
         _entity.AddActiveListener(this);
+        _entity.AddLeftNumberListener(this);
     }
 
     public void OnNinjaItemName(GameEntity entity, string value)
@@ -24,5 +25,13 @@ public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaIt
     public void OnActive(GameEntity entity, bool value)
     {
         transform.Find("NinjaItemMenuItemSelected").gameObject.SetActive(value);
+    }
+    
+    public void OnLeftNumber(GameEntity entity, int value)
+    {
+        if (value < 0) return;
+
+        transform.Find("NinjaItemMenuItemLeftNum").GetComponent<Text>().text = value.ToString();
+        transform.Find("NinjaItemMenuItemIcon").GetComponent<Image>().color = value == 0 ? new Color(1, 1, 1, 0.4f) : new Color(1, 1, 1, 1);
     }
 }

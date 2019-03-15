@@ -25,7 +25,7 @@ public class Keys
     public bool SpecialState2;
     public bool Jump;
     public bool MakeChaKuRa;
-    public bool Slow;
+    public bool ThrowWeapon;
     public bool Submit;
     public bool Cancel;
     public bool NinjaItemMenu;

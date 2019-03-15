@@ -199,6 +199,8 @@ public class UnitySceneService : ISceneService
         var componentInfo = context.uiConfig.UiInfos[prefabName];
         foreach (var component in componentInfo.Components)
         {
+            if (component.Handle.Count == 0 && component.Listener.Count == 0 && component.asParent == false) continue;
+
             var e = prefabName == component.ComponentPath ? rootEntity : context.CreateEntity();
             if (!e.hasName)
             {

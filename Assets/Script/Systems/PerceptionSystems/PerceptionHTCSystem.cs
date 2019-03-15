@@ -19,6 +19,8 @@ public class PerceptionHTCSystem : IInitializeSystem, IExecuteSystem
     public void Execute()
     {
         if (_context.currentScene.name != "BattleScene") return;
+        if (_context.GetGroup(GameMatcher.LoadPlayer).count > 0) return;
+
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         foreach (var e in _context.GetEntitiesWithTag("Character"))

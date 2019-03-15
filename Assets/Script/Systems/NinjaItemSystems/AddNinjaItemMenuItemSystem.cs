@@ -24,34 +24,31 @@ public class AddNinjaItemMenuItemSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            GameEntity itemList = null;
-
-            foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
-            {
-                if (ui.name.text != "NinjaItemMenuList") continue;
-
-                itemList = ui;
-                break;
-            }
-
-            if (itemList == null) continue;
-
             var ninjaItems = _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjaItemList;
 
-            for (var i = 0; i < ninjaItems.Count; i++)
+            var i = 0;
+
+            e.ReplaceNinjaItemList(new Dictionary<string, GameEntity>());
+
+            foreach (var config in ninjaItems)
             {
-                var itemEntity = _context.CreateEntity();
-                itemEntity.ReplaceName("NinjaItemMenuItem");
-                itemEntity.ReplaceNinjaItemName(ninjaItems[i]);
+                var item = _context.CreateEntity();
                 foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
                 {
                     if (ui.name.text != "NinjaItemMenuItem" + i) continue;
 
-                    itemEntity.ReplaceParentEntity(ui);
+                    item.ReplaceParentEntity(ui);
                     break;
                 }
-                itemEntity.ReplaceUiOpen("NinjaItemMenuItem");
+                item.ReplaceUiOpen("NinjaItemMenuItem");
+                item.ReplaceNinjaItemName(config.Key);
+                item.ReplaceName("NinjaItemMenuItem");
+                item.ReplaceLeftNumber(config.Value);
+                i++;
+
+                e.ninjaItemList.dic[config.Key] = item;
             }
+
         }
     }
 }

@@ -10,6 +10,7 @@ public static class ListenerList
         { "Fps", typeof(FpsListener) },
         { "Hierarchy", typeof(HierarchyListener) },
         { "Position", typeof(PositionListener) },
+        { "Rotation", typeof(RotationListener) },
         { "Scale", typeof(ScaleListener) },
         { "ScrollBarValue", typeof(ScrollBarValueListener) },
         { "Size", typeof(SizeListener) },
@@ -41,7 +42,9 @@ public static class ListenerList
 
         { "PerceptionPositionExist", typeof(PerceptionPositionExistListener) },
         { "PerceptionPositionAccurate", typeof(PerceptionPositionAccurateListener) },
-        { "PerceptionHTC", typeof(PerceptionHTCListener) }
+        { "PerceptionHTC", typeof(PerceptionHTCListener) },
+
+        { "CurrentWeapon", typeof(CurrentWeaponListener) },
     };
 }
 

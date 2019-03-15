@@ -28,42 +28,50 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
         {
             var characterBaseAttributes = _context.characterBaseAttributes.dic[e.loadPlayer.playerName];
 
-            var newPlayer = _context.CreateEntity();
-            newPlayer.ReplaceId(e.loadPlayer.playerId);
-            newPlayer.ReplaceName(e.loadPlayer.playerName);
-            newPlayer.ReplaceAnimation("idle", false);
-            newPlayer.ReplaceHierarchy(0);
-            newPlayer.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].CharacterInPosition[0]);
-            newPlayer.ReplaceScale(new Vector2(1.0f, 1.0f));
-            newPlayer.ReplaceMass(66.5f);
-            newPlayer.ReplaceToward(false);
+            e.ReplaceId(e.loadPlayer.playerId);
+            e.ReplaceName(e.loadPlayer.playerName);
+            e.ReplaceAnimation("idle", false);
+            e.ReplaceHierarchy(0);
+            e.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].CharacterInPosition[0]);
+            e.ReplaceRotation(Vector3.Zero);
+            e.ReplaceScale(new Vector2(1.0f, 1.0f));
+            e.ReplaceMass(66.5f);
+            e.ReplaceToward(false);
 
-            newPlayer.ReplaceHealthTotal(characterBaseAttributes.baseHealth);
-            newPlayer.ReplaceHealthRecoverable(characterBaseAttributes.baseHealth);
-            newPlayer.ReplaceHealthRecoverSpeed(0.1f);
-            newPlayer.ReplaceHealthCurrent(characterBaseAttributes.baseHealth);
+            e.ReplaceHealthTotal(characterBaseAttributes.baseHealth);
+            e.ReplaceHealthRecoverable(characterBaseAttributes.baseHealth);
+            e.ReplaceHealthRecoverSpeed(0.1f);
+            e.ReplaceHealthCurrent(characterBaseAttributes.baseHealth);
 
-            newPlayer.ReplaceChaKuRaTotal(characterBaseAttributes.baseChaKuRa);
-            newPlayer.ReplaceChaKuRaCurrent(characterBaseAttributes.baseChaKuRa);
-            newPlayer.ReplaceChaKuRaSlewRate(characterBaseAttributes.chaKuRaSlewRate);
+            e.ReplaceChaKuRaTotal(characterBaseAttributes.baseChaKuRa);
+            e.ReplaceChaKuRaCurrent(characterBaseAttributes.baseChaKuRa);
+            e.ReplaceChaKuRaSlewRate(characterBaseAttributes.chaKuRaSlewRate);
 
-            newPlayer.ReplaceTaiRyoKuCurrent(characterBaseAttributes.baseTaiRyoKu);
-            newPlayer.ReplaceTaiRyoKuTotal(characterBaseAttributes.baseTaiRyoKu);
-            newPlayer.ReplaceTaiRyoKuTired(characterBaseAttributes.tiredTaiRyoKu);
-            newPlayer.ReplaceTaiRyoKuDeath(characterBaseAttributes.deathTaiRyoKu);
-            newPlayer.ReplaceTaiRyoKuRecoverSpeed(0.1f);
+            e.ReplaceTaiRyoKuCurrent(characterBaseAttributes.baseTaiRyoKu);
+            e.ReplaceTaiRyoKuTotal(characterBaseAttributes.baseTaiRyoKu);
+            e.ReplaceTaiRyoKuTired(characterBaseAttributes.tiredTaiRyoKu);
+            e.ReplaceTaiRyoKuDeath(characterBaseAttributes.deathTaiRyoKu);
+            e.ReplaceTaiRyoKuRecoverSpeed(0.1f);
 
-            newPlayer.ReplacePerceptionLevel(characterBaseAttributes.perceptionLevel);
-            newPlayer.ReplaceAntiPerceptionLevel(characterBaseAttributes.antiPerceptionLevel);
+            e.ReplacePerceptionLevel(characterBaseAttributes.perceptionLevel);
+            e.ReplaceAntiPerceptionLevel(characterBaseAttributes.antiPerceptionLevel);
 
-            newPlayer.isInitializePhysical = true;
-            newPlayer.isAffectedByGravity = true;
-            newPlayer.ReplaceOnTheGround(false);
-            newPlayer.isNormalAttacking = true;
-            newPlayer.isAddShadow = true;
-            newPlayer.ReplaceYinList(new List<Yin>());
-            newPlayer.ReplaceTag("Character");
-            e.isDestroy = true;
+            e.isInitializePhysical = true;
+            e.isAffectedByGravity = true;
+            e.ReplaceOnTheGround(false);
+            e.isNormalAttacking = true;
+            e.isAddShadow = true;
+            e.ReplaceYinList(new List<Yin>());
+            e.ReplaceTag("Character");
+            e.ReplaceBoundingBox(0,0,0,0,0,0);
+
+            e.RemoveLoadPlayer();
+
+            var currentWeaponIcon = _context.CreateEntity();
+            currentWeaponIcon.ReplaceName("CurrentWeaponIcon"+e.name.text);
+            currentWeaponIcon.ReplaceParentEntity(e);
+            currentWeaponIcon.ReplaceUiExcursion(new Vector2(60, 200));
+            currentWeaponIcon.ReplaceUiOpen("CurrentWeaponIcon");
         }
     }
 

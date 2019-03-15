@@ -44,7 +44,7 @@ public class Character
     [DataMember]
     public List<string> ninjutsuList;
     [DataMember]
-    public List<string> ninjaItemList;
+    public Dictionary<string, int> ninjaItemList;
 
     [DataMember]
     public int ninjutsu;

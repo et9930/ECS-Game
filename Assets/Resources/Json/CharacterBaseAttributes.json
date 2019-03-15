@@ -18,12 +18,30 @@
           "HiRaiShinNiNoDan"
         ],
         "ninjaItemList": [
-          "HiRaiShinKuNai",
-          "HuuMaShuRiKen",
-          "KiBaKuHuDa",
-          "KuNai",
-          "KuSaNaGiNoTsuRuGi",
-          "ShuRiKen"
+          {
+            "Key": "HiRaiShinKuNai",
+            "Value": 10
+          },
+          {
+            "Key": "HuuMaShuRiKen",
+            "Value": 10
+          },
+          {
+            "Key": "KiBaKuHuDa",
+            "Value": 10
+          },
+          {
+            "Key": "KuNai",
+            "Value": 10
+          },
+          {
+            "Key": "KuSaNaGiNoTsuRuGi",
+            "Value": 10
+          },
+          {
+            "Key": "ShuRiKen",
+            "Value": 10
+          }
         ],
         "ninjutsu": 10,
         "taijutsu": 9,
@@ -54,12 +72,30 @@
 
         ],
         "ninjaItemList": [
-          "HiRaiShinKuNai",
-          "HuuMaShuRiKen",
-          "KiBaKuHuDa",
-          "KuNai",
-          "KuSaNaGiNoTsuRuGi",
-          "ShuRiKen"
+          {
+            "Key": "HiRaiShinKuNai",
+            "Value": 10
+          },
+          {
+            "Key": "HuuMaShuRiKen",
+            "Value": 10
+          },
+          {
+            "Key": "KiBaKuHuDa",
+            "Value": 10
+          },
+          {
+            "Key": "KuNai",
+            "Value": 10
+          },
+          {
+            "Key": "KuSaNaGiNoTsuRuGi",
+            "Value": 10
+          },
+          {
+            "Key": "ShuRiKen",
+            "Value": 10
+          }
         ],
         "ninjutsu": 10,
         "taijutsu": 9,

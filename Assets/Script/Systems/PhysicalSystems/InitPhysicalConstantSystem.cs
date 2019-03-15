@@ -12,7 +12,7 @@ public class InitPhysicalConstantSystem : IInitializeSystem
     public void Initialize()
     {
         _context.ReplacePhysicalConstant(
-            -9.81f, // Gravity
+            -5f, // Gravity
             10.0f   // Friction Coefficient
         );
     }

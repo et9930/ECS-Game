@@ -22,7 +22,7 @@ public class VelocitySystem : IExecuteSystem
             {
                 continue;
             }
-            if (e.isMoving)
+//            if (e.isMoving)
             {
                 var newPosition = e.position.value;
                 newPosition.X += e.velocity.value.X * _context.timeService.instance.GetDeltaTime();

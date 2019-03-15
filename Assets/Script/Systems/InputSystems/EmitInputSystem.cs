@@ -188,13 +188,13 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
             _currentKeyState.MakeChaKuRa = false;
         }
 
-        if (_context.keyInputService.instance.GetKeyDown("Slow"))
+        if (_context.keyInputService.instance.GetKeyDown("Throw Weapon"))
         {
-            _currentKeyState.Slow = true;
+            _currentKeyState.ThrowWeapon = true;
         }
-        if (_context.keyInputService.instance.GetKeyUp("Slow"))
+        if (_context.keyInputService.instance.GetKeyUp("Throw Weapon"))
         {
-            _currentKeyState.Slow = false;
+            _currentKeyState.ThrowWeapon = false;
         }
 
         if (_context.keyInputService.instance.GetKeyDown("Submit"))

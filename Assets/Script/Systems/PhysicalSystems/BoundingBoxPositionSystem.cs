@@ -17,7 +17,7 @@ public class BoundingBoxPositionSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasSprite && entity.isView && entity.hasName && entity.hasTag;
+        return entity.hasSprite && entity.isView && entity.hasName && entity.hasTag && entity.hasBoundingBox;
     }
 
     protected override void Execute(List<GameEntity> entities)

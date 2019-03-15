@@ -242,24 +242,73 @@
       "ComponentName": "PerceptionPositionExistItem",
       "Listener": [
         "PerceptionPositionExist"
-      ]
+      ],
+      "asParent": true
     },
     {
       "ComponentName": "PerceptionPositionAccurateItemRight",
       "Listener": [
         "PerceptionPositionAccurate"
-      ]
+      ],
+      "asParent": true
     },
     {
       "ComponentName": "PerceptionPositionAccurateItemLeft",
       "Listener": [
         "PerceptionPositionAccurate"
-      ]
+      ],
+      "asParent": true
     },
     {
       "ComponentName": "PerceptionHTCItem",
       "Listener": [
         "PerceptionHTC"
+      ]
+    },
+    {
+      "ComponentName": "PerceptionPositionExistLeftList",
+      "asParent": true
+    },
+    {
+      "ComponentName": "PerceptionPositionExistRightList",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjutsuYinList",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjutsuMenuContent",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem0",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem1",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem2",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem3",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem4",
+      "asParent": true
+    },
+    {
+      "ComponentName": "NinjaItemMenuItem5",
+      "asParent": true
+    },
+    {
+      "ComponentName": "CurrentWeaponIcon",
+      "Listener": [
+        "CurrentWeapon"
       ]
     }
   ]

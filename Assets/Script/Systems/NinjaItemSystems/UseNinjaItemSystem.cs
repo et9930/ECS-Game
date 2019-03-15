@@ -61,6 +61,7 @@ public class UseNinjaItemSystem : ReactiveSystem<GameEntity>
                                 break;
                         }
                     }
+
                     break;
                 case NinjaItemType.Weapon:
                     e.ReplaceCurrentWeapon(e.useNinjaItem.value);

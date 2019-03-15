@@ -134,6 +134,7 @@ public class StoreUIInfo : EditorWindow
                 componentInfo.Listener = uiInfo.Listener;
                 componentInfo.Handle = uiInfo.Handle;
                 componentInfo.AnomalyButton = uiInfo.AnomalyButton;
+                componentInfo.asParent = uiInfo.asParent;
             }
         }
 
@@ -169,4 +170,7 @@ public class UIListener
     public List<string> Handle;
     [DataMember]
     public bool AnomalyButton;
+
+    [DataMember]
+    public bool asParent;
 }

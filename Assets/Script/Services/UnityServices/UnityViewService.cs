@@ -1,4 +1,5 @@
 ﻿using Entitas;
+using Entitas.Unity;
 using Entitas.VisualDebugging.Unity;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
@@ -32,6 +33,7 @@ public class UnityViewService : IViewService
 
         viewGo.transform.position = Utilities.Vector3PositionToVector2Position(entity.position.value);
         viewGo.transform.localScale = Utilities.ToUnityEngineVector2(entity.scale.value);
+        viewGo.transform.localRotation = Quaternion.Euler(Utilities.ToUnityEngineVector3(entity.rotation.value));
 
         var sr = viewGo.AddComponent<SpriteRenderer>();
         sr.sortingOrder = 0;
@@ -41,12 +43,16 @@ public class UnityViewService : IViewService
         viewGo.AddComponent<PositionListener>();
         viewGo.AddComponent<ScaleListener>();
         viewGo.AddComponent<TowardListener>();
+        viewGo.AddComponent<RotationListener>();
 
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)
         {
             listener.RegisterListeners(entity);
         }
+
+        viewGo.Link(entity);
+        entity.isLinked = true;
     }
 
     public void LoadSprite(string objectName, string assetName)
@@ -59,10 +65,16 @@ public class UnityViewService : IViewService
     public void DestroyView(string objectName)
     {
         var viewGo = GameObject.Find(objectName);
-        if (viewGo)
+
+        if (!viewGo) return;
+
+        if (viewGo.GetEntityLink() != null)
         {
-            GameObject.Destroy(viewGo);
+            ((GameEntity)viewGo.GetEntityLink().entity).isLinked = false;
+            viewGo.Unlink();
         }
+
+        GameObject.Destroy(viewGo);
     }
 
     public Vector2 WorldPositionToScreenPosition(Vector3 worldPosition)
