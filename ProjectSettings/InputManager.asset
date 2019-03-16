@@ -246,8 +246,8 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Slow
-    descriptiveName: "\u7F13\u884C"
+    m_Name: Throw Weapon
+    descriptiveName: "\u6295\u63B7\u6B66\u5668"
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: left shift

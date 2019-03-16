@@ -75,6 +75,7 @@ public class CharacterNamikazeMinatoAESystem : ReactiveSystem<GameEntity>
         effectEntity.ReplacePosition(position);
         effectEntity.ReplaceScale(Vector2.One);
         effectEntity.ReplaceToward(entity.toward.left);
+        effectEntity.ReplaceRotation(Vector3.Zero);
     }
 
     private void OnMinatoTaijutsuAttackCheck(GameEntity entity)
