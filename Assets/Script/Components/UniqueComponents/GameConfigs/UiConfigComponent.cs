@@ -41,5 +41,5 @@ public class ComponentInfo
     [DataMember]
     public List<string> Handle;
     [DataMember]
-    public bool asParent;
+    public bool saveEntity;
 }

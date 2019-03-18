@@ -25,7 +25,7 @@ public class SetUiPositionSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            _context.sceneService.instance.SetUIPosition(e.setUiPosition.uiName, e.setUiPosition.position);
+            _context.sceneService.instance.SetUILocalPosition(e.setUiPosition.uiName, e.setUiPosition.position);
             e.isDestroy = true;
         }
     }

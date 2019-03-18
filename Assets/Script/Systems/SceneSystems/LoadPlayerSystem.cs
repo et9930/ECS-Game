@@ -66,6 +66,7 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             e.ReplaceBoundingBox(0,0,0,0,0,0);
 
             e.RemoveLoadPlayer();
+            e.isQuickActionObject = true;
 
             var currentWeaponIcon = _context.CreateEntity();
             currentWeaponIcon.ReplaceName("CurrentWeaponIcon"+e.name.text);

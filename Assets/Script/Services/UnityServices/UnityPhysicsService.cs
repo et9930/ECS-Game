@@ -60,4 +60,16 @@ public class UnityPhysicsService : IPhysicsService
 
         return hasCollision;
     }
+
+    public void UpdateBoxCollision(GameEntity e, System.Numerics.Vector2 size, System.Numerics.Vector2 offset)
+    {
+        var go = GameObject.Find(e.name.text);
+        if (go == null) return;
+
+        var bc = go.GetComponent<BoxCollider2D>();
+        if (bc == null) bc = go.AddComponent<BoxCollider2D>();
+
+        bc.size = Utilities.ToUnityEngineVector2(size);
+        bc.offset = Utilities.ToUnityEngineVector2(offset);
+    }
 }

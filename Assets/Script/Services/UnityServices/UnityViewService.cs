@@ -44,6 +44,11 @@ public class UnityViewService : IViewService
         viewGo.AddComponent<ScaleListener>();
         viewGo.AddComponent<TowardListener>();
         viewGo.AddComponent<RotationListener>();
+        if (entity.isQuickActionObject)
+        {
+            viewGo.AddComponent<SpriteMouseInOutHandle>();
+            viewGo.AddComponent<BoxCollider2D>();
+        }
 
         var eventListeners = viewGo.GetComponents<IEventListener>();
         foreach (var listener in eventListeners)
@@ -113,7 +118,7 @@ public class UnityViewService : IViewService
         var viewTf = viewRoot.transform.Find(objectName);
         var viewGo = viewTf.gameObject;
         var viewSr = viewGo.GetComponent<SpriteRenderer>();
-        var pivot = viewSr.sprite.pivot / viewSr.sprite.pixelsPerUnit;
+        var pivot = new UnityEngine.Vector2(viewSr.sprite.pivot.x / viewSr.sprite.rect.size.x, viewSr.sprite.pivot.y / viewSr.sprite.rect.size.y);
         return Utilities.ToSystemNumericsVector2(pivot);
     }
 }

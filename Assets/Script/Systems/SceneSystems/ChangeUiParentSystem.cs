@@ -37,7 +37,7 @@ public class ChangeUiParentSystem : ReactiveSystem<GameEntity>
             if (e.parentEntity.value.hasUiRootId)
             {
                 _context.sceneService.instance.SetParent(e.uiRootId.value, e.parentEntity.value.name.text);
-                _context.sceneService.instance.SetUIPosition(e.name.text,
+                _context.sceneService.instance.SetUILocalPosition(e.name.text,
                     e.hasUiExcursion ? e.uiExcursion.value : Vector2.Zero);
                 _context.uiChildList.dic[e.parentEntity.value.uiRootId.value].Add(e.uiRootId.value);
             }

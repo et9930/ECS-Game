@@ -14,6 +14,7 @@
         Add(new VelocitySystem(contexts));
         Add(new BoundingBoxPositionSystem(contexts));
         Add(new CollisionDetectionSystem(contexts));
+        Add(new UpdateBoxColliderSystem(contexts));
         Add(new AddPhysicalComponentSystem(contexts));
     }
 }

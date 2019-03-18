@@ -27,7 +27,10 @@
         Add(new UseNinjaItemSystem(contexts));
         Add(new PlayerTryThrowWeaponSystem(contexts));
         Add(new ThrowWeaponSystem(contexts));
-        Add(new ThrowingWeaponManageSystem(contexts));
+        Add(new FlyingWeaponManageSystem(contexts));
+        Add(new QuickActionMenuControlSystem(contexts));
+        Add(new AddQuickActionItemSystem(contexts));
+        Add(new QuickActionExecuteSystem(contexts));
 
         //  HTC systems
         Add(new MakeChaKuRaSystem(contexts));

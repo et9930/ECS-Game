@@ -73,18 +73,35 @@ public class UnitySceneService : ISceneService
         set { Camera.main.transform.position = Utilities.ToUnityEngineVector3(value); }
     }
 
-    public System.Numerics.Vector2 GetUIPosition(string uiName)
+    public System.Numerics.Vector2 GetUILocalPosition(string uiName)
     {
         var ui = GameObject.Find(uiName);
         return ui != null ? Utilities.ToSystemNumericsVector2(ui.transform.localPosition) : System.Numerics.Vector2.Zero;
     }
 
-    public void SetUIPosition(string uiName, System.Numerics.Vector2 position)
+    public void SetUILocalPosition(string uiName, System.Numerics.Vector2 position)
     {
         var ui = GameObject.Find(uiName);
         if (ui == null) return;
         
         ui.transform.localPosition = Utilities.ToUnityEngineVector2(position);
+    }
+
+    public System.Numerics.Vector2 GetUIAnchoredPosition(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if(ui == null) return System.Numerics.Vector2.Zero;
+        var rectTransform = ui.GetComponent<RectTransform>();
+        return rectTransform != null ? Utilities.ToSystemNumericsVector2(rectTransform.anchoredPosition) : System.Numerics.Vector2.Zero;
+    }
+
+    public void SetUIAnchoredPosition(string uiName, System.Numerics.Vector2 position)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var rectTransform = ui.GetComponent<RectTransform>();
+        if(rectTransform == null) return;
+        rectTransform.anchoredPosition = Utilities.ToUnityEngineVector2(position);
     }
 
     public float GetUIAlpha(string uiName)
@@ -199,7 +216,7 @@ public class UnitySceneService : ISceneService
         var componentInfo = context.uiConfig.UiInfos[prefabName];
         foreach (var component in componentInfo.Components)
         {
-            if (component.Handle.Count == 0 && component.Listener.Count == 0 && component.asParent == false) continue;
+            if (component.Handle.Count == 0 && component.Listener.Count == 0 && component.saveEntity == false) continue;
 
             var e = prefabName == component.ComponentPath ? rootEntity : context.CreateEntity();
             if (!e.hasName)

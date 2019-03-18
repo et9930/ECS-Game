@@ -3,7 +3,7 @@ using Entitas.Unity;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ClickHandle : MonoBehaviour, IPointerClickHandler
+public class UIClickHandle : MonoBehaviour, IPointerClickHandler
 {
     private GameEntity _entity;
 

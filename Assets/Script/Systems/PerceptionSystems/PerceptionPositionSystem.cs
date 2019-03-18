@@ -82,6 +82,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                     itemEntity.ReplaceName(accurateName + e.name.text);
                     itemEntity.ReplaceUiOpen(accurateName);
                     itemEntity.ReplacePerceptionPositionAccurateItem(e.name.text, left, eScreenPosition.Y, (int) distance);
+                    itemEntity.ReplacePerceptionTarget(e);
                     _context.perceptionPositionAccurate.dic[e.name.text] = itemEntity;
                 }
             }
@@ -116,6 +117,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                     itemEntity.ReplaceParentEntity(listEntity);
                     itemEntity.ReplaceUiOpen("PerceptionPositionExistItem");
                     itemEntity.ReplacePerceptionPositionExistItem(name, (int)distance, left);
+                    itemEntity.ReplacePerceptionTarget(e);
                     _context.perceptionPositionExist.dic[e.name.text] = itemEntity;
                 }
             }

@@ -3,11 +3,11 @@ using System.Collections;
 using System.Numerics;
 using Entitas;
 
-public class ThrowingWeaponManageSystem : IExecuteSystem
+public class FlyingWeaponManageSystem : IExecuteSystem
 {
     private readonly GameContext _context;
 
-    public ThrowingWeaponManageSystem(Contexts contexts)
+    public FlyingWeaponManageSystem(Contexts contexts)
     {
         _context = contexts.game;
     }

@@ -72,6 +72,7 @@ public class PerceptionHTCSystem : IInitializeSystem, IExecuteSystem
                 itemEntity.ReplaceName("PerceptionHTCItem" + e.name.text);
                 itemEntity.ReplaceUiOpen("PerceptionHTCItem");
                 itemEntity.ReplacePerceptionHTCItem(hp, tp, cp);
+                itemEntity.ReplacePerceptionTarget(e);
                 _context.perceptionHTC.dic[e.name.text] = itemEntity;
                 continue;
             }

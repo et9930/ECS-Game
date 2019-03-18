@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "name": "MinatoHiRaiShinMaKinGu",
+      "allNinja": false,
+      "requireNinja": [
+        "NamikazeMinato"
+      ],
+      "requireFlag": [
+        "MinatoHiRaiShinMaKinGu"
+      ],
+      "describe": "波风水门\n使用飞雷神之术传送至此"
+    },
+    {
+      "name": "LockOnEnemy",
+      "allNinja": true,
+      "requireFlag": [
+        "Enemy"
+      ],
+      "requireNoFlag": [
+        "LockOn"
+      ],
+      "describe": "锁定敌人"
+    },
+    {
+      "name": "LockOff",
+      "allNinja": true,
+      "requireFlag": [
+        "LockOn"
+      ],
+      "describe": "解除锁定"
+    }
+  ]
+}

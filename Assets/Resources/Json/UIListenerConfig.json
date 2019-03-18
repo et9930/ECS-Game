@@ -243,21 +243,21 @@
       "Listener": [
         "PerceptionPositionExist"
       ],
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "PerceptionPositionAccurateItemRight",
       "Listener": [
         "PerceptionPositionAccurate"
       ],
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "PerceptionPositionAccurateItemLeft",
       "Listener": [
         "PerceptionPositionAccurate"
       ],
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "PerceptionHTCItem",
@@ -267,49 +267,70 @@
     },
     {
       "ComponentName": "PerceptionPositionExistLeftList",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "PerceptionPositionExistRightList",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjutsuYinList",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjutsuMenuContent",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem0",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem1",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem2",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem3",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem4",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "NinjaItemMenuItem5",
-      "asParent": true
+      "saveEntity": true
     },
     {
       "ComponentName": "CurrentWeaponIcon",
       "Listener": [
         "CurrentWeapon"
       ]
+    },
+    {
+      "ComponentName": "QuickActionMenuList",
+      "saveEntity": true,
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "QuickActionMenuItem",
+      "Listener": [
+        "QuickActionMenuItem"
+      ],
+      "Handle": [
+        "MouseInOut",
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "QuickActionMenu",
+      "saveEntity": true
     }
   ]
 }

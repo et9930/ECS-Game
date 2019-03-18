@@ -69,5 +69,10 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strCollisionPair = _context.loadConfigService.instance.LoadJsonFile("Json/CollisionPairConfig");
         var tempCollisionPair = Utilities.ParseJson<CollisionPairList>(strCollisionPair);
         _context.ReplaceCollisionPairConfig(tempCollisionPair.list);
+
+        // Quick Action Config
+        var strQuickAction = _context.loadConfigService.instance.LoadJsonFile("Json/QuickActionConfig");
+        var tempQuickAction = Utilities.ParseJson<QuickActionList>(strQuickAction);
+        _context.ReplaceQuickActionConfig(tempQuickAction.list);
     }
 }

@@ -34,7 +34,7 @@ public class UiMoveActionSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             if (_context.movingUiList.list.Contains(e.uiMoveAction.uiName)) continue;
             _context.movingUiList.list.Add(e.uiMoveAction.uiName);
-            _context.coroutineService.instance.StartCoroutine(MoveUi(e.uiMoveAction.uiName, e.uiMoveAction.moveFor ? e.uiMoveAction.moveLocation : e.uiMoveAction.moveLocation - _context.sceneService.instance.GetUIPosition(e.uiMoveAction.uiName), e.uiMoveAction.moveDuration));
+            _context.coroutineService.instance.StartCoroutine(MoveUi(e.uiMoveAction.uiName, e.uiMoveAction.moveFor ? e.uiMoveAction.moveLocation : e.uiMoveAction.moveLocation - _context.sceneService.instance.GetUILocalPosition(e.uiMoveAction.uiName), e.uiMoveAction.moveDuration));
             e.RemoveUiMoveAction();
         }
     }   
@@ -42,7 +42,7 @@ public class UiMoveActionSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     private IEnumerator MoveUi(string uiName, Vector2 forLocation, float time)
     {
         _context.CreateEntity().ReplaceDebugMessage(uiName + " move to " + forLocation);
-        var oldPosition = _context.sceneService.instance.GetUIPosition(uiName);
+        var oldPosition = _context.sceneService.instance.GetUILocalPosition(uiName);
         var finalPosition = oldPosition + forLocation;
         var lastPosition = oldPosition;
         var durationTime = 0.0f;
@@ -51,15 +51,15 @@ public class UiMoveActionSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             var newPosition = lastPosition + _context.timeService.instance.GetDeltaTime() / time * forLocation;
             if (Math.Abs(newPosition.X - oldPosition.X) > Math.Abs(finalPosition.X - oldPosition.X) || Math.Abs(newPosition.Y - oldPosition.Y) > Math.Abs(finalPosition.Y - oldPosition.Y))
             {
-                _context.sceneService.instance.SetUIPosition(uiName, forLocation);
+                _context.sceneService.instance.SetUILocalPosition(uiName, forLocation);
                 break;
             }
-            _context.sceneService.instance.SetUIPosition(uiName, newPosition);
+            _context.sceneService.instance.SetUILocalPosition(uiName, newPosition);
             lastPosition = newPosition;
             durationTime += _context.timeService.instance.GetDeltaTime();
             yield return _context.coroutineService.instance.WaitForEndOfFrame();
         }
-        _context.sceneService.instance.SetUIPosition(uiName, finalPosition);
+        _context.sceneService.instance.SetUILocalPosition(uiName, finalPosition);
         var success = _context.movingUiList.list.Remove(uiName);
         _context.CreateEntity().ReplaceDebugMessage(uiName + " move over " + success);
     }

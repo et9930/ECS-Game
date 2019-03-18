@@ -30,7 +30,7 @@ public class UiFollowSystem : IExecuteSystem
             }
 //            parentScreenPosition.Y -= _context.viewService.instance.ScreenSize.Y / 2;
 //            _context.CreateEntity().ReplaceDebugMessage("ScreenSize " + _context.viewService.instance.ScreenSize);
-            _context.sceneService.instance.SetUIPosition(e.name.text, parentScreenPosition);
+            _context.sceneService.instance.SetUILocalPosition(e.name.text, parentScreenPosition);
         }
     }
 }

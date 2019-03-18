@@ -45,6 +45,8 @@ public static class ListenerList
         { "PerceptionHTC", typeof(PerceptionHTCListener) },
 
         { "CurrentWeapon", typeof(CurrentWeaponListener) },
+
+        { "QuickActionMenuItem", typeof(QuickActionMenuItemListener) },
     };
 }
 

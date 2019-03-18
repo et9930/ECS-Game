@@ -33,6 +33,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyPointNinjaItemMenuItemEventSystem(contexts)); // priority: 0
         Add(new AnyPointNinjutsuMenuItemEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0
+        Add(new QuickActionItemConfigEventSystem(contexts)); // priority: 0
         Add(new RotationEventSystem(contexts)); // priority: 0
         Add(new ScaleEventSystem(contexts)); // priority: 0
         Add(new ScrollBarValueEventSystem(contexts)); // priority: 0

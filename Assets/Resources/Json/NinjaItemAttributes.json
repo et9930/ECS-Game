@@ -19,6 +19,7 @@
           "Y": 0.03,
           "Z": 0.15
         },
+        "throwingWeaponFlaySpeed": 13,
         "throwingWeaponMaxFlyTime": 3,
         "handHeldWeaponAttackPlusRadius": 0.1,
         "handHeldWeaponHurt": 20,
@@ -43,6 +44,7 @@
           "Y": 0.03,
           "Z": 0.8
         },
+        "throwingWeaponFlaySpeed": 8,
         "throwingWeaponMaxFlyTime": 5
       }
     },
@@ -83,6 +85,7 @@
           "Y": 0.03,
           "Z": 0.08
         },
+        "throwingWeaponFlaySpeed": 14,
         "throwingWeaponMaxFlyTime": 3.5,
         "handHeldWeaponAttackPlusRadius": 0.1,
         "handHeldWeaponHurt": 18,
@@ -125,6 +128,7 @@
           "Y": 0.03,
           "Z": 0.1
         },
+        "throwingWeaponFlaySpeed": 15,
         "throwingWeaponMaxFlyTime": 4.5
       }
     }

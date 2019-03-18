@@ -55,6 +55,8 @@ public class NinjaItem
     [DataMember]
     public Vector3 throwingWeaponBoundingBoxSize;
     [DataMember]
+    public float throwingWeaponFlaySpeed;
+    [DataMember]
     public float throwingWeaponMaxFlyTime;
 
     //-----hand held weapon
@@ -102,6 +104,6 @@ public enum NinjaItemWeaponType
 
 public enum NinjaItemSpecialEffect
 {
-    HiRaiShinMaKinGu,
+    MinatoHiRaiShinMaKinGu,
 
 }

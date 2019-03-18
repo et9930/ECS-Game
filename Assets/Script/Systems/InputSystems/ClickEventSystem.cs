@@ -15,6 +15,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         _context.ReplaceClickEventFunc(new Dictionary<string, Action<GameEntity>>());
         _context.clickEventFunc.clickDic["NinjaItemMenuItem"] = OnNinjaItemMenuItemClick;
+        _context.clickEventFunc.clickDic["QuickActionMenuItem"] = OnQuickActionMenuItemClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -55,4 +56,8 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         entity.ReplaceActive(true);
     }
 
+    private void OnQuickActionMenuItemClick(GameEntity entity)
+    {
+        _context.CreateEntity().ReplaceDebugMessage(entity.quickActionTarget.value.name.text);
+    }
 }

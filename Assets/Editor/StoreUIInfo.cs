@@ -134,7 +134,7 @@ public class StoreUIInfo : EditorWindow
                 componentInfo.Listener = uiInfo.Listener;
                 componentInfo.Handle = uiInfo.Handle;
                 componentInfo.AnomalyButton = uiInfo.AnomalyButton;
-                componentInfo.asParent = uiInfo.asParent;
+                componentInfo.saveEntity = uiInfo.saveEntity;
             }
         }
 
@@ -172,5 +172,5 @@ public class UIListener
     public bool AnomalyButton;
 
     [DataMember]
-    public bool asParent;
+    public bool saveEntity;
 }

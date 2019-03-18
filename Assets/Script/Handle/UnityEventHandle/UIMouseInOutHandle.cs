@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using Entitas.Unity;
 using UnityEngine.UI;
 
-public class MouseInOutHandle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UIMouseInOutHandle : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private GameEntity _entity;
 
