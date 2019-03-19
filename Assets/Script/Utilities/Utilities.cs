@@ -72,6 +72,11 @@ public static class Utilities
         return random.Next(min, max);
     }
 
+    public static float RandomFloat(float min, float max)
+    {
+        return (float)random.NextDouble() * (max - min) + min;
+    }
+
     public static Vector2 Vector3PositionToVector2Position(System.Numerics.Vector3 value)
     {
         return new Vector2(value.X, value.Y + value.Z - 1.5f);

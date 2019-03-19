@@ -13,6 +13,7 @@ public class NinjaItemMenuControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.currentScene.name != "BattleScene") return;
         if (_context.key.value.NinjaItemMenu)
         {
             if (_context.isNinjaItemMenuOpenFreezing) return;

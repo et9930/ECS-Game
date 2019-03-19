@@ -24,6 +24,7 @@ public class QuickActionMenuControlSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.currentScene.name != "BattleScene") return;
         foreach (var e in entities)
         {
             if (e.isRightMouse)

@@ -1128,6 +1128,110 @@
       "Components": [
         {
           "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTarget",
+          "ComponentPath": "OutScreenSelectTarget",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetImage",
+          "ComponentPath": "OutScreenSelectTarget\/OutScreenSelectTargetImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenTargetDistance",
+          "ComponentPath": "OutScreenSelectTarget\/OutScreenTargetDistance",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTarget"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetView",
+          "ComponentPath": "OutScreenSelectTargetView",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewBackground",
+          "ComponentPath": "OutScreenSelectTargetView\/OutScreenSelectTargetViewBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewPort",
+          "ComponentPath": "OutScreenSelectTargetView\/OutScreenSelectTargetViewPort",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetView"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewCamera",
+          "ComponentPath": "OutScreenSelectTargetViewCamera",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetViewCamera"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewList",
+          "ComponentPath": "OutScreenSelectTargetViewList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewLeftList",
+          "ComponentPath": "OutScreenSelectTargetViewList\/OutScreenSelectTargetViewLeftList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewRightList",
+          "ComponentPath": "OutScreenSelectTargetViewList\/OutScreenSelectTargetViewRightList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetViewList"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
           "ComponentName": "PerceptionHTCItem",
           "ComponentPath": "PerceptionHTCItem",
           "Handle": [],
@@ -1659,6 +1763,20 @@
       ],
       "UiLayer": "NormalLayer",
       "UiName": "QuickActionMenuItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SelectTarget",
+          "ComponentPath": "SelectTarget",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "SelectTarget"
     }
   ]
 }

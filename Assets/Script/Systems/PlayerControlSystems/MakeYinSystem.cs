@@ -20,6 +20,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
+        if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         if (currentPlayer.isNormalAttacking || currentPlayer.isMakingChaKuRa || currentPlayer.isJumping) return;
@@ -77,8 +78,14 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
             {
                 if (!currentPlayer.yinList.list.SequenceEqual(_context.ninjutsuAttributes.dic[ninjutsuName].ninjutsuFullYin)) continue;
 
+                if (CheckJutsuAlreadyExist(ninjutsuName, currentPlayer))
+                {
+                    break;
+                }
+
                 var jutsu = _context.CreateEntity();
                 jutsu.ReplaceName(ninjutsuName);
+                jutsu.ReplaceOriginator(currentPlayer);
                 jutsu.isJutsu = true;
                 break;
             }
@@ -195,7 +202,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         e.yinList.list.Add(yin);
         e.ReplaceChaKuRaExpend(1.0f);
 
-        var uiName = "NinjutsuYin" + yinName + _context.currentInNumber.value;
+        var uiName = "NinjutsuYin_" + yinName + "_" + _context.currentInNumber.value;
         var yinUI = _context.CreateEntity();
         yinUI.ReplaceName(uiName);
         yinUI.ReplaceParentEntity(yinListUi);
@@ -204,5 +211,18 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         yinUI.ReplaceUiFadeAction(uiName, 1.0f, 0.2f);
 
         _context.ReplaceCurrentInNumber(_context.currentInNumber.value + 1);
+    }
+
+    private bool CheckJutsuAlreadyExist(string name, GameEntity originator)
+    {
+        foreach (var e in _context.GetGroup(GameMatcher.Jutsu))
+        {
+            if (e.name.text == name && e.originator.value == originator && !e.isDestroy)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -5,6 +5,13 @@
       "Key": "HiRaiShinNoJuTsu",
       "Value": {
         "ninjutsuName": "飞雷神之术",
+        "chaKuRaCoast": 15,
+        "taiRyuKuCoast": 5,
+        "needSelectTarget": true,
+        "targetFlag": [
+          "MinatoHiRaiShinMaKinGu"
+        ],
+        "isContinuous": false,
         "ninjutsuClass": 1,
         "ninjutsuNatures": [ 2 ],
         "ninjutsuTypes": [ 1 ],
@@ -21,6 +28,8 @@
       "Key": "HiRaiShinNiNoDan",
       "Value": {
         "ninjutsuName": "飞雷神二段",
+        "chaKuRaCoast": 35,
+        "ninjutsuNeedSelectTarget": false,
         "ninjutsuClass": 1,
         "ninjutsuNatures": [ 2 ],
         "ninjutsuTypes": [ 1 ],

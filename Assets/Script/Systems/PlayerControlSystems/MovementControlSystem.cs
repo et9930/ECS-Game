@@ -14,6 +14,7 @@ public class MovementControlSystem : IExecuteSystem
     
     public void Execute()
     {
+        if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         if (!currentPlayer.onTheGround.value || currentPlayer.isNormalAttacking || currentPlayer.isJumping) return;

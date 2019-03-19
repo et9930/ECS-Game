@@ -79,7 +79,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                 else
                 {
                     var itemEntity = _context.CreateEntity();
-                    itemEntity.ReplaceName(accurateName + e.name.text);
+                    itemEntity.ReplaceName(accurateName + "_" + e.name.text);
                     itemEntity.ReplaceUiOpen(accurateName);
                     itemEntity.ReplacePerceptionPositionAccurateItem(e.name.text, left, eScreenPosition.Y, (int) distance);
                     itemEntity.ReplacePerceptionTarget(e);
@@ -113,7 +113,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                 else
                 {
                     var itemEntity = _context.CreateEntity();
-                    itemEntity.ReplaceName("PerceptionPositionExistItem" + e.name.text);
+                    itemEntity.ReplaceName("PerceptionPositionExistItem_" + e.name.text);
                     itemEntity.ReplaceParentEntity(listEntity);
                     itemEntity.ReplaceUiOpen("PerceptionPositionExistItem");
                     itemEntity.ReplacePerceptionPositionExistItem(name, (int)distance, left);

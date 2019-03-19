@@ -17,13 +17,6 @@ public class EffectAESystem : IInitializeSystem
         characterDic["Effect"] = new CharacterEvent { animationDic = new Dictionary<string, AnimationEvent>() };
         var animationDic = characterDic["Effect"].animationDic;
 
-        //        // idle AE
-        //        animationDic["idle"] = new AnimationEvent {frameDic = new Dictionary<int, Action>()};
-        //
-        //        var frameDic = animationDic["idle"].frameDic;
-        //        frameDic[_context.imageAsset.imageInfos.infos["NamikazeMinato"].animationInfos["idle"].maxFrame] = OnMinatoIdleOver;
-
-        // jump AE
         animationDic["attack_1"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
 
         var frameDic = animationDic["attack_1"].frameDic;

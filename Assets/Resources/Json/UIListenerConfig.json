@@ -331,6 +331,36 @@
     {
       "ComponentName": "QuickActionMenu",
       "saveEntity": true
+    },
+    {
+      "ComponentName": "SelectTarget",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "OutScreenSelectTargetViewLeftList",
+      "saveEntity": true
+    },
+    {
+      "ComponentName": "OutScreenSelectTargetViewRightList",
+      "saveEntity": true
+    },
+    {
+      "ComponentName": "OutScreenSelectTargetView",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "Component": "OutScreenSelectTarget",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "Component": "OutScreenSelectTargetViewCamera",
+      "saveEntity": true
     }
   ]
 }

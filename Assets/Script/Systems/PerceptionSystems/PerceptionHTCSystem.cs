@@ -69,7 +69,7 @@ public class PerceptionHTCSystem : IInitializeSystem, IExecuteSystem
             else
             {
                 itemEntity = _context.CreateEntity();
-                itemEntity.ReplaceName("PerceptionHTCItem" + e.name.text);
+                itemEntity.ReplaceName("PerceptionHTCItem_" + e.name.text);
                 itemEntity.ReplaceUiOpen("PerceptionHTCItem");
                 itemEntity.ReplacePerceptionHTCItem(hp, tp, cp);
                 itemEntity.ReplacePerceptionTarget(e);

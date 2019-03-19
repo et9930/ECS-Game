@@ -32,6 +32,8 @@
         Add(new AddQuickActionItemSystem(contexts));
         Add(new QuickActionExecuteSystem(contexts));
 
+        Add(new NinjutsuSystems(contexts));
+
         //  HTC systems
         Add(new MakeChaKuRaSystem(contexts));
         Add(new TaiRyoKuExpendSystem(contexts));

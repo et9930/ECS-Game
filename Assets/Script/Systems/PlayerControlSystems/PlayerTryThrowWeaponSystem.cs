@@ -11,6 +11,7 @@ public class PlayerTryThrowWeaponSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
 

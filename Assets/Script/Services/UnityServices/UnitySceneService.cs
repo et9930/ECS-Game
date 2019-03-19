@@ -189,6 +189,10 @@ public class UnitySceneService : ISceneService
             }
             uiGo.transform.SetParent(parentUI.transform);
         }
+        else if(rectTransform == null)
+        {
+            uiGo.transform.SetParent(GameObject.Find("Game Views").transform);
+        }
         else
         {
             uiGo.transform.SetParent(_uiLayers[layer].transform);
@@ -196,8 +200,12 @@ public class UnitySceneService : ISceneService
         uiGo.transform.localScale = Vector3.one;
 //        rectTransform.offsetMax = Vector2.zero;
 //        rectTransform.offsetMin = Vector2.zero;
-        rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        rectTransform.anchoredPosition3D = prefab.GetComponent<RectTransform>().anchoredPosition3D;
+        if (rectTransform != null)
+        {
+            rectTransform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            rectTransform.anchoredPosition3D = prefab.GetComponent<RectTransform>().anchoredPosition3D;
+
+        }
 
         _uiDictionary[uiInstanceId] = uiGo;
 

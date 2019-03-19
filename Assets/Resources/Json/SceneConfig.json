@@ -21,7 +21,10 @@
           "NinjaItemMenuInfoWindow",
           "NinjutsuQTE",
           "PerceptionPositionExist",
-          "QuickActionMenu"
+          "QuickActionMenu",
+          "OutScreenSelectTargetViewList",
+          "OutScreenSelectTargetView",
+          "OutScreenSelectTargetViewCamera"
         ]
       }
     }

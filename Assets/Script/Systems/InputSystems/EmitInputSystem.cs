@@ -15,11 +15,19 @@ public class EmitInputSystem : IInitializeSystem, IExecuteSystem
 
     public void Initialize()
     {
+        var mouseWorldPosition = _context.mouseInputService.instance.GetMouseWorldPosition();
+
         _context.isLeftMouse = true;
         _leftMouseEntity = _context.leftMouseEntity;
+        _leftMouseEntity.ReplaceMouseDown(mouseWorldPosition);
+        _leftMouseEntity.ReplaceMouseUp(mouseWorldPosition);
+        _leftMouseEntity.ReplaceMousePosition(mouseWorldPosition);
 
         _context.isRightMouse = true;
         _rightMouseEntity = _context.rightMouseEntity;
+        _rightMouseEntity.ReplaceMouseDown(mouseWorldPosition);
+        _rightMouseEntity.ReplaceMouseUp(mouseWorldPosition);
+        _rightMouseEntity.ReplaceMousePosition(mouseWorldPosition);
 
         _currentKeyState = new Keys();
         _context.ReplaceKey(_currentKeyState);

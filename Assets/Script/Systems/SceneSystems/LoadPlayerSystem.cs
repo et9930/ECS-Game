@@ -69,7 +69,7 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             e.isQuickActionObject = true;
 
             var currentWeaponIcon = _context.CreateEntity();
-            currentWeaponIcon.ReplaceName("CurrentWeaponIcon"+e.name.text);
+            currentWeaponIcon.ReplaceName("CurrentWeaponIcon_" + e.name.text);
             currentWeaponIcon.ReplaceParentEntity(e);
             currentWeaponIcon.ReplaceUiExcursion(new Vector2(60, 200));
             currentWeaponIcon.ReplaceUiOpen("CurrentWeaponIcon");
