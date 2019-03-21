@@ -959,6 +959,12 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/IT99803/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Nakama">
+      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/Nakama/Plugins/Nakama.dll</HintPath>
+    </Reference>
+    <Reference Include="deniszykov.WebSocketListener">
+      <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Assets/Plugins/Nakama/Plugins/deniszykov.WebSocketListener.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>
@@ -1304,6 +1310,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{623BB3F0-BB81-0901-B495-2888DD92BD72}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
