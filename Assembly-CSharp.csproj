@@ -71,6 +71,7 @@
     <Compile Include="Assets\Script\Components\AnimationFrameComponent.cs" />
     <Compile Include="Assets\Script\Components\AnomalyButtonComponent.cs" />
     <Compile Include="Assets\Script\Components\AntiPerceptionLevelComponent.cs" />
+    <Compile Include="Assets\Script\Components\BeforeJutsuTargetComponent.cs" />
     <Compile Include="Assets\Script\Components\BoundingBoxComponent.cs" />
     <Compile Include="Assets\Script\Components\BusyingComponent.cs" />
     <Compile Include="Assets\Script\Components\ChaKuRaCurrentComponent.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Assets\Script\Components\ScrollBarValueComponent.cs" />
     <Compile Include="Assets\Script\Components\SelectedComponent.cs" />
     <Compile Include="Assets\Script\Components\SelectTargetComponent.cs" />
+    <Compile Include="Assets\Script\Components\SelectTargetDistanceComponent.cs" />
     <Compile Include="Assets\Script\Components\SetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\ShadowComponent.cs" />
     <Compile Include="Assets\Script\Components\SignInInfoComponent.cs" />
@@ -198,6 +200,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadingSceneProcessComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadingSceneTextImageComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadSceneComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\MainCameraMovingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MakeYinTimeComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
@@ -260,6 +263,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\LeftNumberListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\NinjaItemNameListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\NinjutsuNameListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\ParentEntityListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PerceptionHTCItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PerceptionPositionAccurateItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\PerceptionPositionExistItemListenerComponent.cs" />
@@ -268,6 +272,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\RotationListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ScaleListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ScrollBarValueListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\SelectTargetDistanceListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\SelectTargetListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\SizeListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\TextListenerComponent.cs" />
@@ -295,6 +300,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ILeftNumberListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjaItemNameListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\INinjutsuNameListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IParentEntityListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionHTCItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionPositionAccurateItemListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IPerceptionPositionExistItemListener.cs" />
@@ -303,6 +309,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IRotationListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IScaleListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IScrollBarValueListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\ISelectTargetDistanceListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ISelectTargetListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ISizeListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\ITextListener.cs" />
@@ -329,6 +336,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\LeftNumberEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\NinjaItemNameEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\NinjutsuNameEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\ParentEntityEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionHTCItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionPositionAccurateItemEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\PerceptionPositionExistItemEventSystem.cs" />
@@ -337,6 +345,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\RotationEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ScaleEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\ScrollBarValueEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\SelectTargetDistanceEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\SelectTargetEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\SizeEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\TextEventSystem.cs" />
@@ -373,6 +382,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjutsuMenuItemListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameBeforeJutsuTargetComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameBoundingBoxComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameChaKuRaExpendComponent.cs" />
@@ -436,6 +446,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameLockOnComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLogServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMainCameraMovingComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMakeYinTimeComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMakingChaKuRaComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMakingYinComponent.cs" />
@@ -471,6 +482,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameOnTheWallComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameOriginatorComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameParentEntityListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCItemComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GamePerceptionHTCItemListenerComponent.cs" />
@@ -509,6 +521,8 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameScrollBarValueListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameShadowComponent.cs" />
@@ -591,6 +605,7 @@
     <Compile Include="Assets\Script\Listeners\UnityListeners\RotationListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\ScaleListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\ScrollBarValueListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\SelectTargetListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\SizeListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\TextListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\TowardListener.cs" />
@@ -645,6 +660,7 @@
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\AddNinjutsuMenuItemSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\CheckNinjutsuStartConditionSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\HiRaiShinNoJuTsu\HiRaiShinNoJuTsuSystem.cs" />
+    <Compile Include="Assets\Script\Systems\NinjutsuSystems\ManagementSelectTargetSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\NinjutsuSystems.cs" />
     <Compile Include="Assets\Script\Systems\NinjutsuSystems\SelectTargetSystem.cs" />
     <Compile Include="Assets\Script\Systems\PerceptionSystems\CheckPerceptionLevelSystem.cs" />

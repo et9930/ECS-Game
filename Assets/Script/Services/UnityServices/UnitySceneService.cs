@@ -104,6 +104,25 @@ public class UnitySceneService : ISceneService
         rectTransform.anchoredPosition = Utilities.ToUnityEngineVector2(position);
     }
 
+    public void SetUIAnchorMax(string uiName, System.Numerics.Vector2 anchorMax)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var rectTransform = ui.GetComponent<RectTransform>();
+        if (rectTransform == null) return;
+        rectTransform.anchorMax = Utilities.ToUnityEngineVector2(anchorMax);
+    }
+
+    public void SetUIAnchorMin(string uiName, System.Numerics.Vector2 anchorMin)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var rectTransform = ui.GetComponent<RectTransform>();
+        if (rectTransform == null) return;
+        rectTransform.anchorMin = Utilities.ToUnityEngineVector2(anchorMin);
+
+    }
+
     public float GetUIAlpha(string uiName)
     {
         var ui = GameObject.Find(uiName);

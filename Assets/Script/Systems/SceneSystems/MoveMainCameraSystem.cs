@@ -21,7 +21,7 @@ public class MoveMainCameraSystem : IExecuteSystem
         var lastPosition = _context.sceneService.instance.MainCameraPosition;
 
         var tempPosition = new Vector3(currentPlayer.position.value.X, 0, -10);
-        tempPosition.X += currentPlayer.toward.left ? -6 : 6;
+        tempPosition.X += currentPlayer.toward.left ? -2 : 2;
 
         if (tempPosition.X > lastPosition.X)
         {

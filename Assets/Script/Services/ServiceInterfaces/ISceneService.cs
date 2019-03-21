@@ -15,6 +15,8 @@ public interface ISceneService
     void SetUILocalPosition(string uiName, Vector2 position);
     Vector2 GetUIAnchoredPosition(string uiName);
     void SetUIAnchoredPosition(string uiName, Vector2 position);
+    void SetUIAnchorMax(string uiName, Vector2 anchorMax);
+    void SetUIAnchorMin(string uiName, Vector2 anchorMin);
     float GetUIAlpha(string uiName);
     void SetUIAlpha(string uiName, float value);
     float GetUIAngle(string uiName);

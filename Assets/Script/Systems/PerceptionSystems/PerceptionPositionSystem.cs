@@ -83,21 +83,25 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                     itemEntity.ReplaceUiOpen(accurateName);
                     itemEntity.ReplacePerceptionPositionAccurateItem(e.name.text, left, eScreenPosition.Y, (int) distance);
                     itemEntity.ReplacePerceptionTarget(e);
+                    itemEntity.isQuickActionObject = true;
                     _context.perceptionPositionAccurate.dic[e.name.text] = itemEntity;
                 }
             }
             else
             {
                 string name;
+                bool canQuickAction;
                 if (finalLevel >= 5)
                 {
                     distance = (int)distance / 10 * 10;
                     name = e.name.text;
+                    canQuickAction = true;
                 }
                 else
                 {
                     distance = -1;
                     name = "Unknown";
+                    canQuickAction = false;
                 }
 
                 if (_context.perceptionPositionAccurate.dic.ContainsKey(e.name.text))
@@ -109,6 +113,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                 if (_context.perceptionPositionExist.dic.ContainsKey(e.name.text))
                 {
                     _context.perceptionPositionExist.dic[e.name.text].ReplacePerceptionPositionExistItem(name, (int)distance, left);
+                    _context.perceptionPositionExist.dic[e.name.text].isQuickActionObject = canQuickAction;
                 }
                 else
                 {
@@ -118,6 +123,8 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
                     itemEntity.ReplaceUiOpen("PerceptionPositionExistItem");
                     itemEntity.ReplacePerceptionPositionExistItem(name, (int)distance, left);
                     itemEntity.ReplacePerceptionTarget(e);
+                    itemEntity.isQuickActionObject = canQuickAction;
+                    
                     _context.perceptionPositionExist.dic[e.name.text] = itemEntity;
                 }
             }

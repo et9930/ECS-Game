@@ -47,12 +47,15 @@ public class AddQuickActionItemSystem : ReactiveSystem<GameEntity>
         foreach (var quickActionEntity in _context.GetGroup(GameMatcher.QuickActionObject))
         {
             var testEntity = quickActionEntity;
-            if (quickActionEntity.hasPerceptionTarget)
+            if (quickActionEntity.hasPerceptionTarget && quickActionEntity.mouseInState.value)
             {
                 testEntity = quickActionEntity.perceptionTarget.value;
             }
-            quickActionE = testEntity;
-            if (!testEntity.mouseInState.value) continue;
+            else
+            {
+                if (!testEntity.mouseInState.value) continue;
+            }
+            quickActionE = quickActionEntity;
             foreach (var quickAction in _context.quickActionConfig.list)
             {
                 if (!quickAction.allNinja && !quickAction.requireNinja.Contains(player.name.text)) continue;
@@ -84,13 +87,17 @@ public class AddQuickActionItemSystem : ReactiveSystem<GameEntity>
             menuPosition.Y = _context.viewService.instance.ScreenSize.Y - qaNumber * 60;
         }
 
-        if (quickActionE != null)
+        if (quickActionE != null && !quickActionE.hasUiRootId)
         {
             menuEntity.ReplaceParentEntity(quickActionE);
             if (quickActionE.hasPosition)
             {
                 menuEntity.ReplaceUiExcursion(menuPosition - _context.viewService.instance.WorldPositionToScreenPosition(quickActionE.position.value));
             }
+        }
+        else
+        {
+            _context.sceneService.instance.SetUIAnchoredPosition(menuEntity.name.text, _context.mouseInputService.instance.GetMouseScreenPosition());
         }
 
         _context.sceneService.instance.SetUIAnchoredPosition("QuickActionMenu", menuPosition);

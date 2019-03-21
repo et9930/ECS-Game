@@ -4,6 +4,7 @@
     {
         Add(new CheckNinjutsuStartConditionSystem(contexts));
         Add(new SelectTargetSystem(contexts));
+        Add(new ManagementSelectTargetSystem(contexts));
 
         Add(new HiRaiShinNoJuTsuSystem(contexts));
     }

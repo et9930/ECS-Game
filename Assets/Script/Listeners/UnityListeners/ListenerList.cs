@@ -47,6 +47,8 @@ public static class ListenerList
         { "CurrentWeapon", typeof(CurrentWeaponListener) },
 
         { "QuickActionMenuItem", typeof(QuickActionMenuItemListener) },
+
+        { "SelectTarget", typeof(SelectTargetListener) },
     };
 }
 

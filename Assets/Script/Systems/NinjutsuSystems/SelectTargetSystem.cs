@@ -31,6 +31,12 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         foreach (var e in entities)
         {
+            if (e.hasJutsuTarget)
+            {
+                e.isStartConditionConfirm = true;
+                continue;
+            }
+
             var jutsuConfig = _context.ninjutsuAttributes.dic[e.name.text];
             var targets = new List<GameEntity>();
 
@@ -40,12 +46,12 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
                 var targetMark = _context.CreateEntity();
                 targetMark.ReplaceSelectTarget(target);
+                targetMark.ReplaceName("SelectTarget_" + _context.jutsuSelectTargetId.value);
+                targetMark.ReplaceUiOpen("SelectTarget");
                 var targetScreenPosition = _context.viewService.instance.WorldPositionToScreenPosition(target.position.value);
                 if (targetScreenPosition.X >= 0 && targetScreenPosition.X <= 1920 && targetScreenPosition.Y >= 0 && targetScreenPosition.Y <= 1080)
                 {
                     targetMark.ReplaceParentEntity(target);
-                    targetMark.ReplaceName("SelectTarget_" + _context.jutsuSelectTargetId.value);
-                    targetMark.ReplaceUiOpen("SelectTarget");
                 }
                 else
                 {
@@ -61,8 +67,6 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                     }
                     if (listEntity == null) continue;
 
-                    targetMark.ReplaceName("OutScreenSelectTarget_" + _context.jutsuSelectTargetId.value);
-                    targetMark.ReplaceUiOpen("OutScreenSelectTarget");
                     targetMark.ReplaceParentEntity(listEntity);
                 }
 
@@ -116,7 +120,12 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             e.isUiClose = true;
         }
 
-//        targets.Clear();
+        foreach (var e in _context.GetEntitiesWithName("OutScreenSelectTargetView"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        targets.Clear();
     }
 
     private bool CheckSelectState(List<GameEntity> targets, GameEntity jutsu)

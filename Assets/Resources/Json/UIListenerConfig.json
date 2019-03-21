@@ -243,6 +243,9 @@
       "Listener": [
         "PerceptionPositionExist"
       ],
+      "Handle": [
+        "MouseInOut"
+      ],
       "saveEntity": true
     },
     {
@@ -250,12 +253,18 @@
       "Listener": [
         "PerceptionPositionAccurate"
       ],
+      "Handle": [
+        "MouseInOut"
+      ],
       "saveEntity": true
     },
     {
       "ComponentName": "PerceptionPositionAccurateItemLeft",
       "Listener": [
         "PerceptionPositionAccurate"
+      ],
+      "Handle": [
+        "MouseInOut"
       ],
       "saveEntity": true
     },
@@ -334,8 +343,12 @@
     },
     {
       "ComponentName": "SelectTarget",
+      "Listener": [
+        "SelectTarget"
+      ],
       "Handle": [
-        "Click"
+        "Click",
+        "MouseInOut"
       ]
     },
     {
@@ -353,14 +366,10 @@
       ]
     },
     {
-      "Component": "OutScreenSelectTarget",
-      "Handle": [
-        "Click"
+      "ComponentName": "OutScreenSelectTargetViewCamera",
+      "Listener": [
+        "Position"
       ]
-    },
-    {
-      "Component": "OutScreenSelectTargetViewCamera",
-      "saveEntity": true
     }
   ]
 }

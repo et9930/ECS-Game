@@ -56,6 +56,16 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
                 e.isDestroy = true;
             }
 
+            foreach (var beforeJutsu in _context.GetGroup(GameMatcher.BeforeJutsuTarget))
+            {
+                if (beforeJutsu.name.text == e.name.text)
+                {
+                    e.ReplaceJutsuTarget(beforeJutsu.jutsuTarget.value);
+                }
+
+                beforeJutsu.isDestroy = true;
+            }
+
             if (!jutsuConfig.needSelectTarget || jutsuConfig.needSelectTarget && e.hasJutsuTarget)
             {
                 e.isStartConditionConfirm = true;

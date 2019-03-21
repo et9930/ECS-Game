@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
@@ -19,12 +20,15 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context.mouseInOutEventFunc.inDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseIn;
+        _context.mouseInOutEventFunc.inDic["SelectTarget"] = SelectTargetOnMouseIn;
 
         _context.mouseInOutEventFunc.outDic["HealthValueTxt"] = HealthValueTxtOnMouseOut;
         _context.mouseInOutEventFunc.outDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseOut;
         _context.mouseInOutEventFunc.outDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseOut;
         _context.mouseInOutEventFunc.outDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseOut;
         _context.mouseInOutEventFunc.outDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseOut;
+        _context.mouseInOutEventFunc.outDic["SelectTarget"] = SelectTargetOnMouseOut;
+
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -41,18 +45,25 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
     {
         foreach (var e in entities)
         {
+            var uiName = e.name.text;
+            var index = e.name.text.IndexOf('_');
+            if (index != -1)
+            {
+                uiName = e.name.text.Substring(0, index);
+            }
+
             if (e.mouseInState.value)
             {
-                if (_context.mouseInOutEventFunc.inDic.ContainsKey(e.name.text))
+                if (_context.mouseInOutEventFunc.inDic.ContainsKey(uiName))
                 {
-                    _context.mouseInOutEventFunc.inDic[e.name.text](e);
+                    _context.mouseInOutEventFunc.inDic[uiName](e);
                 }
             }
             else
             {
-                if (_context.mouseInOutEventFunc.outDic.ContainsKey(e.name.text))
+                if (_context.mouseInOutEventFunc.outDic.ContainsKey(uiName))
                 {
-                    _context.mouseInOutEventFunc.outDic[e.name.text](e);
+                    _context.mouseInOutEventFunc.outDic[uiName](e);
                 }
             }
         }
@@ -149,6 +160,35 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         {
             e.ReplaceActive(false);
             return;
+        }
+    }
+
+    private void SelectTargetOnMouseIn(GameEntity entity)
+    {
+        if (!entity.parentEntity.value.hasUiRootId) return;
+
+        foreach (var e in _context.GetEntitiesWithName("OutScreenSelectTargetViewCamera"))
+        {
+            var position = entity.selectTarget.value.position.value;
+            if (position.Z < -2.05f)
+            {
+                position.Z = -2.05f;
+            }
+            e.ReplacePosition(position);
+        }
+
+        foreach (var e in _context.GetEntitiesWithName("OutScreenSelectTargetView"))
+        {
+            e.ReplaceActive(true);
+        }
+
+    }
+
+    private void SelectTargetOnMouseOut(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("OutScreenSelectTargetView"))
+        {
+            e.ReplaceActive(false);
         }
     }
 }

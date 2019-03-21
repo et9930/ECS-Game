@@ -2,7 +2,7 @@
 using Entitas.CodeGeneration.Attributes;
 
 [Game, Event(EventTarget.Self)]
-public class ParentEntityComponent : IComponent
+public class SelectTargetDistanceComponent : IComponent
 {
-    public GameEntity value;
+    public int value;
 }

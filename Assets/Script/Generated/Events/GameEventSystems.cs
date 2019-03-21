@@ -27,6 +27,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyMakeYinTimeEventSystem(contexts)); // priority: 0
         Add(new NinjaItemNameEventSystem(contexts)); // priority: 0
         Add(new NinjutsuNameEventSystem(contexts)); // priority: 0
+        Add(new ParentEntityEventSystem(contexts)); // priority: 0
         Add(new PerceptionHTCItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionAccurateItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionExistItemEventSystem(contexts)); // priority: 0
@@ -38,6 +39,7 @@ public sealed class GameEventSystems : Feature {
         Add(new ScaleEventSystem(contexts)); // priority: 0
         Add(new ScrollBarValueEventSystem(contexts)); // priority: 0
         Add(new SelectTargetEventSystem(contexts)); // priority: 0
+        Add(new SelectTargetDistanceEventSystem(contexts)); // priority: 0
         Add(new SizeEventSystem(contexts)); // priority: 0
         Add(new AnyTaiRyoKuCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyTaiRyoKuRecoverSpeedEventSystem(contexts)); // priority: 0

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using Entitas;
 
 public class UiFollowSystem : IExecuteSystem
@@ -28,6 +29,7 @@ public class UiFollowSystem : IExecuteSystem
             }
 //            parentScreenPosition.Y -= _context.viewService.instance.ScreenSize.Y / 2;
 //            _context.CreateEntity().ReplaceDebugMessage("ScreenSize " + _context.viewService.instance.ScreenSize);
+            _context.sceneService.instance.SetUILocalPosition(e.name.text, Vector2.Zero);
             _context.sceneService.instance.SetUIAnchoredPosition(e.name.text, parentScreenPosition);
         }
     }

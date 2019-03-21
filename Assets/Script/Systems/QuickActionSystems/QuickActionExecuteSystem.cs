@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Entitas;
 
@@ -35,12 +36,30 @@ public class QuickActionExecuteSystem : ReactiveSystem<GameEntity>, IInitializeS
             {
                 _context.quickActionExecuteFunc.dic[e.quickActionItemConfig.value.name](e);
             }
-            e.isDestroy = true;
         }
     }
 
     private void ExecuteMinatoHiRaiShinMaKinGu(GameEntity entity)
     {
-        _context.CreateEntity().ReplaceDebugMessage("ExecuteMinatoHiRaiShinMaKinGu");
+        var e = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (!e.isMakingYin)
+        {
+            e.isMakingYin = true;
+            foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
+            {
+                if (ui.name.text != "NinjutsuQTE") continue;
+
+                ui.ReplaceActive(true);
+                break;
+            }
+
+            var beforeJutsu = _context.CreateEntity();
+            beforeJutsu.isBeforeJutsuTarget = true;
+            beforeJutsu.ReplaceName("HiRaiShinNoJuTsu");
+            beforeJutsu.ReplaceJutsuTarget(entity.quickActionTarget.value);
+        }
+
+        entity.isDestroy = true;
     }
+
 }
