@@ -370,6 +370,48 @@
       "Listener": [
         "Position"
       ]
+    },
+    {
+      "ComponentName": "LoginButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "SignInButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "SignInConfirmButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "SignInCancelButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "SignInWindow",
+      "Listener": [
+        "Active"
+      ]
+    },
+    {
+      "ComponentName": "LoginErrorMessage",
+      "Listener": [
+        "Text"
+      ]
+    },
+    {
+      "ComponentName": "SignInErrorMessage",
+      "Listener": [
+        "Text"
+      ]
     }
   ]
 }

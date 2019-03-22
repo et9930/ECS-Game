@@ -177,6 +177,14 @@ public class UnitySceneService : ISceneService
         _uiDictionary[child].transform.SetParent(ui.transform);
     }
 
+    public string GetInputValue(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return "";
+        var inputField = ui.GetComponent<InputField>();
+        return inputField == null ? "" : inputField.text;
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);

@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameLauncher : MonoBehaviour
 {
     private Systems _systems;
-//    private Systems _physicalSystems;
 
     void Start()
     {
@@ -30,10 +29,6 @@ public class GameLauncher : MonoBehaviour
             .Add(new GameWorld(contexts, services));
         _systems.Initialize();
 
-//        _physicalSystems = new Feature("Physical Systems")
-//            .
-//        _physicalSystems.Initialize();
-
 #if UNITY_EDITOR
         DontDestroyOnLoad(GameObject.Find("Systems"));
 #endif
@@ -45,15 +40,8 @@ public class GameLauncher : MonoBehaviour
         _systems.Cleanup();
     }
 
-    void FixedUpdate()
-    {
-//        _physicalSystems.Execute();
-//        _physicalSystems.Cleanup();
-    }
-
-    private void OnDestroy()
+    void OnDestroy()
     {
         _systems.TearDown();
-//        _physicalSystems.TearDown();
     }
 }

@@ -22,4 +22,5 @@ public interface ISceneService
     float GetUIAngle(string uiName);
     void SetUIAngle(string uiName, float value);
     void SetParent(int child, string parent);
+    string GetInputValue(string uiName);
 }

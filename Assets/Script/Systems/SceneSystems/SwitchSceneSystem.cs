@@ -14,7 +14,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     public void Initialize()
     {
         _context.ReplaceCurrentScene("LaunchScene");
-        _context.ReplaceLoadScene("BattleScene");
+        _context.ReplaceLoadScene("LoginScene");
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -42,7 +42,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
         // open loading scene
         _context.sceneService.instance.OpenScene("LoadingScene", _context);
-        _context.ReplaceCurrentScene("LoadingScene");
+        //_context.ReplaceCurrentScene("LoadingScene");
         yield return _context.coroutineService.instance.WaitForEndOfFrame();
         GameEntity loadingProcessRootEntity = _context.CreateEntity();
         var loadingProcessUiId = _context.sceneService.instance.OpenUI("LoadingProcess", "LoadingProcess", "TopLayer", _context, ref loadingProcessRootEntity);
@@ -54,9 +54,17 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.ReplaceLoadingSceneTextImage(randomText.Title, randomText.Text, randomImage.Path);
         yield return _context.coroutineService.instance.WaitForEndOfFrame();
         loadingProcessRootEntity.ReplaceActive(true);
-        
-        // clean old scene
 
+        // clean old scene
+        var oldUis = _context.sceneConfig.dic[_context.currentScene.name].Uis;
+        foreach (var ui in oldUis)
+        {
+            foreach(var e in _context.GetEntitiesWithName(ui))
+            {
+                e.isUiClose = true;
+            }
+        }
+        yield return _context.coroutineService.instance.WaitForEndOfFrame();
 
         // load new scene
         foreach (var value in _context.sceneService.instance.OpenSceneAsync(sceneName, _context))

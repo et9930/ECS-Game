@@ -5,6 +5,11 @@
         // Initialize Only
         Add(new ServiceRegistrationSystems(contexts, services));
         Add(new LoadGameConfigSystem(contexts));
+        Add(new InitializeNetworkSystem(contexts));
+
+        // NetWork Systems
+        Add(new LoginSystem(contexts));
+        Add(new SignInSystem(contexts));
 
         // Game Event
         

@@ -1,12 +1,28 @@
 {
-  "Scenes": 
-  [
+  "Scenes": [
+    {
+      "Key": "LaunchScene",
+      "Value": {
+        "SceneName": "LaunchScene",
+        "Uis": [
+        ]
+      }
+    },
     {
       "Key": "LoadingScene",
       "Value": {
         "SceneName": "LoadingScene",
         "Uis": [
           "LoadingProcess"
+        ]
+      }
+    },
+    {
+      "Key": "LoginScene",
+      "Value": {
+        "SceneName": "LoginScene",
+        "Uis": [
+          "Login"
         ]
       }
     },

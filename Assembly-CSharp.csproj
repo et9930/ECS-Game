@@ -200,11 +200,13 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadingSceneProcessComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadingSceneTextImageComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\LoadSceneComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\LoginComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MainCameraMovingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MakeYinTimeComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MovingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\NakamaClientComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemListComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemMenuOpenComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemMenuOpenFreezingComponent.cs" />
@@ -229,6 +231,8 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\SceneServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\TimeServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\ViewServiceComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\SessionComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\SignInComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\TaijutsuAttackFreezingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ThrowWeaponNumberComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\TryThrowWeaponFreezingComponent.cs" />
@@ -444,6 +448,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadPlayerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLockOnComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLoginComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLogServiceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMainCameraMovingComponent.cs" />
@@ -464,6 +469,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameMoveTargetComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMovingComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMovingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameNakamaClientComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameNameComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameNextAnimationComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameNinjaItemAttributesComponent.cs" />
@@ -524,8 +530,10 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSessionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameShadowComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSignInComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSignInInfoComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSizeComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSizeListenerComponent.cs" />
@@ -652,7 +660,9 @@
     <Compile Include="Assets\Script\Systems\InputSystems\MouseInOutEventSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\ErrorMessageSystem.cs" />
+    <Compile Include="Assets\Script\Systems\NetworkSystems\InitializeNetworkSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\LoginSystem.cs" />
+    <Compile Include="Assets\Script\Systems\NetworkSystems\SignInSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjaItemSystems\AddNinjaItemMenuItemSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjaItemSystems\FlyingWeaponManageSystem.cs" />
     <Compile Include="Assets\Script\Systems\NinjaItemSystems\ThrowWeaponSystem.cs" />

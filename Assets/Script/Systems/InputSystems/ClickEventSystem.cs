@@ -17,6 +17,10 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["NinjaItemMenuItem"] = OnNinjaItemMenuItemClick;
         _context.clickEventFunc.clickDic["QuickActionMenuItem"] = OnQuickActionMenuItemClick;
         _context.clickEventFunc.clickDic["SelectTarget"] = OnSelectTargetClick;
+        _context.clickEventFunc.clickDic["LoginButton"] = OnLoginButtonClick;
+        _context.clickEventFunc.clickDic["SignInButton"] = OnSignInButtonClick;
+        _context.clickEventFunc.clickDic["SignInConfirmButton"] = OnSignInConfirmButtonClick;
+        _context.clickEventFunc.clickDic["SignInCancelButton"] = OnSignInCancelButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -71,5 +75,102 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     private void OnSelectTargetClick(GameEntity entity)
     {
         entity.isSelected = true;
+    }
+
+    private void OnLoginButtonClick(GameEntity entity)
+    {
+        var email = _context.sceneService.instance.GetInputValue("LoginEmailInput");
+        var password = _context.sceneService.instance.GetInputValue("LoginPasswordInput");
+
+        GameEntity loginErrorMessage = null;
+        foreach (var e in _context.GetEntitiesWithName("LoginErrorMessage"))
+        {
+            loginErrorMessage = e;
+        }
+        if (loginErrorMessage == null) return;
+        loginErrorMessage.ReplaceText("");
+
+        if (email == "")
+        {
+            loginErrorMessage.ReplaceText("邮箱不能为空");
+            return;
+        }
+        if (password == "")
+        {
+            loginErrorMessage.ReplaceText("密码不能为空");
+            return;
+        }
+        if (password.Length < 8)
+        {
+            loginErrorMessage.ReplaceText("密码必须大于8位");
+            return;
+        }
+
+        _context.ReplaceLogin(email, password);
+    }
+
+    private void OnSignInButtonClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("SignInWindow"))
+        {
+            e.ReplaceActive(true);
+        }
+    }
+
+    private void OnSignInConfirmButtonClick(GameEntity entity)
+    {
+        var email = _context.sceneService.instance.GetInputValue("SignInEmailInput");
+        var userName = _context.sceneService.instance.GetInputValue("SignInUserNameInput");
+        var password = _context.sceneService.instance.GetInputValue("SignInPasswordInput");
+        var passwordConfirm = _context.sceneService.instance.GetInputValue("SignInPasswordConfirmInput");
+
+        GameEntity signInErrorMessage = null;
+        foreach (var e in _context.GetEntitiesWithName("SignInErrorMessage"))
+        {
+            signInErrorMessage = e;
+        }
+        if (signInErrorMessage == null) return;
+        signInErrorMessage.ReplaceText("");
+
+        if (email == "")
+        {
+            signInErrorMessage.ReplaceText("邮箱不能为空");
+            return;
+        }
+        if (userName == "")
+        {
+            signInErrorMessage.ReplaceText("用户名不能为空");
+            return;
+        }
+        if (password == "")
+        {
+            signInErrorMessage.ReplaceText("密码不能为空");
+            return;
+        }
+        if (passwordConfirm == "")
+        {
+            signInErrorMessage.ReplaceText("确认密码不能为空");
+            return;
+        }
+        if (password != passwordConfirm)
+        {
+            signInErrorMessage.ReplaceText("两次输入密码不一致");
+            return;
+        }
+        if (password.Length < 8)
+        {
+            signInErrorMessage.ReplaceText("密码必须大于8位");
+            return;
+        }
+
+        _context.ReplaceSignIn(userName, email, password);
+    }
+
+    private void OnSignInCancelButtonClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("SignInWindow"))
+        {
+            e.ReplaceActive(false);
+        }
     }
 }
