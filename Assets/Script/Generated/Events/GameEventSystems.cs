@@ -13,6 +13,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyChaKuRaCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaSlewRateEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentFpsEventSystem(contexts)); // priority: 0
+        Add(new AnyCurrentPingTimeEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentWeaponEventSystem(contexts)); // priority: 0
         Add(new AnyHealthCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyHealthRecoverableEventSystem(contexts)); // priority: 0

@@ -11,5 +11,6 @@
         Add(new RegisterKeyInputServiceSystem(contexts, services.KeyInput));
         Add(new RegisterTimeServiceSystem(contexts, services.Time));
         Add(new RegisterPhysicsServiceSystem(contexts, services.Physics));
+        Add(new RegisterNetworkServiceSystem(contexts, services.Network));
     }
 }

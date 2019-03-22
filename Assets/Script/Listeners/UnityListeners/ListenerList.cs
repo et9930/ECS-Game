@@ -9,6 +9,7 @@ public static class ListenerList
         { "Active", typeof(ActiveListener) },
         { "Fps", typeof(FpsListener) },
         { "Hierarchy", typeof(HierarchyListener) },
+        { "Ping", typeof(PingListener) },
         { "Position", typeof(PositionListener) },
         { "Rotation", typeof(RotationListener) },
         { "Scale", typeof(ScaleListener) },

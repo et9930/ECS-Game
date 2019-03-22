@@ -15,8 +15,9 @@ public class Services
     public readonly IKeyInputService KeyInput;
     public readonly ITimeService Time;
     public readonly IPhysicsService Physics;
+    public readonly INetworkService Network;
 
-    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time, IPhysicsService physics)
+    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time, IPhysicsService physics, INetworkService network)
     {
         Log = log;
         View = view;
@@ -27,5 +28,6 @@ public class Services
         KeyInput = keyInput;
         Time = time;
         Physics = physics;
+        Network = network;
     }
 }

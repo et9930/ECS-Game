@@ -15,6 +15,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         _context.ReplaceCurrentScene("LaunchScene");
         _context.ReplaceLoadScene("LoginScene");
+//        _context.ReplaceLoadScene("BattleScene");
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

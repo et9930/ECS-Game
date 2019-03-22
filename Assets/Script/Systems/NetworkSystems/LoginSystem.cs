@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Entitas;
 using Nakama;
 
@@ -25,14 +26,12 @@ public class LoginSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            var client = _context.nakamaClient.value;
-            Login(client, e.login.email, e.login.password);
+            Login(e.login.email, e.login.password);
         }
     }
 
-    private async void Login(IClient client, string email, string password)
+    private async void Login(string email, string password)
     {
-        ISession session = null;
         GameEntity loginErrorMessage = null;
         foreach (var e in _context.GetEntitiesWithName("LoginErrorMessage"))
         {
@@ -40,41 +39,27 @@ public class LoginSystem : ReactiveSystem<GameEntity>
         }
         if (loginErrorMessage == null) return;
 
-        try
+        var returnCode = await _context.networkService.instance.Login(email, password);
+
+        switch (returnCode)
         {
-            session = await client.AuthenticateEmailAsync(email, password, null, false);
-        }
-        catch (ApiResponseException e)
-        {
-            if (e.Message == "Invalid email address format.")
-            {
+            case 400:
+                _context.ReplaceLoadScene("BattleScene");
+                return;
+            case 401:
                 loginErrorMessage.ReplaceText("邮箱格式错误");
                 return;
-            }
-
-            if (e.Message == "User account not found.")
-            {
+            case 402:
                 loginErrorMessage.ReplaceText("该邮箱未注册");
                 return;
-            }
-
-            if(e.Message == "Invalid credentials.")
-            {
+            case 403:
                 loginErrorMessage.ReplaceText("密码错误");
                 return;
-            }
-
-            _context.CreateEntity().ReplaceDebugMessage(e.ToString());
+            case 404:
+                loginErrorMessage.ReplaceText("网络错误");
+                return;
+            default:
+                return;
         }
-
-        if (session == null)
-        {
-            loginErrorMessage.ReplaceText("密码错误");
-            return;
-        }
-
-        _context.CreateEntity().ReplaceDebugMessage(session.ToString());
-        _context.ReplaceSession(session);
-        _context.ReplaceLoadScene("BattleScene");
     }
 }

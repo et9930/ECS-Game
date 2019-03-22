@@ -1,5 +1,4 @@
 ﻿using Entitas;
-using Nakama;
 
 public class InitializeNetworkSystem : IInitializeSystem
 {
@@ -12,7 +11,6 @@ public class InitializeNetworkSystem : IInitializeSystem
 
     public void Initialize()
     {
-        var client = new Client("NarutoKey", "127.0.0.1", 8000);
-        _context.ReplaceNakamaClient(client);
+        _context.networkService.instance.InitializeNetworkService("127.0.0.1", 8000);
     }
 }

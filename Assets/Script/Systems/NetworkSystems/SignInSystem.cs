@@ -25,14 +25,12 @@ public class SignInSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            var client = _context.nakamaClient.value;
-            SignIn(client, e.signIn.email, e.signIn.userName, e.signIn.password);
+            SignIn(e.signIn.email, e.signIn.userName, e.signIn.password);
         }
     }
 
-    private async void SignIn(IClient client, string email, string userName, string password)
+    private async void SignIn(string email, string userName, string password)
     {
-        ISession session = null;
         GameEntity signInErrorMessage = null;
         foreach (var e in _context.GetEntitiesWithName("SignInErrorMessage"))
         {
@@ -40,30 +38,27 @@ public class SignInSystem : ReactiveSystem<GameEntity>
         }
         if (signInErrorMessage == null) return;
 
-        try
+        var returnCode = await _context.networkService.instance.SignIn(email, userName, password);
+
+        switch (returnCode)
         {
-            session = await client.AuthenticateEmailAsync(email, password, userName, true);
-        }
-        catch (ApiResponseException e)
-        {
-            if (e.Message == "Invalid email address format.")
-            {
+            case 400:
+                foreach (var e in _context.GetEntitiesWithName("SignInWindow"))
+                {
+                    e.ReplaceActive(false);
+                }
+                return;
+            case 401:
                 signInErrorMessage.ReplaceText("邮箱格式错误");
                 return;
-            }
-            _context.CreateEntity().ReplaceDebugMessage(e.ToString());
-        }
-
-        if (session == null || session.Username != userName || !session.Created) 
-        {
-            signInErrorMessage.ReplaceText("该邮箱已被注册");
-            return;
-        }
-
-        _context.CreateEntity().ReplaceDebugMessage(session.ToString());
-        foreach (var e in _context.GetEntitiesWithName("SignInWindow"))
-        {
-            e.ReplaceActive(false);
+            case 405:
+                signInErrorMessage.ReplaceText("该邮箱已被注册");
+                return;
+            case 406:
+                signInErrorMessage.ReplaceText("网络错误");
+                return;
+            default:
+                return;
         }
     }
 }

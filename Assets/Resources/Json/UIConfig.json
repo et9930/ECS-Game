@@ -47,6 +47,14 @@
           "Handle": [],
           "Listener": [],
           "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PingValue",
+          "ComponentPath": "GameState\/Network\/PingValue",
+          "Handle": [],
+          "Listener": ["Active", "Ping"],
+          "saveEntity": false
         }
       ],
       "UiLayer": "NormalLayer",

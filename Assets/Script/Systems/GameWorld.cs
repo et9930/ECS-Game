@@ -8,6 +8,7 @@
         Add(new InitializeNetworkSystem(contexts));
 
         // NetWork Systems
+        Add(new GetServerPingTimeSystem(contexts));
         Add(new LoginSystem(contexts));
         Add(new SignInSystem(contexts));
 

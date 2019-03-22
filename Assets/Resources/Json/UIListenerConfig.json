@@ -61,6 +61,13 @@
       ]
     },
     {
+      "ComponentName": "PingValue",
+      "Listener": [
+        "Active",
+        "Ping"
+      ]
+    },
+    {
       "ComponentName": "PlayerInfo",
       "Listener": [
         "Active"
