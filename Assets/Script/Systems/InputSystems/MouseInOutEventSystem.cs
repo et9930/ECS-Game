@@ -15,12 +15,14 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
     public void Initialize()
     {
         _context.ReplaceMouseInOutEventFunc(new Dictionary<string, Action<GameEntity>>(), new Dictionary<string, Action<GameEntity>>());
+
         _context.mouseInOutEventFunc.inDic["HealthValueTxt"] = HealthValueTxtOnMouseIn;
         _context.mouseInOutEventFunc.inDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseIn;
         _context.mouseInOutEventFunc.inDic["TaiRyoKuValueImg"] = TaiRyoKuValueImgOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseIn;
         _context.mouseInOutEventFunc.inDic["SelectTarget"] = SelectTargetOnMouseIn;
+        _context.mouseInOutEventFunc.inDic["UserInfo"] = UserInfoOnMouseIn;
 
         _context.mouseInOutEventFunc.outDic["HealthValueTxt"] = HealthValueTxtOnMouseOut;
         _context.mouseInOutEventFunc.outDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseOut;
@@ -28,6 +30,7 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context.mouseInOutEventFunc.outDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseOut;
         _context.mouseInOutEventFunc.outDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseOut;
         _context.mouseInOutEventFunc.outDic["SelectTarget"] = SelectTargetOnMouseOut;
+        _context.mouseInOutEventFunc.outDic["UserInfo"] = UserInfoOnMouseOut;
 
     }
 
@@ -190,5 +193,15 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         {
             e.ReplaceActive(false);
         }
+    }
+
+    private void UserInfoOnMouseIn(GameEntity entity)
+    {
+        entity.ReplaceUiMoveAction(entity.name.text, false, new Vector2(-730, 390), 0.5f);
+    }
+
+    private void UserInfoOnMouseOut(GameEntity entity)
+    {
+        entity.ReplaceUiMoveAction(entity.name.text, false, new Vector2(-1095, 390), 0.5f);
     }
 }

@@ -419,6 +419,12 @@
       "Listener": [
         "Text"
       ]
+    },
+    {
+      "ComponentName": "UserInfo",
+      "Handle": [
+        "MouseInOut"
+      ] 
     }
   ]
 }

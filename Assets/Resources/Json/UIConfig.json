@@ -2089,6 +2089,150 @@
       ],
       "UiLayer": "NormalLayer",
       "UiName": "SelectTarget"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfo",
+          "ComponentPath": "UserInfo",
+          "Handle": ["MouseInOut"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBackground",
+          "ComponentPath": "UserInfo\/UserInfoBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoTitle",
+          "ComponentPath": "UserInfo\/UserInfoTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUserHeadShot",
+          "ComponentPath": "UserInfo\/UserInfoUserHeadShot",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUsername",
+          "ComponentPath": "UserInfo\/UserInfoUsername",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleNumber",
+          "ComponentPath": "UserInfo\/UserInfoBattleNumber",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoWinRate",
+          "ComponentPath": "UserInfo\/UserInfoWinRate",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevel",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevelValue",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevelTitle",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoNinjaNumber",
+          "ComponentPath": "UserInfo\/UserInfoNinjaNumber",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUserLevel",
+          "ComponentPath": "UserInfo\/UserInfoUserLevel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgress",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBar",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBarBackground",
+          "ComponentPath":
+            "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBarImg",
+          "ComponentPath":
+            "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressExp",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressExp",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "UserInfo"
     }
   ]
 }

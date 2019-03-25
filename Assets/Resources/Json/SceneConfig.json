@@ -27,6 +27,15 @@
       }
     },
     {
+      "Key": "MainScene",
+      "Value": {
+        "SceneName": "MainScene",
+        "Uis": [
+          "UserInfo"
+        ]
+      }
+    },
+    {
       "Key": "BattleScene",
       "Value": {
         "SceneName": "BattleScene",

@@ -18,4 +18,5 @@ public interface INetworkService
     Task<int> Login(string email, string password);
     Task<int> SignIn(string email, string username, string password);
     Task<int> Ping();
+    Task<string> RpcCall(string rpcName, string payload);
 }

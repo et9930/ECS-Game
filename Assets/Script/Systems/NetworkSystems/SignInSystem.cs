@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Entitas;
 using Nakama;
 
@@ -38,7 +39,18 @@ public class SignInSystem : ReactiveSystem<GameEntity>
         }
         if (signInErrorMessage == null) return;
 
-        var returnCode = await _context.networkService.instance.SignIn(email, userName, password);
+        int returnCode;
+
+        try
+        {
+            returnCode = await _context.networkService.instance.SignIn(email, userName, password);
+
+        }
+        catch (Exception)
+        {
+            signInErrorMessage.ReplaceText("网络错误");
+            return;
+        }
 
         switch (returnCode)
         {

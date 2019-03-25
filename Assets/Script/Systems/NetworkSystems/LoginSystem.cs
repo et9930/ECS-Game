@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Entitas;
-using Nakama;
 
 public class LoginSystem : ReactiveSystem<GameEntity>
 {
@@ -39,12 +38,23 @@ public class LoginSystem : ReactiveSystem<GameEntity>
         }
         if (loginErrorMessage == null) return;
 
-        var returnCode = await _context.networkService.instance.Login(email, password);
+        int returnCode;
+
+        try
+        {
+            returnCode = await _context.networkService.instance.Login(email, password);
+
+        }
+        catch (Exception)
+        {
+            loginErrorMessage.ReplaceText("网络错误");
+            return;
+        }
 
         switch (returnCode)
         {
             case 400:
-                _context.ReplaceLoadScene("BattleScene");
+                _context.ReplaceLoadScene("MainScene");
                 return;
             case 401:
                 loginErrorMessage.ReplaceText("邮箱格式错误");

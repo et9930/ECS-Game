@@ -78,4 +78,20 @@ public class NakamaNetworkService : INetworkService
 
         return 400;
     }
+
+    public async Task<string> RpcCall(string rpcName, string payload)
+    {
+        string returnString;
+        try
+        {
+            var apiRpc = await _client.RpcAsync(_session, rpcName, payload);
+            returnString = apiRpc.Payload;
+        }
+        catch (Exception )
+        {
+            return null;
+        }
+
+        return returnString;
+    }
 }
