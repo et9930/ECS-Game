@@ -158,6 +158,7 @@
     <Compile Include="Assets\Script\Components\TaiRyoKuTiredComponent.cs" />
     <Compile Include="Assets\Script\Components\TaiRyoKuTotalComponent.cs" />
     <Compile Include="Assets\Script\Components\TextComponent.cs" />
+    <Compile Include="Assets\Script\Components\ToggleStateComponent.cs" />
     <Compile Include="Assets\Script\Components\TowardComponent.cs" />
     <Compile Include="Assets\Script\Components\TryThrowWeaponComponent.cs" />
     <Compile Include="Assets\Script\Components\UiCloseComponent.cs" />
@@ -228,6 +229,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\CoroutineServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\KeyInputServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LoadConfigServiceComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LocalStorageServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LogServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\MouseInputServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\NetworkServiceComponent.cs" />
@@ -461,6 +463,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadingUiRandomInfoComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadPlayerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoadSceneComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameLocalStorageServiceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLockOnComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoginComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameLoginInfoComponent.cs" />
@@ -566,6 +569,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameTextListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameThrowWeaponNumberComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTimeServiceComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameToggleStateComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTowardComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTowardListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameTryThrowWeaponComponent.cs" />
@@ -637,6 +641,7 @@
     <Compile Include="Assets\Script\Services\ServiceInterfaces\ICoroutineService.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\IKeyInputService.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\ILoadConfigService.cs" />
+    <Compile Include="Assets\Script\Services\ServiceInterfaces\ILocalStorageService.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\ILogService.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\IMouseInputService.cs" />
     <Compile Include="Assets\Script\Services\ServiceInterfaces\INetworkService.cs" />
@@ -649,6 +654,7 @@
     <Compile Include="Assets\Script\Services\UnityServices\UnityDebugLogService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityKeyInputService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityLoadConfigService.cs" />
+    <Compile Include="Assets\Script\Services\UnityServices\UnityLocalStorageService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityMouseInputService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityPhysicsService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnitySceneService.cs" />
@@ -738,6 +744,7 @@
     <Compile Include="Assets\Script\Systems\SceneSystems\ChangeUiParentSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\InitBattleSceneSystem.cs" />
+    <Compile Include="Assets\Script\Systems\SceneSystems\InitLoginSceneSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\InitMainSceneSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\LoadPlayerSystem.cs" />
     <Compile Include="Assets\Script\Systems\SceneSystems\MoveMainCameraSystem.cs" />
@@ -751,6 +758,7 @@
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterCoroutineServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterKeyInputServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLoadConfigServiceSystem.cs" />
+    <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLocalStorageServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterLogServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterMouseInputServiceSystem.cs" />
     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterNetworkServiceSystem.cs" />

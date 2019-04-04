@@ -106,6 +106,14 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             return;
         }
 
+        _context.localStorageService.instance.SetString("login_email", email);
+        var isRemember = _context.sceneService.instance.GetToggleOnState("LoginRememberPasswordToggle");
+        _context.localStorageService.instance.SetBool("login_remember_password", isRemember);
+        if (isRemember)
+        {
+            _context.localStorageService.instance.SetString("login_password", password);
+        }
+        
         _context.ReplaceLogin(email, password);
     }
 

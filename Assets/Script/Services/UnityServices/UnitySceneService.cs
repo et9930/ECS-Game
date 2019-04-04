@@ -185,6 +185,34 @@ public class UnitySceneService : ISceneService
         return inputField == null ? "" : inputField.text;
     }
 
+    public void SetInputValue(string uiName, string value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var inputField = ui.GetComponent<InputField>();
+        if (inputField == null) return;
+
+        inputField.text = value;
+    }
+
+    public bool GetToggleOnState(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return false;
+        var toggle = ui.GetComponent<Toggle>();
+        return toggle != null && toggle.isOn;
+    }
+
+    public void SetToggleOnState(string uiName, bool state)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var toggle = ui.GetComponent<Toggle>();
+        if (toggle == null) return;
+
+        toggle.isOn = state;
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);

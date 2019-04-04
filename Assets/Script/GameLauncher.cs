@@ -23,7 +23,8 @@ public class GameLauncher : MonoBehaviour
             new UnityKeyInputService(),
             new UnityTimeService(),
             new UnityPhysicsService(),
-            new NakamaNetworkService()
+            new NakamaNetworkService(),
+            new UnityLocalStorageService()
         );
 
         _systems = new Feature("Systems")

@@ -22,4 +22,7 @@ public interface ISceneService
     void SetUIAngle(string uiName, float value);
     void SetParent(int child, string parent);
     string GetInputValue(string uiName);
+    void SetInputValue(string uiName, string value);
+    bool GetToggleOnState(string uiName);
+    void SetToggleOnState(string uiName, bool state);
 }

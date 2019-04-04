@@ -66,6 +66,7 @@
         Add(new ChangeUiParentSystem(contexts));
         Add(new SetUiPositionSystem(contexts));
         Add(new CloseUiSystem(contexts));
+        Add(new InitLoginSceneSystem(contexts));
         Add(new InitMainSceneSystem(contexts));
         Add(new InitBattleSceneSystem(contexts));
 
