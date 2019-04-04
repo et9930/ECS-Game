@@ -50,6 +50,8 @@ public static class ListenerList
         { "QuickActionMenuItem", typeof(QuickActionMenuItemListener) },
 
         { "SelectTarget", typeof(SelectTargetListener) },
+
+        { "CurrentPlayerUserData", typeof(CurrentPlayerUserDataListener) },
     };
 }
 

@@ -7,7 +7,8 @@ using Random = System.Random;
 
 public static class Utilities
 {
-    public static Random random = new Random();
+    private static readonly Random random = new Random();
+    private static readonly DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1)); // 当地时区
 
     public static System.Numerics.Vector2 ToSystemNumericsVector2(UnityEngine.Vector2 value)
     {
@@ -35,6 +36,11 @@ public static class Utilities
         }
 
         return obj;
+    }
+
+    public static string ToJson(object item)
+    {
+        return Nakama.TinyJson.JsonWriter.ToJson(item);
     }
 
     public static System.Numerics.Vector4 ToSystemNumericsVector4(UnityEngine.Color value)
@@ -91,5 +97,10 @@ public static class Utilities
         Debug.Log(probability + " result " + result);
 
         return result;
+    }
+
+    public static double GetTimeStamp()
+    {
+        return (DateTime.Now - startTime).TotalMilliseconds; // 相差毫秒数
     }
 }

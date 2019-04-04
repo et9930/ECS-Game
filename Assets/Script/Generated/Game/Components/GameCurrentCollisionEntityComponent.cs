@@ -12,7 +12,7 @@ public partial class GameContext {
     public CurrentCollisionEntityComponent currentCollisionEntity { get { return currentCollisionEntityEntity.currentCollisionEntity; } }
     public bool hasCurrentCollisionEntity { get { return currentCollisionEntityEntity != null; } }
 
-    public GameEntity SetCurrentCollisionEntity(System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<int>> newDic) {
+    public GameEntity SetCurrentCollisionEntity(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> newDic) {
         if (hasCurrentCollisionEntity) {
             throw new Entitas.EntitasException("Could not set CurrentCollisionEntity!\n" + this + " already has an entity with CurrentCollisionEntityComponent!",
                 "You should check if the context already has a currentCollisionEntityEntity before setting it or use context.ReplaceCurrentCollisionEntity().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceCurrentCollisionEntity(System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<int>> newDic) {
+    public void ReplaceCurrentCollisionEntity(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> newDic) {
         var entity = currentCollisionEntityEntity;
         if (entity == null) {
             entity = SetCurrentCollisionEntity(newDic);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public CurrentCollisionEntityComponent currentCollisionEntity { get { return (CurrentCollisionEntityComponent)GetComponent(GameComponentsLookup.CurrentCollisionEntity); } }
     public bool hasCurrentCollisionEntity { get { return HasComponent(GameComponentsLookup.CurrentCollisionEntity); } }
 
-    public void AddCurrentCollisionEntity(System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<int>> newDic) {
+    public void AddCurrentCollisionEntity(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> newDic) {
         var index = GameComponentsLookup.CurrentCollisionEntity;
         var component = (CurrentCollisionEntityComponent)CreateComponent(index, typeof(CurrentCollisionEntityComponent));
         component.dic = newDic;
         AddComponent(index, component);
     }
 
-    public void ReplaceCurrentCollisionEntity(System.Collections.Generic.Dictionary<int, System.Collections.Generic.List<int>> newDic) {
+    public void ReplaceCurrentCollisionEntity(System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>> newDic) {
         var index = GameComponentsLookup.CurrentCollisionEntity;
         var component = (CurrentCollisionEntityComponent)CreateComponent(index, typeof(CurrentCollisionEntityComponent));
         component.dic = newDic;

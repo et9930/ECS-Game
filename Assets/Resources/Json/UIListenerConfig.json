@@ -1,430 +1,442 @@
 {
-  "UIListener": [
-    {
-      "ComponentName": "LoadingProcess",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "BackgroundImage",
-      "Listener": [
-        "Active",
-        "LoadingSceneImage"
-      ]
-    },
-    {
-      "ComponentName": "ProcessBarBackImg",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "ProcessNumber",
-      "Listener": [
-        "Active",
-        "LoadingSceneProcessText"
-      ]
-    },
-    {
-      "ComponentName": "ProcessBarFillImg",
-      "Listener": [
-        "Active",
-        "LoadingSceneProcess"
-      ]
-    },
-    {
-      "ComponentName": "RandomTitle",
-      "Listener": [
-        "Active",
-        "LoadingSceneTitle"
-      ]
-    },
-    {
-      "ComponentName": "RandomText",
-      "Listener": [
-        "Active",
-        "LoadingSceneText"
-      ]
-    },
-    {
-      "ComponentName": "GameState",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "FpsValue",
-      "Listener": [
-        "Active",
-        "Fps"
-      ]
-    },
-    {
-      "ComponentName": "PingValue",
-      "Listener": [
-        "Active",
-        "Ping"
-      ]
-    },
-    {
-      "ComponentName": "PlayerInfo",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "PlayerState",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "PlayerTaiRyoKuValue",
-      "Listener": [
-        "Active",
-        "PlayerTaiRyoKu"
-      ]
-    },
-    {
-      "ComponentName": "PlayerChaKuRaValue",
-      "Listener": [
-        "Active",
-        "PlayerChaKuRa"
-      ]
-    },
-    {
-      "ComponentName": "PlayerHealthValue",
-      "Listener": [
-        "Active",
-        "PlayerHealth"
-      ]
-    },
-    {
-      "ComponentName": "PlayerHeadShot",
-      "AnomalyButton": true,
-      "Listener": [
-        "Active",
-        "PlayerHeadShot"
-      ],
-      "Handle": [
-        "MouseInOut",
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "HealthValueTxt",
-      "Handle": [
-        "MouseInOut"
-      ]
-    },
-    {
-      "ComponentName": "HealthPopUpWindow",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "ChaKuRaValueImg",
-      "Handle": [
-        "MouseInOut"
-      ]
-    },
-    {
-      "ComponentName": "ChaKuRaPopUpWindow",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "TaiRyoKuValueImg",
-      "Handle": [
-        "MouseInOut"
-      ]
-    },
-    {
-      "ComponentName": "TaiRyoKuPopUpWindow",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "JumpForceVerticalDirectionArrow",
-      "Listener": [
-        "JumpVerticalDirectionArrow"
-      ]
-    },
-    {
-      "ComponentName": "JumpForceHorizontalDirectionArrow",
-      "Listener": [
-        "JumpHorizontalDirectionArrow"
-      ]
-    },
-    {
-      "ComponentName": "JumpForceProcessBarImage",
-      "Listener": [
-        "JumpForce"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuMenuItem",
-      "AnomalyButton": true,
-      "Listener": [
-        "NinjutsuMenuItem"
-      ],
-      "Handle": [
-        "MouseInOut",
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuMenuInfoWindow",
-      "Listener": [
-        "Active",
-        "NinjutsuMenuInfo"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuMenuScrollRect",
-      "Listener": [
-        "Size"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuMenuScrollbar",
-      "Listener": [
-        "ScrollBarValue"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuQTE",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "NinjutsuQTETime",
-      "Listener": [
-        "MakeYinTime"
-      ]
-    },
-    {
-      "ComponentName": "NinjaItemMenu",
-      "AnomalyButton": true,
-      "Handle": [
-        "MouseInOut"
-      ]
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem",
-      "AnomalyButton": true,
-      "Listener": [
-        "NinjaItemMenuItem"
-      ],
-      "Handle": [
-        "MouseInOut",
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "NinjaItemMenuInfoWindow",
-      "Listener": [
-        "Active",
-        "NinjaItemMenuInfo"
-      ]
-    },
-    {
-      "ComponentName": "PerceptionPositionExistLeft",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "PerceptionPositionExistRight",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "PerceptionPositionExistItem",
-      "Listener": [
-        "PerceptionPositionExist"
-      ],
-      "Handle": [
-        "MouseInOut"
-      ],
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "PerceptionPositionAccurateItemRight",
-      "Listener": [
-        "PerceptionPositionAccurate"
-      ],
-      "Handle": [
-        "MouseInOut"
-      ],
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "PerceptionPositionAccurateItemLeft",
-      "Listener": [
-        "PerceptionPositionAccurate"
-      ],
-      "Handle": [
-        "MouseInOut"
-      ],
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "PerceptionHTCItem",
-      "Listener": [
-        "PerceptionHTC"
-      ]
-    },
-    {
-      "ComponentName": "PerceptionPositionExistLeftList",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "PerceptionPositionExistRightList",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjutsuYinList",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjutsuMenuContent",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem0",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem1",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem2",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem3",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem4",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "NinjaItemMenuItem5",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "CurrentWeaponIcon",
-      "Listener": [
-        "CurrentWeapon"
-      ]
-    },
-    {
-      "ComponentName": "QuickActionMenuList",
-      "saveEntity": true,
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "QuickActionMenuItem",
-      "Listener": [
-        "QuickActionMenuItem"
-      ],
-      "Handle": [
-        "MouseInOut",
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "QuickActionMenu",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "SelectTarget",
-      "Listener": [
-        "SelectTarget"
-      ],
-      "Handle": [
-        "Click",
-        "MouseInOut"
-      ]
-    },
-    {
-      "ComponentName": "OutScreenSelectTargetViewLeftList",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "OutScreenSelectTargetViewRightList",
-      "saveEntity": true
-    },
-    {
-      "ComponentName": "OutScreenSelectTargetView",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "OutScreenSelectTargetViewCamera",
-      "Listener": [
-        "Position"
-      ]
-    },
-    {
-      "ComponentName": "LoginButton",
-      "Handle": [
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "SignInButton",
-      "Handle": [
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "SignInConfirmButton",
-      "Handle": [
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "SignInCancelButton",
-      "Handle": [
-        "Click"
-      ]
-    },
-    {
-      "ComponentName": "SignInWindow",
-      "Listener": [
-        "Active"
-      ]
-    },
-    {
-      "ComponentName": "LoginErrorMessage",
-      "Listener": [
-        "Text"
-      ]
-    },
-    {
-      "ComponentName": "SignInErrorMessage",
-      "Listener": [
-        "Text"
-      ]
-    },
-    {
-      "ComponentName": "UserInfo",
-      "Handle": [
-        "MouseInOut"
-      ] 
-    }
-  ]
+	"UIListener": [
+		{
+			"ComponentName": "LoadingProcess",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "BackgroundImage",
+			"Listener": [
+				"Active",
+				"LoadingSceneImage"
+			]
+		},
+		{
+			"ComponentName": "ProcessBarBackImg",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "ProcessNumber",
+			"Listener": [
+				"Active",
+				"LoadingSceneProcessText"
+			]
+		},
+		{
+			"ComponentName": "ProcessBarFillImg",
+			"Listener": [
+				"Active",
+				"LoadingSceneProcess"
+			]
+		},
+		{
+			"ComponentName": "RandomTitle",
+			"Listener": [
+				"Active",
+				"LoadingSceneTitle"
+			]
+		},
+		{
+			"ComponentName": "RandomText",
+			"Listener": [
+				"Active",
+				"LoadingSceneText"
+			]
+		},
+		{
+			"ComponentName": "GameState",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "FpsValue",
+			"Listener": [
+				"Active",
+				"Fps"
+			]
+		},
+		{
+			"ComponentName": "PingValue",
+			"Listener": [
+				"Active",
+				"Ping"
+			]
+		},
+		{
+			"ComponentName": "PlayerInfo",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "PlayerState",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "PlayerTaiRyoKuValue",
+			"Listener": [
+				"Active",
+				"PlayerTaiRyoKu"
+			]
+		},
+		{
+			"ComponentName": "PlayerChaKuRaValue",
+			"Listener": [
+				"Active",
+				"PlayerChaKuRa"
+			]
+		},
+		{
+			"ComponentName": "PlayerHealthValue",
+			"Listener": [
+				"Active",
+				"PlayerHealth"
+			]
+		},
+		{
+			"ComponentName": "PlayerHeadShot",
+			"AnomalyButton": true,
+			"Listener": [
+				"Active",
+				"PlayerHeadShot"
+			],
+			"Handle": [
+				"MouseInOut",
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "HealthValueTxt",
+			"Handle": [
+				"MouseInOut"
+			]
+		},
+		{
+			"ComponentName": "HealthPopUpWindow",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "ChaKuRaValueImg",
+			"Handle": [
+				"MouseInOut"
+			]
+		},
+		{
+			"ComponentName": "ChaKuRaPopUpWindow",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "TaiRyoKuValueImg",
+			"Handle": [
+				"MouseInOut"
+			]
+		},
+		{
+			"ComponentName": "TaiRyoKuPopUpWindow",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "JumpForceVerticalDirectionArrow",
+			"Listener": [
+				"JumpVerticalDirectionArrow"
+			]
+		},
+		{
+			"ComponentName": "JumpForceHorizontalDirectionArrow",
+			"Listener": [
+				"JumpHorizontalDirectionArrow"
+			]
+		},
+		{
+			"ComponentName": "JumpForceProcessBarImage",
+			"Listener": [
+				"JumpForce"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuMenuItem",
+			"AnomalyButton": true,
+			"Listener": [
+				"NinjutsuMenuItem"
+			],
+			"Handle": [
+				"MouseInOut",
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuMenuInfoWindow",
+			"Listener": [
+				"Active",
+				"NinjutsuMenuInfo"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuMenuScrollRect",
+			"Listener": [
+				"Size"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuMenuScrollbar",
+			"Listener": [
+				"ScrollBarValue"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuQTE",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "NinjutsuQTETime",
+			"Listener": [
+				"MakeYinTime"
+			]
+		},
+		{
+			"ComponentName": "NinjaItemMenu",
+			"AnomalyButton": true,
+			"Handle": [
+				"MouseInOut"
+			]
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem",
+			"AnomalyButton": true,
+			"Listener": [
+				"NinjaItemMenuItem"
+			],
+			"Handle": [
+				"MouseInOut",
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "NinjaItemMenuInfoWindow",
+			"Listener": [
+				"Active",
+				"NinjaItemMenuInfo"
+			]
+		},
+		{
+			"ComponentName": "PerceptionPositionExistLeft",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "PerceptionPositionExistRight",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "PerceptionPositionExistItem",
+			"Listener": [
+				"PerceptionPositionExist"
+			],
+			"Handle": [
+				"MouseInOut"
+			],
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "PerceptionPositionAccurateItemRight",
+			"Listener": [
+				"PerceptionPositionAccurate"
+			],
+			"Handle": [
+				"MouseInOut"
+			],
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "PerceptionPositionAccurateItemLeft",
+			"Listener": [
+				"PerceptionPositionAccurate"
+			],
+			"Handle": [
+				"MouseInOut"
+			],
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "PerceptionHTCItem",
+			"Listener": [
+				"PerceptionHTC"
+			]
+		},
+		{
+			"ComponentName": "PerceptionPositionExistLeftList",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "PerceptionPositionExistRightList",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjutsuYinList",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjutsuMenuContent",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem0",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem1",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem2",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem3",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem4",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "NinjaItemMenuItem5",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "CurrentWeaponIcon",
+			"Listener": [
+				"CurrentWeapon"
+			]
+		},
+		{
+			"ComponentName": "QuickActionMenuList",
+			"saveEntity": true,
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "QuickActionMenuItem",
+			"Listener": [
+				"QuickActionMenuItem"
+			],
+			"Handle": [
+				"MouseInOut",
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "QuickActionMenu",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "SelectTarget",
+			"Listener": [
+				"SelectTarget"
+			],
+			"Handle": [
+				"Click",
+				"MouseInOut"
+			]
+		},
+		{
+			"ComponentName": "OutScreenSelectTargetViewLeftList",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "OutScreenSelectTargetViewRightList",
+			"saveEntity": true
+		},
+		{
+			"ComponentName": "OutScreenSelectTargetView",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "OutScreenSelectTargetViewCamera",
+			"Listener": [
+				"Position"
+			]
+		},
+		{
+			"ComponentName": "LoginButton",
+			"Handle": [
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "SignInButton",
+			"Handle": [
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "SignInConfirmButton",
+			"Handle": [
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "SignInCancelButton",
+			"Handle": [
+				"Click"
+			]
+		},
+		{
+			"ComponentName": "SignInWindow",
+			"Listener": [
+				"Active"
+			]
+		},
+		{
+			"ComponentName": "LoginErrorMessage",
+			"Listener": [
+				"Text"
+			]
+		},
+		{
+			"ComponentName": "SignInErrorMessage",
+			"Listener": [
+				"Text"
+			]
+		},
+		{
+			"ComponentName": "UserInfo",
+			"Listener": [
+				"CurrentPlayerUserData"
+			]
+		},
+		{			
+			"ComponentName": "NormalNetworkIcon",
+			"Listener": [
+				"Active"
+			]
+		},
+		{			
+			"ComponentName": "ErrorNetworkIcon",
+			"Listener": [
+				"Active"
+			]
+		}
+	]
 }

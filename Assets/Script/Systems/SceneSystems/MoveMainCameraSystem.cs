@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Numerics;
+﻿using System.Numerics;
 using Entitas;
 
 public class MoveMainCameraSystem : IExecuteSystem
@@ -15,7 +14,7 @@ public class MoveMainCameraSystem : IExecuteSystem
     {
         if (_context.currentScene.name != "BattleScene") return;
 
-        var currentMapConfig = _context.mapConfig.list.list[_context.currentMapName.value];
+        var currentMapConfig = _context.mapConfig.list[_context.currentMapName.value];
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         var lastPosition = _context.sceneService.instance.MainCameraPosition;

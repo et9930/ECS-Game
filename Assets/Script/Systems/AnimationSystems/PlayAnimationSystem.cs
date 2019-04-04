@@ -23,7 +23,7 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
         foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.CurrentAnimation, GameMatcher.AnimationFrame)))
         {
 
-            var animationInfo = _context.imageAsset.imageInfos.infos[e.name.text].animationInfos[e.currentAnimation.name];
+            var animationInfo = _context.imageAsset.infos[e.name.text].animationInfos[e.currentAnimation.name];
             Dictionary<int, Action<GameEntity>> animationEventInfo = null;
             if (_context.animationEventFunc.characterDic.ContainsKey(e.name.text))
             {

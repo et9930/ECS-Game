@@ -12,7 +12,7 @@ public partial class GameContext {
     public MapConfigComponent mapConfig { get { return mapConfigEntity.mapConfig; } }
     public bool hasMapConfig { get { return mapConfigEntity != null; } }
 
-    public GameEntity SetMapConfig(MapConfigList newList) {
+    public GameEntity SetMapConfig(System.Collections.Generic.Dictionary<string, MapConfig> newList) {
         if (hasMapConfig) {
             throw new Entitas.EntitasException("Could not set MapConfig!\n" + this + " already has an entity with MapConfigComponent!",
                 "You should check if the context already has a mapConfigEntity before setting it or use context.ReplaceMapConfig().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceMapConfig(MapConfigList newList) {
+    public void ReplaceMapConfig(System.Collections.Generic.Dictionary<string, MapConfig> newList) {
         var entity = mapConfigEntity;
         if (entity == null) {
             entity = SetMapConfig(newList);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public MapConfigComponent mapConfig { get { return (MapConfigComponent)GetComponent(GameComponentsLookup.MapConfig); } }
     public bool hasMapConfig { get { return HasComponent(GameComponentsLookup.MapConfig); } }
 
-    public void AddMapConfig(MapConfigList newList) {
+    public void AddMapConfig(System.Collections.Generic.Dictionary<string, MapConfig> newList) {
         var index = GameComponentsLookup.MapConfig;
         var component = (MapConfigComponent)CreateComponent(index, typeof(MapConfigComponent));
         component.list = newList;
         AddComponent(index, component);
     }
 
-    public void ReplaceMapConfig(MapConfigList newList) {
+    public void ReplaceMapConfig(System.Collections.Generic.Dictionary<string, MapConfig> newList) {
         var index = GameComponentsLookup.MapConfig;
         var component = (MapConfigComponent)CreateComponent(index, typeof(MapConfigComponent));
         component.list = newList;

@@ -142,6 +142,7 @@
     <Compile Include="Assets\Script\Components\SelectedComponent.cs" />
     <Compile Include="Assets\Script\Components\SelectTargetComponent.cs" />
     <Compile Include="Assets\Script\Components\SelectTargetDistanceComponent.cs" />
+    <Compile Include="Assets\Script\Components\SendToServerComponent.cs" />
     <Compile Include="Assets\Script\Components\SetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\ShadowComponent.cs" />
     <Compile Include="Assets\Script\Components\SignInInfoComponent.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentMapNameComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPingTimeComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPlayerIdComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPlayerUserDataComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentSceneComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\FadingUiListComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\FinalPerceptionLevelComponent.cs" />
@@ -251,6 +253,7 @@
     <Compile Include="Assets\Script\Generated\Events\Components\AnyChaKuRaSlewRateListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentFpsListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentPingTimeListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentPlayerUserDataListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentWeaponListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyHealthCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\AnyHealthRecoverableListenerComponent.cs" />
@@ -289,6 +292,7 @@
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyChaKuRaSlewRateListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentFpsListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentPingTimeListener.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentPlayerUserDataListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentWeaponListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyHealthCurrentListener.cs" />
     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyHealthRecoverableListener.cs" />
@@ -326,6 +330,7 @@
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyChaKuRaSlewRateEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentFpsEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentPingTimeEventSystem.cs" />
+    <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentPlayerUserDataEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentWeaponEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyHealthCurrentEventSystem.cs" />
     <Compile Include="Assets\Script\Generated\Events\Systems\AnyHealthRecoverableEventSystem.cs" />
@@ -377,6 +382,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyChaKuRaSlewRateListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentFpsListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentPingTimeListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentPlayerUserDataListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentWeaponListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyHealthCurrentListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyHealthRecoverableListenerComponent.cs" />
@@ -410,6 +416,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentMapNameComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPingTimeComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPlayerIdComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPlayerUserDataComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentSceneComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentWeaponComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameDebugMessageComponent.cs" />
@@ -537,6 +544,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceListenerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSendToServerComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSetUiPositionComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameShadowComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSignInComponent.cs" />
@@ -590,6 +598,7 @@
     <Compile Include="Assets\Script\Handle\UnityEventHandle\UIMouseInOutHandle.cs" />
     <Compile Include="Assets\Script\Listeners\ListenerInterfaces\IEventListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\ActiveListener.cs" />
+    <Compile Include="Assets\Script\Listeners\UnityListeners\CurrentPlayerUserDataListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\CurrentWeaponListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\FpsListener.cs" />
     <Compile Include="Assets\Script\Listeners\UnityListeners\HierarchyListener.cs" />
@@ -645,7 +654,21 @@
     <Compile Include="Assets\Script\Services\UnityServices\UnitySceneService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityTimeService.cs" />
     <Compile Include="Assets\Script\Services\UnityServices\UnityViewService.cs" />
-    <Compile Include="Assets\Script\Structs\NetworkUserData.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\CharacterBaseAttributes.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\CollisionPairList.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\ImageInfos.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\LoadingUiRandomInfo.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\MapConfigList.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\NinjaItemAttributes.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\NinjutsuAttributes.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\QuickActionList.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\SceneConfigs.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\UiInfoList.cs" />
+    <Compile Include="Assets\Script\Structs\ClientOnly\UiLayerInfos.cs" />
+    <Compile Include="Assets\Script\Structs\ClientToServer\CSGetUserData.cs" />
+    <Compile Include="Assets\Script\Structs\ClientToServer\ICSMessage.cs" />
+    <Compile Include="Assets\Script\Structs\ServerToClient\SCPing.cs" />
+    <Compile Include="Assets\Script\Structs\ServerToClient\SCUserData.cs" />
     <Compile Include="Assets\Script\Systems\AnimationEventSystems\AnimationEventSystems.cs" />
     <Compile Include="Assets\Script\Systems\AnimationEventSystems\CharacterNamikazeMinatoAESystem.cs" />
     <Compile Include="Assets\Script\Systems\AnimationEventSystems\EffectAESystem.cs" />
@@ -749,20 +772,11 @@
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.AIModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.ARModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
@@ -784,9 +798,6 @@
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.FacebookModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
@@ -857,9 +868,6 @@
     <Reference Include="UnityEngine.TLSModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
@@ -890,17 +898,11 @@
     <Reference Include="UnityEngine.UnityWebRequestModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Entitas;
 
 public class ChaKuRaExpendSystem : ReactiveSystem<GameEntity>

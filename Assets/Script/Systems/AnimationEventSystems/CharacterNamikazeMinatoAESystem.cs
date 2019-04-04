@@ -38,7 +38,7 @@ public class CharacterNamikazeMinatoAESystem : ReactiveSystem<GameEntity>
         animationDic["jump_0"] = new AnimationEvent() {frameDic = new Dictionary<int, Action<GameEntity>>()};
 
         var frameDic = animationDic["jump_0"].frameDic;
-        frameDic[_context.imageAsset.imageInfos.infos["NamikazeMinato"].animationInfos["jump_0"].maxFrame] = OnMinatoStartJumpOver;
+        frameDic[_context.imageAsset.infos["NamikazeMinato"].animationInfos["jump_0"].maxFrame] = OnMinatoStartJumpOver;
 
         // attack_1 AE
         animationDic["attack_1"] = new AnimationEvent() {frameDic = new Dictionary<int, Action<GameEntity>>()};

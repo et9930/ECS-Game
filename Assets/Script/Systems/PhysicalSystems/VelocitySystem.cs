@@ -14,7 +14,7 @@ public class VelocitySystem : IExecuteSystem
         if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentMapName) return;
 
-        var currentMapConfig = _context.mapConfig.list.list[_context.currentMapName.value];
+        var currentMapConfig = _context.mapConfig.list[_context.currentMapName.value];
 
         foreach (var e in _context.GetGroup(GameMatcher.Velocity))
         {

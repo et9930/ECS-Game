@@ -1,6 +1,4 @@
-﻿using Entitas;
-using Entitas.Unity;
-using Entitas.VisualDebugging.Unity;
+﻿using Entitas.Unity;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
 using Vector3 = System.Numerics.Vector3;

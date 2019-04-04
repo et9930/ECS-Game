@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Numerics;
 using Entitas;
 
@@ -32,7 +31,7 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             e.ReplaceName(e.loadPlayer.playerName);
             e.ReplaceAnimation("idle", false);
             e.ReplaceHierarchy(0);
-            e.ReplacePosition(_context.mapConfig.list.list[_context.currentMapName.value].CharacterInPosition[0]);
+            e.ReplacePosition(_context.mapConfig.list[_context.currentMapName.value].CharacterInPosition[0]);
             e.ReplaceRotation(Vector3.Zero);
             e.ReplaceScale(new Vector2(1.0f, 1.0f));
             e.ReplaceMass(66.5f);

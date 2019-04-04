@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Entitas;
-using Nakama;
 
 public class SignInSystem : ReactiveSystem<GameEntity>
 {
@@ -27,6 +26,7 @@ public class SignInSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             SignIn(e.signIn.email, e.signIn.userName, e.signIn.password);
+            e.isDestroy = true;
         }
     }
 
@@ -44,11 +44,9 @@ public class SignInSystem : ReactiveSystem<GameEntity>
         try
         {
             returnCode = await _context.networkService.instance.SignIn(email, userName, password);
-
         }
         catch (Exception)
         {
-            signInErrorMessage.ReplaceText("网络错误");
             return;
         }
 
@@ -67,7 +65,7 @@ public class SignInSystem : ReactiveSystem<GameEntity>
                 signInErrorMessage.ReplaceText("该邮箱已被注册");
                 return;
             case 406:
-                signInErrorMessage.ReplaceText("网络错误");
+                signInErrorMessage.ReplaceText("用户名已存在");
                 return;
             default:
                 return;

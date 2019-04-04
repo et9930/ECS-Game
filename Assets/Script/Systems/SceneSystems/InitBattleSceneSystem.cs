@@ -22,11 +22,10 @@ public class InitBattleSceneSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
-        _context.ReplaceCurrentPlayerId(100);
         _context.ReplaceCurrentMapName("ProvingGroundMap");
-        _context.CreateEntity().ReplaceLoadPlayer(100, "NamikazeMinato");
-        _context.CreateEntity().ReplaceLoadPlayer(101, "UchihaMadara");
+        _context.CreateEntity().ReplaceLoadPlayer("100", "NamikazeMinato");
+        _context.CreateEntity().ReplaceLoadPlayer("101", "UchihaMadara");
         _context.sceneService.instance.MainCameraPosition =
-            _context.mapConfig.list.list[_context.currentMapName.value].CameraPosition[0];
+            _context.mapConfig.list[_context.currentMapName.value].CameraPosition[0];
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 
 [DataContract]
-public class NetworkUserData
+public class SCUserData
 {
     [DataMember(Name = "username")]      public string username;
     [DataMember(Name = "head_shot")]     public string headShot;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using Entitas;
@@ -43,7 +42,7 @@ public class ThrowWeaponSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                     weapon.ReplaceTag("Weapon");
                     weapon.ReplaceBoundingBox(0,0,0,0,0,0);
                     weapon.ReplaceSprite("Image/Weapon/" + e.currentWeapon.value);
-                    weapon.ReplaceId(400 + _context.throwWeaponNumber.value);
+                    weapon.ReplaceId((400 + _context.throwWeaponNumber.value).ToString());
 //                    weapon.ReplaceVelocity(new Vector3(, 0, 0));
                     weapon.ReplaceVelocity(new Vector3(e.toward.left ? -1 : 1, 0, 0) * weaponConfig.throwingWeaponFlaySpeed);
                     weapon.ReplaceRotation(Vector3.Zero);

@@ -24,7 +24,7 @@ public class DisplayHierarchySystem : ReactiveSystem<GameEntity>
     {
         if(!_context.hasCurrentMapName) return;
 
-        var hierarchyConfig = _context.mapConfig.list.list[_context.currentMapName.value].CharacterDisplayHierarchy;
+        var hierarchyConfig = _context.mapConfig.list[_context.currentMapName.value].CharacterDisplayHierarchy;
         foreach (var e in entities)
         {
             var lastHierarchy = 1.0f;

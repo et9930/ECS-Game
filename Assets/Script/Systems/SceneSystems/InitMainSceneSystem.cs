@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Entitas;
 
 public class InitMainSceneSystem : ReactiveSystem<GameEntity>
@@ -17,11 +18,27 @@ public class InitMainSceneSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasCurrentScene && entity.currentScene.name == "BattleScene";
+        return entity.hasCurrentScene && entity.currentScene.name == "MainScene";
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
-        throw new System.NotImplementedException();
+        foreach (var e in entities)
+        {
+            GetUserData();
+        }
+    }
+
+    private async void GetUserData()
+    {
+        var getUserData = new GetUserData()
+        {
+            userId = _context.currentPlayerId.value
+        };
+        var payload = Utilities.ToJson(getUserData);
+        var rpcPayload = await _context.networkService.instance.RpcCall("rpc_get_user_data", payload);
+        if (rpcPayload == null) return;
+        var userData = Utilities.ParseJson<SCUserData>(rpcPayload);
+        _context.ReplaceCurrentPlayerUserData(userData);
     }
 }

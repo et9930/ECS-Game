@@ -11,7 +11,7 @@ public partial class GameEntity {
     public LoadPlayerComponent loadPlayer { get { return (LoadPlayerComponent)GetComponent(GameComponentsLookup.LoadPlayer); } }
     public bool hasLoadPlayer { get { return HasComponent(GameComponentsLookup.LoadPlayer); } }
 
-    public void AddLoadPlayer(int newPlayerId, string newPlayerName) {
+    public void AddLoadPlayer(string newPlayerId, string newPlayerName) {
         var index = GameComponentsLookup.LoadPlayer;
         var component = (LoadPlayerComponent)CreateComponent(index, typeof(LoadPlayerComponent));
         component.playerId = newPlayerId;
@@ -19,7 +19,7 @@ public partial class GameEntity {
         AddComponent(index, component);
     }
 
-    public void ReplaceLoadPlayer(int newPlayerId, string newPlayerName) {
+    public void ReplaceLoadPlayer(string newPlayerId, string newPlayerName) {
         var index = GameComponentsLookup.LoadPlayer;
         var component = (LoadPlayerComponent)CreateComponent(index, typeof(LoadPlayerComponent));
         component.playerId = newPlayerId;

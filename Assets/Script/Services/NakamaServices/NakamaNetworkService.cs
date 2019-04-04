@@ -6,14 +6,23 @@ public class NakamaNetworkService : INetworkService
 {
     private IClient _client;
     private ISession _session;
+    private const string _serverKey = "NarutoKey";
+    private const string _httpKey = "NarutoKey";
+    private readonly GameContext _context;
+
     public string _serverIp { get; set; }
     public int _serverPort { get; set; }
+
+    public NakamaNetworkService()
+    {
+        _context = Contexts.sharedInstance.game;
+    }
 
     public void InitializeNetworkService(string serverIp, int serverPort)
     {
         _serverIp = serverIp;
         _serverPort = serverPort;
-        _client = new Client("NarutoKey", serverIp, serverPort);
+        _client = new Client(_serverKey, serverIp, serverPort);
     }
 
     public async Task<int> Login(string email, string password)
@@ -36,7 +45,7 @@ public class NakamaNetworkService : INetworkService
                     return 404;
             }
         }
-
+        _context.ReplaceCurrentPlayerId(_session.UserId);
         return 400;
     }
 
@@ -65,33 +74,27 @@ public class NakamaNetworkService : INetworkService
         return 400;
     }
 
-    public async Task<int> Ping()
+    public async Task<string> RpcCall(string rpcName, string payload = null, bool unauthorized = false)
     {
+        string rpcPayload;
         try
         {
-            await _client.RpcAsync("NarutoKey", "rpc_ping");
+            IApiRpc apiRpc = null;
+            if (unauthorized)
+            {
+                apiRpc = await _client.RpcAsync(_httpKey, rpcName, payload);
+            }
+            else
+            {
+                apiRpc = await _client.RpcAsync(_session, rpcName, payload);
+            }
+            rpcPayload = apiRpc.Payload;
         }
         catch (Exception)
-        {
-            return 407;
-        }
-
-        return 400;
-    }
-
-    public async Task<string> RpcCall(string rpcName, string payload)
-    {
-        string returnString;
-        try
-        {
-            var apiRpc = await _client.RpcAsync(_session, rpcName, payload);
-            returnString = apiRpc.Payload;
-        }
-        catch (Exception )
         {
             return null;
         }
 
-        return returnString;
+        return rpcPayload;
     }
 }

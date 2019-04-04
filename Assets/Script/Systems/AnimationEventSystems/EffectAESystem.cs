@@ -20,7 +20,7 @@ public class EffectAESystem : IInitializeSystem
         animationDic["attack_1"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
 
         var frameDic = animationDic["attack_1"].frameDic;
-        frameDic[_context.imageAsset.imageInfos.infos["Effect"].animationInfos["attack_1"].maxFrame] = OnEffectAttack1Over;
+        frameDic[_context.imageAsset.infos["Effect"].animationInfos["attack_1"].maxFrame] = OnEffectAttack1Over;
     }
 
     private void OnEffectAttack1Over(GameEntity entity)

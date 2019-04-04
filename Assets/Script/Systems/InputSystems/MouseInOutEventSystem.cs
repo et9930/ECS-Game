@@ -22,7 +22,6 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context.mouseInOutEventFunc.inDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseIn;
         _context.mouseInOutEventFunc.inDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseIn;
         _context.mouseInOutEventFunc.inDic["SelectTarget"] = SelectTargetOnMouseIn;
-        _context.mouseInOutEventFunc.inDic["UserInfo"] = UserInfoOnMouseIn;
 
         _context.mouseInOutEventFunc.outDic["HealthValueTxt"] = HealthValueTxtOnMouseOut;
         _context.mouseInOutEventFunc.outDic["ChaKuRaValueImg"] = ChaKuRaValueImgOnMouseOut;
@@ -30,7 +29,6 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context.mouseInOutEventFunc.outDic["NinjutsuMenuItem"] = NinjutsuMenuItemOnMouseOut;
         _context.mouseInOutEventFunc.outDic["NinjaItemMenuItem"] = NinjaItemMenuItemOnMouseOut;
         _context.mouseInOutEventFunc.outDic["SelectTarget"] = SelectTargetOnMouseOut;
-        _context.mouseInOutEventFunc.outDic["UserInfo"] = UserInfoOnMouseOut;
 
     }
 
@@ -195,13 +193,4 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         }
     }
 
-    private void UserInfoOnMouseIn(GameEntity entity)
-    {
-        entity.ReplaceUiMoveAction(entity.name.text, false, new Vector2(-730, 390), 0.5f);
-    }
-
-    private void UserInfoOnMouseOut(GameEntity entity)
-    {
-        entity.ReplaceUiMoveAction(entity.name.text, false, new Vector2(-1095, 390), 0.5f);
-    }
 }

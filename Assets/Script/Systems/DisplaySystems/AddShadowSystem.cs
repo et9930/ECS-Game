@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Numerics;
 using Entitas;
 
 public class AddShadowSystem : ReactiveSystem<GameEntity>

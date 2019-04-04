@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Entitas;
 
 public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
@@ -14,7 +13,7 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
     public void Initialize()
     {
         _context.physicsService.instance.InitializePhysicsShapeData(_context);
-        _context.ReplaceCurrentCollisionEntity(new Dictionary<int, List<int>>());
+        _context.ReplaceCurrentCollisionEntity(new Dictionary<string, List<string>>());
     }
 
     public void Execute()
@@ -29,7 +28,7 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
 
                 if (!_context.currentCollisionEntity.dic.ContainsKey(firstEntity.id.value))
                 {
-                    _context.currentCollisionEntity.dic[firstEntity.id.value] = new List<int>();
+                    _context.currentCollisionEntity.dic[firstEntity.id.value] = new List<string>();
                 }
 
                 foreach (var secondEntity in _context.GetEntitiesWithTag(collisionPair.second))

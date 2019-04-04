@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Json;
-using System.Text;
+﻿using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
 public class LoadGameConfigSystem : IInitializeSystem
 {
@@ -19,7 +14,7 @@ public class LoadGameConfigSystem : IInitializeSystem
     {
         // Animation Image Info
         var strImageInfo = _context.loadConfigService.instance.LoadJsonFile("Json/AnimationInfos");
-        _context.ReplaceImageAsset(Utilities.ParseJson<ImageInfos>(strImageInfo));
+        _context.ReplaceImageAsset(Utilities.ParseJson<ImageInfos>(strImageInfo).infos);
         
         // UI Layer Config
         var strUiLayer = _context.loadConfigService.instance.LoadJsonFile("Json/UILayer");
@@ -53,7 +48,7 @@ public class LoadGameConfigSystem : IInitializeSystem
         // Map Config
         var strMapConfig = _context.loadConfigService.instance.LoadJsonFile("Json/MapConfig");
         var tempMapConfig = Utilities.ParseJson<MapConfigList>(strMapConfig);
-        _context.ReplaceMapConfig(tempMapConfig);
+        _context.ReplaceMapConfig(tempMapConfig.list);
 
         // Ninjutsu Attributes
         var strNinjutsuAttributes = _context.loadConfigService.instance.LoadJsonFile("Json/NinjutsuAttributes");

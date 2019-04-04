@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using Entitas;
+﻿using Entitas;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 

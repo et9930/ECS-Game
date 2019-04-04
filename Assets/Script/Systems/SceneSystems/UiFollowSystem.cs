@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 using Entitas;
 
 public class UiFollowSystem : IExecuteSystem

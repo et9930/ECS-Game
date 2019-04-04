@@ -12,7 +12,7 @@ public partial class GameContext {
     public CurrentPlayerIdComponent currentPlayerId { get { return currentPlayerIdEntity.currentPlayerId; } }
     public bool hasCurrentPlayerId { get { return currentPlayerIdEntity != null; } }
 
-    public GameEntity SetCurrentPlayerId(int newValue) {
+    public GameEntity SetCurrentPlayerId(string newValue) {
         if (hasCurrentPlayerId) {
             throw new Entitas.EntitasException("Could not set CurrentPlayerId!\n" + this + " already has an entity with CurrentPlayerIdComponent!",
                 "You should check if the context already has a currentPlayerIdEntity before setting it or use context.ReplaceCurrentPlayerId().");
@@ -22,7 +22,7 @@ public partial class GameContext {
         return entity;
     }
 
-    public void ReplaceCurrentPlayerId(int newValue) {
+    public void ReplaceCurrentPlayerId(string newValue) {
         var entity = currentPlayerIdEntity;
         if (entity == null) {
             entity = SetCurrentPlayerId(newValue);
@@ -49,14 +49,14 @@ public partial class GameEntity {
     public CurrentPlayerIdComponent currentPlayerId { get { return (CurrentPlayerIdComponent)GetComponent(GameComponentsLookup.CurrentPlayerId); } }
     public bool hasCurrentPlayerId { get { return HasComponent(GameComponentsLookup.CurrentPlayerId); } }
 
-    public void AddCurrentPlayerId(int newValue) {
+    public void AddCurrentPlayerId(string newValue) {
         var index = GameComponentsLookup.CurrentPlayerId;
         var component = (CurrentPlayerIdComponent)CreateComponent(index, typeof(CurrentPlayerIdComponent));
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceCurrentPlayerId(int newValue) {
+    public void ReplaceCurrentPlayerId(string newValue) {
         var index = GameComponentsLookup.CurrentPlayerId;
         var component = (CurrentPlayerIdComponent)CreateComponent(index, typeof(CurrentPlayerIdComponent));
         component.value = newValue;

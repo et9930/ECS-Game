@@ -1,5 +1,4 @@
-﻿using System;
-using Entitas;
+﻿using Entitas;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +14,7 @@ public class PlayerHeadShotListener : MonoBehaviour, IEventListener, IAnyLoadPla
         _entity.AddAnyLoadPlayerListener(this);
     }
 
-    public void OnAnyLoadPlayer(GameEntity entity, int playerId, string playerName)
+    public void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName)
     {
         if (playerId != _context.currentPlayerId.value) return;
 

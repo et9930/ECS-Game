@@ -1,5 +1,4 @@
 ﻿using System.Numerics;
-using Entitas;
 
 public interface IViewService
 {

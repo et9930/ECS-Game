@@ -8,7 +8,7 @@ public class UnityPhysicsService : IPhysicsService
     public void InitializePhysicsShapeData(GameContext context)
     {
         _shapeDic = new Dictionary<string, Dictionary<string, List<List<Vector2>>>>();
-        foreach (var characterInfo in context.imageAsset.imageInfos.infos)
+        foreach (var characterInfo in context.imageAsset.infos)
         {
             _shapeDic[characterInfo.Key] = new Dictionary<string, List<List<Vector2>>>();
             foreach (var animationInfo in characterInfo.Value.animationInfos)

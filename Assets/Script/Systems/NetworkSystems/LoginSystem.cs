@@ -26,6 +26,7 @@ public class LoginSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             Login(e.login.email, e.login.password);
+            e.isDestroy = true;
         }
     }
 
@@ -43,11 +44,9 @@ public class LoginSystem : ReactiveSystem<GameEntity>
         try
         {
             returnCode = await _context.networkService.instance.Login(email, password);
-
         }
         catch (Exception)
         {
-            loginErrorMessage.ReplaceText("网络错误");
             return;
         }
 
@@ -66,7 +65,7 @@ public class LoginSystem : ReactiveSystem<GameEntity>
                 loginErrorMessage.ReplaceText("密码错误");
                 return;
             case 404:
-                loginErrorMessage.ReplaceText("网络错误");
+                loginErrorMessage.ReplaceText("服务器错误");
                 return;
             default:
                 return;

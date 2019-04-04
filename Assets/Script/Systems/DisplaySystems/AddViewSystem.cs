@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Entitas;
-using UnityEngine;
 
 
 public class AddViewSystem : ReactiveSystem<GameEntity>, IInitializeSystem

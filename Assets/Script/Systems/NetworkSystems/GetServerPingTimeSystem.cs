@@ -1,5 +1,4 @@
-﻿using System;
-using Entitas;
+﻿using Entitas;
 
 public class GetServerPingTimeSystem : IInitializeSystem, IExecuteSystem
 {
@@ -26,20 +25,35 @@ public class GetServerPingTimeSystem : IInitializeSystem, IExecuteSystem
 
     private async void GetPingTime()
     {
-        var sendTimeStamp = DateTime.Now.Millisecond;
-        var returnCode = await _context.networkService.instance.Ping();
-        switch (returnCode)
+        var sendTimeStamp = Utilities.GetTimeStamp();
+        var payload = await _context.networkService.instance.RpcCall("rpc_ping", null, true);
+        if (payload == null)
         {
-            case 400:
-                var receiveTimeStamp = DateTime.Now.Millisecond;
-                var pingTime = receiveTimeStamp - sendTimeStamp;
-                _context.ReplaceCurrentPingTime(pingTime);
-                return;
-            case 407:
-                // 丢包
-                return;
-            default:
-                return;
+            foreach (var e in _context.GetEntitiesWithName("NormalNetworkIcon"))
+            {
+                e.ReplaceActive(false);
+            }
+            foreach (var e in _context.GetEntitiesWithName("ErrorNetworkIcon"))
+            {
+                e.ReplaceActive(true);
+            }
+            _context.ReplaceCurrentPingTime(999);
+        }
+        else
+        {
+            foreach (var e in _context.GetEntitiesWithName("NormalNetworkIcon"))
+            {
+                e.ReplaceActive(true);
+            }
+            foreach (var e in _context.GetEntitiesWithName("ErrorNetworkIcon"))
+            {
+                e.ReplaceActive(false);
+            }
+            var scPing = Utilities.ParseJson<SCPing>(payload);
+            //        _context.CreateEntity().ReplaceDebugMessage(sendTimeStamp.ToString());
+            //        _context.CreateEntity().ReplaceDebugMessage(scPing.timeStamp.ToString());
+            var deltaTime = (int)((scPing.timeStamp - sendTimeStamp) * 2);
+            _context.ReplaceCurrentPingTime(deltaTime);
         }
     }
 }
