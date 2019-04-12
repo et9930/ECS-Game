@@ -57,6 +57,9 @@
         //  physical systems
         Add(new PhysicalSystems(contexts));
 
+        Add(new OnGameMatchedSystem(contexts));
+        Add(new CheckJoinNumberSystem(contexts));
+
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
         Add(new UiFollowSystem(contexts));

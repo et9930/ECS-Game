@@ -21,6 +21,10 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["SignInButton"] = OnSignInButtonClick;
         _context.clickEventFunc.clickDic["SignInConfirmButton"] = OnSignInConfirmButtonClick;
         _context.clickEventFunc.clickDic["SignInCancelButton"] = OnSignInCancelButtonClick;
+        _context.clickEventFunc.clickDic["MainUIOperationSearchBattle"] = OnMainUIOperationSearchBattleClick;
+        _context.clickEventFunc.clickDic["SearchBattleWindowMask"] = OnSearchBattleWindowMaskClick;
+        _context.clickEventFunc.clickDic["StartSearchButton"] = OnStartSearchButtonClick;
+        _context.clickEventFunc.clickDic["StopSearchButton"] = OnStopSearchButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -180,5 +184,74 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             e.ReplaceActive(false);
         }
+    }
+
+    private void OnMainUIOperationSearchBattleClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("SearchBattleWindow"))
+        {
+            e.ReplaceActive(true);
+        }
+    }
+
+    private void OnSearchBattleWindowMaskClick(GameEntity entity)
+    {
+        if (_context.isSearchingBattle) return;
+        foreach (var e in _context.GetEntitiesWithName("SearchBattleWindow"))
+        {
+            e.ReplaceActive(false);
+        }
+    }
+
+    private async void OnStartSearchButtonClick(GameEntity entity)
+    {
+        var matchType = _context.sceneService.instance.GetDropdownValue("MatchTypeDropdown");
+        var playerCount = (int)Math.Pow(2, 1 + _context.sceneService.instance.GetDropdownValue("MatchScaleDropdown"));
+
+        var result = await _context.networkService.instance.StartMatchMaker(matchType, playerCount);
+        if (!result) return;
+        foreach (var e in _context.GetEntitiesWithName("StartSearchButton"))
+        {
+            e.ReplaceActive(false);
+        }
+        foreach (var e in _context.GetEntitiesWithName("StopSearchButton"))
+        {
+            e.ReplaceActive(true);
+        }
+
+        foreach (var e in _context.GetEntitiesWithName("WaitOtherPlayerJoin"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        _context.isSearchingBattle = true;
+
+        _context.sceneService.instance.SetSelectableInteractable("MatchScaleDropdown", false);
+        _context.sceneService.instance.SetSelectableInteractable("MatchTypeDropdown", false);
+
+    }
+
+    private async void OnStopSearchButtonClick(GameEntity entity)
+    {
+        var result = await _context.networkService.instance.StopMatchMaker();
+        if (!result) return;
+        foreach (var e in _context.GetEntitiesWithName("StartSearchButton"))
+        {
+            e.ReplaceActive(true);
+        }
+        foreach (var e in _context.GetEntitiesWithName("StopSearchButton"))
+        {
+            e.ReplaceActive(false);
+        }
+        foreach (var e in _context.GetEntitiesWithName("WaitOtherPlayerJoin"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        _context.isSearchingBattle = false;
+
+        _context.sceneService.instance.SetSelectableInteractable("MatchScaleDropdown", true);
+        _context.sceneService.instance.SetSelectableInteractable("MatchTypeDropdown", true);
+
     }
 }

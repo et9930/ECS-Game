@@ -1,11 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Nakama;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class NakamaNetworkService : INetworkService
 {
     private IClient _client;
+    private ISocket _socket;
     private ISession _session;
+    private IMatchmakerTicket _matchmakerTicket;
+    private IMatchmakerMatched _matchmakerMatched;
+    private IMatch _match;
     private const string _serverKey = "NarutoKey";
     private const string _httpKey = "NarutoKey";
     private readonly GameContext _context;
@@ -46,9 +55,42 @@ public class NakamaNetworkService : INetworkService
             }
         }
         _context.ReplaceCurrentPlayerId(_session.UserId);
+
+        // create socket
+        _socket = _client.CreateWebSocket();
+        await _socket.ConnectAsync(_session);
+
+        // set socket event
+        _socket.OnMatchmakerMatched += OnMatchmakerMatched;
+        _socket.OnMatchPresence += OnMatchPresence;
+        _socket.OnMatchState += OnMatchState;
+        _socket.OnNotification += OnNotification;
+
         return 400;
     }
 
+    private void OnNotification(object sender, IApiNotification notification)
+    {
+        
+    }
+
+    private void OnMatchState(object sender, IMatchState state)
+    {
+        var payload = System.Text.Encoding.UTF8.GetString(state.State);
+        _context.CreateEntity().ReplaceMatchData(state.OpCode, payload);
+    }
+
+    private void OnMatchPresence(object sender, IMatchPresenceEvent presence)
+    {
+        _context.ReplaceMatchJoinedNumber(_context.matchJoinedNumber.value + presence.Joins.Count() - presence.Leaves.Count());
+    }
+
+    private void OnMatchmakerMatched(object sender, IMatchmakerMatched matched)
+    {
+        _matchmakerMatched = matched;
+        _context.isGameMatched = true;
+    }
+    
     public async Task<int> SignIn(string email, string username, string password)
     {
         try
@@ -96,5 +138,89 @@ public class NakamaNetworkService : INetworkService
         }
 
         return rpcPayload;
+    }
+
+    public async Task<bool> StartMatchMaker(int matchType, int playerCount)
+    {
+        var query = "";
+        var minCount = playerCount;
+        var maxCount = playerCount;
+        var numericProperties = new Dictionary<string, double>() {
+            {"matchType", matchType}
+        };
+
+        switch (matchType)
+        {
+            case 0:
+                query = "*";
+                break;
+            case 1:
+                query = "-properties.matchType:2 -properties.matchType:3";
+                break;
+            case 2:
+                query = "-properties.matchType:1 -properties.matchType:3";
+                break;
+            case 3:
+                query = "-properties.matchType:1 -properties.matchType:2";
+                break;
+            default:
+                query = "*";
+                break;
+        }
+
+        try
+        {
+            _matchmakerTicket = await _socket.AddMatchmakerAsync(query, minCount, maxCount, null, numericProperties);
+            
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public async Task<bool> StopMatchMaker()
+    {
+        try
+        {
+            await _socket.RemoveMatchmakerAsync(_matchmakerTicket);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public async Task<bool> JoinMatch()
+    {
+        try
+        {
+            _match = await _socket.JoinMatchAsync(_matchmakerMatched);
+            _context.ReplaceMatchJoinedNumber(_context.matchJoinedNumber.value + _match.Size);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public async Task<bool> SendMatchData(long dataCode, string payload)
+    {
+        try
+        {
+            await _socket.SendMatchStateAsync(_match.Id, dataCode, payload);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+
+        return true;
     }
 }

@@ -31,7 +31,7 @@ public class GameLauncher : MonoBehaviour
             .Add(new GameWorld(contexts, services));
         _systems.Initialize();
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR && (!ENTITAS_DISABLE_DEEP_PROFILING || !ENTITAS_DISABLE_VISUAL_DEBUGGING)
         DontDestroyOnLoad(GameObject.Find("Systems"));
 #endif
     }

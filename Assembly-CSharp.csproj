@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_15;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENTITAS_DISABLE_DEEP_PROFILING</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_15;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ENTITAS_DISABLE_DEEP_PROFILING;ENTITAS_DISABLE_VISUAL_DEBUGGING</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -109,6 +109,7 @@
     <Compile Include="Assets\Script\Components\MakingChaKuRaComponent.cs" />
     <Compile Include="Assets\Script\Components\MakingYinComponent.cs" />
     <Compile Include="Assets\Script\Components\MassComponent.cs" />
+    <Compile Include="Assets\Script\Components\MatchDataComponent.cs" />
     <Compile Include="Assets\Script\Components\MaxSpeedComponent.cs" />
     <Compile Include="Assets\Script\Components\MinatoHiRaiShinMaKinGuComponent.cs" />
     <Compile Include="Assets\Script\Components\MouseDownComponent.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentFpsComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentInNumberComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentMapNameComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\CurrentMatchDataComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPingTimeComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPlayerIdComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\CurrentPlayerUserDataComponent.cs" />
@@ -193,6 +195,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\SceneConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\UiConfigComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\UILayerConfigComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\GameMatchedComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\JumpAngleComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\JumpForceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\JumpForceIncreasingComponent.cs" />
@@ -208,6 +211,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\LoginComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MainCameraMovingComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MakeYinTimeComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\MatchJoinedNumberComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\MovingUiListComponent.cs" />
@@ -226,6 +230,7 @@
     <Compile Include="Assets\Script\Components\UniqueComponents\QuickActionMenuOnComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\RightMouseComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\RotatingUiListComponent.cs" />
+    <Compile Include="Assets\Script\Components\UniqueComponents\SearchingBattleComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\CoroutineServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\KeyInputServiceComponent.cs" />
     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\LoadConfigServiceComponent.cs" />
@@ -248,6 +253,7 @@
     <Compile Include="Assets\Script\Components\VelocityComponent.cs" />
     <Compile Include="Assets\Script\Components\ViewComponent.cs" />
     <Compile Include="Assets\Script\Components\YinListComponent.cs" />
+    <Compile Include="Assets\Script\Enum\Enum.cs" />
     <Compile Include="Assets\Script\GameLauncher.cs" />
     <Compile Include="Assets\Script\Generated\Contexts.cs" />
     <Compile Include="Assets\Script\Generated\Events\Components\ActiveListenerComponent.cs" />
@@ -416,6 +422,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentFpsComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentInNumberComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentMapNameComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentMatchDataComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPingTimeComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPlayerIdComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentPlayerUserDataComponent.cs" />
@@ -429,6 +436,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameFadingUiListComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameFinalPerceptionLevelComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameFrictionComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameGameMatchedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameGravityComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameHealthCurrentComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameHealthRecoverableComponent.cs" />
@@ -474,6 +482,8 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameMakingYinComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMapConfigComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMassComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMatchDataComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameMatchJoinedNumberComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMaxSpeedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMinatoHiRaiShinMaKinGuComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameMouseCurrentPositionComponent.cs" />
@@ -542,6 +552,7 @@
     <Compile Include="Assets\Script\Generated\Game\Components\GameSceneServiceComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameScrollBarValueComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameScrollBarValueListenerComponent.cs" />
+    <Compile Include="Assets\Script\Generated\Game\Components\GameSearchingBattleComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectedComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetComponent.cs" />
     <Compile Include="Assets\Script\Generated\Game\Components\GameSelectTargetDistanceComponent.cs" />
@@ -673,6 +684,7 @@
     <Compile Include="Assets\Script\Structs\ClientOnly\UiLayerInfos.cs" />
     <Compile Include="Assets\Script\Structs\ClientToServer\CSGetUserData.cs" />
     <Compile Include="Assets\Script\Structs\ClientToServer\ICSMessage.cs" />
+    <Compile Include="Assets\Script\Structs\ServerToClient\SCMatchData.cs" />
     <Compile Include="Assets\Script\Structs\ServerToClient\SCPing.cs" />
     <Compile Include="Assets\Script\Structs\ServerToClient\SCUserData.cs" />
     <Compile Include="Assets\Script\Systems\AnimationEventSystems\AnimationEventSystems.cs" />
@@ -699,6 +711,8 @@
     <Compile Include="Assets\Script\Systems\InputSystems\MouseInOutEventSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
     <Compile Include="Assets\Script\Systems\LogSystems\ErrorMessageSystem.cs" />
+    <Compile Include="Assets\Script\Systems\MatchGameSystems\CheckJoinNumberSystem.cs" />
+    <Compile Include="Assets\Script\Systems\MatchGameSystems\OnGameMatchedSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\GetServerPingTimeSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\InitializeNetworkSystem.cs" />
     <Compile Include="Assets\Script\Systems\NetworkSystems\LoginSystem.cs" />

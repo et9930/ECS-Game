@@ -213,6 +213,37 @@ public class UnitySceneService : ISceneService
         toggle.isOn = state;
     }
 
+    public int GetDropdownValue(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return -1;
+        var dropdown = ui.GetComponent<Dropdown>();
+        if (dropdown == null) return -1;
+        return dropdown.value;
+    }
+
+    public void SetDropdownValue(string uiName, int value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var dropdown = ui.GetComponent<Dropdown>();
+        if (dropdown == null) return;
+
+        dropdown.value = value;
+    }
+
+    public void SetSelectableInteractable(string uiName, bool value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var selectableUis = ui.GetComponents<Selectable>();
+        if (selectableUis.Length == 0) return;
+        foreach (var selectableUi in selectableUis)
+        {
+            selectableUi.interactable = value;
+        }
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);

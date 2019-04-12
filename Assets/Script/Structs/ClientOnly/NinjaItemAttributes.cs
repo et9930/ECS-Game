@@ -72,30 +72,3 @@ public class NinjaItem
     public float manualTriggerMaxDistance;
 
 }
-
-public enum NinjaItemType
-{
-    Functional,
-    Weapon
-}
-
-public enum NinjaItemFunction
-{
-    Health,
-    ChaKuRa,
-    TaiRyuKu
-}
-
-public enum NinjaItemWeaponType
-{
-    Throwing,
-    HandHeld,
-    Placing,
-    Explode
-}
-
-public enum NinjaItemSpecialEffect
-{
-    MinatoHiRaiShinMaKinGu,
-
-}
