@@ -13,7 +13,7 @@ public interface INetworkService
     //      405 sign_in_email_authorized
     //      406 sign_in_username_exist
     //  notification
-    //      
+    //      501 ready_state
 
     string _serverIp { get; set; }
     int _serverPort { get; set; }

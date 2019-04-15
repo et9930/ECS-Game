@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -71,7 +72,22 @@ public class NakamaNetworkService : INetworkService
 
     private void OnNotification(object sender, IApiNotification notification)
     {
-        
+        switch (notification.Code)
+        {
+            case 501:
+                var matchReadyState = Utilities.ParseJson<SCReadyState>(notification.Content);
+                if (matchReadyState.customMatchId == _context.currentMatchData.value.customMatchId)
+                {
+                    _context.CreateEntity().ReplaceMatchReadyState(matchReadyState);
+                }
+                break;
+            case 502:
+                var allocationNinja = Utilities.ParseJson<SCAllocationNinja>(notification.Content);
+                _context.ReplaceAllocationNinjaNotification(allocationNinja);
+                break;
+            default:
+                break;
+        }
     }
 
     private void OnMatchState(object sender, IMatchState state)
@@ -142,13 +158,12 @@ public class NakamaNetworkService : INetworkService
 
     public async Task<bool> StartMatchMaker(int matchType, int playerCount)
     {
-        var query = "";
         var minCount = playerCount;
         var maxCount = playerCount;
         var numericProperties = new Dictionary<string, double>() {
             {"matchType", matchType}
         };
-
+        string query;
         switch (matchType)
         {
             case 0:

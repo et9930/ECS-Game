@@ -605,6 +605,58 @@
       "Listener": [
         "Active"
       ]
+    },
+    {
+      "ComponentName": "ChooseNinjaWindow",
+      "Listener": [
+        "Active",
+        "ChooseNinjaWindow"
+      ]
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowMask",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowConfirmButton",
+      "Listener": [
+        "Active"
+      ],
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowNinjaList",
+      "saveEntity": true
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowFriendlyList",
+      "saveEntity": true
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowEnemyList",
+      "saveEntity": true
+    },
+    {
+      "ComponentName": "ChooseNinjaItem",
+      "Listener": [
+        "ChooseNinjaItem"
+      ]
+    },
+    {
+      "ComponentName": "PlayerChooseItem",
+      "Listener": [
+        "PlayerChooseItem"
+      ]
+    },
+    {
+      "ComponentName": "ChooseNinjaWindowWaitOtherPlayers",
+      "Listener": [
+        "Active"
+      ]
     }
   ]
 }

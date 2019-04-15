@@ -3,6 +3,7 @@
     {
       "Key": "ProvingGroundMap",
       "Value": {
+        "Name": "演习场", 
         "CameraMinX": -50,
         "CameraMaxX": 50,
         "CharacterMinX": -58.5,

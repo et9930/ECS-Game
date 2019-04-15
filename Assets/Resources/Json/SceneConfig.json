@@ -31,9 +31,8 @@
       "Value": {
         "SceneName": "MainScene",
         "Uis": [
-          "UserInfo",
           "MainUI",
-		  "SearchBattleWindow"
+          "UserInfo"
         ]
       }
     },

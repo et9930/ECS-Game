@@ -31,7 +31,7 @@ public class InitMainSceneSystem : ReactiveSystem<GameEntity>
 
     private async void GetUserData()
     {
-        var getUserData = new GetDataByUserId()
+        var getUserData = new CSGetDataByUserId()
         {
             userId = _context.currentPlayerId.value
         };

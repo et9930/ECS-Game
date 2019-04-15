@@ -1,4 +1,6 @@
-﻿public class GameWorld : Feature
+﻿using System.Runtime.Remoting.Messaging;
+
+public class GameWorld : Feature
 {
     public GameWorld(Contexts contexts, Services services) : base("Game World")
     {
@@ -59,6 +61,8 @@
 
         Add(new OnGameMatchedSystem(contexts));
         Add(new CheckJoinNumberSystem(contexts));
+        Add(new PlayerReadyStateSystem(contexts));
+        Add(new SwitchChooseNinjaWindowSystem(contexts));
 
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));

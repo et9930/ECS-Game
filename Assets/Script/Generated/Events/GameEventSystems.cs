@@ -10,8 +10,10 @@ public sealed class GameEventSystems : Feature {
 
     public GameEventSystems(Contexts contexts) {
         Add(new ActiveEventSystem(contexts)); // priority: 0
+        Add(new AnyAllocationNinjaEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaSlewRateEventSystem(contexts)); // priority: 0
+        Add(new ChooseNinjaItemInfoEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentFpsEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentPingTimeEventSystem(contexts)); // priority: 0
         Add(new AnyCurrentPlayerUserDataEventSystem(contexts)); // priority: 0
@@ -33,6 +35,7 @@ public sealed class GameEventSystems : Feature {
         Add(new PerceptionHTCItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionAccurateItemEventSystem(contexts)); // priority: 0
         Add(new PerceptionPositionExistItemEventSystem(contexts)); // priority: 0
+        Add(new AnyPlayerChooseNinjaInfoEventSystem(contexts)); // priority: 0
         Add(new AnyPointNinjaItemMenuItemEventSystem(contexts)); // priority: 0
         Add(new AnyPointNinjutsuMenuItemEventSystem(contexts)); // priority: 0
         Add(new PositionEventSystem(contexts)); // priority: 0

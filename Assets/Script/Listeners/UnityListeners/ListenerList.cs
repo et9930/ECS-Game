@@ -52,6 +52,11 @@ public static class ListenerList
         { "SelectTarget", typeof(SelectTargetListener) },
 
         { "CurrentPlayerUserData", typeof(CurrentPlayerUserDataListener) },
+
+        { "ChooseNinjaWindow", typeof(ChooseNinjaWindowListener) },
+        { "ChooseNinjaItem", typeof(ChooseNinjaItemListener) },
+        { "PlayerChooseItem", typeof(PlayerChooseItemListener) },
+
     };
 }
 

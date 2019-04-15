@@ -25,6 +25,8 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["SearchBattleWindowMask"] = OnSearchBattleWindowMaskClick;
         _context.clickEventFunc.clickDic["StartSearchButton"] = OnStartSearchButtonClick;
         _context.clickEventFunc.clickDic["StopSearchButton"] = OnStopSearchButtonClick;
+        _context.clickEventFunc.clickDic["ReadyMatchButton"] = OnReadyMatchButtonClick;
+        _context.clickEventFunc.clickDic["CancelMatchButton"] = OnCancelMatchButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -188,10 +190,9 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     private void OnMainUIOperationSearchBattleClick(GameEntity entity)
     {
-        foreach (var e in _context.GetEntitiesWithName("SearchBattleWindow"))
-        {
-            e.ReplaceActive(true);
-        }
+        var e = _context.CreateEntity();
+        e.ReplaceUiOpen("SearchBattleWindow");
+        e.ReplaceName("SearchBattleWindow");
     }
 
     private void OnSearchBattleWindowMaskClick(GameEntity entity)
@@ -199,7 +200,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         if (_context.isSearchingBattle) return;
         foreach (var e in _context.GetEntitiesWithName("SearchBattleWindow"))
         {
-            e.ReplaceActive(false);
+            e.isUiClose = true;
         }
     }
 
@@ -253,5 +254,39 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.sceneService.instance.SetSelectableInteractable("MatchScaleDropdown", true);
         _context.sceneService.instance.SetSelectableInteractable("MatchTypeDropdown", true);
 
+    }
+
+    private async void OnReadyMatchButtonClick(GameEntity entity)
+    {
+        var readyMatch = new CSReadyMatch
+        {
+            ready = true
+        };
+        var strReadyMatch = Utilities.ToJson(readyMatch);
+        var rpcPayload = await _context.networkService.instance.RpcCall("rpc_ready_match", strReadyMatch);
+        if (rpcPayload == null) return;
+
+        foreach (var e in _context.GetEntitiesWithName("WaitOtherPlayerReady"))
+        {
+            e.ReplaceActive(true);
+        }
+        foreach (var e in _context.GetEntitiesWithName("ReadyMatchButton"))
+        {
+            e.ReplaceActive(false);
+        }
+        foreach (var e in _context.GetEntitiesWithName("CancelMatchButton"))
+        {
+            e.ReplaceActive(false);
+        }
+    }
+
+    private async void OnCancelMatchButtonClick(GameEntity entity)
+    {
+        var readyMatch = new CSReadyMatch
+        {
+            ready = false
+        };
+        var strReadyMatch = Utilities.ToJson(readyMatch);
+        await _context.networkService.instance.RpcCall("rpc_ready_match", strReadyMatch);
     }
 }
