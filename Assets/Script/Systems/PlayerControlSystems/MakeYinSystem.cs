@@ -23,6 +23,8 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (currentPlayer == null) return;
+
         if (currentPlayer.isNormalAttacking || currentPlayer.isMakingChaKuRa || currentPlayer.isJumping) return;
 
         GameEntity yinListUi = null;

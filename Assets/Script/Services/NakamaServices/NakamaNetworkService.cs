@@ -63,7 +63,6 @@ public class NakamaNetworkService : INetworkService
 
         // set socket event
         _socket.OnMatchmakerMatched += OnMatchmakerMatched;
-        _socket.OnMatchPresence += OnMatchPresence;
         _socket.OnMatchState += OnMatchState;
         _socket.OnNotification += OnNotification;
 
@@ -85,6 +84,15 @@ public class NakamaNetworkService : INetworkService
                 var allocationNinja = Utilities.ParseJson<SCAllocationNinja>(notification.Content);
                 _context.ReplaceAllocationNinjaNotification(allocationNinja);
                 break;
+            case 503:
+                var chooseNinja = Utilities.ParseJson<SCChooseNinja>(notification.Content);
+                _context.CreateEntity().ReplacePlayerChooseNinjaInfo(chooseNinja.userId, chooseNinja.ninjaName,chooseNinja.confirm);
+                break;
+            case 504:
+                var matchData = Utilities.ParseJson<SCMatchData>(notification.Content);
+                _context.ReplaceCurrentMatchData(matchData);
+                _context.isMatchStart = true;
+                break;
             default:
                 break;
         }
@@ -94,11 +102,6 @@ public class NakamaNetworkService : INetworkService
     {
         var payload = System.Text.Encoding.UTF8.GetString(state.State);
         _context.CreateEntity().ReplaceMatchData(state.OpCode, payload);
-    }
-
-    private void OnMatchPresence(object sender, IMatchPresenceEvent presence)
-    {
-        _context.ReplaceMatchJoinedNumber(_context.matchJoinedNumber.value + presence.Joins.Count() - presence.Leaves.Count());
     }
 
     private void OnMatchmakerMatched(object sender, IMatchmakerMatched matched)
@@ -215,7 +218,7 @@ public class NakamaNetworkService : INetworkService
         try
         {
             _match = await _socket.JoinMatchAsync(_matchmakerMatched);
-            _context.ReplaceMatchJoinedNumber(_context.matchJoinedNumber.value + _match.Size);
+            _context.isAllPlayerJoined = true;
         }
         catch (Exception)
         {

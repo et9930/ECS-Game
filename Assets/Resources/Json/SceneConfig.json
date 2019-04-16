@@ -4,7 +4,10 @@
       "Key": "LaunchScene",
       "Value": {
         "SceneName": "LaunchScene",
-        "Uis": [
+        "InitializeUis": [
+        ],
+        "CloseUIs": [
+
         ]
       }
     },
@@ -12,7 +15,10 @@
       "Key": "LoadingScene",
       "Value": {
         "SceneName": "LoadingScene",
-        "Uis": [
+        "InitializeUis": [
+          "LoadingProcess"
+        ],
+        "CloseUIs": [
           "LoadingProcess"
         ]
       }
@@ -21,7 +27,10 @@
       "Key": "LoginScene",
       "Value": {
         "SceneName": "LoginScene",
-        "Uis": [
+        "InitializeUis": [
+          "Login"
+        ],
+        "CloseUIs": [
           "Login"
         ]
       }
@@ -30,8 +39,18 @@
       "Key": "MainScene",
       "Value": {
         "SceneName": "MainScene",
-        "Uis": [
+        "InitializeUis": [
           "MainUI",
+          "UserInfo"
+        ],
+        "CloseUIs": [
+          "ChatMain",
+          "ChatMini",
+          "ChooseNinjaItem",
+          "ChooseNinjaWindow",
+          "MainUI",
+          "PlayerChooseItem",
+          "SearchBattleWindow",
           "UserInfo"
         ]
       }
@@ -40,7 +59,7 @@
       "Key": "BattleScene",
       "Value": {
         "SceneName": "BattleScene",
-        "Uis": [
+        "InitializeUis": [
           "PlayerInfo",
           "NinjutsuMenu",
           "NinjaItemMenu",
@@ -51,6 +70,34 @@
           "OutScreenSelectTargetViewList",
           "OutScreenSelectTargetView",
           "OutScreenSelectTargetViewCamera"
+        ],
+        "CloseUIs": [
+          "CurrentWeaponIcon",
+          "JumpUI",
+          "NinjaItemMenu",
+          "NinjaItemMenuInfoWindow",
+          "NinjaItemMenuItem",
+          "NinjutsuMenu",
+          "NinjutsuMenuItem",
+          "NinjutsuQTE",
+          "NinjutsuYinChen",
+          "NinjutsuYinShen",
+          "NinjutsuYinWu",
+          "NinjutsuYinXu",
+          "NinjutsuYinYin",
+          "NinjutsuYinZi",
+          "OutScreenSelectTargetView",
+          "OutScreenSelectTargetViewCamera",
+          "OutScreenSelectTargetViewList",
+          "PerceptionHTCItem",
+          "PerceptionPositionAccurateItemLeft",
+          "PerceptionPositionAccurateItemRight",
+          "PerceptionPositionExist",
+          "PerceptionPositionExistItem",
+          "PlayerInfo",
+          "QuickActionMenu",
+          "QuickActionMenuItem",
+          "SelectTarget"
         ]
       }
     }

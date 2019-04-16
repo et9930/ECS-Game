@@ -19,6 +19,8 @@ public class NormalAttackControlSystem : IExecuteSystem
             _context.isTaijutsuAttackFreezing = true;
 
             var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+            if (currentPlayer == null) return;
+
             if (!currentPlayer.onTheGround.value || currentPlayer.isJumping || currentPlayer.isMakingYin) return;
 
             if (!currentPlayer.isNormalAttacking)

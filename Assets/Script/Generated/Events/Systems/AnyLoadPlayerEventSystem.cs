@@ -35,7 +35,7 @@ public sealed class AnyLoadPlayerEventSystem : Entitas.ReactiveSystem<GameEntity
                 _listenerBuffer.Clear();
                 _listenerBuffer.AddRange(listenerEntity.anyLoadPlayerListener.value);
                 foreach (var listener in _listenerBuffer) {
-                    listener.OnAnyLoadPlayer(e, component.playerId, component.playerName);
+                    listener.OnAnyLoadPlayer(e, component.playerId, component.playerName, component.position, component.towardLeft, component.team);
                 }
             }
         }

@@ -23,9 +23,23 @@ public class InitBattleSceneSystem : ReactiveSystem<GameEntity>
     protected override void Execute(List<GameEntity> entities)
     {
         _context.ReplaceCurrentMapName("ProvingGroundMap");
-        _context.CreateEntity().ReplaceLoadPlayer("100", "NamikazeMinato");
-        _context.CreateEntity().ReplaceLoadPlayer("101", "UchihaMadara");
-        _context.sceneService.instance.MainCameraPosition =
-            _context.mapConfig.list[_context.currentMapName.value].CameraPosition[0];
+
+        var matchData = _context.currentMatchData.value;
+
+        foreach (var player in matchData.matchPlayers)
+        {
+            _context.CreateEntity().ReplaceLoadPlayer(
+                player.userId,
+                player.ninjaName,
+                _context.mapConfig.list[_context.currentMapName.value].CharacterInPosition[player.position],
+                player.team == 2,
+                player.team
+            );
+
+            if (player.userId == _context.currentPlayerId.value)
+            {
+                _context.sceneService.instance.MainCameraPosition = _context.mapConfig.list[_context.currentMapName.value].CameraPosition[player.team - 1];
+            }
+        }
     }
 }

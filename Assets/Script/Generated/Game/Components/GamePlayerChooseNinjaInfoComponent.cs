@@ -11,19 +11,21 @@ public partial class GameEntity {
     public PlayerChooseNinjaInfoComponent playerChooseNinjaInfo { get { return (PlayerChooseNinjaInfoComponent)GetComponent(GameComponentsLookup.PlayerChooseNinjaInfo); } }
     public bool hasPlayerChooseNinjaInfo { get { return HasComponent(GameComponentsLookup.PlayerChooseNinjaInfo); } }
 
-    public void AddPlayerChooseNinjaInfo(string newUserId, string newNinjaName) {
+    public void AddPlayerChooseNinjaInfo(string newUserId, string newNinjaName, bool newConfirm) {
         var index = GameComponentsLookup.PlayerChooseNinjaInfo;
         var component = (PlayerChooseNinjaInfoComponent)CreateComponent(index, typeof(PlayerChooseNinjaInfoComponent));
         component.userId = newUserId;
         component.ninjaName = newNinjaName;
+        component.confirm = newConfirm;
         AddComponent(index, component);
     }
 
-    public void ReplacePlayerChooseNinjaInfo(string newUserId, string newNinjaName) {
+    public void ReplacePlayerChooseNinjaInfo(string newUserId, string newNinjaName, bool newConfirm) {
         var index = GameComponentsLookup.PlayerChooseNinjaInfo;
         var component = (PlayerChooseNinjaInfoComponent)CreateComponent(index, typeof(PlayerChooseNinjaInfoComponent));
         component.userId = newUserId;
         component.ninjaName = newNinjaName;
+        component.confirm = newConfirm;
         ReplaceComponent(index, component);
     }
 

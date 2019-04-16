@@ -27,6 +27,8 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["StopSearchButton"] = OnStopSearchButtonClick;
         _context.clickEventFunc.clickDic["ReadyMatchButton"] = OnReadyMatchButtonClick;
         _context.clickEventFunc.clickDic["CancelMatchButton"] = OnCancelMatchButtonClick;
+        _context.clickEventFunc.clickDic["ChooseNinjaItem"] = OnChooseNinjaItemClick;
+        _context.clickEventFunc.clickDic["ChooseNinjaWindowConfirmButton"] = OnChooseNinjaWindowConfirmButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -288,5 +290,61 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         };
         var strReadyMatch = Utilities.ToJson(readyMatch);
         await _context.networkService.instance.RpcCall("rpc_ready_match", strReadyMatch);
+    }
+
+    private async void OnChooseNinjaItemClick(GameEntity entity)
+    {
+        if (!_context.sceneService.instance.GetSelectableInteractable(entity.name.text)) return;
+
+        var toggleOnState = _context.sceneService.instance.GetToggleOnState(entity.name.text);
+        var ninjaName = toggleOnState ? entity.chooseNinjaItemInfo.value.ninjaName : "";
+
+        var chooseNinja = new CSChooseNinja
+        {
+            confirm = false,
+            ninjaName = ninjaName
+        };
+
+        var strChooseNinja = Utilities.ToJson(chooseNinja);
+        await _context.networkService.instance.RpcCall("rpc_choose_ninja", strChooseNinja);
+    }
+
+    private async void OnChooseNinjaWindowConfirmButtonClick(GameEntity entity)
+    {
+        var activeToggleName =
+            _context.sceneService.instance.GetToggleGroupSelectToggleName("ChooseNinjaWindowNinjaList");
+        if (activeToggleName == "") return;
+
+        var ninjaName = "";
+
+        foreach (var e in _context.GetEntitiesWithName(activeToggleName))
+        {
+            ninjaName = e.chooseNinjaItemInfo.value.ninjaName;
+        }
+
+        var chooseNinja = new CSChooseNinja
+        {
+            confirm = true,
+            ninjaName = ninjaName
+        };
+
+        var strChooseNinja = Utilities.ToJson(chooseNinja);
+        var rpcPayload = await _context.networkService.instance.RpcCall("rpc_choose_ninja", strChooseNinja);
+        if (rpcPayload == null) return;
+
+        for (var i = 0; i < _context.allocationNinjaNotification.value.ninjaList.Count; i++)
+        {
+            _context.sceneService.instance.SetSelectableInteractable("ChooseNinjaItem_" + i, false);
+        }
+
+        foreach (var e in _context.GetEntitiesWithName("ChooseNinjaWindowConfirmButton"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        foreach (var e in _context.GetEntitiesWithName("ChooseNinjaWindowWaitOtherPlayers"))
+        {
+            e.ReplaceActive(true);
+        }
     }
 }

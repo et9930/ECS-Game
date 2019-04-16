@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IAnyPlayerChooseNinjaInfoListener {
-    void OnAnyPlayerChooseNinjaInfo(GameEntity entity, string userId, string ninjaName);
+    void OnAnyPlayerChooseNinjaInfo(GameEntity entity, string userId, string ninjaName, bool confirm);
 }

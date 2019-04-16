@@ -6,4 +6,5 @@ public class PlayerChooseNinjaInfoComponent : IComponent
 {
     public string userId;
     public string ninjaName;
+    public bool confirm;
 }

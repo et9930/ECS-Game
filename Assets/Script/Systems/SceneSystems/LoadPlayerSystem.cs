@@ -31,11 +31,12 @@ public class LoadPlayerSystem : ReactiveSystem<GameEntity>
             e.ReplaceName(e.loadPlayer.playerName);
             e.ReplaceAnimation("idle", false);
             e.ReplaceHierarchy(0);
-            e.ReplacePosition(_context.mapConfig.list[_context.currentMapName.value].CharacterInPosition[0]);
+            e.ReplacePosition(e.loadPlayer.position);
             e.ReplaceRotation(Vector3.Zero);
             e.ReplaceScale(new Vector2(1.0f, 1.0f));
             e.ReplaceMass(66.5f);
-            e.ReplaceToward(false);
+            e.ReplaceToward(e.loadPlayer.towardLeft);
+            e.ReplaceTeam(e.loadPlayer.team);
 
             e.ReplaceHealthTotal(characterBaseAttributes.baseHealth);
             e.ReplaceHealthRecoverable(characterBaseAttributes.baseHealth);

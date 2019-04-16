@@ -74,21 +74,23 @@ public class SwitchChooseNinjaWindowSystem : ReactiveSystem<GameEntity>
 
         if (ninjaList == null || friendlyList == null || enemyList == null) yield break;
 
-        foreach (var ninjaItem in allocationNinja.ninjaList)
+        for (var i = 0; i < allocationNinja.ninjaList.Count; i++)
         {
+            var ninjaItem = allocationNinja.ninjaList[i];
             var ui = _context.CreateEntity();
             ui.ReplaceUiOpen("ChooseNinjaItem");
-            ui.ReplaceName("ChooseNinjaItem");
+            ui.ReplaceName("ChooseNinjaItem_" + i);
             ui.ReplaceChooseNinjaItemInfo(ninjaItem);
             ui.ReplaceParentEntity(ninjaList);
         }
 
-        foreach (var player in _context.currentMatchData.value.matchPlayers)
+        for (var i = 0; i < _context.currentMatchData.value.matchPlayers.Count; i++)
         {
+            var player = _context.currentMatchData.value.matchPlayers[i];
             var ui = _context.CreateEntity();
             ui.ReplaceUiOpen("PlayerChooseItem");
-            ui.ReplaceName("PlayerChooseItem");
-            ui.ReplacePlayerChooseNinjaInfo(player.userId, "");
+            ui.ReplaceName("PlayerChooseItem_" + i);
+            ui.ReplacePlayerChooseNinjaInfo(player.userId, "", false);
             ui.ReplaceParentEntity(player.team == selfTeam ? friendlyList : enemyList);
         }
 

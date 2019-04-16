@@ -41,6 +41,8 @@ public class QuickActionExecuteSystem : ReactiveSystem<GameEntity>, IInitializeS
     private void ExecuteMinatoHiRaiShinMaKinGu(GameEntity entity)
     {
         var e = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (e == null) return;
+
         if (!e.isMakingYin)
         {
             e.isMakingYin = true;

@@ -154,6 +154,7 @@
      <Compile Include="Assets\Script\Components\TaiRyoKuRecoverSpeedComponent.cs" />
      <Compile Include="Assets\Script\Components\TaiRyoKuTiredComponent.cs" />
      <Compile Include="Assets\Script\Components\TaiRyoKuTotalComponent.cs" />
+     <Compile Include="Assets\Script\Components\TeamComponent.cs" />
      <Compile Include="Assets\Script\Components\TextComponent.cs" />
      <Compile Include="Assets\Script\Components\ToggleStateComponent.cs" />
      <Compile Include="Assets\Script\Components\TowardComponent.cs" />
@@ -168,6 +169,7 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\AddQuickActionItemComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AllocationNinjaComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AllocationNinjaNotificationComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\AllPlayerJoinedComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AnimationEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AnimationFrameRateComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ClickEventFuncComponent.cs" />
@@ -209,7 +211,7 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\LoginComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MainCameraMovingComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MakeYinTimeComponent.cs" />
-     <Compile Include="Assets\Script\Components\UniqueComponents\MatchJoinedNumberComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\MatchStartComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MovingUiListComponent.cs" />
@@ -389,6 +391,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameAffectedByGravityComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAllocationNinjaComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAllocationNinjaNotificationComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameAllPlayerJoinedComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnimationComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnimationEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnimationFrameComponent.cs" />
@@ -496,8 +499,8 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameMapConfigComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMassComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMatchDataComponent.cs" />
-     <Compile Include="Assets\Script\Generated\Game\Components\GameMatchJoinedNumberComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMatchReadyStateComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameMatchStartComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMaxSpeedComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMinatoHiRaiShinMaKinGuComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameMouseCurrentPositionComponent.cs" />
@@ -591,6 +594,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuRecoverSpeedComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuTiredComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameTaiRyoKuTotalComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameTeamComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameTextComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameTextListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameThrowWeaponNumberComponent.cs" />
@@ -666,6 +670,7 @@
      <Compile Include="Assets\Script\Listeners\UnityListeners\SizeListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\TextListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\TowardListener.cs" />
+     <Compile Include="Assets\Script\Services\FileServices\FileDebugLogService.cs" />
      <Compile Include="Assets\Script\Services\NakamaServices\NakamaNetworkService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\ICoroutineService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\IKeyInputService.cs" />
@@ -700,10 +705,12 @@
      <Compile Include="Assets\Script\Structs\ClientOnly\SceneConfigs.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\UiInfoList.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\UiLayerInfos.cs" />
+     <Compile Include="Assets\Script\Structs\ClientToServer\CSChooseNinja.cs" />
      <Compile Include="Assets\Script\Structs\ClientToServer\CSGetDataByUserId.cs" />
      <Compile Include="Assets\Script\Structs\ClientToServer\CSReadyMatch.cs" />
      <Compile Include="Assets\Script\Structs\ClientToServer\ICSMessage.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCAllocationNinja.cs" />
+     <Compile Include="Assets\Script\Structs\ServerToClient\SCChooseNinja.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCMatchData.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCPing.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCReadyState.cs" />
@@ -733,6 +740,7 @@
      <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
      <Compile Include="Assets\Script\Systems\LogSystems\ErrorMessageSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\CheckJoinNumberSystem.cs" />
+     <Compile Include="Assets\Script\Systems\MatchGameSystems\MatchStartSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\OnGameMatchedSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\PlayerReadyStateSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\SwitchChooseNinjaWindowSystem.cs" />
@@ -810,6 +818,7 @@
      <Compile Include="Assets\Script\Systems\TaijutsuSystems\CheckTaijutsuAttackHitSystem.cs" />
      <Compile Include="Assets\Script\Utilities\Utilities.cs" />
      <None Include="Assets\Entitas\Entitas.xml" />
+     <None Include="Assets\StreamingAssets\Log\log.txt" />
      <None Include="Assets\Entitas\LICENSE.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/IT99803/Documents/GraduationProject/ECS-Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

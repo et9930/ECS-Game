@@ -17,6 +17,8 @@ public class MoveMainCameraSystem : IExecuteSystem
         var currentMapConfig = _context.mapConfig.list[_context.currentMapName.value];
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (currentPlayer == null) return;
+
         var lastPosition = _context.sceneService.instance.MainCameraPosition;
 
         var tempPosition = new Vector3(currentPlayer.position.value.X, 0, -10);

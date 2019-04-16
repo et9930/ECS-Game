@@ -21,6 +21,6 @@ public class ChooseNinjaItemListener : MonoBehaviour, IEventListener, IChooseNin
         var headShot = transform.Find("Background/NinjaHeadShot").GetComponent<Image>();
         headShot.sprite = Resources.Load<Sprite>("Image/UI/HeadShot/" + value.ninjaName + "HeadShot");
 
-        entity.ReplaceName(value.ninjaName);
+        //entity.ReplaceName(value.ninjaName);
     }
 }

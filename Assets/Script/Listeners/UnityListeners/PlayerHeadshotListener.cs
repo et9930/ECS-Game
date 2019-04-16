@@ -1,6 +1,7 @@
 ﻿using Entitas;
 using UnityEngine;
 using UnityEngine.UI;
+using Vector3 = System.Numerics.Vector3;
 
 public class PlayerHeadShotListener : MonoBehaviour, IEventListener, IAnyLoadPlayerListener
 {
@@ -14,7 +15,7 @@ public class PlayerHeadShotListener : MonoBehaviour, IEventListener, IAnyLoadPla
         _entity.AddAnyLoadPlayerListener(this);
     }
 
-    public void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName)
+    public void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName, Vector3 position, bool towardLeft, int team)
     {
         if (playerId != _context.currentPlayerId.value) return;
 

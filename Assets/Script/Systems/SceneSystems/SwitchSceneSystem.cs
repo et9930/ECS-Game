@@ -57,7 +57,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         loadingProcessRootEntity.ReplaceActive(true);
 
         // clean old scene
-        var oldUis = _context.sceneConfig.dic[_context.currentScene.name].Uis;
+        var oldUis = _context.sceneConfig.dic[_context.currentScene.name].CloseUIs;
         foreach (var ui in oldUis)
         {
             foreach(var e in _context.GetEntitiesWithName(ui))
@@ -85,7 +85,7 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         }
 
         // open ui
-        var uis = _context.sceneConfig.dic[sceneName].Uis;
+        var uis = _context.sceneConfig.dic[sceneName].InitializeUis;
         for(var i = 0; i < uis.Count; i++)
         {
             var ui = _context.CreateEntity();

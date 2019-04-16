@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Entitas;
 
-public class CheckJoinNumberSystem : ReactiveSystem<GameEntity>, IInitializeSystem
+public class CheckJoinNumberSystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _context;
 
@@ -11,19 +11,15 @@ public class CheckJoinNumberSystem : ReactiveSystem<GameEntity>, IInitializeSyst
         _context = contexts.game;
     }
 
-    public void Initialize()
-    {
-        _context.ReplaceMatchJoinedNumber(0);
-    }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.MatchJoinedNumber);
+        return context.CreateCollector(GameMatcher.AllPlayerJoined);
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasMatchJoinedNumber;
+        return entity.isAllPlayerJoined;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -32,9 +28,6 @@ public class CheckJoinNumberSystem : ReactiveSystem<GameEntity>, IInitializeSyst
 
         foreach (var e in entities)
         {
-            
-            if (e.matchJoinedNumber.value != _context.currentMatchData.value.matchSize) continue;
-
             foreach (var ui in _context.GetEntitiesWithName("ReadyWindow"))
             {
                 ui.ReplaceActive(true);
@@ -45,7 +38,7 @@ public class CheckJoinNumberSystem : ReactiveSystem<GameEntity>, IInitializeSyst
                 ui.ReplaceActive(false);
             }
 
-            for (var i = 1; i <= e.matchJoinedNumber.value; i++)
+            for (var i = 1; i <= _context.currentMatchData.value.matchSize; i++)
             {
                 foreach (var ui in _context.GetEntitiesWithName("Player" + i))
                 {

@@ -21,6 +21,8 @@ public class JumpControlSystem : IExecuteSystem
             if (_context.isJumpFreezing) return;
 
             var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+            if (currentPlayer == null) return;
+
 
             if (currentPlayer.isNormalAttacking || !currentPlayer.onTheGround.value || currentPlayer.isMakingYin) return;
 
@@ -155,6 +157,7 @@ public class JumpControlSystem : IExecuteSystem
         else // jump button up
         {
             var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+            if (currentPlayer == null) return;
 
             if (currentPlayer.isNormalAttacking || !currentPlayer.onTheGround.value || !currentPlayer.isJumping) return;
 

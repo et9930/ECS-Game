@@ -232,6 +232,14 @@ public class UnitySceneService : ISceneService
         dropdown.value = value;
     }
 
+    public bool GetSelectableInteractable(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return false;
+        var selectableUis = ui.GetComponents<Selectable>();
+        return selectableUis.Length != 0 && selectableUis[0].interactable;
+    }
+
     public void SetSelectableInteractable(string uiName, bool value)
     {
         var ui = GameObject.Find(uiName);
@@ -242,6 +250,20 @@ public class UnitySceneService : ISceneService
         {
             selectableUi.interactable = value;
         }
+    }
+
+    public string GetToggleGroupSelectToggleName(string uiName)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return "";
+        var toggleGroup = ui.GetComponent<ToggleGroup>();
+        if (toggleGroup == null) return "";
+        var toggles = toggleGroup.ActiveToggles();
+        foreach (var toggle in toggles)
+        {
+            return toggle.name;
+        }
+        return "";
     }
 
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)

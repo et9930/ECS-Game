@@ -27,5 +27,7 @@ public interface ISceneService
     void SetToggleOnState(string uiName, bool state);
     int GetDropdownValue(string uiName);
     void SetDropdownValue(string uiName, int value);
+    bool GetSelectableInteractable(string uiName);
     void SetSelectableInteractable(string uiName, bool value);
+    string GetToggleGroupSelectToggleName(string uiName);
 }

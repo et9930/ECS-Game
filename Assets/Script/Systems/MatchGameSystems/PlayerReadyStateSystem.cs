@@ -67,7 +67,7 @@ public class PlayerReadyStateSystem : ReactiveSystem<GameEntity>
 
         _context.isGameMatched = false;
         _context.isSearchingBattle = false;
-        _context.ReplaceMatchJoinedNumber(0);
+        _context.isAllPlayerJoined = false;
         _context.RemoveCurrentMatchData();
     }
 }

@@ -24,6 +24,8 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
 
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (currentPlayer == null) return;
+
         foreach (var e in _context.GetEntitiesWithTag("Character"))
         {
             if (e == currentPlayer) continue;

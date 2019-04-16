@@ -644,7 +644,10 @@
       "ComponentName": "ChooseNinjaItem",
       "Listener": [
         "ChooseNinjaItem"
-      ]
+      ],
+      "Handle": [
+        "Click"
+      ] 
     },
     {
       "ComponentName": "PlayerChooseItem",

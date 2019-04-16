@@ -7,5 +7,5 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 public interface IAnyLoadPlayerListener {
-    void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName);
+    void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName, System.Numerics.Vector3 position, bool towardLeft, int team);
 }

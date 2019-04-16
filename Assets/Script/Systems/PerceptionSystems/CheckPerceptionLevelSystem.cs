@@ -16,6 +16,8 @@ public class CheckPerceptionLevelSystem : IExecuteSystem
         if (_context.GetGroup(GameMatcher.LoadPlayer).count > 0) return;
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (currentPlayer == null) return;
+
         var perceptionLevel = currentPlayer.perceptionLevel.value;
 
         foreach (var e in _context.GetEntitiesWithTag("Character"))

@@ -63,6 +63,7 @@ public class GameWorld : Feature
         Add(new CheckJoinNumberSystem(contexts));
         Add(new PlayerReadyStateSystem(contexts));
         Add(new SwitchChooseNinjaWindowSystem(contexts));
+        Add(new MatchStartSystem(contexts));
 
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));

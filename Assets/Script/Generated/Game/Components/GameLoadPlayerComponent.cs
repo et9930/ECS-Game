@@ -11,19 +11,25 @@ public partial class GameEntity {
     public LoadPlayerComponent loadPlayer { get { return (LoadPlayerComponent)GetComponent(GameComponentsLookup.LoadPlayer); } }
     public bool hasLoadPlayer { get { return HasComponent(GameComponentsLookup.LoadPlayer); } }
 
-    public void AddLoadPlayer(string newPlayerId, string newPlayerName) {
+    public void AddLoadPlayer(string newPlayerId, string newPlayerName, System.Numerics.Vector3 newPosition, bool newTowardLeft, int newTeam) {
         var index = GameComponentsLookup.LoadPlayer;
         var component = (LoadPlayerComponent)CreateComponent(index, typeof(LoadPlayerComponent));
         component.playerId = newPlayerId;
         component.playerName = newPlayerName;
+        component.position = newPosition;
+        component.towardLeft = newTowardLeft;
+        component.team = newTeam;
         AddComponent(index, component);
     }
 
-    public void ReplaceLoadPlayer(string newPlayerId, string newPlayerName) {
+    public void ReplaceLoadPlayer(string newPlayerId, string newPlayerName, System.Numerics.Vector3 newPosition, bool newTowardLeft, int newTeam) {
         var index = GameComponentsLookup.LoadPlayer;
         var component = (LoadPlayerComponent)CreateComponent(index, typeof(LoadPlayerComponent));
         component.playerId = newPlayerId;
         component.playerName = newPlayerName;
+        component.position = newPosition;
+        component.towardLeft = newTowardLeft;
+        component.team = newTeam;
         ReplaceComponent(index, component);
     }
 

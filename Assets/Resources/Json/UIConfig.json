@@ -1,1 +1,3222 @@
-{"UIConfigs":[{"Components":[{"AnomalyButton":false,"ComponentName":"ChatMain","ComponentPath":"ChatMain","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatMainBackground","ComponentPath":"ChatMain\/ChatMainBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatInputField","ComponentPath":"ChatMain\/ChatInputField","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"ChatMain\/ChatInputField\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatSendButton","ComponentPath":"ChatMain\/ChatSendButton","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatChannel","ComponentPath":"ChatMain\/ChatChannel","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatChannelList","ComponentPath":"ChatMain\/ChatChannelList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatChannelWorld","ComponentPath":"ChatMain\/ChatChannelList\/ChatChannelWorld","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatChannelTeam","ComponentPath":"ChatMain\/ChatChannelList\/ChatChannelTeam","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatChannelClan","ComponentPath":"ChatMain\/ChatChannelList\/ChatChannelClan","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"ChatMain"},{"Components":[{"AnomalyButton":false,"ComponentName":"ChatMini","ComponentPath":"ChatMini","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChatMiniBackground","ComponentPath":"ChatMini\/ChatMiniBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"GameObject","ComponentPath":"ChatMini\/GameObject","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"ChatMini"},{"Components":[{"AnomalyButton":false,"ComponentName":"ChooseNinjaItem","ComponentPath":"ChooseNinjaItem","Handle":[],"Listener":["ChooseNinjaItem"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Background","ComponentPath":"ChooseNinjaItem\/Background","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaHeadShot","ComponentPath":"ChooseNinjaItem\/Background\/NinjaHeadShot","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Checkmark","ComponentPath":"ChooseNinjaItem\/Background\/Checkmark","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"ChooseNinjaItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindow","ComponentPath":"ChooseNinjaWindow","Handle":[],"Listener":["Active","ChooseNinjaWindow"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowMask","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowMask","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowBackground","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowMapImage","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowMapImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowMapName","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowMapName","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowBattleType","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowBattleType","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowNinjaList","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowNinjaList","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowConfirmButton","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowConfirmButton","Handle":["Click"],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowConfirmButton\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowFriendlyList","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowFriendlyList","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowEnemyList","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowEnemyList","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"ChooseNinjaWindowWaitOtherPlayers","ComponentPath":"ChooseNinjaWindow\/ChooseNinjaWindowWaitOtherPlayers","Handle":[],"Listener":["Active"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"ChooseNinjaWindow"},{"Components":[{"AnomalyButton":false,"ComponentName":"CurrentWeaponIcon","ComponentPath":"CurrentWeaponIcon","Handle":[],"Listener":["CurrentWeapon"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"CurrentWeaponIcon"},{"Components":[{"AnomalyButton":false,"ComponentName":"GameState","ComponentPath":"GameState","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Fps","ComponentPath":"GameState\/Fps","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"FpsValue","ComponentPath":"GameState\/Fps\/FpsValue","Handle":[],"Listener":["Active","Fps"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Network","ComponentPath":"GameState\/Network","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PingValue","ComponentPath":"GameState\/Network\/PingValue","Handle":[],"Listener":["Active","Ping"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NormalNetworkIcon","ComponentPath":"GameState\/Network\/NormalNetworkIcon","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ErrorNetworkIcon","ComponentPath":"GameState\/Network\/ErrorNetworkIcon","Handle":[],"Listener":["Active"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"GameState"},{"Components":[{"AnomalyButton":false,"ComponentName":"JumpUI","ComponentPath":"JumpUI","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceProcess","ComponentPath":"JumpUI\/JumpForceProcess","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceProcessBarBackground","ComponentPath":"JumpUI\/JumpForceProcess\/JumpForceProcessBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceProcessBarImage","ComponentPath":"JumpUI\/JumpForceProcess\/JumpForceProcessBarImage","Handle":[],"Listener":["JumpForce"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceProcessBarMask","ComponentPath":"JumpUI\/JumpForceProcess\/JumpForceProcessBarMask","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceDirection","ComponentPath":"JumpUI\/JumpForceDirection","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceVerticalDirection","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceVerticalDirection","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceVerticalDirectionScale","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceVerticalDirection\/JumpForceVerticalDirectionScale","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceVerticalDirectionArrow","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceVerticalDirection\/JumpForceVerticalDirectionArrow","Handle":[],"Listener":["JumpVerticalDirectionArrow"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceHorizontalDirection","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceHorizontalDirectionScale","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection\/JumpForceHorizontalDirectionScale","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"JumpForceHorizontalDirectionArrow","ComponentPath":"JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection\/JumpForceHorizontalDirectionArrow","Handle":[],"Listener":["JumpHorizontalDirectionArrow"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"JumpUI"},{"Components":[{"AnomalyButton":false,"ComponentName":"LoadingProcess","ComponentPath":"LoadingProcess","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"BackgroundImage","ComponentPath":"LoadingProcess\/BackgroundImage","Handle":[],"Listener":["Active","LoadingSceneImage"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ProcessBar","ComponentPath":"LoadingProcess\/ProcessBar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ProcessBarBackImg","ComponentPath":"LoadingProcess\/ProcessBar\/ProcessBarBackImg","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ProcessBarFillImg","ComponentPath":"LoadingProcess\/ProcessBar\/ProcessBarFillImg","Handle":[],"Listener":["Active","LoadingSceneProcess"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ProcessNumber","ComponentPath":"LoadingProcess\/ProcessBar\/ProcessNumber","Handle":[],"Listener":["Active","LoadingSceneProcessText"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RandomInfo","ComponentPath":"LoadingProcess\/RandomInfo","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RandomTitle","ComponentPath":"LoadingProcess\/RandomInfo\/RandomTitle","Handle":[],"Listener":["Active","LoadingSceneTitle"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RandomText","ComponentPath":"LoadingProcess\/RandomInfo\/RandomText","Handle":[],"Listener":["Active","LoadingSceneText"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"LoadingProcess"},{"Components":[{"AnomalyButton":false,"ComponentName":"Login","ComponentPath":"Login","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginBackground","ComponentPath":"Login\/LoginBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginPicture","ComponentPath":"Login\/LoginPicture","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginEmailInput","ComponentPath":"Login\/LoginEmailInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/LoginEmailInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/LoginEmailInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginPasswordInput","ComponentPath":"Login\/LoginPasswordInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/LoginPasswordInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/LoginPasswordInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginButton","ComponentPath":"Login\/LoginButton","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginButtonText","ComponentPath":"Login\/LoginButton\/LoginButtonText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInButton","ComponentPath":"Login\/SignInButton","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInButtonText","ComponentPath":"Login\/SignInButton\/SignInButtonText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginRememberPasswordToggle","ComponentPath":"Login\/LoginRememberPasswordToggle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Background","ComponentPath":"Login\/LoginRememberPasswordToggle\/Background","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Checkmark","ComponentPath":"Login\/LoginRememberPasswordToggle\/Background\/Checkmark","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Label","ComponentPath":"Login\/LoginRememberPasswordToggle\/Label","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LoginErrorMessage","ComponentPath":"Login\/LoginErrorMessage","Handle":[],"Listener":["Text"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInWindow","ComponentPath":"Login\/SignInWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInWindowMark","ComponentPath":"Login\/SignInWindow\/SignInWindowMark","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInWindowBackground","ComponentPath":"Login\/SignInWindow\/SignInWindowBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInEmailInput","ComponentPath":"Login\/SignInWindow\/SignInEmailInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Title","ComponentPath":"Login\/SignInWindow\/SignInEmailInput\/Title","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/SignInWindow\/SignInEmailInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/SignInWindow\/SignInEmailInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInPasswordInput","ComponentPath":"Login\/SignInWindow\/SignInPasswordInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Title","ComponentPath":"Login\/SignInWindow\/SignInPasswordInput\/Title","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/SignInWindow\/SignInPasswordInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/SignInWindow\/SignInPasswordInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInPasswordConfirmInput","ComponentPath":"Login\/SignInWindow\/SignInPasswordConfirmInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Title","ComponentPath":"Login\/SignInWindow\/SignInPasswordConfirmInput\/Title","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/SignInWindow\/SignInPasswordConfirmInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/SignInWindow\/SignInPasswordConfirmInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInUserNameInput","ComponentPath":"Login\/SignInWindow\/SignInUserNameInput","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Title","ComponentPath":"Login\/SignInWindow\/SignInUserNameInput\/Title","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"Login\/SignInWindow\/SignInUserNameInput\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Placeholder","ComponentPath":"Login\/SignInWindow\/SignInUserNameInput\/Placeholder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInConfirmButton","ComponentPath":"Login\/SignInWindow\/SignInConfirmButton","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInButtonText","ComponentPath":"Login\/SignInWindow\/SignInConfirmButton\/SignInButtonText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInCancelButton","ComponentPath":"Login\/SignInWindow\/SignInCancelButton","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInButtonText","ComponentPath":"Login\/SignInWindow\/SignInCancelButton\/SignInButtonText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SignInErrorMessage","ComponentPath":"Login\/SignInWindow\/SignInErrorMessage","Handle":[],"Listener":["Text"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"Login"},{"Components":[{"AnomalyButton":false,"ComponentName":"MainUI","ComponentPath":"MainUI","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MainUIBackground","ComponentPath":"MainUI\/MainUIBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MainUIOperationList","ComponentPath":"MainUI\/MainUIOperationList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MainUIOperationSearchBattle","ComponentPath":"MainUI\/MainUIOperationList\/MainUIOperationSearchBattle","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MainUIOperationNinjaList","ComponentPath":"MainUI\/MainUIOperationList\/MainUIOperationNinjaList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MainUIOperationSetting","ComponentPath":"MainUI\/MainUIOperationList\/MainUIOperationSetting","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"MainUI"},{"Components":[{"AnomalyButton":false,"ComponentName":"NetworkWait","ComponentPath":"NetworkWait","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NetworkWaitBackground","ComponentPath":"NetworkWait\/NetworkWaitBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NetworkWaitImg","ComponentPath":"NetworkWait\/NetworkWaitImg","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NetworkWaitText","ComponentPath":"NetworkWait\/NetworkWaitText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NetworkWait"},{"Components":[{"AnomalyButton":true,"ComponentName":"NinjaItemMenu","ComponentPath":"NinjaItemMenu","Handle":["MouseInOut"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuBackground","ComponentPath":"NinjaItemMenu\/NinjaItemMenuBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuList","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem0","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem0","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem1","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem1","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem2","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem2","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem3","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem3","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem4","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem4","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItem5","ComponentPath":"NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem5","Handle":[],"Listener":[],"saveEntity":true}],"UiLayer":"NormalLayer","UiName":"NinjaItemMenu"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoWindow","ComponentPath":"NinjaItemMenuInfoWindow","Handle":[],"Listener":["Active","NinjaItemMenuInfo"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoWindowBackground","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoWindowBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoIcon","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoIcon","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoName","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoName","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoDescribe","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoDescribeTitle","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoDescribeSubtitleBackground","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle\/NinjaItemMenuInfoDescribeSubtitleBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoDescribeSubtitleText","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle\/NinjaItemMenuInfoDescribeSubtitleText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoDescribeText","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoEffect","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoEffectTitle","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoEffectSubtitleBackground","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle\/NinjaItemMenuInfoEffectSubtitleBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoEffectSubtitleText","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle\/NinjaItemMenuInfoEffectSubtitleText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuInfoEffectText","ComponentPath":"NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjaItemMenuInfoWindow"},{"Components":[{"AnomalyButton":true,"ComponentName":"NinjaItemMenuItem","ComponentPath":"NinjaItemMenuItem","Handle":["MouseInOut","Click"],"Listener":["NinjaItemMenuItem"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItemBackground","ComponentPath":"NinjaItemMenuItem\/NinjaItemMenuItemBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItemSelected","ComponentPath":"NinjaItemMenuItem\/NinjaItemMenuItemSelected","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItemIcon","ComponentPath":"NinjaItemMenuItem\/NinjaItemMenuItemIcon","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaItemMenuItemLeftNum","ComponentPath":"NinjaItemMenuItem\/NinjaItemMenuItemLeftNum","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjaItemMenuItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuMenu","ComponentPath":"NinjutsuMenu","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuBackground","ComponentPath":"NinjutsuMenu\/NinjutsuMenuBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuScrollbar","ComponentPath":"NinjutsuMenu\/NinjutsuMenuScrollbar","Handle":[],"Listener":["ScrollBarValue"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuScrollbarSlidingArea","ComponentPath":"NinjutsuMenu\/NinjutsuMenuScrollbar\/NinjutsuMenuScrollbarSlidingArea","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuScrollbarHandle","ComponentPath":"NinjutsuMenu\/NinjutsuMenuScrollbar\/NinjutsuMenuScrollbarSlidingArea\/NinjutsuMenuScrollbarHandle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuScrollRect","ComponentPath":"NinjutsuMenu\/NinjutsuMenuScrollRect","Handle":[],"Listener":["Size"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuContent","ComponentPath":"NinjutsuMenu\/NinjutsuMenuScrollRect\/NinjutsuMenuContent","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoWindow","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow","Handle":[],"Listener":["Active","NinjutsuMenuInfo"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoWindowBackground","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoWindowBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoName","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoName","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoIconBackground","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoIconBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoIcon","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoIcon","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoClass","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoClass","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoNature","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureFire","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureFire","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureWind","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWind","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureThunder","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureThunder","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureSoil","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureSoil","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureWater","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWater","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureYin","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYin","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NatureYang","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYang","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoLabel","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoType","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TypeNin","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeNin","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TypeTai","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeTai","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TypeGen","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeGen","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoRange","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RangeClose","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeClose","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RangeMiddle","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeMiddle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RangeFar","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeFar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoEffect","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"EffectAttack","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAttack","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"EffectDefense","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectDefense","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"EffectAssist","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAssist","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoDescribe","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoDescribeTitle","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoDescribeSubtitleBackground","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle\/NinjutsuMenuInfoDescribeSubtitleBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoDescribeSubtitleText","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle\/NinjutsuMenuInfoDescribeSubtitleText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoDescribeText","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoQTE","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoQTETitle","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoQTESubtitleBackground","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle\/NinjutsuMenuInfoQTESubtitleBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoQTESubtitleText","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle\/NinjutsuMenuInfoQTESubtitleText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuInfoQTEText","ComponentPath":"NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTEText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuMenu"},{"Components":[{"AnomalyButton":true,"ComponentName":"NinjutsuMenuItem","ComponentPath":"NinjutsuMenuItem","Handle":["MouseInOut","Click"],"Listener":["NinjutsuMenuItem"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuItemBackground","ComponentPath":"NinjutsuMenuItem\/NinjutsuMenuItemBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuMenuItemIcon","ComponentPath":"NinjutsuMenuItem\/NinjutsuMenuItemIcon","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuMenuItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuQTE","ComponentPath":"NinjutsuQTE","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuQTETime","ComponentPath":"NinjutsuQTE\/NinjutsuQTETime","Handle":[],"Listener":["MakeYinTime"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuQTETimePorcessBar","ComponentPath":"NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuQTETimeProcessBarBackground","ComponentPath":"NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar\/NinjutsuQTETimeProcessBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuQTETimeProcessBarImage","ComponentPath":"NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar\/NinjutsuQTETimeProcessBarImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuQTETimeText","ComponentPath":"NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimeText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinList","ComponentPath":"NinjutsuQTE\/NinjutsuYinList","Handle":[],"Listener":[],"saveEntity":true}],"UiLayer":"NormalLayer","UiName":"NinjutsuQTE"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinChen","ComponentPath":"NinjutsuYinChen","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinChen\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinChen\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinChen"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinShen","ComponentPath":"NinjutsuYinShen","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinShen\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinShen\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinShen"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinWu","ComponentPath":"NinjutsuYinWu","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinWu\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinWu\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinWu"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinXu","ComponentPath":"NinjutsuYinXu","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinXu\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinXu\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinXu"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinYin","ComponentPath":"NinjutsuYinYin","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinYin\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinYin\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinYin"},{"Components":[{"AnomalyButton":false,"ComponentName":"NinjutsuYinZi","ComponentPath":"NinjutsuYinZi","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYiImage","ComponentPath":"NinjutsuYinZi\/NinjutsuYiImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjutsuYinText","ComponentPath":"NinjutsuYinZi\/NinjutsuYinText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"NinjutsuYinZi"},{"Components":[{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetView","ComponentPath":"OutScreenSelectTargetView","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewBackground","ComponentPath":"OutScreenSelectTargetView\/OutScreenSelectTargetViewBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewPort","ComponentPath":"OutScreenSelectTargetView\/OutScreenSelectTargetViewPort","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"OutScreenSelectTargetView"},{"Components":[{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewCamera","ComponentPath":"OutScreenSelectTargetViewCamera","Handle":[],"Listener":["Position"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"OutScreenSelectTargetViewCamera"},{"Components":[{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewList","ComponentPath":"OutScreenSelectTargetViewList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewLeftList","ComponentPath":"OutScreenSelectTargetViewList\/OutScreenSelectTargetViewLeftList","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetViewRightList","ComponentPath":"OutScreenSelectTargetViewList\/OutScreenSelectTargetViewRightList","Handle":[],"Listener":[],"saveEntity":true}],"UiLayer":"NormalLayer","UiName":"OutScreenSelectTargetViewList"},{"Components":[{"AnomalyButton":false,"ComponentName":"PerceptionHTCItem","ComponentPath":"PerceptionHTCItem","Handle":[],"Listener":["PerceptionHTC"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionHealth","ComponentPath":"PerceptionHTCItem\/PerceptionHealth","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionProcessBarBackground","ComponentPath":"PerceptionHTCItem\/PerceptionHealth\/PerceptionProcessBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionHealthValue","ComponentPath":"PerceptionHTCItem\/PerceptionHealth\/PerceptionHealthValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionTaiRyoKu","ComponentPath":"PerceptionHTCItem\/PerceptionTaiRyoKu","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionProcessBarBackground","ComponentPath":"PerceptionHTCItem\/PerceptionTaiRyoKu\/PerceptionProcessBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionTaiRyoKuValue","ComponentPath":"PerceptionHTCItem\/PerceptionTaiRyoKu\/PerceptionTaiRyoKuValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionChaKuRa","ComponentPath":"PerceptionHTCItem\/PerceptionChaKuRa","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionProcessBarBackground","ComponentPath":"PerceptionHTCItem\/PerceptionChaKuRa\/PerceptionProcessBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionChaKuRaValue","ComponentPath":"PerceptionHTCItem\/PerceptionChaKuRa\/PerceptionChaKuRaValue","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PerceptionHTCItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateItemLeft","ComponentPath":"PerceptionPositionAccurateItemLeft","Handle":["MouseInOut"],"Listener":["PerceptionPositionAccurate"],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateArrow","ComponentPath":"PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateArrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateImage","ComponentPath":"PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateText","ComponentPath":"PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PerceptionPositionAccurateItemLeft"},{"Components":[{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateItemRight","ComponentPath":"PerceptionPositionAccurateItemRight","Handle":["MouseInOut"],"Listener":["PerceptionPositionAccurate"],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateArrow","ComponentPath":"PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateArrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateImage","ComponentPath":"PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionAccurateText","ComponentPath":"PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateText","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PerceptionPositionAccurateItemRight"},{"Components":[{"AnomalyButton":false,"ComponentName":"PerceptionPositionExist","ComponentPath":"PerceptionPositionExist","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistLeft","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistLeft","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistLeftArrow","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistLeft\/PerceptionPositionExistLeftArrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistLeftList","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistLeft\/PerceptionPositionExistLeftList","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistRight","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistRight","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistRightArrow","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistRight\/PerceptionPositionExistRightArrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistRightList","ComponentPath":"PerceptionPositionExist\/PerceptionPositionExistRight\/PerceptionPositionExistRightList","Handle":[],"Listener":[],"saveEntity":true}],"UiLayer":"NormalLayer","UiName":"PerceptionPositionExist"},{"Components":[{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistItem","ComponentPath":"PerceptionPositionExistItem","Handle":["MouseInOut"],"Listener":["PerceptionPositionExist"],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistItemNinja","ComponentPath":"PerceptionPositionExistItem\/PerceptionPositionExistItemNinja","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PerceptionPositionExistItemDistance","ComponentPath":"PerceptionPositionExistItem\/PerceptionPositionExistItemDistance","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PerceptionPositionExistItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"PlayerChooseItem","ComponentPath":"PlayerChooseItem","Handle":[],"Listener":["PlayerChooseItem"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Background","ComponentPath":"PlayerChooseItem\/Background","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NinjaHeadShot","ComponentPath":"PlayerChooseItem\/NinjaHeadShot","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PlayerChooseItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"PlayerInfo","ComponentPath":"PlayerInfo","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerInfoBottomImg","ComponentPath":"PlayerInfo\/PlayerInfoBottomImg","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerState","ComponentPath":"PlayerInfo\/PlayerState","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"BurnState","ComponentPath":"PlayerInfo\/PlayerState\/BurnState","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NearDeathState","ComponentPath":"PlayerInfo\/PlayerState\/NearDeathState","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"NormalState","ComponentPath":"PlayerInfo\/PlayerState\/NormalState","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PoisonedState","ComponentPath":"PlayerInfo\/PlayerState\/PoisonedState","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerTaiRyoKuValue","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue","Handle":[],"Listener":["Active","PlayerTaiRyoKu"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuValueImg","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuValueImg","Handle":["MouseInOut"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuDeathTip","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuDeathTip","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuTiredTip","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuTiredTip","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuPopUpWindow","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuPopUpWindowTxt","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow\/TaiRyoKuPopUpWindowTxt","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TaiRyoKuPopUpWindowValue","ComponentPath":"PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow\/TaiRyoKuPopUpWindowValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerChaKuRaValue","ComponentPath":"PlayerInfo\/PlayerChaKuRaValue","Handle":[],"Listener":["Active","PlayerChaKuRa"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChaKuRaValueImg","ComponentPath":"PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaValueImg","Handle":["MouseInOut"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChaKuRaPopUpWindow","ComponentPath":"PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChaKuRaPopUpWindowTxt","ComponentPath":"PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow\/ChaKuRaPopUpWindowTxt","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ChaKuRaPopUpWindowValue","ComponentPath":"PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow\/ChaKuRaPopUpWindowValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerHealthValue","ComponentPath":"PlayerInfo\/PlayerHealthValue","Handle":[],"Listener":["Active","PlayerHealth"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"RecoverableHealthValueImg","ComponentPath":"PlayerInfo\/PlayerHealthValue\/RecoverableHealthValueImg","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"HealthValueImg","ComponentPath":"PlayerInfo\/PlayerHealthValue\/HealthValueImg","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"HealthValueTxt","ComponentPath":"PlayerInfo\/PlayerHealthValue\/HealthValueTxt","Handle":["MouseInOut"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"HealthPopUpWindow","ComponentPath":"PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"HealthPopUpWindowTxt","ComponentPath":"PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow\/HealthPopUpWindowTxt","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"HealthPopUpWindowValue","ComponentPath":"PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow\/HealthPopUpWindowValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":true,"ComponentName":"PlayerHeadShot","ComponentPath":"PlayerInfo\/PlayerHeadShot","Handle":["MouseInOut","Click"],"Listener":["Active","PlayerHeadShot"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"PlayerInfo"},{"Components":[{"AnomalyButton":false,"ComponentName":"QuickActionMenu","ComponentPath":"QuickActionMenu","Handle":[],"Listener":[],"saveEntity":true},{"AnomalyButton":false,"ComponentName":"QuickActionMenuList","ComponentPath":"QuickActionMenu\/QuickActionMenuList","Handle":[],"Listener":["Active"],"saveEntity":true}],"UiLayer":"NormalLayer","UiName":"QuickActionMenu"},{"Components":[{"AnomalyButton":false,"ComponentName":"QuickActionMenuItem","ComponentPath":"QuickActionMenuItem","Handle":["MouseInOut","Click"],"Listener":["QuickActionMenuItem"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"QuickActionMenuItemBackground","ComponentPath":"QuickActionMenuItem\/QuickActionMenuItemBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"QuickActionMenuItemIcon","ComponentPath":"QuickActionMenuItem\/QuickActionMenuItemIcon","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"QuickActionMenuItemDescribe","ComponentPath":"QuickActionMenuItem\/QuickActionMenuItemDescribe","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"QuickActionMenuItem"},{"Components":[{"AnomalyButton":false,"ComponentName":"SearchBattleWindow","ComponentPath":"SearchBattleWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SearchBattleWindowMask","ComponentPath":"SearchBattleWindow\/SearchBattleWindowMask","Handle":["Click"],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SearchBattleWindowBackground","ComponentPath":"SearchBattleWindow\/SearchBattleWindowBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TeamPlayer1","ComponentPath":"SearchBattleWindow\/TeamPlayer1","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Username","ComponentPath":"SearchBattleWindow\/TeamPlayer1\/Username","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TeamPlayer2","ComponentPath":"SearchBattleWindow\/TeamPlayer2","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Username","ComponentPath":"SearchBattleWindow\/TeamPlayer2\/Username","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TeamPlayer3","ComponentPath":"SearchBattleWindow\/TeamPlayer3","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Username","ComponentPath":"SearchBattleWindow\/TeamPlayer3\/Username","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"TeamPlayer4","ComponentPath":"SearchBattleWindow\/TeamPlayer4","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Username","ComponentPath":"SearchBattleWindow\/TeamPlayer4\/Username","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MatchScaleDropdown","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Label","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Label","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Arrow","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Arrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Template","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Viewport","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Content","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Background","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Background","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Checkmark","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Checkmark","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Label","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Label","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Scrollbar","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Sliding Area","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar\/Sliding Area","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Handle","ComponentPath":"SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar\/Sliding Area\/Handle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MatchScaleText","ComponentPath":"SearchBattleWindow\/MatchScaleText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MatchTypeDropdown","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Label","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Label","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Arrow","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Arrow","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Template","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Viewport","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Content","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Background","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Background","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Checkmark","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Checkmark","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Item Label","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Label","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Scrollbar","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Sliding Area","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar\/Sliding Area","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Handle","ComponentPath":"SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar\/Sliding Area\/Handle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"MatchTypeText","ComponentPath":"SearchBattleWindow\/MatchTypeText","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"StartSearchButton","ComponentPath":"SearchBattleWindow\/StartSearchButton","Handle":["Click"],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"SearchBattleWindow\/StartSearchButton\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"StopSearchButton","ComponentPath":"SearchBattleWindow\/StopSearchButton","Handle":["Click"],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"SearchBattleWindow\/StopSearchButton\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"WaitOtherPlayerJoin","ComponentPath":"SearchBattleWindow\/WaitOtherPlayerJoin","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ReadyWindow","ComponentPath":"SearchBattleWindow\/ReadyWindow","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"PlayerList","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player1","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player1","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player1Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player1\/Player1Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player2","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player2","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player2Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player2\/Player2Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player3","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player3","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player3Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player3\/Player3Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player4","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player4","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player4Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player4\/Player4Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player5","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player5","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player5Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player5\/Player5Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player6","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player6","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player6Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player6\/Player6Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player7","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player7","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player7Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player7\/Player7Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player8","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player8","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Player8Ready","ComponentPath":"SearchBattleWindow\/ReadyWindow\/PlayerList\/Player8\/Player8Ready","Handle":[],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"ReadyMatchButton","ComponentPath":"SearchBattleWindow\/ReadyWindow\/ReadyMatchButton","Handle":["Click"],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"SearchBattleWindow\/ReadyWindow\/ReadyMatchButton\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"CancelMatchButton","ComponentPath":"SearchBattleWindow\/ReadyWindow\/CancelMatchButton","Handle":["Click"],"Listener":["Active"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"Text","ComponentPath":"SearchBattleWindow\/ReadyWindow\/CancelMatchButton\/Text","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"LeftTimeBeforeMatchCancel","ComponentPath":"SearchBattleWindow\/ReadyWindow\/LeftTimeBeforeMatchCancel","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"WaitOtherPlayerReady","ComponentPath":"SearchBattleWindow\/ReadyWindow\/WaitOtherPlayerReady","Handle":[],"Listener":["Active"],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"SearchBattleWindow"},{"Components":[{"AnomalyButton":false,"ComponentName":"SelectTarget","ComponentPath":"SelectTarget","Handle":["Click","MouseInOut"],"Listener":["SelectTarget"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"OutScreenSelectTargetIcon","ComponentPath":"SelectTarget\/OutScreenSelectTargetIcon","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"SelectTargetImage","ComponentPath":"SelectTarget\/SelectTargetImage","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"OutScreenTargetDistance","ComponentPath":"SelectTarget\/OutScreenTargetDistance","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"SelectTarget"},{"Components":[{"AnomalyButton":false,"ComponentName":"UserInfo","ComponentPath":"UserInfo","Handle":[],"Listener":["CurrentPlayerUserData"],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoBackground","ComponentPath":"UserInfo\/UserInfoBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoTitle","ComponentPath":"UserInfo\/UserInfoTitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUserHeadShot","ComponentPath":"UserInfo\/UserInfoUserHeadShot","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUsername","ComponentPath":"UserInfo\/UserInfoUsername","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoBattleNumber","ComponentPath":"UserInfo\/UserInfoBattleNumber","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoWinRate","ComponentPath":"UserInfo\/UserInfoWinRate","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoBattleLevel","ComponentPath":"UserInfo\/UserInfoBattleLevel","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoBattleLevelValue","ComponentPath":"UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelValue","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoBattleLevelTitle","ComponentPath":"UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelTitle","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoNinjaNumber","ComponentPath":"UserInfo\/UserInfoNinjaNumber","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUserLevel","ComponentPath":"UserInfo\/UserInfoUserLevel","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUpgradeProgress","ComponentPath":"UserInfo\/UserInfoUpgradeProgress","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUpgradeProgressBar","ComponentPath":"UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUpgradeProgressBarBackground","ComponentPath":"UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarBackground","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUpgradeProgressBarImg","ComponentPath":"UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarImg","Handle":[],"Listener":[],"saveEntity":false},{"AnomalyButton":false,"ComponentName":"UserInfoUpgradeProgressExp","ComponentPath":"UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressExp","Handle":[],"Listener":[],"saveEntity":false}],"UiLayer":"NormalLayer","UiName":"UserInfo"}]}
+{
+  "UIConfigs": [
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatMain",
+          "ComponentPath": "ChatMain",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatMainBackground",
+          "ComponentPath": "ChatMain\/ChatMainBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatInputField",
+          "ComponentPath": "ChatMain\/ChatInputField",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "ChatMain\/ChatInputField\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatSendButton",
+          "ComponentPath": "ChatMain\/ChatSendButton",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatChannel",
+          "ComponentPath": "ChatMain\/ChatChannel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatChannelList",
+          "ComponentPath": "ChatMain\/ChatChannelList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatChannelWorld",
+          "ComponentPath": "ChatMain\/ChatChannelList\/ChatChannelWorld",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatChannelTeam",
+          "ComponentPath": "ChatMain\/ChatChannelList\/ChatChannelTeam",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatChannelClan",
+          "ComponentPath": "ChatMain\/ChatChannelList\/ChatChannelClan",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "ChatMain"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatMini",
+          "ComponentPath": "ChatMini",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChatMiniBackground",
+          "ComponentPath": "ChatMini\/ChatMiniBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "GameObject",
+          "ComponentPath": "ChatMini\/GameObject",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "ChatMini"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaItem",
+          "ComponentPath": "ChooseNinjaItem",
+          "Handle": ["Click"],
+          "Listener": ["ChooseNinjaItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Background",
+          "ComponentPath": "ChooseNinjaItem\/Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaHeadShot",
+          "ComponentPath": "ChooseNinjaItem\/Background\/NinjaHeadShot",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Checkmark",
+          "ComponentPath": "ChooseNinjaItem\/Background\/Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "ChooseNinjaItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindow",
+          "ComponentPath": "ChooseNinjaWindow",
+          "Handle": [],
+          "Listener": ["Active", "ChooseNinjaWindow"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowMask",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowMask",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowBackground",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowMapImage",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowMapImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowMapName",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowMapName",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowBattleType",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowBattleType",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowNinjaList",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowNinjaList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowConfirmButton",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowConfirmButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowConfirmButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowFriendlyList",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowFriendlyList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowEnemyList",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowEnemyList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChooseNinjaWindowWaitOtherPlayers",
+          "ComponentPath": "ChooseNinjaWindow\/ChooseNinjaWindowWaitOtherPlayers",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "ChooseNinjaWindow"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "CurrentWeaponIcon",
+          "ComponentPath": "CurrentWeaponIcon",
+          "Handle": [],
+          "Listener": ["CurrentWeapon"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "CurrentWeaponIcon"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "GameState",
+          "ComponentPath": "GameState",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Fps",
+          "ComponentPath": "GameState\/Fps",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "FpsValue",
+          "ComponentPath": "GameState\/Fps\/FpsValue",
+          "Handle": [],
+          "Listener": ["Active", "Fps"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Network",
+          "ComponentPath": "GameState\/Network",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PingValue",
+          "ComponentPath": "GameState\/Network\/PingValue",
+          "Handle": [],
+          "Listener": ["Active", "Ping"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NormalNetworkIcon",
+          "ComponentPath": "GameState\/Network\/NormalNetworkIcon",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ErrorNetworkIcon",
+          "ComponentPath": "GameState\/Network\/ErrorNetworkIcon",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "GameState"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpUI",
+          "ComponentPath": "JumpUI",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceProcess",
+          "ComponentPath": "JumpUI\/JumpForceProcess",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceProcessBarBackground",
+          "ComponentPath": "JumpUI\/JumpForceProcess\/JumpForceProcessBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceProcessBarImage",
+          "ComponentPath": "JumpUI\/JumpForceProcess\/JumpForceProcessBarImage",
+          "Handle": [],
+          "Listener": ["JumpForce"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceProcessBarMask",
+          "ComponentPath": "JumpUI\/JumpForceProcess\/JumpForceProcessBarMask",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceDirection",
+          "ComponentPath": "JumpUI\/JumpForceDirection",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceVerticalDirection",
+          "ComponentPath": "JumpUI\/JumpForceDirection\/JumpForceVerticalDirection",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceVerticalDirectionScale",
+          "ComponentPath": "JumpUI\/JumpForceDirection\/JumpForceVerticalDirection\/JumpForceVerticalDirectionScale",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceVerticalDirectionArrow",
+          "ComponentPath": "JumpUI\/JumpForceDirection\/JumpForceVerticalDirection\/JumpForceVerticalDirectionArrow",
+          "Handle": [],
+          "Listener": ["JumpVerticalDirectionArrow"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceHorizontalDirection",
+          "ComponentPath": "JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceHorizontalDirectionScale",
+          "ComponentPath":
+            "JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection\/JumpForceHorizontalDirectionScale",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "JumpForceHorizontalDirectionArrow",
+          "ComponentPath":
+            "JumpUI\/JumpForceDirection\/JumpForceHorizontalDirection\/JumpForceHorizontalDirectionArrow",
+          "Handle": [],
+          "Listener": ["JumpHorizontalDirectionArrow"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "JumpUI"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoadingProcess",
+          "ComponentPath": "LoadingProcess",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BackgroundImage",
+          "ComponentPath": "LoadingProcess\/BackgroundImage",
+          "Handle": [],
+          "Listener": ["Active", "LoadingSceneImage"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ProcessBar",
+          "ComponentPath": "LoadingProcess\/ProcessBar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ProcessBarBackImg",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ProcessBarFillImg",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
+          "Handle": [],
+          "Listener": ["Active", "LoadingSceneProcess"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ProcessNumber",
+          "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessNumber",
+          "Handle": [],
+          "Listener": ["Active", "LoadingSceneProcessText"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RandomInfo",
+          "ComponentPath": "LoadingProcess\/RandomInfo",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RandomTitle",
+          "ComponentPath": "LoadingProcess\/RandomInfo\/RandomTitle",
+          "Handle": [],
+          "Listener": ["Active", "LoadingSceneTitle"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RandomText",
+          "ComponentPath": "LoadingProcess\/RandomInfo\/RandomText",
+          "Handle": [],
+          "Listener": ["Active", "LoadingSceneText"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "LoadingProcess"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Login",
+          "ComponentPath": "Login",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginBackground",
+          "ComponentPath": "Login\/LoginBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginPicture",
+          "ComponentPath": "Login\/LoginPicture",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginEmailInput",
+          "ComponentPath": "Login\/LoginEmailInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/LoginEmailInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/LoginEmailInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginPasswordInput",
+          "ComponentPath": "Login\/LoginPasswordInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/LoginPasswordInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/LoginPasswordInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginButton",
+          "ComponentPath": "Login\/LoginButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginButtonText",
+          "ComponentPath": "Login\/LoginButton\/LoginButtonText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInButton",
+          "ComponentPath": "Login\/SignInButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInButtonText",
+          "ComponentPath": "Login\/SignInButton\/SignInButtonText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginRememberPasswordToggle",
+          "ComponentPath": "Login\/LoginRememberPasswordToggle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Background",
+          "ComponentPath": "Login\/LoginRememberPasswordToggle\/Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Checkmark",
+          "ComponentPath": "Login\/LoginRememberPasswordToggle\/Background\/Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Label",
+          "ComponentPath": "Login\/LoginRememberPasswordToggle\/Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LoginErrorMessage",
+          "ComponentPath": "Login\/LoginErrorMessage",
+          "Handle": [],
+          "Listener": ["Text"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInWindow",
+          "ComponentPath": "Login\/SignInWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInWindowMark",
+          "ComponentPath": "Login\/SignInWindow\/SignInWindowMark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInWindowBackground",
+          "ComponentPath": "Login\/SignInWindow\/SignInWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInEmailInput",
+          "ComponentPath": "Login\/SignInWindow\/SignInEmailInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Title",
+          "ComponentPath": "Login\/SignInWindow\/SignInEmailInput\/Title",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/SignInWindow\/SignInEmailInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/SignInWindow\/SignInEmailInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInPasswordInput",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Title",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordInput\/Title",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInPasswordConfirmInput",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordConfirmInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Title",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordConfirmInput\/Title",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordConfirmInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/SignInWindow\/SignInPasswordConfirmInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInUserNameInput",
+          "ComponentPath": "Login\/SignInWindow\/SignInUserNameInput",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Title",
+          "ComponentPath": "Login\/SignInWindow\/SignInUserNameInput\/Title",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "Login\/SignInWindow\/SignInUserNameInput\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Placeholder",
+          "ComponentPath": "Login\/SignInWindow\/SignInUserNameInput\/Placeholder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInConfirmButton",
+          "ComponentPath": "Login\/SignInWindow\/SignInConfirmButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInButtonText",
+          "ComponentPath": "Login\/SignInWindow\/SignInConfirmButton\/SignInButtonText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInCancelButton",
+          "ComponentPath": "Login\/SignInWindow\/SignInCancelButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInButtonText",
+          "ComponentPath": "Login\/SignInWindow\/SignInCancelButton\/SignInButtonText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SignInErrorMessage",
+          "ComponentPath": "Login\/SignInWindow\/SignInErrorMessage",
+          "Handle": [],
+          "Listener": ["Text"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "Login"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUI",
+          "ComponentPath": "MainUI",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUIBackground",
+          "ComponentPath": "MainUI\/MainUIBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUIOperationList",
+          "ComponentPath": "MainUI\/MainUIOperationList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUIOperationSearchBattle",
+          "ComponentPath": "MainUI\/MainUIOperationList\/MainUIOperationSearchBattle",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUIOperationNinjaList",
+          "ComponentPath": "MainUI\/MainUIOperationList\/MainUIOperationNinjaList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MainUIOperationSetting",
+          "ComponentPath": "MainUI\/MainUIOperationList\/MainUIOperationSetting",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "MainUI"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NetworkWait",
+          "ComponentPath": "NetworkWait",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NetworkWaitBackground",
+          "ComponentPath": "NetworkWait\/NetworkWaitBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NetworkWaitImg",
+          "ComponentPath": "NetworkWait\/NetworkWaitImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NetworkWaitText",
+          "ComponentPath": "NetworkWait\/NetworkWaitText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NetworkWait"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": true,
+          "ComponentName": "NinjaItemMenu",
+          "ComponentPath": "NinjaItemMenu",
+          "Handle": ["MouseInOut"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuBackground",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuList",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem0",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem0",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem1",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem1",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem2",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem2",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem3",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem3",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem4",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem4",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItem5",
+          "ComponentPath": "NinjaItemMenu\/NinjaItemMenuList\/NinjaItemMenuItem5",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjaItemMenu"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoWindow",
+          "ComponentPath": "NinjaItemMenuInfoWindow",
+          "Handle": [],
+          "Listener": ["Active", "NinjaItemMenuInfo"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoWindowBackground",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoIcon",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoName",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoName",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoDescribe",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoDescribeTitle",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoDescribeSubtitleBackground",
+          "ComponentPath":
+            "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle\/NinjaItemMenuInfoDescribeSubtitleBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoDescribeSubtitleText",
+          "ComponentPath":
+            "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeTitle\/NinjaItemMenuInfoDescribeSubtitleText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoDescribeText",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoDescribe\/NinjaItemMenuInfoDescribeText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoEffect",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoEffectTitle",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoEffectSubtitleBackground",
+          "ComponentPath":
+            "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle\/NinjaItemMenuInfoEffectSubtitleBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoEffectSubtitleText",
+          "ComponentPath":
+            "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectTitle\/NinjaItemMenuInfoEffectSubtitleText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuInfoEffectText",
+          "ComponentPath": "NinjaItemMenuInfoWindow\/NinjaItemMenuInfoEffect\/NinjaItemMenuInfoEffectText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjaItemMenuInfoWindow"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": true,
+          "ComponentName": "NinjaItemMenuItem",
+          "ComponentPath": "NinjaItemMenuItem",
+          "Handle": ["MouseInOut", "Click"],
+          "Listener": ["NinjaItemMenuItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItemBackground",
+          "ComponentPath": "NinjaItemMenuItem\/NinjaItemMenuItemBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItemSelected",
+          "ComponentPath": "NinjaItemMenuItem\/NinjaItemMenuItemSelected",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItemIcon",
+          "ComponentPath": "NinjaItemMenuItem\/NinjaItemMenuItemIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaItemMenuItemLeftNum",
+          "ComponentPath": "NinjaItemMenuItem\/NinjaItemMenuItemLeftNum",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjaItemMenuItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenu",
+          "ComponentPath": "NinjutsuMenu",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuBackground",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuScrollbar",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollbar",
+          "Handle": [],
+          "Listener": ["ScrollBarValue"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuScrollbarSlidingArea",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollbar\/NinjutsuMenuScrollbarSlidingArea",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuScrollbarHandle",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuScrollbar\/NinjutsuMenuScrollbarSlidingArea\/NinjutsuMenuScrollbarHandle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuScrollRect",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect",
+          "Handle": [],
+          "Listener": ["Size"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuContent",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect\/NinjutsuMenuContent",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoWindow",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow",
+          "Handle": [],
+          "Listener": ["Active", "NinjutsuMenuInfo"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoWindowBackground",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoName",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoName",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoIconBackground",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoIconBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoIcon",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoClass",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoClass",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoNature",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureFire",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureFire",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureWind",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWind",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureThunder",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureThunder",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureSoil",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureSoil",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureWater",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureWater",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureYin",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYin",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NatureYang",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoNature\/NatureYang",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoLabel",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoType",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TypeNin",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeNin",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TypeTai",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeTai",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TypeGen",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoType\/TypeGen",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoRange",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RangeClose",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeClose",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RangeMiddle",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeMiddle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RangeFar",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoRange\/RangeFar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoEffect",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectAttack",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAttack",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectDefense",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectDefense",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "EffectAssist",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoLabel\/NinjutsuMenuInfoEffect\/EffectAssist",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoDescribe",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoDescribeTitle",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoDescribeSubtitleBackground",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle\/NinjutsuMenuInfoDescribeSubtitleBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoDescribeSubtitleText",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeTitle\/NinjutsuMenuInfoDescribeSubtitleText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoDescribeText",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoDescribe\/NinjutsuMenuInfoDescribeText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoQTE",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoQTETitle",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoQTESubtitleBackground",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle\/NinjutsuMenuInfoQTESubtitleBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoQTESubtitleText",
+          "ComponentPath":
+            "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTETitle\/NinjutsuMenuInfoQTESubtitleText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuInfoQTEText",
+          "ComponentPath": "NinjutsuMenu\/NinjutsuMenuInfoWindow\/NinjutsuMenuInfoQTE\/NinjutsuMenuInfoQTEText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuMenu"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": true,
+          "ComponentName": "NinjutsuMenuItem",
+          "ComponentPath": "NinjutsuMenuItem",
+          "Handle": ["MouseInOut", "Click"],
+          "Listener": ["NinjutsuMenuItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuItemBackground",
+          "ComponentPath": "NinjutsuMenuItem\/NinjutsuMenuItemBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuMenuItemIcon",
+          "ComponentPath": "NinjutsuMenuItem\/NinjutsuMenuItemIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuMenuItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTE",
+          "ComponentPath": "NinjutsuQTE",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTETime",
+          "ComponentPath": "NinjutsuQTE\/NinjutsuQTETime",
+          "Handle": [],
+          "Listener": ["MakeYinTime"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTETimePorcessBar",
+          "ComponentPath": "NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTETimeProcessBarBackground",
+          "ComponentPath":
+            "NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar\/NinjutsuQTETimeProcessBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTETimeProcessBarImage",
+          "ComponentPath": "NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimePorcessBar\/NinjutsuQTETimeProcessBarImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuQTETimeText",
+          "ComponentPath": "NinjutsuQTE\/NinjutsuQTETime\/NinjutsuQTETimeText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinList",
+          "ComponentPath": "NinjutsuQTE\/NinjutsuYinList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuQTE"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinChen",
+          "ComponentPath": "NinjutsuYinChen",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinChen\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinChen\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinChen"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinShen",
+          "ComponentPath": "NinjutsuYinShen",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinShen\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinShen\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinShen"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinWu",
+          "ComponentPath": "NinjutsuYinWu",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinWu\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinWu\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinWu"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinXu",
+          "ComponentPath": "NinjutsuYinXu",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinXu\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinXu\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinXu"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinYin",
+          "ComponentPath": "NinjutsuYinYin",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinYin\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinYin\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinYin"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinZi",
+          "ComponentPath": "NinjutsuYinZi",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYiImage",
+          "ComponentPath": "NinjutsuYinZi\/NinjutsuYiImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjutsuYinText",
+          "ComponentPath": "NinjutsuYinZi\/NinjutsuYinText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "NinjutsuYinZi"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetView",
+          "ComponentPath": "OutScreenSelectTargetView",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewBackground",
+          "ComponentPath": "OutScreenSelectTargetView\/OutScreenSelectTargetViewBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewPort",
+          "ComponentPath": "OutScreenSelectTargetView\/OutScreenSelectTargetViewPort",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetView"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewCamera",
+          "ComponentPath": "OutScreenSelectTargetViewCamera",
+          "Handle": [],
+          "Listener": ["Position"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetViewCamera"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewList",
+          "ComponentPath": "OutScreenSelectTargetViewList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewLeftList",
+          "ComponentPath": "OutScreenSelectTargetViewList\/OutScreenSelectTargetViewLeftList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetViewRightList",
+          "ComponentPath": "OutScreenSelectTargetViewList\/OutScreenSelectTargetViewRightList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "OutScreenSelectTargetViewList"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionHTCItem",
+          "ComponentPath": "PerceptionHTCItem",
+          "Handle": [],
+          "Listener": ["PerceptionHTC"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionHealth",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionHealth",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionProcessBarBackground",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionHealth\/PerceptionProcessBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionHealthValue",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionHealth\/PerceptionHealthValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionTaiRyoKu",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionTaiRyoKu",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionProcessBarBackground",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionTaiRyoKu\/PerceptionProcessBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionTaiRyoKuValue",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionTaiRyoKu\/PerceptionTaiRyoKuValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionChaKuRa",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionChaKuRa",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionProcessBarBackground",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionChaKuRa\/PerceptionProcessBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionChaKuRaValue",
+          "ComponentPath": "PerceptionHTCItem\/PerceptionChaKuRa\/PerceptionChaKuRaValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PerceptionHTCItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateItemLeft",
+          "ComponentPath": "PerceptionPositionAccurateItemLeft",
+          "Handle": ["MouseInOut"],
+          "Listener": ["PerceptionPositionAccurate"],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateArrow",
+          "ComponentPath": "PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateArrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateImage",
+          "ComponentPath": "PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateText",
+          "ComponentPath": "PerceptionPositionAccurateItemLeft\/PerceptionPositionAccurateText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PerceptionPositionAccurateItemLeft"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateItemRight",
+          "ComponentPath": "PerceptionPositionAccurateItemRight",
+          "Handle": ["MouseInOut"],
+          "Listener": ["PerceptionPositionAccurate"],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateArrow",
+          "ComponentPath": "PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateArrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateImage",
+          "ComponentPath": "PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionAccurateText",
+          "ComponentPath": "PerceptionPositionAccurateItemRight\/PerceptionPositionAccurateText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PerceptionPositionAccurateItemRight"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExist",
+          "ComponentPath": "PerceptionPositionExist",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistLeft",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistLeft",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistLeftArrow",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistLeft\/PerceptionPositionExistLeftArrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistLeftList",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistLeft\/PerceptionPositionExistLeftList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistRight",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistRight",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistRightArrow",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistRight\/PerceptionPositionExistRightArrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistRightList",
+          "ComponentPath": "PerceptionPositionExist\/PerceptionPositionExistRight\/PerceptionPositionExistRightList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PerceptionPositionExist"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistItem",
+          "ComponentPath": "PerceptionPositionExistItem",
+          "Handle": ["MouseInOut"],
+          "Listener": ["PerceptionPositionExist"],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistItemNinja",
+          "ComponentPath": "PerceptionPositionExistItem\/PerceptionPositionExistItemNinja",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PerceptionPositionExistItemDistance",
+          "ComponentPath": "PerceptionPositionExistItem\/PerceptionPositionExistItemDistance",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PerceptionPositionExistItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerChooseItem",
+          "ComponentPath": "PlayerChooseItem",
+          "Handle": [],
+          "Listener": ["PlayerChooseItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Background",
+          "ComponentPath": "PlayerChooseItem\/Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NinjaHeadShot",
+          "ComponentPath": "PlayerChooseItem\/NinjaHeadShot",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Confirm",
+          "ComponentPath": "PlayerChooseItem\/Confirm",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PlayerChooseItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerInfo",
+          "ComponentPath": "PlayerInfo",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerInfoBottomImg",
+          "ComponentPath": "PlayerInfo\/PlayerInfoBottomImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerState",
+          "ComponentPath": "PlayerInfo\/PlayerState",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BurnState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/BurnState",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NearDeathState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/NearDeathState",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "NormalState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/NormalState",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PoisonedState",
+          "ComponentPath": "PlayerInfo\/PlayerState\/PoisonedState",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerTaiRyoKuValue",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue",
+          "Handle": [],
+          "Listener": ["Active", "PlayerTaiRyoKu"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuValueImg",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuValueImg",
+          "Handle": ["MouseInOut"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuDeathTip",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuDeathTip",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuTiredTip",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuTiredTip",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuPopUpWindow",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuPopUpWindowTxt",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow\/TaiRyoKuPopUpWindowTxt",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TaiRyoKuPopUpWindowValue",
+          "ComponentPath": "PlayerInfo\/PlayerTaiRyoKuValue\/TaiRyoKuPopUpWindow\/TaiRyoKuPopUpWindowValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerChaKuRaValue",
+          "ComponentPath": "PlayerInfo\/PlayerChaKuRaValue",
+          "Handle": [],
+          "Listener": ["Active", "PlayerChaKuRa"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChaKuRaValueImg",
+          "ComponentPath": "PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaValueImg",
+          "Handle": ["MouseInOut"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChaKuRaPopUpWindow",
+          "ComponentPath": "PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChaKuRaPopUpWindowTxt",
+          "ComponentPath": "PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow\/ChaKuRaPopUpWindowTxt",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ChaKuRaPopUpWindowValue",
+          "ComponentPath": "PlayerInfo\/PlayerChaKuRaValue\/ChaKuRaPopUpWindow\/ChaKuRaPopUpWindowValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerHealthValue",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue",
+          "Handle": [],
+          "Listener": ["Active", "PlayerHealth"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "RecoverableHealthValueImg",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/RecoverableHealthValueImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "HealthValueImg",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/HealthValueImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "HealthValueTxt",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/HealthValueTxt",
+          "Handle": ["MouseInOut"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "HealthPopUpWindow",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "HealthPopUpWindowTxt",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow\/HealthPopUpWindowTxt",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "HealthPopUpWindowValue",
+          "ComponentPath": "PlayerInfo\/PlayerHealthValue\/HealthPopUpWindow\/HealthPopUpWindowValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": true,
+          "ComponentName": "PlayerHeadShot",
+          "ComponentPath": "PlayerInfo\/PlayerHeadShot",
+          "Handle": ["MouseInOut", "Click"],
+          "Listener": ["Active", "PlayerHeadShot"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "PlayerInfo"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenu",
+          "ComponentPath": "QuickActionMenu",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenuList",
+          "ComponentPath": "QuickActionMenu\/QuickActionMenuList",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": true
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "QuickActionMenu"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenuItem",
+          "ComponentPath": "QuickActionMenuItem",
+          "Handle": ["MouseInOut", "Click"],
+          "Listener": ["QuickActionMenuItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenuItemBackground",
+          "ComponentPath": "QuickActionMenuItem\/QuickActionMenuItemBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenuItemIcon",
+          "ComponentPath": "QuickActionMenuItem\/QuickActionMenuItemIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "QuickActionMenuItemDescribe",
+          "ComponentPath": "QuickActionMenuItem\/QuickActionMenuItemDescribe",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "QuickActionMenuItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SearchBattleWindow",
+          "ComponentPath": "SearchBattleWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SearchBattleWindowMask",
+          "ComponentPath": "SearchBattleWindow\/SearchBattleWindowMask",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SearchBattleWindowBackground",
+          "ComponentPath": "SearchBattleWindow\/SearchBattleWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TeamPlayer1",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer1",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Username",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer1\/Username",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TeamPlayer2",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer2",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Username",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer2\/Username",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TeamPlayer3",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer3",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Username",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer3\/Username",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "TeamPlayer4",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer4",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Username",
+          "ComponentPath": "SearchBattleWindow\/TeamPlayer4\/Username",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchScaleDropdown",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Label",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Arrow",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Arrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Template",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Viewport",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Content",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Background",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Checkmark",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Label",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Viewport\/Content\/Item\/Item Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Scrollbar",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Sliding Area",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar\/Sliding Area",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Handle",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleDropdown\/Template\/Scrollbar\/Sliding Area\/Handle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchScaleText",
+          "ComponentPath": "SearchBattleWindow\/MatchScaleText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchTypeDropdown",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Label",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Arrow",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Arrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Template",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Viewport",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Content",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Background",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Checkmark",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Label",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Viewport\/Content\/Item\/Item Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Scrollbar",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Sliding Area",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar\/Sliding Area",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Handle",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeDropdown\/Template\/Scrollbar\/Sliding Area\/Handle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchTypeText",
+          "ComponentPath": "SearchBattleWindow\/MatchTypeText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "StartSearchButton",
+          "ComponentPath": "SearchBattleWindow\/StartSearchButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "SearchBattleWindow\/StartSearchButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "StopSearchButton",
+          "ComponentPath": "SearchBattleWindow\/StopSearchButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "SearchBattleWindow\/StopSearchButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "WaitOtherPlayerJoin",
+          "ComponentPath": "SearchBattleWindow\/WaitOtherPlayerJoin",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ReadyWindow",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "PlayerList",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player1",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player1",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player1Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player1\/Player1Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player2",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player2",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player2Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player2\/Player2Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player3",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player3",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player3Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player3\/Player3Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player4",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player4",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player4Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player4\/Player4Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player5",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player5",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player5Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player5\/Player5Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player6",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player6",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player6Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player6\/Player6Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player7",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player7",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player7Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player7\/Player7Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player8",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player8",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Player8Ready",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/PlayerList\/Player8\/Player8Ready",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "ReadyMatchButton",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/ReadyMatchButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/ReadyMatchButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "CancelMatchButton",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/CancelMatchButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/CancelMatchButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "LeftTimeBeforeMatchCancel",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/LeftTimeBeforeMatchCancel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "WaitOtherPlayerReady",
+          "ComponentPath": "SearchBattleWindow\/ReadyWindow\/WaitOtherPlayerReady",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "SearchBattleWindow"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SelectTarget",
+          "ComponentPath": "SelectTarget",
+          "Handle": ["Click", "MouseInOut"],
+          "Listener": ["SelectTarget"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenSelectTargetIcon",
+          "ComponentPath": "SelectTarget\/OutScreenSelectTargetIcon",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SelectTargetImage",
+          "ComponentPath": "SelectTarget\/SelectTargetImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "OutScreenTargetDistance",
+          "ComponentPath": "SelectTarget\/OutScreenTargetDistance",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "SelectTarget"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfo",
+          "ComponentPath": "UserInfo",
+          "Handle": [],
+          "Listener": ["CurrentPlayerUserData"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBackground",
+          "ComponentPath": "UserInfo\/UserInfoBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoTitle",
+          "ComponentPath": "UserInfo\/UserInfoTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUserHeadShot",
+          "ComponentPath": "UserInfo\/UserInfoUserHeadShot",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUsername",
+          "ComponentPath": "UserInfo\/UserInfoUsername",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleNumber",
+          "ComponentPath": "UserInfo\/UserInfoBattleNumber",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoWinRate",
+          "ComponentPath": "UserInfo\/UserInfoWinRate",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevel",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevelValue",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelValue",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoBattleLevelTitle",
+          "ComponentPath": "UserInfo\/UserInfoBattleLevel\/UserInfoBattleLevelTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoNinjaNumber",
+          "ComponentPath": "UserInfo\/UserInfoNinjaNumber",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUserLevel",
+          "ComponentPath": "UserInfo\/UserInfoUserLevel",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgress",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBar",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBarBackground",
+          "ComponentPath":
+            "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressBarImg",
+          "ComponentPath":
+            "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressBar\/UserInfoUpgradeProgressBarImg",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "UserInfoUpgradeProgressExp",
+          "ComponentPath": "UserInfo\/UserInfoUpgradeProgress\/UserInfoUpgradeProgressExp",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "UserInfo"
+    }
+  ]
+}

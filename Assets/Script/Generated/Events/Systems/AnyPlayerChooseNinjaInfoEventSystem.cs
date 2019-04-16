@@ -35,7 +35,7 @@ public sealed class AnyPlayerChooseNinjaInfoEventSystem : Entitas.ReactiveSystem
                 _listenerBuffer.Clear();
                 _listenerBuffer.AddRange(listenerEntity.anyPlayerChooseNinjaInfoListener.value);
                 foreach (var listener in _listenerBuffer) {
-                    listener.OnAnyPlayerChooseNinjaInfo(e, component.userId, component.ninjaName);
+                    listener.OnAnyPlayerChooseNinjaInfo(e, component.userId, component.ninjaName, component.confirm);
                 }
             }
         }

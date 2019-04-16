@@ -14,6 +14,8 @@ public class ManagementSelectTargetSystem : IExecuteSystem
         if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
+        if (currentPlayer == null) return;
+
         GameEntity leftListEntity = null;
         GameEntity rightListEntity = null;
         foreach (var ui in _context.GetGroup(GameMatcher.AllOf(GameMatcher.UiRootId).NoneOf(GameMatcher.UiClose)))

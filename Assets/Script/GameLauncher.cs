@@ -14,7 +14,7 @@ public class GameLauncher : MonoBehaviour
         var contexts = Contexts.sharedInstance;
 
         var services = new Services(
-            new UnityDebugLogService(),
+            new UnityDebugLogService(), 
             new UnityViewService(),
             new UnityMouseInputService(),
             new UnityLoadConfigService(),
