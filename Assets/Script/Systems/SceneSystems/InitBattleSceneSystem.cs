@@ -25,6 +25,7 @@ public class InitBattleSceneSystem : ReactiveSystem<GameEntity>
         _context.ReplaceCurrentMapName("ProvingGroundMap");
 
         var matchData = _context.currentMatchData.value;
+        Utilities.SetRandomSeed(matchData.matchRandomSeed);
 
         foreach (var player in matchData.matchPlayers)
         {

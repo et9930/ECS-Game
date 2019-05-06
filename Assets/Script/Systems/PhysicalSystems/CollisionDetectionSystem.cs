@@ -23,7 +23,7 @@ public class CollisionDetectionSystem : IExecuteSystem, IInitializeSystem
             var checkedEntityList = new List<GameEntity>();
             foreach (var firstEntity in _context.GetEntitiesWithTag(collisionPair.first))
             {
-                if (!firstEntity.isMoving) continue;
+//                if (!firstEntity.isMoving) continue;
                 if (!firstEntity.hasSprite || !firstEntity.hasBoundingBox || !firstEntity.hasName) continue;
 
                 if (!_context.currentCollisionEntity.dic.ContainsKey(firstEntity.id.value))

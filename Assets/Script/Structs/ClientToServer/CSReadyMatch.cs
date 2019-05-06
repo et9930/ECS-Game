@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 
 [DataContract]
-public class CSReadyMatch : ICSMessage
+public class CSReadyMatch
 {
     [DataMember(Name = "ready")] public bool ready;
 }

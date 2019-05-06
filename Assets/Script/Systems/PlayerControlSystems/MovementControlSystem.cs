@@ -1,49 +1,63 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
+using Nakama.TinyJson;
 
-public class MovementControlSystem : IExecuteSystem
+public class MovementControlSystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _context;
 
-    public MovementControlSystem(Contexts contexts)
+    public MovementControlSystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
     }
-    
-    public void Execute()
+
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        if (_context.currentScene.name != "BattleScene") return;
-        if (!_context.hasCurrentPlayerId) return;
-        var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
-        if (currentPlayer == null) return;
+        return context.CreateCollector(GameMatcher.MovementControl);
+    }
 
-        if (!currentPlayer.onTheGround.value || currentPlayer.isNormalAttacking || currentPlayer.isJumping) return;
+    protected override bool Filter(GameEntity entity)
+    {
+        return entity.hasMovementControl && !entity.isDestroy;
+    }
 
-        if (_context.key.value.Horizontal != 0.0f || _context.key.value.Vertical != 0.0f)
+    protected override void Execute(List<GameEntity> entities)
+    {
+        foreach (var e in entities)
         {
-            currentPlayer.isMoving = true;
-            if(currentPlayer.currentAnimation.name == "idle")
-                currentPlayer.ReplaceAnimation("move", true);
-                    
-        }
-        else
-        {
-            currentPlayer.isMoving = false;
-            if(currentPlayer.currentAnimation.name == "move")
-                currentPlayer.ReplaceAnimation("idle", true);
-        }
+            var player = _context.GetEntityWithId(e.movementControl.data.userId);
+            if (player == null) continue;
+            if (e.movementControl.data.horizontal != 0.0f || e.movementControl.data.vertical != 0.0f)
+            {
+                player.isMoving = true;
+                if(player.currentAnimation.name == "idle")
+                    player.ReplaceAnimation("move", true);
+                        
+            }
+            else
+            {
+                player.isMoving = false;
+                if(player.currentAnimation.name == "move")
+                    player.ReplaceAnimation("idle", true);
+            }
+            
+            var tmpHorizontal = e.movementControl.data.horizontal * _context.characterBaseAttributes.dic[player.name.text].baseVelocity;
+            var tmpVertical = e.movementControl.data.vertical * _context.characterBaseAttributes.dic[player.name.text].baseVelocity;
+//            _context.CreateEntity().ReplaceDebugMessage("horizontal " + tmpHorizontal + ", vertical " + tmpVertical);
+            player.ReplaceVelocity(new Vector3(tmpHorizontal, 0, tmpVertical));
+            
+            if (e.movementControl.data.horizontal > 0)
+            {
+                player.ReplaceToward(false);
+            }
+            else if (e.movementControl.data.horizontal < 0)
+            {
+                player.ReplaceToward(true);
+            }
 
-        var tmpHorizontal = _context.key.value.Horizontal * _context.characterBaseAttributes.dic[currentPlayer.name.text].baseVelocity;
-        var tmpVertical = _context.key.value.Vertical * _context.characterBaseAttributes.dic[currentPlayer.name.text].baseVelocity;
-        currentPlayer.ReplaceVelocity(new Vector3(tmpHorizontal, 0, tmpVertical));
-
-        if (_context.key.value.Horizontal > 0)
-        {
-            currentPlayer.ReplaceToward(false);
-        }
-        else if (_context.key.value.Horizontal < 0)
-        {
-            currentPlayer.ReplaceToward(true);
+            e.isDestroy = true;
         }
     }
 }

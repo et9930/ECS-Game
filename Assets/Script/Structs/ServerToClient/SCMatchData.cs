@@ -10,6 +10,7 @@ public class SCMatchData
     [DataMember(Name = "match_size")]      public int matchSize;
     [DataMember(Name = "match_ready_number")] public int matchReadyNumber;
     [DataMember(Name = "match_choose_finish_number")] public int matchChooseFinishNumber;
+    [DataMember(Name = "match_random_seed")] public int matchRandomSeed;
 }
 
 [DataContract]

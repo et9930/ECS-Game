@@ -18,7 +18,8 @@ public class CalculateFpsSystem : IInitializeSystem, IExecuteSystem
     public void Execute()
     {
         var currentTime = _context.timeService.instance.GetRealTimeSinceStartup();
-        _context.ReplaceCurrentFps(1/(currentTime - _context.lastUpdateFpsTime.value));
+        //        _context.ReplaceCurrentFps(1/(currentTime - _context.lastUpdateFpsTime.value));
+        _context.ReplaceCurrentFps(1 / (_context.timeService.instance.GetDeltaTime()));
         _context.ReplaceLastUpdateFpsTime(currentTime);
     }
 }

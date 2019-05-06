@@ -22,33 +22,31 @@ public class VelocitySystem : IExecuteSystem
             {
                 continue;
             }
-//            if (e.isMoving)
-            {
-                var newPosition = e.position.value;
-                newPosition.X += e.velocity.value.X * _context.timeService.instance.GetDeltaTime();
-                newPosition.Y += e.velocity.value.Y * _context.timeService.instance.GetDeltaTime();
-                newPosition.Z += e.velocity.value.Z * _context.timeService.instance.GetDeltaTime();
+            
+            var newPosition = e.position.value;
+            newPosition.X += e.velocity.value.X * _context.timeService.instance.GetDeltaTime();
+            newPosition.Y += e.velocity.value.Y * _context.timeService.instance.GetDeltaTime();
+            newPosition.Z += e.velocity.value.Z * _context.timeService.instance.GetDeltaTime();
 
-                if (newPosition.X < currentMapConfig.CharacterMinX)
-                    newPosition.X = currentMapConfig.CharacterMinX;
+            if (newPosition.X < currentMapConfig.CharacterMinX)
+                newPosition.X = currentMapConfig.CharacterMinX;
 
-                if (newPosition.X > currentMapConfig.CharacterMaxX)
-                    newPosition.X = currentMapConfig.CharacterMaxX;
+            if (newPosition.X > currentMapConfig.CharacterMaxX)
+                newPosition.X = currentMapConfig.CharacterMaxX;
 
-                if (newPosition.Y < 0)
-                    newPosition.Y = 0;
-                
-                
-                if (newPosition.Z < currentMapConfig.CharacterMinZ)
-                    newPosition.Z = currentMapConfig.CharacterMinZ;
+            if (newPosition.Y < 0)
+                newPosition.Y = 0;
+            
+            if (newPosition.Z < currentMapConfig.CharacterMinZ)
+                newPosition.Z = currentMapConfig.CharacterMinZ;
 
-                if (newPosition.Z > currentMapConfig.CharacterMaxZ)
-                    newPosition.Z = currentMapConfig.CharacterMaxZ;
+            if (newPosition.Z > currentMapConfig.CharacterMaxZ)
+                newPosition.Z = currentMapConfig.CharacterMaxZ;
 
-                e.ReplacePosition(newPosition);
+            e.ReplacePosition(newPosition);
 
-//                _context.CreateEntity().ReplaceDebugMessage(newPosition.ToString());
-            }
+//            _context.CreateEntity().ReplaceDebugMessage(newPosition.ToString());
+            
         }
     }
 }

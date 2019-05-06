@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public static class Utilities
 {
-    private static readonly Random random = new Random();
+    private static Random random = new Random();
     private static readonly DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1)); // 当地时区
 
     public static System.Numerics.Vector2 ToSystemNumericsVector2(UnityEngine.Vector2 value)
@@ -102,5 +102,11 @@ public static class Utilities
     public static double GetTimeStamp()
     {
         return (DateTime.Now - startTime).TotalMilliseconds; // 相差毫秒数
+    }
+
+    public static void SetRandomSeed(int seed)
+    {
+        Debug.Log("set random seed " + seed);
+        random = new Random(seed);
     }
 }

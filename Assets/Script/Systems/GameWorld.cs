@@ -14,18 +14,31 @@ public class GameWorld : Feature
         Add(new LoginSystem(contexts));
         Add(new SignInSystem(contexts));
 
+
+
         // Game Event
-        
-        
+
+
         // Input Systems
         Add(new EmitInputSystem(contexts));
         Add(new ClickEventSystem(contexts));
         Add(new MouseInOutEventSystem(contexts));
 
+        Add(new SendMovementControlSystem(contexts));
+        Add(new SendPhysicsDataSystem(contexts));
+        Add(new SendJumpControlSystem(contexts));
+        Add(new SendNormalAttackControlSystem(contexts));
+
+        Add(new SendMatchDataSystem(contexts));
+        Add(new ReceiveMatchDataSystem(contexts));
+
+
         // Main Game Logic Systems
         Add(new PlayerStateControlSystem(contexts));
 
         //  input deal systems
+
+
         Add(new MovementControlSystem(contexts));
         Add(new JumpControlSystem(contexts));
         Add(new MakeYinSystem(contexts));

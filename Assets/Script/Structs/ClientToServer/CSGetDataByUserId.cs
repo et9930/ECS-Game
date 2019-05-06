@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 
 [DataContract]
-public class CSGetDataByUserId : ICSMessage
+public class CSGetDataByUserId
 {
     [DataMember(Name = "user_id")] public string userId;
 }

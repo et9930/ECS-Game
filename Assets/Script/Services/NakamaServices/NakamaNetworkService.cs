@@ -16,8 +16,8 @@ public class NakamaNetworkService : INetworkService
     private IMatchmakerTicket _matchmakerTicket;
     private IMatchmakerMatched _matchmakerMatched;
     private IMatch _match;
-    private const string _serverKey = "NarutoKey";
-    private const string _httpKey = "NarutoKey";
+    private const string ServerKey = "NarutoKey";
+    private const string HttpKey = "NarutoKey";
     private readonly GameContext _context;
 
     public string _serverIp { get; set; }
@@ -32,7 +32,7 @@ public class NakamaNetworkService : INetworkService
     {
         _serverIp = serverIp;
         _serverPort = serverPort;
-        _client = new Client(_serverKey, serverIp, serverPort);
+        _client = new Client(ServerKey, serverIp, serverPort);
     }
 
     public async Task<int> Login(string email, string password)
@@ -143,7 +143,7 @@ public class NakamaNetworkService : INetworkService
             IApiRpc apiRpc = null;
             if (unauthorized)
             {
-                apiRpc = await _client.RpcAsync(_httpKey, rpcName, payload);
+                apiRpc = await _client.RpcAsync(HttpKey, rpcName, payload);
             }
             else
             {

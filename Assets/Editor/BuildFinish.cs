@@ -10,9 +10,9 @@ public class BuildFinish : IPostprocessBuildWithReport
     private readonly string sourceFolder = "Build";
     private readonly List<string> targetFolderList = new List<string>
     {
-        "G:\\Test\\01",
-        "G:\\Test\\02",
-        "G:\\Test\\03",
+//        "G:\\Test\\01",
+//        "G:\\Test\\02",
+//        "G:\\Test\\03",
     };
 
     public int callbackOrder => 0;

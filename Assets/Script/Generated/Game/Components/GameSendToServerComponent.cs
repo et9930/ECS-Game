@@ -11,7 +11,7 @@ public partial class GameEntity {
     public SendToServerComponent sendToServer { get { return (SendToServerComponent)GetComponent(GameComponentsLookup.SendToServer); } }
     public bool hasSendToServer { get { return HasComponent(GameComponentsLookup.SendToServer); } }
 
-    public void AddSendToServer(string newRpcName, ICSMessage newPayload, bool newUnauthorized) {
+    public void AddSendToServer(string newRpcName, string newPayload, bool newUnauthorized) {
         var index = GameComponentsLookup.SendToServer;
         var component = (SendToServerComponent)CreateComponent(index, typeof(SendToServerComponent));
         component.rpcName = newRpcName;
@@ -20,7 +20,7 @@ public partial class GameEntity {
         AddComponent(index, component);
     }
 
-    public void ReplaceSendToServer(string newRpcName, ICSMessage newPayload, bool newUnauthorized) {
+    public void ReplaceSendToServer(string newRpcName, string newPayload, bool newUnauthorized) {
         var index = GameComponentsLookup.SendToServer;
         var component = (SendToServerComponent)CreateComponent(index, typeof(SendToServerComponent));
         component.rpcName = newRpcName;

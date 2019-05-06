@@ -4,6 +4,6 @@
 public class SendToServerComponent : IComponent
 {
     public string rpcName;
-    public ICSMessage payload;
+    public string payload;
     public bool unauthorized;
 }

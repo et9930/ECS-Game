@@ -1,64 +1,42 @@
-﻿using System.Numerics;
+﻿using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
-public class NormalAttackControlSystem : IExecuteSystem
+public class NormalAttackControlSystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _context;
 
-    public NormalAttackControlSystem(Contexts contexts)
+    public NormalAttackControlSystem(Contexts contexts):base(contexts.game)
     {
         _context = contexts.game;
     }
 
-    public void Execute()
+    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        if (_context.currentScene.name != "BattleScene") return;
-        if (_context.key.value.TaijutsuAttack)
+        return context.CreateCollector(GameMatcher.NormalAttackControl);
+    }
+
+    protected override bool Filter(GameEntity entity)
+    {
+        return entity.hasNormalAttackControl && !entity.isDestroy;
+    }
+
+    protected override void Execute(List<GameEntity> entities)
+    {
+        foreach (var e in entities)
         {
-            if (_context.isTaijutsuAttackFreezing) return;
-            _context.isTaijutsuAttackFreezing = true;
-
-            var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
-            if (currentPlayer == null) return;
-
-            if (!currentPlayer.onTheGround.value || currentPlayer.isJumping || currentPlayer.isMakingYin) return;
-
-            if (!currentPlayer.isNormalAttacking)
+            var player = _context.GetEntityWithId(e.normalAttackControl.value.userId);
+            if (player == null) continue;
+            if (e.normalAttackControl.value.immediately)
             {
-                if (currentPlayer.hasCurrentWeapon)
-                {
-                    currentPlayer.ReplaceAnimation("attack_" + _context.characterBaseAttributes.dic[currentPlayer.name.text].taijutsuAttackWithWeapon, false);
-                }
-                else
-                {
-                    currentPlayer.ReplaceAnimation("attack_1", false);
-                }
-                currentPlayer.ReplaceVelocity(Vector3.Zero);
-                currentPlayer.isNormalAttacking = true;
+                player.ReplaceAnimation("attack_" + e.normalAttackControl.value.attackIndex, false);
+                player.ReplaceVelocity(Vector3.Zero);
+                player.isNormalAttacking = true;
             }
             else
             {
-                if (currentPlayer.hasCurrentWeapon) return;
-
-                var currentAttackAnimationName = currentPlayer.animation.name;
-                if (!currentAttackAnimationName.StartsWith("attack_")) return;
-
-                var _index = currentAttackAnimationName.LastIndexOf('_');
-                var currentAttackIndex = int.Parse(currentAttackAnimationName.Substring(_index + 1));
-
-                if (currentAttackIndex >= _context.characterBaseAttributes.dic[currentPlayer.name.text].taijutsuAttackNum) return;
-
-                currentPlayer.ReplaceNextAnimation("attack_" + (currentAttackIndex + 1), false);
-            }
-
-        }
-        else
-        {
-            if (_context.isTaijutsuAttackFreezing)
-            {
-                _context.isTaijutsuAttackFreezing = false;
+                player.ReplaceNextAnimation("attack_" + e.normalAttackControl.value.attackIndex, false);
             }
         }
-        
     }
 }

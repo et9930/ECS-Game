@@ -35,7 +35,7 @@ public class ChangeAnimationSystem : ReactiveSystem<GameEntity>
             if (e.animation.name == "idle")
             {
                 e.isNormalAttacking = false;
-                e.isMoving = false;
+//                e.isMoving = false;
             }
             e.ReplaceCurrentAnimation(e.animation.name);
             e.ReplaceAnimationFrame(0);

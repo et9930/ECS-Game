@@ -42,6 +42,12 @@ public class GameLauncher : MonoBehaviour
         _systems.Cleanup();
     }
 
+//    void FixedUpdate()
+//    {
+//        _systems.Execute();
+//        _systems.Cleanup();
+//    }
+
     void OnDestroy()
     {
         _systems.TearDown();
