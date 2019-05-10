@@ -202,7 +202,14 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
         }
 
         e.yinList.list.Add(yin);
-        e.ReplaceChaKuRaExpend(1.0f);
+//        e.ReplaceChaKuRaExpend(1.0f);
+        var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
+        {
+            userId = _context.currentPlayerId.value,
+            chaKuRaExpend = 1.0f
+        };
+        _context.CreateEntity().ReplaceSendMatchData(1007, Utilities.ToJson(newChaKuRaExpend));
+
 
         var uiName = "NinjutsuYin_" + yinName + "_" + _context.currentInNumber.value;
         var yinUI = _context.CreateEntity();

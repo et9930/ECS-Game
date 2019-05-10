@@ -3,7 +3,7 @@
 [DataContract]
 public class MatchDataNormalAttackControl : IMatchData
 {
-    [DataMember(Name = "user_id")] public string userId;
-    [DataMember(Name = "attack_index")] public int attackIndex;
-    [DataMember(Name = "immediately")] public bool immediately;
+    [DataMember(Name = "uid")] public string userId;
+    [DataMember(Name = "idx")] public int attackIndex;
+    [DataMember(Name = "imme")] public bool immediately;
 }

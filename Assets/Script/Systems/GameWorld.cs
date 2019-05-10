@@ -1,6 +1,4 @@
-﻿using System.Runtime.Remoting.Messaging;
-
-public class GameWorld : Feature
+﻿public sealed class GameWorld : Feature
 {
     public GameWorld(Contexts contexts, Services services) : base("Game World")
     {
@@ -25,9 +23,10 @@ public class GameWorld : Feature
         Add(new MouseInOutEventSystem(contexts));
 
         Add(new SendMovementControlSystem(contexts));
-        Add(new SendPhysicsDataSystem(contexts));
+        Add(new SendStateDataSystem(contexts));
         Add(new SendJumpControlSystem(contexts));
         Add(new SendNormalAttackControlSystem(contexts));
+        Add(new SendMakeChaKuRaControlSystem(contexts));
 
         Add(new SendMatchDataSystem(contexts));
         Add(new ReceiveMatchDataSystem(contexts));

@@ -42,7 +42,6 @@ public class SendJumpControlSystem : IExecuteSystem
                 _context.ReplaceJumpForce(0.0f);
                 _context.isJumpForceIncreasing = true;
                 _context.CreateEntity().ReplaceSendMatchData(1003, Utilities.ToJson(newJumpControl));
-                _context.CreateEntity().ReplaceJumpControl(newJumpControl);
                 currentPlayer.isJumping = true;
             }
             else
@@ -64,7 +63,6 @@ public class SendJumpControlSystem : IExecuteSystem
                         break;
                     }
                     _context.CreateEntity().ReplaceSendMatchData(1003, Utilities.ToJson(newJumpControl));
-                    _context.CreateEntity().ReplaceJumpControl(newJumpControl);
 
                     return;
                 }
@@ -119,12 +117,31 @@ public class SendJumpControlSystem : IExecuteSystem
 
                     if (_context.key.value.Horizontal > 0)
                     {
-                        currentPlayer.ReplaceToward(false);
+//                        currentPlayer.ReplaceToward(false);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = false
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
                         horizontalAngle = 45.0f;
                     }
                     else if (_context.key.value.Horizontal < 0)
                     {
-                        currentPlayer.ReplaceToward(true);
+//                        currentPlayer.ReplaceToward(true);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = true
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
+
                         horizontalAngle = 135.0f;
                     }
                     else
@@ -136,12 +153,32 @@ public class SendJumpControlSystem : IExecuteSystem
                 {
                     if (_context.key.value.Horizontal > 0)
                     {
-                        currentPlayer.ReplaceToward(false);
+//                        currentPlayer.ReplaceToward(false);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = false
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
+
                         horizontalAngle = 315.0f;
                     }
                     else if (_context.key.value.Horizontal < 0)
                     {
-                        currentPlayer.ReplaceToward(true);
+//                        currentPlayer.ReplaceToward(true);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = true
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
+
                         horizontalAngle = 225.0f;
                     }
                     else
@@ -153,12 +190,32 @@ public class SendJumpControlSystem : IExecuteSystem
                 {
                     if (_context.key.value.Horizontal > 0)
                     {
-                        currentPlayer.ReplaceToward(false);
+//                        currentPlayer.ReplaceToward(false);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = false
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
+
                         horizontalAngle = 0.0f;
                     }
                     else if (_context.key.value.Horizontal < 0)
                     {
-                        currentPlayer.ReplaceToward(true);
+//                        currentPlayer.ReplaceToward(true);
+                        var newTowardControl = new MatchDataTowardControl
+                        {
+                            userId = _context.currentPlayerId.value,
+                            faceLeft = true
+                        };
+                        if (currentPlayer.toward.left != newTowardControl.faceLeft)
+                        {
+                            _context.CreateEntity().ReplaceSendMatchData(1005, Utilities.ToJson(newTowardControl));
+                        }
+
                         horizontalAngle = 180.0f;
                     }
                 }
@@ -200,7 +257,6 @@ public class SendJumpControlSystem : IExecuteSystem
                     force = force
                 };
                 _context.CreateEntity().ReplaceSendMatchData(1003, Utilities.ToJson(newJumpControl));
-                _context.CreateEntity().ReplaceJumpControl(newJumpControl);
 
             }
         }

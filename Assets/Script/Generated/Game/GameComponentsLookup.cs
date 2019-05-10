@@ -104,7 +104,7 @@ public static class GameComponentsLookup {
     public const int KeyInputService = 93;
     public const int LastGetPingTime = 94;
     public const int LastMovementKeyState = 95;
-    public const int LastSendPhysicsTime = 96;
+    public const int LastSendStateTime = 96;
     public const int LastUpdateFpsTime = 97;
     public const int Layer = 98;
     public const int LeftMouse = 99;
@@ -210,52 +210,53 @@ public static class GameComponentsLookup {
     public const int SelectTargetListener = 199;
     public const int SendMatchData = 200;
     public const int SendToServer = 201;
-    public const int SetUiPosition = 202;
-    public const int Shadow = 203;
-    public const int SignIn = 204;
-    public const int SignInInfo = 205;
-    public const int Size = 206;
-    public const int SizeListener = 207;
-    public const int Sprite = 208;
-    public const int StartConditionConfirm = 209;
-    public const int Tag = 210;
-    public const int TaijutsuAttackFreezing = 211;
-    public const int TaijutsuAttackHit = 212;
-    public const int TaiRyoKuCurrent = 213;
-    public const int TaiRyoKuDeath = 214;
-    public const int TaiRyoKuExpend = 215;
-    public const int TaiRyoKuRecoverSpeed = 216;
-    public const int TaiRyoKuTired = 217;
-    public const int TaiRyoKuTotal = 218;
-    public const int Team = 219;
-    public const int Text = 220;
-    public const int TextListener = 221;
-    public const int ThrowWeaponNumber = 222;
-    public const int TimeService = 223;
-    public const int ToggleState = 224;
-    public const int Toward = 225;
-    public const int TowardListener = 226;
-    public const int TryThrowWeapon = 227;
-    public const int TryThrowWeaponFreezing = 228;
-    public const int UiChildList = 229;
-    public const int UiClose = 230;
-    public const int UiConfig = 231;
-    public const int UiExcursion = 232;
-    public const int UiFadeAction = 233;
-    public const int UiLayerConfig = 234;
-    public const int UiMoveAction = 235;
-    public const int UiOpen = 236;
-    public const int UiRootId = 237;
-    public const int UiRotateAction = 238;
-    public const int UseNinjaItem = 239;
-    public const int UuidToEntity = 240;
-    public const int Velocity = 241;
-    public const int View = 242;
-    public const int ViewService = 243;
-    public const int YinFreeze = 244;
-    public const int YinList = 245;
+    public const int ServerConfig = 202;
+    public const int SetUiPosition = 203;
+    public const int Shadow = 204;
+    public const int SignIn = 205;
+    public const int SignInInfo = 206;
+    public const int Size = 207;
+    public const int SizeListener = 208;
+    public const int Sprite = 209;
+    public const int StartConditionConfirm = 210;
+    public const int Tag = 211;
+    public const int TaijutsuAttackFreezing = 212;
+    public const int TaijutsuAttackHit = 213;
+    public const int TaiRyoKuCurrent = 214;
+    public const int TaiRyoKuDeath = 215;
+    public const int TaiRyoKuExpend = 216;
+    public const int TaiRyoKuRecoverSpeed = 217;
+    public const int TaiRyoKuTired = 218;
+    public const int TaiRyoKuTotal = 219;
+    public const int Team = 220;
+    public const int Text = 221;
+    public const int TextListener = 222;
+    public const int ThrowWeaponNumber = 223;
+    public const int TimeService = 224;
+    public const int ToggleState = 225;
+    public const int Toward = 226;
+    public const int TowardListener = 227;
+    public const int TryThrowWeapon = 228;
+    public const int TryThrowWeaponFreezing = 229;
+    public const int UiChildList = 230;
+    public const int UiClose = 231;
+    public const int UiConfig = 232;
+    public const int UiExcursion = 233;
+    public const int UiFadeAction = 234;
+    public const int UiLayerConfig = 235;
+    public const int UiMoveAction = 236;
+    public const int UiOpen = 237;
+    public const int UiRootId = 238;
+    public const int UiRotateAction = 239;
+    public const int UseNinjaItem = 240;
+    public const int UuidToEntity = 241;
+    public const int Velocity = 242;
+    public const int View = 243;
+    public const int ViewService = 244;
+    public const int YinFreeze = 245;
+    public const int YinList = 246;
 
-    public const int TotalComponents = 246;
+    public const int TotalComponents = 247;
 
     public static readonly string[] componentNames = {
         "Acceleration",
@@ -354,7 +355,7 @@ public static class GameComponentsLookup {
         "KeyInputService",
         "LastGetPingTime",
         "LastMovementKeyState",
-        "LastSendPhysicsTime",
+        "LastSendStateTime",
         "LastUpdateFpsTime",
         "Layer",
         "LeftMouse",
@@ -460,6 +461,7 @@ public static class GameComponentsLookup {
         "SelectTargetListener",
         "SendMatchData",
         "SendToServer",
+        "ServerConfig",
         "SetUiPosition",
         "Shadow",
         "SignIn",
@@ -603,7 +605,7 @@ public static class GameComponentsLookup {
         typeof(KeyInputServiceComponent),
         typeof(LastGetPingTimeComponent),
         typeof(LastMovementKeyStateComponent),
-        typeof(LastSendPhysicsTimeComponent),
+        typeof(LastSendStateTimeComponent),
         typeof(LastUpdateFpsTimeComponent),
         typeof(LayerComponent),
         typeof(LeftMouseComponent),
@@ -709,6 +711,7 @@ public static class GameComponentsLookup {
         typeof(SelectTargetListenerComponent),
         typeof(SendMatchDataComponent),
         typeof(SendToServerComponent),
+        typeof(ServerConfigComponent),
         typeof(SetUiPositionComponent),
         typeof(ShadowComponent),
         typeof(SignInComponent),

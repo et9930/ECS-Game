@@ -69,5 +69,10 @@ public class LoadGameConfigSystem : IInitializeSystem
         var strQuickAction = _context.loadConfigService.instance.LoadJsonFile("Json/QuickActionConfig");
         var tempQuickAction = Utilities.ParseJson<QuickActionList>(strQuickAction);
         _context.ReplaceQuickActionConfig(tempQuickAction.list);
+
+        // Server Config
+        var strServerConfig = _context.loadConfigService.instance.LoadJsonFile("Json/ServerConfig");
+        var tempServerConfig = Utilities.ParseJson<ServerConfig>(strServerConfig);
+        _context.ReplaceServerConfig(tempServerConfig);
     }
 }

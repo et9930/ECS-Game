@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class UnityTimeService : ITimeService
 {
+    private readonly DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1)); // 当地时区
+    private double clientServerDeltaTime;
+
     public float GetDeltaTime()
     {
         return Time.deltaTime;
@@ -25,5 +29,15 @@ public class UnityTimeService : ITimeService
     public float GetRealTimeSinceStartup()
     {
         return Time.realtimeSinceStartup;
+    }
+
+    public double GetTimeStamp()
+    {
+        return (DateTime.Now - startTime).TotalMilliseconds + clientServerDeltaTime; // 相差毫秒数
+    }
+
+    public void SetClientServerDeltaTime(double value)
+    {
+        clientServerDeltaTime += value;
     }
 }

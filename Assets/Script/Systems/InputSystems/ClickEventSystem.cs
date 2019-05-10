@@ -65,7 +65,13 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         if (entity.leftNumber.value <= 0) return;
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
-        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
+//        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
+        var newUseNinjaItemControl = new MatchDataUseNinjaItemControl
+        {
+            userId = _context.currentPlayerId.value,
+            item = entity.ninjaItemName.value
+        };
+        _context.CreateEntity().ReplaceSendMatchData(1009, Utilities.ToJson(newUseNinjaItemControl));
         
         foreach (var e in _context.GetEntitiesWithName("NinjaItemMenuItem"))
         {

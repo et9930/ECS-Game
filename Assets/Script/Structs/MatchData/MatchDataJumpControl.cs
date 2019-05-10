@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 [DataContract]
 public class MatchDataJumpControl : IMatchData
 {
-    [DataMember(Name = "user_id")] public string userId;
+    [DataMember(Name = "uid")] public string userId;
     /// <summary>
     /// 0:Start, 1:Cancel, 2:Jump
     /// </summary>

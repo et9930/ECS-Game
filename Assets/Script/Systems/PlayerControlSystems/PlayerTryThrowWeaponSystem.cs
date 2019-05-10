@@ -23,7 +23,12 @@ public class PlayerTryThrowWeaponSystem : IExecuteSystem
 
             if (currentPlayer.isNormalAttacking || currentPlayer.isJumping || currentPlayer.isMakingYin || currentPlayer.isMakingChaKuRa) return;
 
-            currentPlayer.isTryThrowWeapon = true;
+            var newThrowWeapon = new MatchDataThrowWeaponControl
+            {
+                userId = _context.currentPlayerId.value,
+                isThrowWeapon = true
+            };
+            _context.CreateEntity().ReplaceSendMatchData(1010, Utilities.ToJson(newThrowWeapon));
             _context.isTryThrowWeaponFreezing = true;
         }
         else

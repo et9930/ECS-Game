@@ -39,6 +39,5 @@ public class SendMovementControlSystem : IExecuteSystem, IInitializeSystem
 
         _context.CreateEntity().ReplaceSendMatchData(1001, Utilities.ToJson(newMovementControl));
         _context.ReplaceLastMovementKeyState(_context.key.value.Horizontal, _context.key.value.Vertical);
-        _context.CreateEntity().ReplaceMovementControl(newMovementControl);
     }
 }

@@ -25,8 +25,10 @@ public class GetServerPingTimeSystem : IInitializeSystem, IExecuteSystem
 
     private async void GetPingTime()
     {
-        var sendTimeStamp = Utilities.GetTimeStamp();
+        var sendTimeStamp = _context.timeService.instance.GetTimeStamp();
         var payload = await _context.networkService.instance.RpcCall("rpc_ping", null, true);
+        var receiveTimeStamp = _context.timeService.instance.GetTimeStamp() - 18;
+        
         if (payload == null)
         {
             foreach (var e in _context.GetEntitiesWithName("NormalNetworkIcon"))
@@ -37,7 +39,7 @@ public class GetServerPingTimeSystem : IInitializeSystem, IExecuteSystem
             {
                 e.ReplaceActive(true);
             }
-            _context.ReplaceCurrentPingTime(999);
+//            _context.ReplaceCurrentPingTime(999);
         }
         else
         {
@@ -53,7 +55,12 @@ public class GetServerPingTimeSystem : IInitializeSystem, IExecuteSystem
             //        _context.CreateEntity().ReplaceDebugMessage(sendTimeStamp.ToString());
             //        _context.CreateEntity().ReplaceDebugMessage(scPing.timeStamp.ToString());
             var deltaTime = (int)((scPing.timeStamp - sendTimeStamp) * 2);
-            _context.ReplaceCurrentPingTime(deltaTime);
+            _context.ReplaceCurrentPingTime(deltaTime >= 0 ? deltaTime : 0);
+
+            // set delta time
+            var localPing = receiveTimeStamp - sendTimeStamp;
+            var clientServerDelta = scPing.timeStamp - sendTimeStamp + localPing / 2;
+            _context.timeService.instance.SetClientServerDeltaTime(clientServerDelta);
         }
     }
 }

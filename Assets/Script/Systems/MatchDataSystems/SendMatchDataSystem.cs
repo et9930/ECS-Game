@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Entitas;
 
 public class SendMatchDataSystem : ReactiveSystem<GameEntity>
@@ -25,8 +26,17 @@ public class SendMatchDataSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            _context.networkService.instance.SendMatchData(e.sendMatchData.dataCode, e.sendMatchData.payload);
+            SendMatchData(e.sendMatchData.dataCode, e.sendMatchData.payload);
             e.isDestroy = true;
+        }
+    }
+
+    private async void SendMatchData(long dataCode, string payload)
+    {
+        var result = await _context.networkService.instance.SendMatchData(dataCode, payload);
+        if (result)
+        {
+            _context.CreateEntity().ReplaceMatchData(dataCode, payload);
         }
     }
 }

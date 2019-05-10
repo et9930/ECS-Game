@@ -2,7 +2,7 @@
 using Entitas.CodeGeneration.Attributes;
 
 [Game, Unique]
-public class LastSendPhysicsTimeComponent : IComponent
+public class LastSendStateTimeComponent : IComponent
 {
     public double value;
 }

@@ -36,7 +36,6 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                         immediately = true
                     };
                     _context.CreateEntity().ReplaceSendMatchData(1004, Utilities.ToJson(newNormalAttack));
-                    _context.CreateEntity().ReplaceNormalAttackControl(newNormalAttack);
                 }
                 else
                 {
@@ -47,7 +46,6 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                         immediately = true
                     };
                     _context.CreateEntity().ReplaceSendMatchData(1004, Utilities.ToJson(newNormalAttack));
-                    _context.CreateEntity().ReplaceNormalAttackControl(newNormalAttack);
                 }
             }
             else
@@ -69,7 +67,6 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                     immediately = false
                 };
                 _context.CreateEntity().ReplaceSendMatchData(1004, Utilities.ToJson(newNormalAttack));
-                _context.CreateEntity().ReplaceNormalAttackControl(newNormalAttack);
                 //                currentPlayer.ReplaceNextAnimation("attack_" + (currentAttackIndex + 1), false);
             }
 

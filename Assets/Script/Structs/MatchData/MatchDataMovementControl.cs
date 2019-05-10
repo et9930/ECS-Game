@@ -3,7 +3,7 @@
 [DataContract]
 public class MatchDataMovementControl : IMatchData
 {
-    [DataMember(Name = "user_id")] public string userId;
-    [DataMember(Name = "horizontal")] public float horizontal;
-    [DataMember(Name = "vertical")] public float vertical;
+    [DataMember(Name = "uid")] public string userId;
+    [DataMember(Name = "h")] public float horizontal;
+    [DataMember(Name = "v")] public float vertical;
 }

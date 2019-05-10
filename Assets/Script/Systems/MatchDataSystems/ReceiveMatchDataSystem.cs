@@ -39,9 +39,28 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
                 case 1004:
                     ReceiveNormalAttackControl(e.matchData.payload);
                     break;
+                case 1005:
+                    ReceiveTowardControl(e.matchData.payload);
+                    break;
+                case 1006:
+                    ReceiveMakeChaKuRaControl(e.matchData.payload);
+                    break;
+                case 1007:
+                    ReceiveChaKuRaExpendControl(e.matchData.payload);
+                    break;
+                case 1008:
+                    ReceiveTaiRyoKuCoastControl(e.matchData.payload);
+                    break;
+                case 1009:
+                    ReceiveChangeWeaponControl(e.matchData.payload);
+                    break;
+                case 1010:
+                    ReceiveThrowWeaponControl(e.matchData.payload);
+                    break;
+                    
             }
 
-            _context.CreateEntity().ReplaceDebugMessage(e.matchData.payload);
+            _context.CreateEntity().ReplaceDebugMessage(e.matchData.dataCode + ": " + e.matchData.payload);
             e.isDestroy = true;
         }
     }
@@ -53,12 +72,15 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
 
     private void ReceivePhysicsData(string payload)
     {
-        var physicsData = Utilities.ParseJson<MatchDataPhysics>(payload);
-        var player = _context.GetEntityWithId(physicsData.userId);
+        var stateData = Utilities.ParseJson<MatchDataState>(payload);
+        var player = _context.GetEntityWithId(stateData.userId);
         if (player == null) return;
-        player.ReplaceAcceleration(physicsData.acceleration);
-        player.ReplaceVelocity(physicsData.velocity);
-        player.ReplacePosition(physicsData.position);
+        player.ReplaceAcceleration(stateData.acceleration);
+        player.ReplaceVelocity(stateData.velocity);
+        player.ReplacePosition(stateData.position);
+        player.ReplaceChaKuRaCurrent(stateData.currentChaKuRa);
+        player.ReplaceTaiRyoKuCurrent(stateData.currentTaiRyoKu);
+        player.ReplaceHealthCurrent(stateData.currentHealth);
     }
 
     private void ReceiveJumpControl(string payload)
@@ -71,4 +93,47 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
         _context.CreateEntity().ReplaceNormalAttackControl(Utilities.ParseJson<MatchDataNormalAttackControl>(payload));
     }
 
+    private void ReceiveTowardControl(string payload)
+    {
+        var towardControl = Utilities.ParseJson<MatchDataTowardControl>(payload);
+        var player = _context.GetEntityWithId(towardControl.userId);
+        player?.ReplaceToward(towardControl.faceLeft);
+    }
+
+    private void ReceiveMakeChaKuRaControl(string payload)
+    {
+        var makeChaKuRaControl = Utilities.ParseJson<MatchDataMakeChaKuRaControl>(payload);
+        var player = _context.GetEntityWithId(makeChaKuRaControl.userId);
+        if (player == null) return;
+        player.isMakingChaKuRa = makeChaKuRaControl.isMakingChaKuRa;
+    }
+
+    private void ReceiveChaKuRaExpendControl(string payload)
+    {
+        var chaKuRaExpendControl = Utilities.ParseJson<MatchDataChaKuRaExpendControl>(payload);
+        var player = _context.GetEntityWithId(chaKuRaExpendControl.userId);
+        player?.ReplaceChaKuRaExpend(chaKuRaExpendControl.chaKuRaExpend);
+    }
+
+    private void ReceiveTaiRyoKuCoastControl(string payload)
+    {
+        var taiRyoKuCoastControl = Utilities.ParseJson<MatchDataTaiRyuKuExpendControl>(payload);
+        var player = _context.GetEntityWithId(taiRyoKuCoastControl.userId);
+        player?.ReplaceTaiRyoKuExpend(taiRyoKuCoastControl.taiRyuKuExpend);
+    }
+
+    private void ReceiveChangeWeaponControl(string payload)
+    {
+        var useNinjaItemControl = Utilities.ParseJson<MatchDataUseNinjaItemControl>(payload);
+        var player = _context.GetEntityWithId(useNinjaItemControl.userId);
+        player?.ReplaceUseNinjaItem(useNinjaItemControl.item);
+    }
+
+    private void ReceiveThrowWeaponControl(string payload)
+    {
+        var throwWeaponControl = Utilities.ParseJson<MatchDataThrowWeaponControl>(payload);
+        var player = _context.GetEntityWithId(throwWeaponControl.userId);
+        if(player == null) return;
+        player.isTryThrowWeapon = true;
+    }
 }

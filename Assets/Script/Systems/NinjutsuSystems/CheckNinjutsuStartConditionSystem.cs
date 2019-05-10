@@ -37,21 +37,48 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 
             if (originator.chaKuRaCurrent.value >= chaKuRaCoast)
             {
-                originator.ReplaceChaKuRaExpend(chaKuRaCoast);
+//                originator.ReplaceChaKuRaExpend(chaKuRaCoast);
+                var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
+                {
+                    userId = originator.id.value,
+                    chaKuRaExpend = chaKuRaCoast
+                };
+                _context.CreateEntity().ReplaceSendMatchData(1007, Utilities.ToJson(newChaKuRaExpend));
             }
             else
             {
-                originator.ReplaceChaKuRaExpend(originator.chaKuRaCurrent.value);
+//                originator.ReplaceChaKuRaExpend(originator.chaKuRaCurrent.value);
+                var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
+                {
+                    userId = originator.id.value,
+                    chaKuRaExpend = originator.chaKuRaCurrent.value
+                };
+                _context.CreateEntity().ReplaceSendMatchData(1007, Utilities.ToJson(newChaKuRaExpend));
+
                 taiRyuKuCoast += 1.1f * (jutsuConfig.chaKuRaCoast - originator.chaKuRaCurrent.value) / originator.chaKuRaSlewRate.value;
             }
 
             if (originator.taiRyoKuCurrent.value >= taiRyuKuCoast)
             {
-                originator.ReplaceTaiRyoKuExpend(taiRyuKuCoast);
+//                originator.ReplaceTaiRyoKuExpend(taiRyuKuCoast);
+                var newTaiRyoKuExpend = new MatchDataTaiRyuKuExpendControl
+                {
+                    userId = originator.id.value,
+                    taiRyuKuExpend = taiRyuKuCoast
+                };
+                _context.CreateEntity().ReplaceSendMatchData(1008, Utilities.ToJson(newTaiRyoKuExpend));
+
             }
             else
             {
-                originator.ReplaceTaiRyoKuExpend(originator.taiRyoKuCurrent.value);
+//                originator.ReplaceTaiRyoKuExpend(originator.taiRyoKuCurrent.value);
+                var newTaiRyoKuExpend = new MatchDataTaiRyuKuExpendControl
+                {
+                    userId = originator.id.value,
+                    taiRyuKuExpend = originator.taiRyoKuCurrent.value
+                };
+                _context.CreateEntity().ReplaceSendMatchData(1008, Utilities.ToJson(newTaiRyoKuExpend));
+
                 e.isDestroy = true;
             }
 
