@@ -12,6 +12,11 @@ public class ChooseNinjaItemListener : MonoBehaviour, IEventListener, IChooseNin
         _entity.AddChooseNinjaItemInfoListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveChooseNinjaItemInfoListener(this);
+    }
+
     public void OnChooseNinjaItemInfo(GameEntity entity, AllocationNinjaItem value)
     {
         var toggleGroup = GameObject.Find("ChooseNinjaWindowNinjaList").GetComponent<ToggleGroup>();

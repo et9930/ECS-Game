@@ -894,7 +894,7 @@
           "AnomalyButton": false,
           "ComponentName": "MainUIOperationNinjaList",
           "ComponentPath": "MainUI\/MainUIOperationList\/MainUIOperationNinjaList",
-          "Handle": [],
+          "Handle": ["Click"],
           "Listener": [],
           "saveEntity": false
         },
@@ -909,6 +909,244 @@
       ],
       "UiLayer": "NormalLayer",
       "UiName": "MainUI"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItem",
+          "ComponentPath": "MatchReplayListItem",
+          "Handle": ["Click"],
+          "Listener": ["MatchReplayListItem"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemBackground",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemIndex",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemIndex",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemDateTime",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemDateTime",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemMap",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemMap",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemMapImage",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemMap\/MatchReplayListItemMapImage",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemMapText",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemMap\/MatchReplayListItemMapText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemCharacter",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemCharacter",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemCharacterText",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemCharacter\/MatchReplayListItemCharacterText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemCharacterHeadShot",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemCharacter\/MatchReplayListItemCharacterHeadShot",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemMatchSize",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemMatchSize",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemMatchType",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemMatchType",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListItemSelected",
+          "ComponentPath": "MatchReplayListItem\/MatchReplayListItemSelected",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "MatchReplayListItem"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindow",
+          "ComponentPath": "MatchReplayListWindow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowMask",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowMask",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowBackground",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowReplayButton",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowReplayButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowReplayButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowDownloadButton",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowDownloadButton",
+          "Handle": ["Click"],
+          "Listener": ["Active"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowDownloadButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowCloseButton",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowCloseButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowCloseButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowScrollbar",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollbar",
+          "Handle": [],
+          "Listener": ["ScrollBarValue"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowScrollbarSlidingArea",
+          "ComponentPath":
+            "MatchReplayListWindow\/MatchReplayListWindowScrollbar\/MatchReplayListWindowScrollbarSlidingArea",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowScrollbarHandle",
+          "ComponentPath":
+            "MatchReplayListWindow\/MatchReplayListWindowScrollbar\/MatchReplayListWindowScrollbarSlidingArea\/MatchReplayListWindowScrollbarHandle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowScrollRect",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect",
+          "Handle": [],
+          "Listener": ["Size"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowContent",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect\/MatchReplayListWindowContent",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": true
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "MatchReplayListWindowWaitingServer",
+          "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowWaitingServer",
+          "Handle": [],
+          "Listener": ["Active"],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "MatchReplayListWindow"
     },
     {
       "Components": [

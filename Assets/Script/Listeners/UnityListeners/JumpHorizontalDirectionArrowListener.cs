@@ -11,6 +11,11 @@ public class JumpHorizontalDirectionArrowListener : MonoBehaviour, IEventListene
         _entity.AddAnyJumpAngleListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyJumpAngleListener(this);
+    }
+
     public void OnAnyJumpAngle(GameEntity entity, float Vertical, float Horizontal)
     {
         var rectTransform = GetComponent<RectTransform>();

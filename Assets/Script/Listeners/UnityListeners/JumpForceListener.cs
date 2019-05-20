@@ -12,6 +12,11 @@ public class JumpForceListener : MonoBehaviour, IEventListener, IAnyJumpForceLis
         _entity.AddAnyJumpForceListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyJumpForceListener(this);
+    }
+
     public void OnAnyJumpForce(GameEntity entity, float value)
     {
         GetComponent<Image>().fillAmount = value / 40000.0f;

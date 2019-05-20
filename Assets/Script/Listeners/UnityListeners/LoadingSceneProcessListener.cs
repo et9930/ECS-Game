@@ -12,6 +12,11 @@ public class LoadingSceneProcessListener : MonoBehaviour, IEventListener, IAnyLo
         _entity.AddAnyLoadingSceneProcessListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyLoadingSceneProcessListener(this);
+    }
+
     public void OnAnyLoadingSceneProcess(GameEntity entity, float value)
     {
         gameObject.GetComponent<Image>().fillAmount = value;

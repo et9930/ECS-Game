@@ -12,6 +12,13 @@ public class PlayerChaKuRaListener : MonoBehaviour, IEventListener, IAnyChaKuRaC
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddAnyChaKuRaCurrentListener(this);
+        _entity.AddAnyChaKuRaSlewRateListener(this);
+    }
+
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyChaKuRaCurrentListener(this);
+        _entity.RemoveAnyChaKuRaSlewRateListener(this);
     }
 
     public void OnAnyChaKuRaCurrent(GameEntity entity, float value)

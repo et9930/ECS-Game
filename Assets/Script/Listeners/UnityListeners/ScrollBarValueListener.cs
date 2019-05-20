@@ -12,6 +12,11 @@ public class ScrollBarValueListener : MonoBehaviour, IEventListener, IScrollBarV
         _entity.AddScrollBarValueListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveScrollBarValueListener(this);
+    }
+
     public void OnScrollBarValue(GameEntity entity, float value)
     {
         GetComponent<Scrollbar>().value = value;

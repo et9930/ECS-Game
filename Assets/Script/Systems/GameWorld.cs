@@ -27,10 +27,15 @@
         Add(new SendJumpControlSystem(contexts));
         Add(new SendNormalAttackControlSystem(contexts));
         Add(new SendMakeChaKuRaControlSystem(contexts));
+        Add(new SendThrowWeaponControlSystem(contexts));
 
         Add(new SendMatchDataSystem(contexts));
         Add(new ReceiveMatchDataSystem(contexts));
 
+
+        Add(new GetReplayListSystem(contexts));
+        Add(new AddReplayListItemSystem(contexts));
+        Add(new DownloadReplaySystem(contexts));
 
         // Main Game Logic Systems
         Add(new PlayerStateControlSystem(contexts));

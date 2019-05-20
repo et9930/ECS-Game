@@ -14,6 +14,11 @@ public class NinjaItemMenuInfoListener : MonoBehaviour, IEventListener, IAnyPoin
         _entity.AddAnyPointNinjaItemMenuItemListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyPointNinjaItemMenuItemListener(this);
+    }
+
     public void OnAnyPointNinjaItemMenuItem(GameEntity entity, string value)
     {
         var ninjaItemInfo = _context.ninjaItemAttributes.dic[value];

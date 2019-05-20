@@ -32,6 +32,7 @@ public class SendMovementControlSystem : IExecuteSystem, IInitializeSystem
 
         var newMovementControl = new MatchDataMovementControl()
         {
+            matchId = _context.currentMatchData.value.customMatchId,
             userId = _context.currentPlayerId.value,
             horizontal = _context.key.value.Horizontal,
             vertical = _context.key.value.Vertical

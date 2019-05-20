@@ -12,6 +12,11 @@ public class SizeListener : MonoBehaviour, IEventListener, ISizeListener
         _entity.AddSizeListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveSizeListener(this);
+    }
+
     public void OnSize(GameEntity entity, Vector2 value)
     {
         var rectTransform = GetComponent<RectTransform>();

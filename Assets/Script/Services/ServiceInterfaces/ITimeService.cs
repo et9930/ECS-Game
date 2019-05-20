@@ -1,4 +1,6 @@
-﻿public interface ITimeService
+﻿using System;
+
+public interface ITimeService
 {
     float GetDeltaTime();
     float GetFixedDeltaTime();
@@ -7,4 +9,5 @@
     float GetRealTimeSinceStartup();
     double GetTimeStamp();
     void SetClientServerDeltaTime(double value);
+    DateTime TimeStampToDateTime(double timeStamp);
 }

@@ -12,6 +12,8 @@ public class CharacterBaseAttributes
 public class Character
 {
     [DataMember]
+    public string name;
+    [DataMember]
     public float baseVelocity;
     [DataMember]
     public float baseHealth;

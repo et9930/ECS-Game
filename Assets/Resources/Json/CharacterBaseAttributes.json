@@ -3,6 +3,7 @@
     {
       "Key": "NamikazeMinato",
       "Value": {
+		"name": "波风水门",
         "baseVelocity": 7.5,
         "baseHealth": 100,
         "baseChaKuRa": 100,
@@ -58,6 +59,7 @@
     {
       "Key": "UchihaMadara",
       "Value": {
+		"name": "宇智波斑",
         "baseVelocity": 7.5,
         "baseHealth": 100,
         "baseChaKuRa": 100,

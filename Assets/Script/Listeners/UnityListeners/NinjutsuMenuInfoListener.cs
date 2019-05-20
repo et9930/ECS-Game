@@ -14,6 +14,11 @@ public class NinjutsuMenuInfoListener : MonoBehaviour, IEventListener, IAnyPoint
         _entity.AddAnyPointNinjutsuMenuItemListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyPointNinjutsuMenuItemListener(this);
+    }
+
     public void OnAnyPointNinjutsuMenuItem(GameEntity entity, string value)
     {
         var ninjutsuInfo = _context.ninjutsuAttributes.dic[value];

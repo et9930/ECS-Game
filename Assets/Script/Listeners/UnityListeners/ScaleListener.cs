@@ -12,6 +12,11 @@ public class ScaleListener : MonoBehaviour, IEventListener, IScaleListener
         _entity.AddScaleListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveScaleListener(this);
+    }
+
     public void OnScale(GameEntity entity, Vector2 value)
     {
         transform.localScale = Utilities.ToUnityEngineVector2(value);

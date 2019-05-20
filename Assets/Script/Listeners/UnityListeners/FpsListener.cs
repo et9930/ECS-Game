@@ -14,6 +14,11 @@ public class FpsListener : MonoBehaviour, IEventListener, IAnyCurrentFpsListener
         _entity.AddAnyCurrentFpsListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyCurrentFpsListener(this);
+    }
+
     public void OnAnyCurrentFps(GameEntity entity, float value)
     {
         var currentTime = Time.realtimeSinceStartup;

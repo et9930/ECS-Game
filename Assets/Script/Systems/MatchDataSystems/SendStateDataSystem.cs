@@ -28,6 +28,7 @@ public class SendStateDataSystem : IExecuteSystem, IInitializeSystem
 
         var newStateData = new MatchDataState
         {
+            matchId = _context.currentMatchData.value.customMatchId,
             userId = _context.currentPlayerId.value,
             acceleration = currentPlayer.acceleration.value,
             position = currentPlayer.position.value,

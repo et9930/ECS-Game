@@ -12,6 +12,11 @@ public class MakeYinTimeListener : MonoBehaviour, IEventListener, IAnyMakeYinTim
         _entity.AddAnyMakeYinTimeListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyMakeYinTimeListener(this);
+    }
+
     public void OnAnyMakeYinTime(GameEntity entity, float value)
     {
         var processImage = transform.Find("NinjutsuQTETimePorcessBar/NinjutsuQTETimeProcessBarImage").GetComponent<Image>();

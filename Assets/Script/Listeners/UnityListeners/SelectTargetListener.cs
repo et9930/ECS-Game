@@ -14,6 +14,13 @@ public class SelectTargetListener : MonoBehaviour, IEventListener, IParentEntity
         _entity.AddSelectTargetListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveParentEntityListener(this);
+        _entity.RemoveSelectTargetDistanceListener(this);
+        _entity.RemoveSelectTargetListener(this);
+    }
+
     public void OnParentEntity(GameEntity entity, GameEntity value)
     {
         var icon = transform.Find("OutScreenSelectTargetIcon").GetComponent<Image>();

@@ -12,6 +12,11 @@ public class LoadingSceneTitleListener : MonoBehaviour, IEventListener, IAnyLoad
         _entity.AddAnyLoadingSceneTextImageListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyLoadingSceneTextImageListener(this);
+    }
+
     public void OnAnyLoadingSceneTextImage(GameEntity entity, string title, string text, string imagePath)
     {
         gameObject.GetComponent<Text>().text = title;

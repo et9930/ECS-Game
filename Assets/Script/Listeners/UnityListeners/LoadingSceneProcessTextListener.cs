@@ -12,6 +12,11 @@ public class LoadingSceneProcessTextListener : MonoBehaviour, IEventListener, IA
         _entity.AddAnyLoadingSceneProcessListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyLoadingSceneProcessListener(this);
+    }
+
     public void OnAnyLoadingSceneProcess(GameEntity entity, float value)
     {
         gameObject.GetComponent<Text>().text = value.ToString("P") + " 加载中。。。";

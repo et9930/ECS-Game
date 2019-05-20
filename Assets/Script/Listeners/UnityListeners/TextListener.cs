@@ -12,6 +12,11 @@ public class TextListener : MonoBehaviour, IEventListener, ITextListener
         _entity.AddTextListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveTextListener(this);
+    }
+
     public void OnText(GameEntity entity, string value)
     {
         gameObject.GetComponent<Text>().text = value;

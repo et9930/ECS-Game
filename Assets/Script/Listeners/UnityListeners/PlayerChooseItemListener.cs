@@ -12,6 +12,11 @@ public class PlayerChooseItemListener : MonoBehaviour, IEventListener, IAnyPlaye
         _entity.AddAnyPlayerChooseNinjaInfoListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyPlayerChooseNinjaInfoListener(this);
+    }
+
     public void OnAnyPlayerChooseNinjaInfo(GameEntity entity, string userId, string ninjaName, bool confirm)
     {
         if (userId != _entity.playerChooseNinjaInfo.userId) return;

@@ -445,6 +445,12 @@
       ]
     },
     {
+      "ComponentName": "MainUIOperationNinjaList",
+      "Handle": [
+        "Click"
+      ] 
+    },
+    {
       "ComponentName": "SearchBattleWindow",
       "Listener": [
         "Active"
@@ -659,6 +665,68 @@
       "ComponentName": "ChooseNinjaWindowWaitOtherPlayers",
       "Listener": [
         "Active"
+      ]
+    },
+	  {
+	    "ComponentName": "MatchReplayListWindowMask",
+        "Handle": [
+          "Click"
+        ] 
+	  },
+	  {
+	    "ComponentName": "MatchReplayListWindowReplayButton",
+		"Listener": [
+			"Active"
+		],
+
+        "Handle": [
+          "Click"
+        ] 
+	  },	
+	  {
+	    "ComponentName": "MatchReplayListWindowDownloadButton",
+		"Listener": [
+			"Active"
+		],        
+		"Handle": [
+          "Click"
+        ] 
+	  },	
+	  {
+	    "ComponentName": "MatchReplayListWindowCloseButton",
+        "Handle": [
+          "Click"
+        ] 
+	  },
+	  {
+        "ComponentName": "MatchReplayListWindowScrollRect",
+        "Listener": [
+          "Size"
+        ]
+      },
+    {
+      "ComponentName": "MatchReplayListWindowScrollbar",
+      "Listener": [
+        "ScrollBarValue"
+      ]
+    },
+    {
+      "ComponentName": "MatchReplayListWindowWaitingServer",
+      "Listener": [
+        "Active"
+      ] 
+    },
+	  {
+	    "ComponentName": "MatchReplayListWindowContent",
+	    "saveEntity": true
+	  },
+    {
+      "ComponentName": "MatchReplayListItem",
+      "Handle": [
+        "Click"
+      ],
+      "Listener": [
+        "MatchReplayListItem"
       ]
     }
   ]

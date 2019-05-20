@@ -29,6 +29,7 @@ public sealed class GameEventSystems : Feature {
         Add(new AnyLoadingSceneTextImageEventSystem(contexts)); // priority: 0
         Add(new AnyLoadPlayerEventSystem(contexts)); // priority: 0
         Add(new AnyMakeYinTimeEventSystem(contexts)); // priority: 0
+        Add(new MatchReplayListItemEventSystem(contexts)); // priority: 0
         Add(new NinjaItemNameEventSystem(contexts)); // priority: 0
         Add(new NinjutsuNameEventSystem(contexts)); // priority: 0
         Add(new ParentEntityEventSystem(contexts)); // priority: 0

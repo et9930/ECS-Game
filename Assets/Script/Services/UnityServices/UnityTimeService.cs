@@ -40,4 +40,10 @@ public class UnityTimeService : ITimeService
     {
         clientServerDeltaTime += value;
     }
+
+    public DateTime TimeStampToDateTime(double timeStamp)
+    {
+//        var toTimeStamp = new TimeSpan((long)timeStamp);
+        return startTime.AddMilliseconds(timeStamp);
+    }
 }

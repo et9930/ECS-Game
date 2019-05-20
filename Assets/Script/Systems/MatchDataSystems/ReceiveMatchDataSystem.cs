@@ -57,6 +57,9 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
                 case 1010:
                     ReceiveThrowWeaponControl(e.matchData.payload);
                     break;
+                case 1011:
+                    ReceiveJutsuControl(e.matchData.payload);
+                    break;
                     
             }
 
@@ -131,9 +134,11 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
 
     private void ReceiveThrowWeaponControl(string payload)
     {
-        var throwWeaponControl = Utilities.ParseJson<MatchDataThrowWeaponControl>(payload);
-        var player = _context.GetEntityWithId(throwWeaponControl.userId);
-        if(player == null) return;
-        player.isTryThrowWeapon = true;
+        _context.CreateEntity().ReplaceThrowWeaponControl(Utilities.ParseJson<MatchDataThrowWeaponControl>(payload));
+    }
+
+    private void ReceiveJutsuControl(string payload)
+    {
+        _context.CreateEntity().ReplaceJutsuControl(Utilities.ParseJson<MatchDataJutsuControl>(payload));
     }
 }

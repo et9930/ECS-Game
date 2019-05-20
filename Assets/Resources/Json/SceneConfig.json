@@ -49,6 +49,8 @@
           "ChooseNinjaItem",
           "ChooseNinjaWindow",
           "MainUI",
+          "MatchReplayListWindow",
+          "MatchReplayListItem",
           "PlayerChooseItem",
           "SearchBattleWindow",
           "UserInfo"

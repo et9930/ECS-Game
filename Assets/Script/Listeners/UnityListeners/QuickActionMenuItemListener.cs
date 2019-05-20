@@ -12,6 +12,11 @@ public class QuickActionMenuItemListener : MonoBehaviour, IEventListener, IQuick
         _entity.AddQuickActionItemConfigListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveQuickActionItemConfigListener(this);
+    }
+
     public void OnQuickActionItemConfig(GameEntity entity, QuickAction value)
     {
         var icon = transform.Find("QuickActionMenuItemIcon").GetComponent<Image>();

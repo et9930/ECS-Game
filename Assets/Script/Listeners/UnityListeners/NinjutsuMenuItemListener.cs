@@ -14,6 +14,11 @@ public class NinjutsuMenuItemListener : MonoBehaviour, IEventListener, INinjutsu
         _entity.AddNinjutsuNameListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveNinjutsuNameListener(this);
+    }
+
     public void OnNinjutsuName(GameEntity entity, string value)
     {
         var ninjutsuMenuItemBackground = transform.Find("NinjutsuMenuItemBackground").GetComponent<Image>();

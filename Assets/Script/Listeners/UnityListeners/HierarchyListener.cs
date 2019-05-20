@@ -11,6 +11,11 @@ public class HierarchyListener : MonoBehaviour, IEventListener, IHierarchyListen
         _entity.AddHierarchyListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveHierarchyListener(this);
+    }
+
     public void OnHierarchy(GameEntity entity, float value)
     {
         var tmpPosition = transform.position;

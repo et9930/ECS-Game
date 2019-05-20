@@ -15,6 +15,11 @@ public class PlayerHeadShotListener : MonoBehaviour, IEventListener, IAnyLoadPla
         _entity.AddAnyLoadPlayerListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyLoadPlayerListener(this);
+    }
+
     public void OnAnyLoadPlayer(GameEntity entity, string playerId, string playerName, Vector3 position, bool towardLeft, int team)
     {
         if (playerId != _context.currentPlayerId.value) return;

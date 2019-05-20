@@ -40,6 +40,7 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 //                originator.ReplaceChaKuRaExpend(chaKuRaCoast);
                 var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = originator.id.value,
                     chaKuRaExpend = chaKuRaCoast
                 };
@@ -50,6 +51,7 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 //                originator.ReplaceChaKuRaExpend(originator.chaKuRaCurrent.value);
                 var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = originator.id.value,
                     chaKuRaExpend = originator.chaKuRaCurrent.value
                 };
@@ -63,6 +65,7 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 //                originator.ReplaceTaiRyoKuExpend(taiRyuKuCoast);
                 var newTaiRyoKuExpend = new MatchDataTaiRyuKuExpendControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = originator.id.value,
                     taiRyuKuExpend = taiRyuKuCoast
                 };
@@ -74,6 +77,7 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 //                originator.ReplaceTaiRyoKuExpend(originator.taiRyoKuCurrent.value);
                 var newTaiRyoKuExpend = new MatchDataTaiRyuKuExpendControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = originator.id.value,
                     taiRyuKuExpend = originator.taiRyoKuCurrent.value
                 };
@@ -95,6 +99,19 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
             if (!jutsuConfig.needSelectTarget || jutsuConfig.needSelectTarget && e.hasJutsuTarget)
             {
                 e.isStartConditionConfirm = true;
+                var newJutsuControl = new MatchDataJutsuControl
+                {
+                    matchId = _context.currentMatchData.value.customMatchId,
+                    originatorId = e.originator.value.id.value,
+                    jutsuName = e.name.text,
+                    needTarget = jutsuConfig.needSelectTarget
+                };
+                if (jutsuConfig.needSelectTarget)
+                {
+                    newJutsuControl.targetId = e.jutsuTarget.value.id.value;
+                }
+                _context.CreateEntity().ReplaceSendMatchData(1011, Utilities.ToJson(newJutsuControl));
+                e.isDestroy = true;
             }
         }
     }

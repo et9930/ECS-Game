@@ -12,6 +12,11 @@ public class ActiveListener : MonoBehaviour, IEventListener, IActiveListener
         _entity.ReplaceActive(gameObject.activeSelf);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveActiveListener(this);
+    }
+
     public void OnActive(GameEntity entity, bool value)
     {
         gameObject.SetActive(value);

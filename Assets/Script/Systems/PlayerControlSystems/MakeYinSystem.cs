@@ -205,6 +205,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 //        e.ReplaceChaKuRaExpend(1.0f);
         var newChaKuRaExpend = new MatchDataChaKuRaExpendControl
         {
+            matchId = _context.currentMatchData.value.customMatchId,
             userId = _context.currentPlayerId.value,
             chaKuRaExpend = 1.0f
         };

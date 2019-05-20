@@ -11,6 +11,11 @@ public class TowardListener : MonoBehaviour, IEventListener, ITowardListener
         _entity.AddTowardListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveTowardListener(this);
+    }
+
     public void OnToward(GameEntity entity, bool left)
     {
         var sr = GetComponent<SpriteRenderer>();

@@ -12,6 +12,11 @@ public class CurrentWeaponListener : MonoBehaviour, IEventListener, IAnyCurrentW
         _entity.AddAnyCurrentWeaponListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyCurrentWeaponListener(this);
+    }
+
     public void OnAnyCurrentWeapon(GameEntity entity, string value)
     {
         if (entity != _entity.parentEntity.value) return;

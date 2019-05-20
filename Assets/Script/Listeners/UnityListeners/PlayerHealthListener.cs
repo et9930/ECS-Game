@@ -16,6 +16,13 @@ public class PlayerHealthListener : MonoBehaviour, IEventListener, IAnyHealthCur
         _entity.AddAnyHealthRecoverableListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyHealthCurrentListener(this);
+        _entity.RemoveAnyHealthRecoverSpeedListener(this);
+        _entity.RemoveAnyHealthRecoverableListener(this);
+    }
+
     public void OnAnyHealthCurrent(GameEntity entity, float value)
     {
         if (entity.id.value != _context.currentPlayerId.value) return;

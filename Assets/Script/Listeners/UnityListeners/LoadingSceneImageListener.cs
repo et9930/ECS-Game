@@ -11,7 +11,12 @@ public class LoadingSceneImageListener : MonoBehaviour, IEventListener, IAnyLoad
         _entity = (GameEntity) entity;
         _entity.AddAnyLoadingSceneTextImageListener(this);
     }
-    
+
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyLoadingSceneTextImageListener(this);
+    }
+
     public void OnAnyLoadingSceneTextImage(GameEntity entity, string title, string text, string imagePath)
     {
         gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(imagePath);

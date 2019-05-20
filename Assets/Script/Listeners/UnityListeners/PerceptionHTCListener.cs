@@ -12,6 +12,11 @@ public class PerceptionHTCListener : MonoBehaviour, IEventListener, IPerceptionH
         _entity.AddPerceptionHTCItemListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemovePerceptionHTCItemListener(this);
+    }
+
     public void OnPerceptionHTCItem(GameEntity entity, float healthPercent, float taiRyoKuPercent, float chaKuRaPercent)
     {
         var healthRoot = transform.Find("PerceptionHealth");

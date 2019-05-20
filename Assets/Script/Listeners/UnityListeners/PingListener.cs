@@ -12,6 +12,11 @@ public class PingListener : MonoBehaviour, IEventListener, IAnyCurrentPingTimeLi
         _entity.AddAnyCurrentPingTimeListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyCurrentPingTimeListener(this);
+    }
+
     public void OnAnyCurrentPingTime(GameEntity entity, int value)
     {
         GetComponent<Text>().text = "Ping: " + value + "ms";

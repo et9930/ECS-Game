@@ -14,6 +14,11 @@ public class ChooseNinjaWindowListener : MonoBehaviour, IEventListener, IAnyAllo
         _entity.AddAnyAllocationNinjaListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyAllocationNinjaListener(this);
+    }
+
     public void OnAnyAllocationNinja(GameEntity entity, SCAllocationNinja value)
     {
         var mapImage = transform.Find("ChooseNinjaWindowMapImage").GetComponent<Image>();

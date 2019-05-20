@@ -29,6 +29,11 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["CancelMatchButton"] = OnCancelMatchButtonClick;
         _context.clickEventFunc.clickDic["ChooseNinjaItem"] = OnChooseNinjaItemClick;
         _context.clickEventFunc.clickDic["ChooseNinjaWindowConfirmButton"] = OnChooseNinjaWindowConfirmButtonClick;
+        _context.clickEventFunc.clickDic["MainUIOperationNinjaList"] = OnMainUIOperationNinjaListClick;
+        _context.clickEventFunc.clickDic["MatchReplayListWindowMask"] = OnMatchReplayListWindowMaskClick;
+        _context.clickEventFunc.clickDic["MatchReplayListItem"] = OnMatchReplayListItemClick;
+        _context.clickEventFunc.clickDic["MatchReplayListWindowDownloadButton"] = OnMatchReplayListWindowDownloadButtonClick;
+        _context.clickEventFunc.clickDic["MatchReplayListWindowCloseButton"] = OnMatchReplayListWindowCloseButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -46,6 +51,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in entities)
         {
             e.ReplaceClickState(false);
+            if (!_context.sceneService.instance.GetSelectableInteractable(e.name.text)) continue; 
             var uiName = e.name.text;
             var index = e.name.text.IndexOf('_');
             if (index != -1)
@@ -68,6 +74,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 //        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
         var newUseNinjaItemControl = new MatchDataUseNinjaItemControl
         {
+            matchId = _context.currentMatchData.value.customMatchId,
             userId = _context.currentPlayerId.value,
             item = entity.ninjaItemName.value
         };
@@ -203,10 +210,26 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         e.ReplaceName("SearchBattleWindow");
     }
 
+    private void OnMainUIOperationNinjaListClick(GameEntity entity)
+    {
+        var e = _context.CreateEntity();
+        e.ReplaceUiOpen("MatchReplayListWindow");
+        e.ReplaceName("MatchReplayListWindow");
+        _context.isRequestReplayList = true;
+    }
+
     private void OnSearchBattleWindowMaskClick(GameEntity entity)
     {
         if (_context.isSearchingBattle) return;
         foreach (var e in _context.GetEntitiesWithName("SearchBattleWindow"))
+        {
+            e.isUiClose = true;
+        }
+    }
+
+    private void OnMatchReplayListWindowMaskClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindow"))
         {
             e.isUiClose = true;
         }
@@ -351,6 +374,62 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in _context.GetEntitiesWithName("ChooseNinjaWindowWaitOtherPlayers"))
         {
             e.ReplaceActive(true);
+        }
+    }
+
+    private void OnMatchReplayListItemClick(GameEntity entity)
+    {
+        _context.ReplaceSelectedReplayItem(entity);
+
+        foreach (var e in _context.GetEntitiesWithName("MatchReplayListItem"))
+        {
+            e.ReplaceActive(false);
+        }
+
+        entity.ReplaceActive(true);
+
+        var matchId = entity.matchReplayListItem.matchData.customMatchId;
+        if (_context.fileService.instance.CheckSavedFile(matchId))
+        {
+            foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindowReplayButton"))
+            {
+                e.ReplaceActive(true);
+            }
+            _context.sceneService.instance.SetSelectableInteractable("MatchReplayListWindowReplayButton", true);
+            foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindowDownloadButton"))
+            {
+                e.ReplaceActive(false);
+            }
+            _context.sceneService.instance.SetSelectableInteractable("MatchReplayListWindowDownloadButton", false);
+        }
+        else
+        {
+            foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindowReplayButton"))
+            {
+                e.ReplaceActive(false);
+            }
+            _context.sceneService.instance.SetSelectableInteractable("MatchReplayListWindowReplayButton", false);
+
+            foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindowDownloadButton"))
+            {
+                e.ReplaceActive(true);
+            }
+            _context.sceneService.instance.SetSelectableInteractable("MatchReplayListWindowDownloadButton", true);
+
+        }
+    }
+
+    private void OnMatchReplayListWindowDownloadButtonClick(GameEntity entity)
+    {
+        var matchId = _context.selectedReplayItem.entity.matchReplayListItem.matchData.customMatchId;
+        _context.CreateEntity().ReplaceDownloadReplay(matchId);
+    }
+
+    private void OnMatchReplayListWindowCloseButtonClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindow"))
+        {
+            e.isUiClose = true;
         }
     }
 }

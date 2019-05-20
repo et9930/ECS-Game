@@ -12,6 +12,11 @@ public class PerceptionPositionExistListener : MonoBehaviour, IEventListener, IP
         _entity.AddPerceptionPositionExistItemListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemovePerceptionPositionExistItemListener(this);
+    }
+
     public void OnPerceptionPositionExistItem(GameEntity entity, string name, int distance, bool left)
     {
         var headShot = transform.Find("PerceptionPositionExistItemNinja").GetComponent<Image>();

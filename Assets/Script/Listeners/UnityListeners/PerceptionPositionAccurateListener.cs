@@ -12,6 +12,11 @@ public class PerceptionPositionAccurateListener : MonoBehaviour, IEventListener,
         _entity.AddPerceptionPositionAccurateItemListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemovePerceptionPositionAccurateItemListener(this);
+    }
+
     public void OnPerceptionPositionAccurateItem(GameEntity entity, string name, bool left, float y, int distance)
     {
         var headShot = transform.Find("PerceptionPositionAccurateImage").GetComponent<Image>();

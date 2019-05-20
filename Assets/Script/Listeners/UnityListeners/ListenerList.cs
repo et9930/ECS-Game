@@ -57,6 +57,7 @@ public static class ListenerList
         { "ChooseNinjaItem", typeof(ChooseNinjaItemListener) },
         { "PlayerChooseItem", typeof(PlayerChooseItemListener) },
 
+        { "MatchReplayListItem", typeof(MatchReplayListItemListener) },
     };
 }
 

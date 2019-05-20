@@ -13,5 +13,6 @@
         Add(new RegisterPhysicsServiceSystem(contexts, services.Physics));
         Add(new RegisterNetworkServiceSystem(contexts, services.Network));
         Add(new RegisterLocalStorageServiceSystem(contexts, services.LocalStorage));
+        Add(new RegisterFileServiceSystem(contexts, services.File));
     }
 }

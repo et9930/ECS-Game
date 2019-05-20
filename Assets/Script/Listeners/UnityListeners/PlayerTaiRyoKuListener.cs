@@ -15,6 +15,12 @@ public class PlayerTaiRyoKuListener : MonoBehaviour, IEventListener, IAnyTaiRyoK
         _entity.AddAnyTaiRyoKuRecoverSpeedListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyTaiRyoKuCurrentListener(this);
+        _entity.RemoveAnyTaiRyoKuRecoverSpeedListener(this);
+    }
+
     public void OnAnyTaiRyoKuCurrent(GameEntity entity, float value)
     {
         if (entity.id.value != _context.currentPlayerId.value) return;

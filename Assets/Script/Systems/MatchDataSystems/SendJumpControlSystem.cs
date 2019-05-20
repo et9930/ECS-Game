@@ -32,6 +32,7 @@ public class SendJumpControlSystem : IExecuteSystem
             {
                 var newJumpControl = new MatchDataJumpControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
                     state = 0,
                 };
@@ -50,6 +51,7 @@ public class SendJumpControlSystem : IExecuteSystem
                 {
                     var newJumpControl = new MatchDataJumpControl
                     {
+                        matchId = _context.currentMatchData.value.customMatchId,
                         userId = _context.currentPlayerId.value,
                         state = 1,
                     };
@@ -120,6 +122,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(false);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = false
                         };
@@ -134,6 +137,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(true);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = true
                         };
@@ -156,6 +160,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(false);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = false
                         };
@@ -171,6 +176,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(true);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = true
                         };
@@ -193,6 +199,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(false);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = false
                         };
@@ -208,6 +215,7 @@ public class SendJumpControlSystem : IExecuteSystem
 //                        currentPlayer.ReplaceToward(true);
                         var newTowardControl = new MatchDataTowardControl
                         {
+                            matchId = _context.currentMatchData.value.customMatchId,
                             userId = _context.currentPlayerId.value,
                             faceLeft = true
                         };
@@ -252,6 +260,7 @@ public class SendJumpControlSystem : IExecuteSystem
 
                 var newJumpControl = new MatchDataJumpControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
                     state = 2,
                     force = force

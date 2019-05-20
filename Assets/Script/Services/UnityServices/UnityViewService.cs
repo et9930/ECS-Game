@@ -77,6 +77,11 @@ public class UnityViewService : IViewService
             viewGo.Unlink();
         }
 
+        foreach (var listener in viewGo.GetComponents<IEventListener>())
+        {
+            listener.UnregisterListeners();
+        }
+
         GameObject.Destroy(viewGo);
     }
 

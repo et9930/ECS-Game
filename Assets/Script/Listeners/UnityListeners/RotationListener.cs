@@ -12,6 +12,11 @@ public class RotationListener : MonoBehaviour, IEventListener, IRotationListener
         _entity.AddRotationListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveRotationListener(this);
+    }
+
     public void OnRotation(GameEntity entity, Vector3 value)
     {
         transform.localRotation = Quaternion.Euler(Utilities.ToUnityEngineVector3(value));

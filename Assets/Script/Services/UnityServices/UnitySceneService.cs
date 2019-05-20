@@ -237,7 +237,7 @@ public class UnitySceneService : ISceneService
         var ui = GameObject.Find(uiName);
         if (ui == null) return false;
         var selectableUis = ui.GetComponents<Selectable>();
-        return selectableUis.Length != 0 && selectableUis[0].interactable;
+        return selectableUis.Length == 0 || selectableUis[0].interactable;
     }
 
     public void SetSelectableInteractable(string uiName, bool value)
@@ -386,7 +386,21 @@ public class UnitySceneService : ISceneService
     public void CloseUI(int id)
     {
         UnlinkEntity(_uiDictionary[id].transform);
+        UnregisterListener(_uiDictionary[id].transform);
         GameObject.Destroy(_uiDictionary[id]);
+    }
+
+    private void UnregisterListener(Transform tf)
+    {
+        for (int i = 0; i < tf.childCount; i++)
+        {
+            UnregisterListener(tf.GetChild(i));
+        }
+
+        foreach (var listener in tf.GetComponents<IEventListener>())
+        {
+            listener.UnregisterListeners();
+        }
     }
 
     private void UnlinkEntity(Transform tf)

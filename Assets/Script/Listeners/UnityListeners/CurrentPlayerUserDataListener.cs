@@ -12,6 +12,11 @@ public class CurrentPlayerUserDataListener : MonoBehaviour, IEventListener, IAny
         _entity.AddAnyCurrentPlayerUserDataListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveAnyCurrentPlayerUserDataListener(this);
+    }
+
     public void OnAnyCurrentPlayerUserData(GameEntity entity, SCUserData value)
     {
         var headShot = transform.Find("UserInfoUserHeadShot").GetComponent<Image>();

@@ -6,6 +6,8 @@
         Add(new SelectTargetSystem(contexts));
         Add(new ManagementSelectTargetSystem(contexts));
 
+        Add(new JutsuControlSystem(contexts));
+
         Add(new HiRaiShinNoJuTsuSystem(contexts));
     }
 }

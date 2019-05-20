@@ -16,6 +16,13 @@ public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaIt
         _entity.AddLeftNumberListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemoveNinjaItemNameListener(this);
+        _entity.RemoveActiveListener(this);
+        _entity.RemoveLeftNumberListener(this);
+    }
+
     public void OnNinjaItemName(GameEntity entity, string value)
     {
         transform.Find("NinjaItemMenuItemIcon").GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/UI/NinjaItemIcon/" + value);

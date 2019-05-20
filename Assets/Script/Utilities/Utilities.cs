@@ -74,12 +74,16 @@ public static class Utilities
 
     public static int RandomInt(int min, int max)
     {
-        return random.Next(min, max);
+        var result = random.Next(min, max);
+        Debug.Log("---- random int : " + result);
+        return result;
     }
 
     public static float RandomFloat(float min, float max)
     {
-        return (float)random.NextDouble() * (max - min) + min;
+        var result = (float)random.NextDouble() * (max - min) + min;
+        Debug.Log("---- random float : " + result);
+        return result;
     }
 
     public static Vector2 Vector3PositionToVector2Position(System.Numerics.Vector3 value)
@@ -91,16 +95,16 @@ public static class Utilities
     {
         if (probability <= 0.0f) return false;
         if (probability >= 1.0f) return true;
-
-        var result = random.NextDouble() <= probability;
-        Debug.Log(probability + " result " + result);
+        var probabilityResult = random.NextDouble();
+        var result = probabilityResult <= probability;
+        Debug.Log("---- " + probability + " result " + result + " " + probabilityResult);
 
         return result;
     }
 
     public static void SetRandomSeed(int seed)
     {
-        Debug.Log("set random seed " + seed);
+        Debug.Log("---- set random seed " + seed);
         random = new Random(seed);
     }
 }

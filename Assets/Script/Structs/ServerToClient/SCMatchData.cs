@@ -11,6 +11,8 @@ public class SCMatchData
     [DataMember(Name = "match_ready_number")] public int matchReadyNumber;
     [DataMember(Name = "match_choose_finish_number")] public int matchChooseFinishNumber;
     [DataMember(Name = "match_random_seed")] public int matchRandomSeed;
+    [DataMember(Name = "match_start_time")] public double matchStartTime;
+    [DataMember(Name = "match_map")] public AllocationMap matchMap;
 }
 
 [DataContract]

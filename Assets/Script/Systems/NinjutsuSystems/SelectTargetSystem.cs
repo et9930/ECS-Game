@@ -34,6 +34,16 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
             if (e.hasJutsuTarget)
             {
                 e.isStartConditionConfirm = true;
+                var newJutsuControl = new MatchDataJutsuControl
+                {
+                    matchId = _context.currentMatchData.value.customMatchId,
+                    originatorId = e.originator.value.id.value,
+                    jutsuName = e.name.text,
+                    needTarget = true,
+                    targetId = e.jutsuTarget.value.id.value
+                };
+                _context.CreateEntity().ReplaceSendMatchData(1011, Utilities.ToJson(newJutsuControl));
+                e.isDestroy = true;
                 continue;
             }
 
@@ -114,6 +124,16 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         yield return _context.coroutineService.instance.WaitUntil(() => CheckSelectState(targets, jutsu));
 
         jutsu.isStartConditionConfirm = true;
+        var newJutsuControl = new MatchDataJutsuControl
+        {
+            matchId = _context.currentMatchData.value.customMatchId,
+            originatorId = jutsu.originator.value.id.value,
+            jutsuName = jutsu.name.text,
+            needTarget = true,
+            targetId = jutsu.jutsuTarget.value.id.value
+        };
+        _context.CreateEntity().ReplaceSendMatchData(1011, Utilities.ToJson(newJutsuControl));
+        jutsu.isDestroy = true;
 
         foreach (var e in targets)
         {

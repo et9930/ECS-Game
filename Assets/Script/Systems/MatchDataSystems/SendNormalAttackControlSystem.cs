@@ -30,6 +30,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
 //                    currentPlayer.ReplaceAnimation("attack_" + _context.characterBaseAttributes.dic[currentPlayer.name.text].taijutsuAttackWithWeapon, false);
                     var newNormalAttack = new MatchDataNormalAttackControl
                     {
+                        matchId = _context.currentMatchData.value.customMatchId,
                         userId = _context.currentPlayerId.value,
                         attackIndex = _context.characterBaseAttributes.dic[currentPlayer.name.text]
                             .taijutsuAttackWithWeapon,
@@ -41,6 +42,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                 {
                     var newNormalAttack = new MatchDataNormalAttackControl
                     {
+                        matchId = _context.currentMatchData.value.customMatchId,
                         userId = _context.currentPlayerId.value,
                         attackIndex = 1,
                         immediately = true
@@ -62,6 +64,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
 
                 var newNormalAttack = new MatchDataNormalAttackControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
                     attackIndex = currentAttackIndex + 1,
                     immediately = false

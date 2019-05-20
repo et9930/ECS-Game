@@ -12,6 +12,11 @@ public class PositionListener : MonoBehaviour, IEventListener, IPositionListener
         _entity.AddPositionListener(this);
     }
 
+    public void UnregisterListeners()
+    {
+        _entity.RemovePositionListener(this);
+    }
+
     public void OnPosition(GameEntity entity, System.Numerics.Vector3 value)
     {
         var tmp_z = transform.position.z;

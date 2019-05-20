@@ -17,7 +17,7 @@ public class HiRaiShinNoJuTsuSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.isJutsu && entity.name.text == "HiRaiShinNoJuTsu" && entity.isStartConditionConfirm;
+        return entity.isJutsu && entity.name.text == "HiRaiShinNoJuTsu" && entity.isStartConditionConfirm && !entity.isDestroy;
     }
 
     protected override void Execute(List<GameEntity> entities)
@@ -29,9 +29,12 @@ public class HiRaiShinNoJuTsuSystem : ReactiveSystem<GameEntity>
             targetPosition.Z = Utilities.RandomFloat(targetPosition.Z - 0.5f, targetPosition.Z + 0.5f);
             e.originator.value.ReplacePosition(targetPosition);
             e.isDestroy = true;
-            var cameraPosition = _context.sceneService.instance.MainCameraPosition;
-            cameraPosition.X = targetPosition.X;
-            _context.sceneService.instance.MainCameraPosition = cameraPosition;
+            if (e.originator.value.id.value == _context.currentPlayerId.value)
+            {
+                var cameraPosition = _context.sceneService.instance.MainCameraPosition;
+                cameraPosition.X = targetPosition.X;
+                _context.sceneService.instance.MainCameraPosition = cameraPosition;
+            }
         }
     }
 }

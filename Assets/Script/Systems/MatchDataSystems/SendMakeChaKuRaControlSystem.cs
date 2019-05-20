@@ -21,6 +21,7 @@ public class SendMakeChaKuRaControlSystem : IExecuteSystem
             if (!currentPlayer.isMakingChaKuRa) return;
             var newMakeChaKuRaControl = new MatchDataMakeChaKuRaControl
             {
+                matchId = _context.currentMatchData.value.customMatchId,
                 userId = _context.currentPlayerId.value,
                 isMakingChaKuRa = false
             };
@@ -37,6 +38,7 @@ public class SendMakeChaKuRaControlSystem : IExecuteSystem
                 if (!currentPlayer.isMakingChaKuRa) return;
                 var newMakeChaKuRaControl = new MatchDataMakeChaKuRaControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
                     isMakingChaKuRa = false
                 };
@@ -47,6 +49,7 @@ public class SendMakeChaKuRaControlSystem : IExecuteSystem
                 if (currentPlayer.isMakingChaKuRa) return;
                 var newMakeChaKuRaControl = new MatchDataMakeChaKuRaControl
                 {
+                    matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
                     isMakingChaKuRa = true
                 };
