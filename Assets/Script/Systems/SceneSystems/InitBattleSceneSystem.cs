@@ -26,6 +26,10 @@ public class InitBattleSceneSystem : ReactiveSystem<GameEntity>
 
         var matchData = _context.currentMatchData.value;
         Utilities.SetRandomSeed(matchData.matchRandomSeed);
+        if (_context.isReplaying)
+        {
+            _context.ReplaceReplayStartTime(_context.timeService.instance.GetLocalTimeStamp());
+        }
 
         foreach (var player in matchData.matchPlayers)
         {

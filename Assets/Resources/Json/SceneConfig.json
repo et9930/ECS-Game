@@ -4,11 +4,8 @@
       "Key": "LaunchScene",
       "Value": {
         "SceneName": "LaunchScene",
-        "InitializeUis": [
-        ],
-        "CloseUIs": [
-
-        ]
+        "InitializeUis": [],
+        "CloseUIs": []
       }
     },
     {
@@ -49,8 +46,8 @@
           "ChooseNinjaItem",
           "ChooseNinjaWindow",
           "MainUI",
-          "MatchReplayListWindow",
           "MatchReplayListItem",
+          "MatchReplayListWindow",
           "PlayerChooseItem",
           "SearchBattleWindow",
           "UserInfo"

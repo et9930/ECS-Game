@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using Entitas;
 
 public class CloseUiSystem : ReactiveSystem<GameEntity>
@@ -24,15 +25,32 @@ public class CloseUiSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            foreach (var uiEntity in _context.GetEntities(GameMatcher.UiRootId))
-            {
-                if (uiEntity.uiRootId.value == e.uiRootId.value)
-                {
-                    uiEntity.isDestroy = true;
-                }
-            }
-            _context.sceneService.instance.CloseUI(e.uiRootId.value);
-            _context.uuidToEntity.dic.Remove(e.uiRootId.value);
+            CloseUi(e.uiRootId.value);
         }
+    }
+
+    private void CloseUi(int rootId)
+    {
+//        if (_context.uiChildList.dic.ContainsKey(rootId))
+//        {
+//            foreach (var childId in _context.uiChildList.dic[rootId])
+//            {
+//                CloseUi(childId);
+//            }
+//        }
+
+        _context.CreateEntity().ReplaceDebugMessage("Close " + _context.uuidToEntity.dic[rootId].name.text);
+
+
+        foreach (var uiEntity in _context.GetEntities(GameMatcher.UiRootId))
+        {
+            if (uiEntity.uiRootId.value == rootId)
+            {
+                uiEntity.isDestroy = true;
+            }
+        }
+        _context.sceneService.instance.CloseUI(rootId);
+        _context.uuidToEntity.dic.Remove(rootId);
+//        _context.uiChildList.dic.Remove(rootId);
     }
 }

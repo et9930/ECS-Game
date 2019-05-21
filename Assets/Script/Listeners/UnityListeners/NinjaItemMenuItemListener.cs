@@ -6,18 +6,25 @@ public class NinjaItemMenuItemListener : MonoBehaviour, IEventListener, INinjaIt
 {
     private GameContext _context;
     private GameEntity _entity;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddNinjaItemNameListener(this);
         _entity.AddActiveListener(this);
         _entity.AddLeftNumberListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveNinjaItemNameListener(this);
         _entity.RemoveActiveListener(this);
         _entity.RemoveLeftNumberListener(this);

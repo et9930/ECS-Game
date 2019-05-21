@@ -18,7 +18,8 @@ public class SendStateDataSystem : IExecuteSystem, IInitializeSystem
     public void Execute()
     {
         if (_context.currentScene.name != "BattleScene") return;
-
+        if (_context.isReplaying) return;
+        
         var currentTime = _context.timeService.instance.GetTimeStamp();
         if (currentTime - _context.lastSendStateTime.value <= 5000.0f) return;
 

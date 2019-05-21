@@ -5,17 +5,24 @@ using UnityEngine.UI;
 public class SelectTargetListener : MonoBehaviour, IEventListener, IParentEntityListener, ISelectTargetDistanceListener, ISelectTargetListener
 {
     private GameEntity _entity;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _entity = (GameEntity) entity;
         _entity.AddParentEntityListener(this);
         _entity.AddSelectTargetDistanceListener(this);
         _entity.AddSelectTargetListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveParentEntityListener(this);
         _entity.RemoveSelectTargetDistanceListener(this);
         _entity.RemoveSelectTargetListener(this);

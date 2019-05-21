@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class JumpVerticalDirectionArrowListener : MonoBehaviour, IEventListener, IAnyJumpAngleListener
 {
+    private bool hasRegistered = false;
+
     private GameEntity _entity;
     private GameEntity _playerEntity;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _entity = (GameEntity) entity;
         _entity.AddAnyJumpAngleListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyJumpAngleListener(this);
     }
 

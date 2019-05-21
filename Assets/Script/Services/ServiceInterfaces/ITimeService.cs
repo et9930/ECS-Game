@@ -8,6 +8,7 @@ public interface ITimeService
     void SetTimeScale(float value);
     float GetRealTimeSinceStartup();
     double GetTimeStamp();
+    double GetLocalTimeStamp();
     void SetClientServerDeltaTime(double value);
     DateTime TimeStampToDateTime(double timeStamp);
 }

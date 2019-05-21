@@ -17,6 +17,7 @@ public class SendMovementControlSystem : IExecuteSystem, IInitializeSystem
     public void Execute()
     {
         if (_context.currentScene.name != "BattleScene") return;
+        if (_context.isReplaying) return;
 
         if (_context.key.value.Horizontal != 0.0f && _context.key.value.Horizontal != 1.0f && _context.key.value.Horizontal != -1.0f || 
             _context.key.value.Vertical != 0.0f && _context.key.value.Vertical != 1.0f && _context.key.value.Vertical != -1.0f) return;

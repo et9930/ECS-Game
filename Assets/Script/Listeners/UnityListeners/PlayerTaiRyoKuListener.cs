@@ -6,17 +6,24 @@ public class PlayerTaiRyoKuListener : MonoBehaviour, IEventListener, IAnyTaiRyoK
 {
     private GameEntity _entity;
     private GameContext _context;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity)entity;
         _entity.AddAnyTaiRyoKuCurrentListener(this);
         _entity.AddAnyTaiRyoKuRecoverSpeedListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyTaiRyoKuCurrentListener(this);
         _entity.RemoveAnyTaiRyoKuRecoverSpeedListener(this);
     }

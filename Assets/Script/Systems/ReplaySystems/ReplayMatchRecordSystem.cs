@@ -12,16 +12,26 @@ public class ReplayMatchRecordSystem : ReactiveSystem<GameEntity>
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        throw new System.NotImplementedException();
+        return context.CreateCollector(GameMatcher.StartReplay);
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        throw new System.NotImplementedException();
+        return entity.hasStartReplay && !entity.isDestroy;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
-        throw new System.NotImplementedException();
+        foreach (var e in entities)
+        {
+            var matchId = e.startReplay.matchData.customMatchId;
+            if (! _context.fileService.instance.CheckSavedFile(matchId)) continue;
+            _context.ReplaceCurrentMatchData(e.startReplay.matchData);
+            var strRecordData = _context.fileService.instance.ReadSavedMatch(matchId);
+            var recordData = Utilities.ParseJson<SCMatchRecord>(strRecordData);
+            _context.ReplaceCurrentReplayData(recordData);
+            _context.isReplaying = true;
+            _context.ReplaceLoadScene("BattleScene");
+        }
     }
 }

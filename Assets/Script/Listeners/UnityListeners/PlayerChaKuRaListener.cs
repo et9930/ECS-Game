@@ -6,17 +6,23 @@ public class PlayerChaKuRaListener : MonoBehaviour, IEventListener, IAnyChaKuRaC
 {
     private GameEntity _entity;
     private GameContext _context;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddAnyChaKuRaCurrentListener(this);
         _entity.AddAnyChaKuRaSlewRateListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyChaKuRaCurrentListener(this);
         _entity.RemoveAnyChaKuRaSlewRateListener(this);
     }

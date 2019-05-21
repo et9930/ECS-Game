@@ -6,16 +6,23 @@ public class NinjaItemMenuInfoListener : MonoBehaviour, IEventListener, IAnyPoin
 {
     private GameContext _context;
     private GameEntity _entity;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddAnyPointNinjaItemMenuItemListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyPointNinjaItemMenuItemListener(this);
     }
 

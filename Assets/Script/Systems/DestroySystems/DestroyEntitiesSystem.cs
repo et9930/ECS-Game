@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
 public class DestroyEntitiesSystem : ReactiveSystem<GameEntity>
 {

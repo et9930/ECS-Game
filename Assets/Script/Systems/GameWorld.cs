@@ -31,11 +31,13 @@
 
         Add(new SendMatchDataSystem(contexts));
         Add(new ReceiveMatchDataSystem(contexts));
+        Add(new PlayRecordSystem(contexts));
 
 
         Add(new GetReplayListSystem(contexts));
         Add(new AddReplayListItemSystem(contexts));
         Add(new DownloadReplaySystem(contexts));
+        
 
         // Main Game Logic Systems
         Add(new PlayerStateControlSystem(contexts));
@@ -81,6 +83,7 @@
         Add(new PlayerReadyStateSystem(contexts));
         Add(new SwitchChooseNinjaWindowSystem(contexts));
         Add(new MatchStartSystem(contexts));
+        Add(new ReplayMatchRecordSystem(contexts));
 
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));

@@ -6,16 +6,23 @@ public class NinjutsuMenuInfoListener : MonoBehaviour, IEventListener, IAnyPoint
 {
     private GameEntity _entity;
     private GameContext _context;
-    
+    private bool hasRegistered = false;
+
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddAnyPointNinjutsuMenuItemListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyPointNinjutsuMenuItemListener(this);
     }
 

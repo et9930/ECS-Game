@@ -34,6 +34,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["MatchReplayListItem"] = OnMatchReplayListItemClick;
         _context.clickEventFunc.clickDic["MatchReplayListWindowDownloadButton"] = OnMatchReplayListWindowDownloadButtonClick;
         _context.clickEventFunc.clickDic["MatchReplayListWindowCloseButton"] = OnMatchReplayListWindowCloseButtonClick;
+        _context.clickEventFunc.clickDic["MatchReplayListWindowReplayButton"] = OnMatchReplayListWindowReplayButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -430,6 +431,15 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         foreach (var e in _context.GetEntitiesWithName("MatchReplayListWindow"))
         {
             e.isUiClose = true;
+        }
+    }
+
+    private void OnMatchReplayListWindowReplayButtonClick(GameEntity entity)
+    {
+        var matchId = _context.selectedReplayItem.entity.matchReplayListItem.matchData.customMatchId;
+        if (_context.fileService.instance.CheckSavedFile(matchId))
+        {
+            _context.ReplaceStartReplay(_context.selectedReplayItem.entity.matchReplayListItem.matchData);
         }
     }
 }

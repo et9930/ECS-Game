@@ -4,18 +4,26 @@ using UnityEngine.UI;
 
 public class ChooseNinjaWindowListener : MonoBehaviour, IEventListener, IAnyAllocationNinjaListener
 {
+    private bool hasRegistered = false;
+
     private GameEntity _entity;
     private GameContext _context;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddAnyAllocationNinjaListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyAllocationNinjaListener(this);
     }
 

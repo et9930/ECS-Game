@@ -6,18 +6,25 @@ public class PlayerHealthListener : MonoBehaviour, IEventListener, IAnyHealthCur
 {
     private GameEntity _entity;
     private GameContext _context;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _entity = (GameEntity) entity;
         _context = Contexts.sharedInstance.game;
         _entity.AddAnyHealthCurrentListener(this);
         _entity.AddAnyHealthRecoverSpeedListener(this);
         _entity.AddAnyHealthRecoverableListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyHealthCurrentListener(this);
         _entity.RemoveAnyHealthRecoverSpeedListener(this);
         _entity.RemoveAnyHealthRecoverableListener(this);

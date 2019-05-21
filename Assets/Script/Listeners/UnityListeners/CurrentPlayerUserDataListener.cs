@@ -4,16 +4,24 @@ using UnityEngine.UI;
 
 public class CurrentPlayerUserDataListener : MonoBehaviour, IEventListener, IAnyCurrentPlayerUserDataListener
 {
+    private bool hasRegistered = false;
+
     private GameEntity _entity;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _entity = (GameEntity) entity;
         _entity.AddAnyCurrentPlayerUserDataListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyCurrentPlayerUserDataListener(this);
     }
 

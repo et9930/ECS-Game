@@ -5,15 +5,22 @@ using UnityEngine.UI;
 public class PlayerChooseItemListener : MonoBehaviour, IEventListener, IAnyPlayerChooseNinjaInfoListener
 {
     private GameEntity _entity;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _entity = (GameEntity) entity;
         _entity.AddAnyPlayerChooseNinjaInfoListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveAnyPlayerChooseNinjaInfoListener(this);
     }
 

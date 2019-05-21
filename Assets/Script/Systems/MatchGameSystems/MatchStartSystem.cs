@@ -32,7 +32,7 @@ public class MatchStartSystem : ReactiveSystem<GameEntity>
     private IEnumerator OnMatchStart()
     {
         yield return _context.coroutineService.instance.WaitForSeconds(2);
-
+        _context.isReplaying = false;
         _context.ReplaceLoadScene("BattleScene");
     }
 

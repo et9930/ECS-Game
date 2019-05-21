@@ -385,9 +385,13 @@ public class UnitySceneService : ISceneService
 
     public void CloseUI(int id)
     {
-        UnlinkEntity(_uiDictionary[id].transform);
-        UnregisterListener(_uiDictionary[id].transform);
-        GameObject.Destroy(_uiDictionary[id]);
+        GameObject go = _uiDictionary[id];
+        if (go != null)
+        {
+            UnregisterListener(go.transform);
+            UnlinkEntity(go.transform);
+            GameObject.Destroy(go);
+        }
     }
 
     private void UnregisterListener(Transform tf)
@@ -412,8 +416,12 @@ public class UnitySceneService : ISceneService
 
         if (tf.gameObject.GetEntityLink() != null)
         {
-            ((GameEntity) tf.gameObject.GetEntityLink().entity).isLinked = false;
-            tf.gameObject.Unlink();
+            var e = (GameEntity) tf.gameObject.GetEntityLink().entity;
+            if (e != null)
+            {
+                e.isLinked = false;
+                tf.gameObject.Unlink();
+            }
         }
     }
 

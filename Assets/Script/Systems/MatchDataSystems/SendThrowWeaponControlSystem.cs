@@ -24,6 +24,8 @@ public class SendThrowWeaponControlSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.isReplaying) return;
+
         foreach (var e in entities)
         {
             if (e.hasCurrentWeapon)

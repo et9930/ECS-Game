@@ -7,17 +7,24 @@ public class MatchReplayListItemListener : MonoBehaviour, IEventListener, IMatch
 {
     private GameContext _context;
     private GameEntity _entity;
+    private bool hasRegistered = false;
 
     public void RegisterListeners(IEntity entity)
     {
+        if (hasRegistered) return;
+
         _context = Contexts.sharedInstance.game;
         _entity = (GameEntity) entity;
         _entity.AddMatchReplayListItemListener(this);
         _entity.AddActiveListener(this);
+        hasRegistered = true;
     }
 
     public void UnregisterListeners()
     {
+        if (!hasRegistered) return;
+        hasRegistered = false;
+
         _entity.RemoveMatchReplayListItemListener(this);
         _entity.RemoveActiveListener(this);
     }

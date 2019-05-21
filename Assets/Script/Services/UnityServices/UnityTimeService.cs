@@ -36,6 +36,11 @@ public class UnityTimeService : ITimeService
         return (DateTime.Now - startTime).TotalMilliseconds + clientServerDeltaTime; // 相差毫秒数
     }
 
+    public double GetLocalTimeStamp()
+    {
+        return (DateTime.Now - startTime).TotalMilliseconds;
+    }
+
     public void SetClientServerDeltaTime(double value)
     {
         clientServerDeltaTime += value;
