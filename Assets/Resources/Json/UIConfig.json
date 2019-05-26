@@ -4,6 +4,36 @@
       "Components": [
         {
           "AnomalyButton": false,
+          "ComponentName": "BattleValueDisplay",
+          "ComponentPath": "BattleValueDisplay",
+          "Handle": [],
+          "Listener": ["BattleValueDisplay"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleValueDisplayText",
+          "ComponentPath": "BattleValueDisplay\/BattleValueDisplayText",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleValueDisplayNumber",
+          "ComponentPath": "BattleValueDisplay\/BattleValueDisplayNumber",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "BattleValueDisplay"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
           "ComponentName": "ChatMain",
           "ComponentPath": "ChatMain",
           "Handle": [],

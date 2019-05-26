@@ -58,6 +58,8 @@ public static class ListenerList
         { "PlayerChooseItem", typeof(PlayerChooseItemListener) },
 
         { "MatchReplayListItem", typeof(MatchReplayListItemListener) },
+
+        { "BattleValueDisplay", typeof(BattleValueDisplayListener) },
     };
 }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class CheckTaijutsuAttackDodgeSystem : ReactiveSystem<GameEntity>
@@ -40,6 +41,7 @@ public class CheckTaijutsuAttackDodgeSystem : ReactiveSystem<GameEntity>
             if (!Utilities.CheckSuccess(probability)) continue;
 
             _context.CreateEntity().ReplaceDebugMessage(e.name.text + " dodge " + e.taijutsuAttackHit.hitBy.name.text + "'s hit");
+            _context.CreateEntity().ReplaceBattleValueDisplay(-1, 1, new Vector3(0, 132, 255), "闪避", e);
             e.RemoveTaijutsuAttackHit();
         }
     }

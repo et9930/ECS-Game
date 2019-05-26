@@ -135,6 +135,10 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             _context.localStorageService.instance.SetString("login_password", password);
         }
+        else
+        {
+            _context.localStorageService.instance.DeleteKey("login_password");
+        }
         
         _context.ReplaceLogin(email, password);
     }

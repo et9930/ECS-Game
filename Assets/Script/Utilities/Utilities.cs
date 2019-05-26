@@ -64,12 +64,20 @@ public static class Utilities
 
     public static UnityEngine.Color ToUnityEngineColor(System.Numerics.Vector4 value)
     {
-        return new Color(value.X, value.Y, value.Z, value.W);
+        if (value.X <= 1 && value.Y <= 1 && value.Z <= 1 && value.W <= 1)
+        {
+            return new Color(value.X, value.Y, value.Z, value.W);
+        }
+        return new Color(value.X / 255.0f, value.Y / 255.0f, value.Z / 255.0f, value.W / 255.0f);
     }
 
     public static UnityEngine.Color ToUnityEngineColor(System.Numerics.Vector3 value)
     {
-        return new Color(value.X, value.Y, value.Z);
+        if (value.X <= 1 && value.Y <= 1 && value.Z <= 1)
+        {
+            return new Color(value.X, value.Y, value.Z);
+        }
+        return new Color(value.X / 255.0f, value.Y / 255.0f, value.Z / 255.0f);
     }
 
     public static int RandomInt(int min, int max)

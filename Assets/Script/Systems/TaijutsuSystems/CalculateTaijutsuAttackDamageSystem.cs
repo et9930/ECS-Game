@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using Entitas;
 
 public class CalculateTaijutsuAttackDamageSystem : ReactiveSystem<GameEntity>
@@ -30,7 +31,7 @@ public class CalculateTaijutsuAttackDamageSystem : ReactiveSystem<GameEntity>
             var attackerPower = _context.characterBaseAttributes.dic[e.taijutsuAttackHit.hitBy.name.text].power;
             var defenderTaijutsu = _context.characterBaseAttributes.dic[e.name.text].taijutsu;
             var defenderPower = _context.characterBaseAttributes.dic[e.name.text].power;
-
+            var defendSuccess = e.isDefendSuccess;
             baseDamage *= 1.0f + (float) Math.Pow(attackerTaijutsu - defenderTaijutsu, 2) * 0.05f + (attackerPower - defenderPower) * 0.07f;
 
             if (e.isDefendSuccess)
@@ -42,6 +43,15 @@ public class CalculateTaijutsuAttackDamageSystem : ReactiveSystem<GameEntity>
             if (e.taijutsuAttackHit.hitBy.position.value.X < e.position.value.X != e.toward.left)
             {
                 baseDamage *= 1.5f;
+            }
+
+            if (defendSuccess)
+            {
+                _context.CreateEntity().ReplaceBattleValueDisplay((int)baseDamage, 2, new Vector3(100, 100, 100), "防御成功", e);
+            }
+            else
+            {
+                _context.CreateEntity().ReplaceBattleValueDisplay((int)baseDamage, 2, new Vector3(200, 200, 200), "防御失败", e);
             }
 
             e.ReplaceHealthReduce(baseDamage);

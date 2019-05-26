@@ -75,6 +75,8 @@
         Add(new CheckTaijutsuAttackDefendSystem(contexts));
         Add(new CalculateTaijutsuAttackDamageSystem(contexts));
 
+        Add(new BattleValueDisplaySystem(contexts));
+
         //  physical systems
         Add(new PhysicalSystems(contexts));
 
