@@ -13,6 +13,8 @@ public class FlyingWeaponManageSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in _context.GetEntitiesWithTag("Weapon"))
         {
             if (!e.hasOnTheGround || (e.hasOnTheGround && e.onTheGround.value == false))

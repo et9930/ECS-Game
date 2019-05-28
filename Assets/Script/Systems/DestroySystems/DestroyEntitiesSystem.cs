@@ -25,10 +25,6 @@ public class DestroyEntitiesSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            if (e.isView)
-            {
-                _context.viewService.instance.DestroyView(e.name.text);
-            }
             e.Destroy();
         }
     }

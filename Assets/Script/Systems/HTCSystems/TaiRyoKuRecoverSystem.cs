@@ -11,8 +11,11 @@ public class TaiRyoKuRecoverSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in _context.GetGroup(GameMatcher.TaiRyoKuCurrent))
         {
+            if (e.isDead) continue;
             if (!e.hasAnimation || e.animation.name != "idle") continue;
             if (e.taiRyoKuCurrent.value >= e.taiRyoKuTotal.value) continue;
             if (e.taiRyoKuCurrent.value < e.taiRyoKuTired.value) continue;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using Entitas;
@@ -34,11 +35,11 @@ public class AddReplayListItemSystem : ReactiveSystem<GameEntity>
             }
 
             GameEntity replayListContent = null;
-            GameEntity replayScrollRect = null;
+            GameEntity replayScrollBar = null;
 
-            foreach (var ui in _context.GetEntitiesWithName("MatchReplayListWindowScrollRect"))
+            foreach (var ui in _context.GetEntitiesWithName("MatchReplayListWindowScrollbar"))
             {
-                replayScrollRect = ui;
+                replayScrollBar = ui;
                 break;
             }
 
@@ -48,7 +49,7 @@ public class AddReplayListItemSystem : ReactiveSystem<GameEntity>
                 break;
             }
 
-            if(replayScrollRect == null || replayListContent == null) continue;
+            if(replayScrollBar == null || replayListContent == null) continue;
 
             for (var index = 0; index < replayList.Count; index++)
             {
@@ -64,7 +65,18 @@ public class AddReplayListItemSystem : ReactiveSystem<GameEntity>
             {
                 height = 385;
             }
-            replayScrollRect.ReplaceSize(new Vector2(820, height));
+
+            UnityEngine.Debug.Log(height);
+            replayListContent.ReplaceSize(new Vector2(820, height));
+            _context.coroutineService.instance.StartCoroutine(SetScrollBarValue(replayScrollBar));
+            //_context.sceneService.instance.SetScrollBarSize("MatchReplayListWindowScrollbar", 385.0f / height);
+
         }
+    }
+
+    private IEnumerator SetScrollBarValue(GameEntity replayScrollBar)
+    {
+        yield return _context.coroutineService.instance.WaitForEndOfFrame();
+        replayScrollBar.ReplaceScrollBarValue(1.0f);
     }
 }

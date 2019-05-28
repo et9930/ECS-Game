@@ -77,12 +77,15 @@
      <Compile Include="Assets\Script\Components\ClickStateComponent.cs" />
      <Compile Include="Assets\Script\Components\CurrentAnimationComponent.cs" />
      <Compile Include="Assets\Script\Components\CurrentWeaponComponent.cs" />
+     <Compile Include="Assets\Script\Components\DeadComponent.cs" />
      <Compile Include="Assets\Script\Components\DebugMessageComponent.cs" />
      <Compile Include="Assets\Script\Components\DefendSuccessComponent.cs" />
+     <Compile Include="Assets\Script\Components\DeleteViewComponent.cs" />
      <Compile Include="Assets\Script\Components\DestroyComponent.cs" />
      <Compile Include="Assets\Script\Components\DownloadReplayComponent.cs" />
      <Compile Include="Assets\Script\Components\EnemyComponent.cs" />
      <Compile Include="Assets\Script\Components\ErrorMessageComponent.cs" />
+     <Compile Include="Assets\Script\Components\FinalPerceptionLevelComponent.cs" />
      <Compile Include="Assets\Script\Components\FrictionComponent.cs" />
      <Compile Include="Assets\Script\Components\GravityComponent.cs" />
      <Compile Include="Assets\Script\Components\HealthCurrentComponent.cs" />
@@ -121,6 +124,7 @@
      <Compile Include="Assets\Script\Components\MovingComponent.cs" />
      <Compile Include="Assets\Script\Components\NameComponent.cs" />
      <Compile Include="Assets\Script\Components\NextAnimationComponent.cs" />
+     <Compile Include="Assets\Script\Components\NinjaItemListComponent.cs" />
      <Compile Include="Assets\Script\Components\NinjaItemNameComponent.cs" />
      <Compile Include="Assets\Script\Components\NinjutsuNameComponent.cs" />
      <Compile Include="Assets\Script\Components\NormalAttackControlComponent.cs" />
@@ -172,6 +176,7 @@
      <Compile Include="Assets\Script\Components\UiExcursionComponent.cs" />
      <Compile Include="Assets\Script\Components\UiFadeActionComponent.cs" />
      <Compile Include="Assets\Script\Components\UiMoveActionComponent.cs" />
+     <Compile Include="Assets\Script\Components\UiNameComponent.cs" />
      <Compile Include="Assets\Script\Components\UiOpenComponent.cs" />
      <Compile Include="Assets\Script\Components\UiRootIdComponent.cs" />
      <Compile Include="Assets\Script\Components\UiRotateActionComponent.cs" />
@@ -181,6 +186,7 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\AllPlayerJoinedComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AnimationEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\AnimationFrameRateComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\BattleOverComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\BattleValueDisplayNumberComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ClickEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\CurrentCollisionEntityComponent.cs" />
@@ -194,7 +200,6 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\CurrentReplayDataComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\CurrentSceneComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\FadingUiListComponent.cs" />
-     <Compile Include="Assets\Script\Components\UniqueComponents\FinalPerceptionLevelComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CharacterBaseAttributesComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\CollisionPairConfigComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\GameConfigs\ImageAssetComponent.cs" />
@@ -216,6 +221,7 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\KeyComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\LastGetPingTimeComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\LastMovementKeyStateComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\LastSceneComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\LastSendStateTimeComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\LastUpdateFpsTimeComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\LeftMouseComponent.cs" />
@@ -229,7 +235,6 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\MouseCurrentPositionComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MouseInOutEventFuncComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\MovingUiListComponent.cs" />
-     <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemListComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemMenuOpenComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\NinjaItemMenuOpenFreezingComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\NinjutsuMenuOpenComponent.cs" />
@@ -273,12 +278,14 @@
      <Compile Include="Assets\Script\Components\UseNinjaItemComponent.cs" />
      <Compile Include="Assets\Script\Components\VelocityComponent.cs" />
      <Compile Include="Assets\Script\Components\ViewComponent.cs" />
+     <Compile Include="Assets\Script\Components\WinControlComponent.cs" />
      <Compile Include="Assets\Script\Components\YinListComponent.cs" />
      <Compile Include="Assets\Script\Enum\Enum.cs" />
      <Compile Include="Assets\Script\GameLauncher.cs" />
      <Compile Include="Assets\Script\Generated\Contexts.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\ActiveListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyAllocationNinjaListenerComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Components\AnyBattleOverListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyChaKuRaCurrentListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyChaKuRaSlewRateListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyCurrentFpsListenerComponent.cs" />
@@ -323,6 +330,7 @@
      <Compile Include="Assets\Script\Generated\Events\GameEventSystems.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IActiveListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyAllocationNinjaListener.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyBattleOverListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyChaKuRaCurrentListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyChaKuRaSlewRateListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyCurrentFpsListener.cs" />
@@ -366,6 +374,7 @@
      <Compile Include="Assets\Script\Generated\Events\Interfaces\ITowardListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\ActiveEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyAllocationNinjaEventSystem.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Systems\AnyBattleOverEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyChaKuRaCurrentEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyChaKuRaSlewRateEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyCurrentFpsEventSystem.cs" />
@@ -426,6 +435,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnomalyButtonComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAntiPerceptionLevelComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyAllocationNinjaListenerComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameAnyBattleOverListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyChaKuRaCurrentListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyChaKuRaSlewRateListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyCurrentFpsListenerComponent.cs" />
@@ -446,6 +456,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjutsuMenuItemListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuCurrentListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameBattleOverComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameBattleValueDisplayComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameBattleValueDisplayListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameBattleValueDisplayNumberComponent.cs" />
@@ -475,8 +486,10 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentReplayDataComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentSceneComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameCurrentWeaponComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameDeadComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameDebugMessageComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameDefendSuccessComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameDeleteViewComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameDestroyComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameDownloadReplayComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameEnemyComponent.cs" />
@@ -511,6 +524,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameKeyInputServiceComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameLastGetPingTimeComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameLastMovementKeyStateComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameLastSceneComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameLastSendStateTimeComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameLastUpdateFpsTimeComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameLayerComponent.cs" />
@@ -661,6 +675,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiFadeActionComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiLayerConfigComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiMoveActionComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameUiNameComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiOpenComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiRootIdComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameUiRotateActionComponent.cs" />
@@ -669,6 +684,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameVelocityComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameViewComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameViewServiceComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameWinControlComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameYinFreezeComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameYinListComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\GameAttribute.cs" />
@@ -682,6 +698,7 @@
      <Compile Include="Assets\Script\Handle\UnityEventHandle\UIMouseInOutHandle.cs" />
      <Compile Include="Assets\Script\Listeners\ListenerInterfaces\IEventListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\ActiveListener.cs" />
+     <Compile Include="Assets\Script\Listeners\UnityListeners\BattleSceneOverListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\BattleValueDisplayListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\ChooseNinjaItemListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\ChooseNinjaWindowListener.cs" />
@@ -776,6 +793,7 @@
      <Compile Include="Assets\Script\Structs\MatchData\MatchDataThrowWeaponControl.cs" />
      <Compile Include="Assets\Script\Structs\MatchData\MatchDataTowardControl.cs" />
      <Compile Include="Assets\Script\Structs\MatchData\MatchDataUseNinjaItemControl.cs" />
+     <Compile Include="Assets\Script\Structs\MatchData\MatchDataWin.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCAllocationNinja.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCChooseNinja.cs" />
      <Compile Include="Assets\Script\Structs\ServerToClient\SCGetUuid.cs" />
@@ -795,6 +813,7 @@
      <Compile Include="Assets\Script\Systems\DisplaySystems\AddViewSystem.cs" />
      <Compile Include="Assets\Script\Systems\DisplaySystems\CalculateFpsSystem.cs" />
      <Compile Include="Assets\Script\Systems\DisplaySystems\ChangeViewSystem.cs" />
+     <Compile Include="Assets\Script\Systems\DisplaySystems\DeleteViewSystem.cs" />
      <Compile Include="Assets\Script\Systems\DisplaySystems\DisplayHierarchySystem.cs" />
      <Compile Include="Assets\Script\Systems\DisplaySystems\ShadowPositionSystem.cs" />
      <Compile Include="Assets\Script\Systems\GameWorld.cs" />
@@ -809,6 +828,7 @@
      <Compile Include="Assets\Script\Systems\InputSystems\MouseInOutEventSystem.cs" />
      <Compile Include="Assets\Script\Systems\LogSystems\DebugMessageSystem.cs" />
      <Compile Include="Assets\Script\Systems\LogSystems\ErrorMessageSystem.cs" />
+     <Compile Include="Assets\Script\Systems\MatchDataSystems\CheckWinSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchDataSystems\ReceiveMatchDataSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchDataSystems\SendJumpControlSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchDataSystems\SendMakeChaKuRaControlSystem.cs" />
@@ -819,6 +839,7 @@
      <Compile Include="Assets\Script\Systems\MatchDataSystems\SendThrowWeaponControlSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\CheckJoinNumberSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\MatchStartSystem.cs" />
+     <Compile Include="Assets\Script\Systems\MatchGameSystems\MatchWinSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\OnGameMatchedSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\PlayerReadyStateSystem.cs" />
      <Compile Include="Assets\Script\Systems\MatchGameSystems\SwitchChooseNinjaWindowSystem.cs" />
@@ -872,6 +893,7 @@
      <Compile Include="Assets\Script\Systems\ReplaySystems\ReplayMatchRecordSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\BattleValueDisplaySystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\ChangeUiParentSystem.cs" />
+     <Compile Include="Assets\Script\Systems\SceneSystems\ClearBattleSceneSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\InitBattleSceneSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\InitLoginSceneSystem.cs" />

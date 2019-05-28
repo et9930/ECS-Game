@@ -13,6 +13,8 @@ public class NinjaItemMenuControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.key.value.NinjaItemMenu)
         {

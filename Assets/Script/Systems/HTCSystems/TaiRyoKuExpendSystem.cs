@@ -22,6 +22,8 @@ public class TaiRyoKuExpendSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var expendTaiRyoKu = e.taiRyoKuExpend.value;

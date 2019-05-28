@@ -25,6 +25,6 @@ public class EffectAESystem : IInitializeSystem
 
     private void OnEffectAttack1Over(GameEntity entity)
     {
-        entity.isDestroy = true;
+        entity.isDeleteView = true;
     }
 }

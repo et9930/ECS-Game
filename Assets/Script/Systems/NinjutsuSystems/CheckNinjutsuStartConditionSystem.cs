@@ -22,6 +22,8 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var jutsuConfig = _context.ninjutsuAttributes.dic[e.name.text];
@@ -29,6 +31,10 @@ public class CheckNinjutsuStartConditionSystem : ReactiveSystem<GameEntity>
             var chaKuRaCoast = jutsuConfig.chaKuRaCoast;
             var taiRyuKuCoast = jutsuConfig.taiRyuKuCoast;
 
+            if (originator.isDead)
+            {
+                continue;
+            }
             if (!originator.hasId)
             {
                 e.isDestroy = true;

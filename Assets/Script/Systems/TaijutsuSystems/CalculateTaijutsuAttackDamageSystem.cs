@@ -24,6 +24,8 @@ public class CalculateTaijutsuAttackDamageSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var baseDamage = 7.0f;

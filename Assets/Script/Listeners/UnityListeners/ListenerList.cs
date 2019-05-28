@@ -60,6 +60,8 @@ public static class ListenerList
         { "MatchReplayListItem", typeof(MatchReplayListItemListener) },
 
         { "BattleValueDisplay", typeof(BattleValueDisplayListener) },
+
+        { "BattleSceneOver", typeof(BattleSceneOverListener) },
     };
 }
 

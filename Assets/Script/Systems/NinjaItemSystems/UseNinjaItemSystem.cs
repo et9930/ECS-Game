@@ -22,6 +22,8 @@ public class UseNinjaItemSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var ninjaItemInfo = _context.ninjaItemAttributes.dic[e.useNinjaItem.value];

@@ -4,6 +4,60 @@
       "Components": [
         {
           "AnomalyButton": false,
+          "ComponentName": "BattleSceneOver",
+          "ComponentPath": "BattleSceneOver",
+          "Handle": [],
+          "Listener": [ "BattleSceneOver" ],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleSceneOverWin",
+          "ComponentPath": "BattleSceneOver\/BattleSceneOverWin",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleSceneOverLose",
+          "ComponentPath": "BattleSceneOver\/BattleSceneOverLose",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleSceneOverReplayOver",
+          "ComponentPath": "BattleSceneOver\/BattleSceneOverReplayOver",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "BattleSceneOverCloseButton",
+          "ComponentPath": "BattleSceneOver\/BattleSceneOverCloseButton",
+          "Handle": [ "Click" ],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "BattleSceneOver\/BattleSceneOverCloseButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "TipLayer",
+      "UiName": "BattleSceneOver"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
           "ComponentName": "BattleValueDisplay",
           "ComponentPath": "BattleValueDisplay",
           "Handle": [],
@@ -307,7 +361,7 @@
           "ComponentName": "GameState",
           "ComponentPath": "GameState",
           "Handle": [],
-          "Listener": ["Active"],
+          "Listener": [ "Active" ],
           "saveEntity": false
         },
         {
@@ -323,7 +377,7 @@
           "ComponentName": "FpsValue",
           "ComponentPath": "GameState\/Fps\/FpsValue",
           "Handle": [],
-          "Listener": ["Active", "Fps"],
+          "Listener": [ "Active", "Fps" ],
           "saveEntity": false
         },
         {
@@ -339,7 +393,7 @@
           "ComponentName": "PingValue",
           "ComponentPath": "GameState\/Network\/PingValue",
           "Handle": [],
-          "Listener": ["Active", "Ping"],
+          "Listener": [ "Active", "Ping" ],
           "saveEntity": false
         },
         {
@@ -347,7 +401,7 @@
           "ComponentName": "NormalNetworkIcon",
           "ComponentPath": "GameState\/Network\/NormalNetworkIcon",
           "Handle": [],
-          "Listener": ["Active"],
+          "Listener": [ "Active" ],
           "saveEntity": false
         },
         {
@@ -355,11 +409,11 @@
           "ComponentName": "ErrorNetworkIcon",
           "ComponentPath": "GameState\/Network\/ErrorNetworkIcon",
           "Handle": [],
-          "Listener": ["Active"],
+          "Listener": [ "Active" ],
           "saveEntity": false
         }
       ],
-      "UiLayer": "NormalLayer",
+      "UiLayer": "TopLayer",
       "UiName": "GameState"
     },
     {
@@ -473,7 +527,7 @@
           "ComponentName": "LoadingProcess",
           "ComponentPath": "LoadingProcess",
           "Handle": [],
-          "Listener": ["Active"],
+          "Listener": [ "Active" ],
           "saveEntity": false
         },
         {
@@ -481,7 +535,7 @@
           "ComponentName": "BackgroundImage",
           "ComponentPath": "LoadingProcess\/BackgroundImage",
           "Handle": [],
-          "Listener": ["Active", "LoadingSceneImage"],
+          "Listener": [ "Active", "LoadingSceneImage" ],
           "saveEntity": false
         },
         {
@@ -497,7 +551,7 @@
           "ComponentName": "ProcessBarBackImg",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarBackImg",
           "Handle": [],
-          "Listener": ["Active"],
+          "Listener": [ "Active" ],
           "saveEntity": false
         },
         {
@@ -505,7 +559,7 @@
           "ComponentName": "ProcessBarFillImg",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessBarFillImg",
           "Handle": [],
-          "Listener": ["Active", "LoadingSceneProcess"],
+          "Listener": [ "Active", "LoadingSceneProcess" ],
           "saveEntity": false
         },
         {
@@ -513,7 +567,7 @@
           "ComponentName": "ProcessNumber",
           "ComponentPath": "LoadingProcess\/ProcessBar\/ProcessNumber",
           "Handle": [],
-          "Listener": ["Active", "LoadingSceneProcessText"],
+          "Listener": [ "Active", "LoadingSceneProcessText" ],
           "saveEntity": false
         },
         {
@@ -529,7 +583,7 @@
           "ComponentName": "RandomTitle",
           "ComponentPath": "LoadingProcess\/RandomInfo\/RandomTitle",
           "Handle": [],
-          "Listener": ["Active", "LoadingSceneTitle"],
+          "Listener": [ "Active", "LoadingSceneTitle" ],
           "saveEntity": false
         },
         {
@@ -537,11 +591,11 @@
           "ComponentName": "RandomText",
           "ComponentPath": "LoadingProcess\/RandomInfo\/RandomText",
           "Handle": [],
-          "Listener": ["Active", "LoadingSceneText"],
+          "Listener": [ "Active", "LoadingSceneText" ],
           "saveEntity": false
         }
       ],
-      "UiLayer": "NormalLayer",
+      "UiLayer": "TopLayer",
       "UiName": "LoadingProcess"
     },
     {
@@ -1155,7 +1209,7 @@
           "ComponentName": "MatchReplayListWindowScrollRect",
           "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect",
           "Handle": [],
-          "Listener": ["Size"],
+          "Listener": [],
           "saveEntity": false
         },
         {
@@ -1163,7 +1217,7 @@
           "ComponentName": "MatchReplayListWindowContent",
           "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect\/MatchReplayListWindowContent",
           "Handle": [],
-          "Listener": [],
+          "Listener": [ "Size" ],
           "saveEntity": true
         },
         {
@@ -1510,7 +1564,7 @@
           "ComponentName": "NinjutsuMenuScrollRect",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect",
           "Handle": [],
-          "Listener": ["Size"],
+          "Listener": [],
           "saveEntity": false
         },
         {
@@ -1518,7 +1572,7 @@
           "ComponentName": "NinjutsuMenuContent",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect\/NinjutsuMenuContent",
           "Handle": [],
-          "Listener": [],
+          "Listener": [ "Size" ],
           "saveEntity": true
         },
         {

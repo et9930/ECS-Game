@@ -11,6 +11,7 @@ public sealed class GameEventSystems : Feature {
     public GameEventSystems(Contexts contexts) {
         Add(new ActiveEventSystem(contexts)); // priority: 0
         Add(new AnyAllocationNinjaEventSystem(contexts)); // priority: 0
+        Add(new AnyBattleOverEventSystem(contexts)); // priority: 0
         Add(new BattleValueDisplayEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaCurrentEventSystem(contexts)); // priority: 0
         Add(new AnyChaKuRaSlewRateEventSystem(contexts)); // priority: 0

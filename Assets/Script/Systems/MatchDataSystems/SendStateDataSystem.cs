@@ -17,6 +17,8 @@ public class SendStateDataSystem : IExecuteSystem, IInitializeSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.isReplaying) return;
         

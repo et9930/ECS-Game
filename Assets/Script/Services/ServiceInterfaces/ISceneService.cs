@@ -30,4 +30,5 @@ public interface ISceneService
     bool GetSelectableInteractable(string uiName);
     void SetSelectableInteractable(string uiName, bool value);
     string GetToggleGroupSelectToggleName(string uiName);
+    void SetScrollBarSize(string uiName, float value);
 }

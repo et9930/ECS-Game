@@ -22,8 +22,10 @@ public class CheckTaijutsuAttackDefendSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         // 80% - (f(attack taijutsu) - f(defend taijutsu)) * 2% - attack power > defend power ? (attack power - defend power) * 10% : 0% + defend has weapon ? 5% : 0%
-        
+
         foreach (var e in entities)
         {
             var probability = 0.8f;

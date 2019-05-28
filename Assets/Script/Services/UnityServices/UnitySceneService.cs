@@ -266,6 +266,16 @@ public class UnitySceneService : ISceneService
         return "";
     }
 
+    public void SetScrollBarSize(string uiName, float value)
+    {
+        var ui = GameObject.Find(uiName);
+        if (ui == null) return;
+        var scrollbar = ui.GetComponent<Scrollbar>();
+        if (scrollbar == null) return;
+
+        scrollbar.size = value;
+    }
+
     public int OpenUI(string uiName, string prefabName, string layer, GameContext context, ref GameEntity rootEntity, GameEntity parentEntity = null)
     {
         var prefab = Resources.Load<GameObject>("Prefab/UI/" + prefabName);
@@ -335,6 +345,7 @@ public class UnitySceneService : ISceneService
             if (component.Handle.Count == 0 && component.Listener.Count == 0 && component.saveEntity == false) continue;
 
             var e = prefabName == component.ComponentPath ? rootEntity : context.CreateEntity();
+            e.ReplaceUiName(component.ComponentName);
             if (!e.hasName)
             {
                 e.ReplaceName(component.ComponentName);

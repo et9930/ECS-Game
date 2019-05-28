@@ -40,10 +40,10 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     private IEnumerator SwitchScene(string sceneName)
     {
         float displayProgress = 0.0f;
-
         // open loading scene
         _context.sceneService.instance.OpenScene("LoadingScene", _context);
-        //_context.ReplaceCurrentScene("LoadingScene");
+        _context.ReplaceLastScene(_context.currentScene.name);
+        _context.ReplaceCurrentScene("LoadingScene");
         yield return _context.coroutineService.instance.WaitForEndOfFrame();
         GameEntity loadingProcessRootEntity = _context.CreateEntity();
         var loadingProcessUiId = _context.sceneService.instance.OpenUI("LoadingProcess", "LoadingProcess", "TopLayer", _context, ref loadingProcessRootEntity);
@@ -57,10 +57,10 @@ public class SwitchSceneSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         loadingProcessRootEntity.ReplaceActive(true);
 
         // clean old scene
-        var oldUis = _context.sceneConfig.dic[_context.currentScene.name].CloseUIs;
+        var oldUis = _context.sceneConfig.dic[_context.lastScene.value].CloseUIs;
         foreach (var ui in oldUis)
         {
-            foreach(var e in _context.GetEntitiesWithName(ui))
+            foreach(var e in _context.GetEntitiesWithUiName(ui))
             {
                 e.isUiClose = true;
             }

@@ -23,6 +23,8 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             switch (e.matchData.dataCode)
@@ -59,6 +61,9 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
                     break;
                 case 1011:
                     ReceiveJutsuControl(e.matchData.payload);
+                    break;
+                case 1012:
+                    ReceiveWin(e.matchData.payload);
                     break;
                     
             }
@@ -140,5 +145,10 @@ public class ReceiveMatchDataSystem : ReactiveSystem<GameEntity>
     private void ReceiveJutsuControl(string payload)
     {
         _context.CreateEntity().ReplaceJutsuControl(Utilities.ParseJson<MatchDataJutsuControl>(payload));
+    }
+
+    private void ReceiveWin(string payload)
+    {
+        _context.CreateEntity().ReplaceWinControl(Utilities.ParseJson<MatchDataWin>(payload));
     }
 }

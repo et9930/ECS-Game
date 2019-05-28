@@ -12,6 +12,8 @@ public class NinjutsuMenuControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.key.value.NinjutsuAttackMenu)
         {
@@ -37,7 +39,7 @@ public class NinjutsuMenuControlSystem : IExecuteSystem
                 {
                     if (!ui.hasName || ui.name.text != "NinjutsuMenuScrollbar") continue;
                     
-                    ui.ReplaceScrollBarValue(0.0f);
+                    ui.ReplaceScrollBarValue(1.0f);
                     break;
                 }
             }

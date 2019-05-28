@@ -35,6 +35,7 @@ public class AddNinjaItemMenuItemSystem : ReactiveSystem<GameEntity>
                 var item = _context.CreateEntity();
                 foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
                 {
+                    if (!ui.hasName) continue;
                     if (ui.name.text != "NinjaItemMenuItem" + i) continue;
 
                     item.ReplaceParentEntity(ui);

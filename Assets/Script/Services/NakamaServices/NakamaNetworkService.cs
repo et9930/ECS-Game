@@ -106,6 +106,7 @@ public class NakamaNetworkService : INetworkService
 
     private void OnMatchmakerMatched(object sender, IMatchmakerMatched matched)
     {
+        _context.CreateEntity().ReplaceDebugMessage("On Matchmaker Matched");
         _matchmakerMatched = matched;
         _context.isGameMatched = true;
     }

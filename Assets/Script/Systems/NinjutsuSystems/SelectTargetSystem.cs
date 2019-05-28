@@ -29,6 +29,8 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             if (e.hasJutsuTarget)
@@ -59,7 +61,7 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                 targetMark.ReplaceName("SelectTarget_" + _context.jutsuSelectTargetId.value);
                 targetMark.ReplaceUiOpen("SelectTarget");
                 var targetScreenPosition = _context.viewService.instance.WorldPositionToScreenPosition(target.position.value);
-                if (targetScreenPosition.X >= 0 && targetScreenPosition.X <= 1920 && targetScreenPosition.Y >= 0 && targetScreenPosition.Y <= 1080)
+                if (targetScreenPosition.X >= 0 && targetScreenPosition.X <= _context.viewService.instance.ScreenSize.X && targetScreenPosition.Y >= 0 && targetScreenPosition.Y <= _context.viewService.instance.ScreenSize.Y)
                 {
                     targetMark.ReplaceParentEntity(target);
                 }
@@ -71,6 +73,7 @@ public class SelectTargetSystem : ReactiveSystem<GameEntity>, IInitializeSystem
                     var listName = left ? "OutScreenSelectTargetViewLeftList" : "OutScreenSelectTargetViewRightList";
                     foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
                     {
+                        if(!ui.hasName) continue;
                         if (ui.name.text != listName) continue;
                         listEntity = ui;
                         break;

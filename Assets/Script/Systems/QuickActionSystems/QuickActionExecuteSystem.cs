@@ -42,12 +42,13 @@ public class QuickActionExecuteSystem : ReactiveSystem<GameEntity>, IInitializeS
     {
         var e = _context.GetEntityWithId(_context.currentPlayerId.value);
         if (e == null) return;
-
+        if (e.isDead) return;
         if (!e.isMakingYin)
         {
             e.isMakingYin = true;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "NinjutsuQTE") continue;
 
                 ui.ReplaceActive(true);

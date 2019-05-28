@@ -13,6 +13,8 @@ public class SendJumpControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if(_context.isReplaying) return;
         if (!_context.hasCurrentPlayerId) return;
@@ -23,7 +25,8 @@ public class SendJumpControlSystem : IExecuteSystem
 
             var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
             if (currentPlayer == null) return;
-            
+            if (currentPlayer.isDead) return;
+
 
             if (currentPlayer.isNormalAttacking || !currentPlayer.onTheGround.value ||
                 currentPlayer.isMakingYin) return;

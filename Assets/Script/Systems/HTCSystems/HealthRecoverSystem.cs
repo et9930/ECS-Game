@@ -11,8 +11,11 @@ public class HealthRecoverSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in _context.GetGroup(GameMatcher.HealthCurrent))
         {
+            if (e.isDead) continue;
             if (e.healthCurrent.value >= e.healthRecoverable.value) continue;
 
             var newHealth = e.healthCurrent.value + e.healthRecoverSpeed.value * _context.timeService.instance.GetDeltaTime();

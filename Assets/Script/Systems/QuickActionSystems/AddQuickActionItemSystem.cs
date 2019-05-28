@@ -23,6 +23,8 @@ public class AddQuickActionItemSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         _context.isAddQuickActionItem = false;
         var player = _context.GetEntityWithId(_context.currentPlayerId.value);
 

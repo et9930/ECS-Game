@@ -11,6 +11,8 @@ public class VelocitySystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (!_context.hasCurrentMapName) return;
 

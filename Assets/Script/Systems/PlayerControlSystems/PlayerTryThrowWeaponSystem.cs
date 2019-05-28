@@ -11,6 +11,8 @@ public class PlayerTryThrowWeaponSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.isReplaying) return;
         if (!_context.hasCurrentPlayerId) return;

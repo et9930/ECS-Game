@@ -38,6 +38,7 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     {
         foreach (var e in entities)
         {
+            _context.CreateEntity().ReplaceDebugMessage("Open " + e.uiOpen.prefabName);
             var rootEntity = e;
             var id = e.hasParentEntity
                 ? _context.sceneService.instance.OpenUI(e.name.text, e.uiOpen.prefabName,
@@ -56,7 +57,7 @@ public class OpenUiSystem : ReactiveSystem<GameEntity>, IInitializeSystem
 //            {
 //                rootEntity.ReplaceNinjutsuName(e.ninjutsuName.value);
 //            }
-
+            e.ReplaceUiName(e.uiOpen.prefabName);
             e.ReplaceUiRootId(id);
             e.RemoveUiOpen();
         }

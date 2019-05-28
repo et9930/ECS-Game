@@ -12,6 +12,8 @@ public class CheckPerceptionLevelSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.GetGroup(GameMatcher.LoadPlayer).count > 0) return;
 
@@ -27,7 +29,10 @@ public class CheckPerceptionLevelSystem : IExecuteSystem
             var antiPerceptionLevel = e.antiPerceptionLevel.value;
             var distance = Vector3.Distance(currentPlayer.position.value, e.position.value);
             var finalLevel = perceptionLevel - antiPerceptionLevel - (int)distance / 15;
-
+            if (currentPlayer.isDead)
+            {
+                finalLevel = 0;
+            }
             e.ReplaceFinalPerceptionLevel(finalLevel);
         }
     }

@@ -23,6 +23,8 @@ public class JutsuControlSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var jutsu = _context.CreateEntity();

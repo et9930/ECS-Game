@@ -18,6 +18,8 @@ public class PerceptionHTCSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.GetGroup(GameMatcher.LoadPlayer).count > 0) return;
 

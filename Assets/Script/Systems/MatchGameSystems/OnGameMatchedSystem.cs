@@ -31,7 +31,6 @@ public class OnGameMatchedSystem : ReactiveSystem<GameEntity>
 
     private async void OnGameMatched()
     {
-
         var getDataByUserId = new CSGetDataByUserId
         {
             userId = _context.currentPlayerId.value

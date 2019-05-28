@@ -23,6 +23,8 @@ public class CheckTaijutsuAttackDodgeSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         // 50% + (defend speed - attack speed) * 15% - (attack taijutsu - 7) * 10%
 
         foreach (var e in entities)

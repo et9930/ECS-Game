@@ -448,7 +448,7 @@
       "ComponentName": "MainUIOperationNinjaList",
       "Handle": [
         "Click"
-      ] 
+      ]
     },
     {
       "ComponentName": "SearchBattleWindow",
@@ -653,7 +653,7 @@
       ],
       "Handle": [
         "Click"
-      ] 
+      ]
     },
     {
       "ComponentName": "PlayerChooseItem",
@@ -667,43 +667,43 @@
         "Active"
       ]
     },
-	  {
-	    "ComponentName": "MatchReplayListWindowMask",
-        "Handle": [
-          "Click"
-        ] 
-	  },
-	  {
-	    "ComponentName": "MatchReplayListWindowReplayButton",
-		"Listener": [
-			"Active"
-		],
+    {
+      "ComponentName": "MatchReplayListWindowMask",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "MatchReplayListWindowReplayButton",
+      "Listener": [
+        "Active"
+      ],
 
-        "Handle": [
-          "Click"
-        ] 
-	  },	
-	  {
-	    "ComponentName": "MatchReplayListWindowDownloadButton",
-		"Listener": [
-			"Active"
-		],        
-		"Handle": [
-          "Click"
-        ] 
-	  },	
-	  {
-	    "ComponentName": "MatchReplayListWindowCloseButton",
-        "Handle": [
-          "Click"
-        ] 
-	  },
-	  {
-        "ComponentName": "MatchReplayListWindowScrollRect",
-        "Listener": [
-          "Size"
-        ]
-      },
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "MatchReplayListWindowDownloadButton",
+      "Listener": [
+        "Active"
+      ],
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "MatchReplayListWindowCloseButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "MatchReplayListWindowScrollRect",
+      "Listener": [
+        "Size"
+      ]
+    },
     {
       "ComponentName": "MatchReplayListWindowScrollbar",
       "Listener": [
@@ -714,12 +714,12 @@
       "ComponentName": "MatchReplayListWindowWaitingServer",
       "Listener": [
         "Active"
-      ] 
+      ]
     },
-	  {
-	    "ComponentName": "MatchReplayListWindowContent",
-	    "saveEntity": true
-	  },
+    {
+      "ComponentName": "MatchReplayListWindowContent",
+      "saveEntity": true
+    },
     {
       "ComponentName": "MatchReplayListItem",
       "Handle": [
@@ -733,7 +733,19 @@
       "ComponentName": "BattleValueDisplay",
       "Listener": [
         "BattleValueDisplay"
-      ] 
+      ]
+    },
+    {
+      "ComponentName": "BattleSceneOver",
+      "Listener": [
+        "BattleSceneOver"
+      ]
+    },
+    {
+      "ComponentName": "BattleSceneOverCloseButton",
+      "Handle": [
+        "Click"
+      ]
     }
   ]
 }

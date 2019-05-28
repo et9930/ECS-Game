@@ -20,12 +20,14 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.isReplaying) return;
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         if (currentPlayer == null) return;
-
+        if (currentPlayer.isDead) return;
         if (currentPlayer.isNormalAttacking || currentPlayer.isMakingChaKuRa || currentPlayer.isJumping) return;
 
         GameEntity yinListUi = null;
@@ -42,6 +44,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
 
         foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
         {
+            if (!ui.hasName) continue;
             if (ui.name.text != "NinjutsuYinList") continue;
             yinListUi = ui;
             break;
@@ -53,6 +56,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
             currentPlayer.isMakingYin = false;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "NinjutsuQTE") continue;
 
                 ui.ReplaceActive(false);
@@ -97,6 +101,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
             currentPlayer.isMakingYin = false;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "NinjutsuQTE") continue;
 
                 ui.ReplaceActive(false);
@@ -195,6 +200,7 @@ public class MakeYinSystem : IInitializeSystem, IExecuteSystem
             e.isMakingYin = true;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "NinjutsuQTE") continue;
                 
                 ui.ReplaceActive(true);

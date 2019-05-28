@@ -24,6 +24,8 @@ public class SendMatchDataSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             SendMatchData(e.sendMatchData.dataCode, e.sendMatchData.payload);

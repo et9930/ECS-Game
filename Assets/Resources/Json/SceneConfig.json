@@ -71,6 +71,7 @@
           "OutScreenSelectTargetViewCamera"
         ],
         "CloseUIs": [
+          "BattleSceneOver",
           "CurrentWeaponIcon",
           "JumpUI",
           "NinjaItemMenu",

@@ -25,6 +25,8 @@ public class MovementControlSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var player = _context.GetEntityWithId(e.movementControl.data.userId);

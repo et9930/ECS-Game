@@ -22,6 +22,8 @@ public class ChaKuRaExpendSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var expendChaKuRa = e.chaKuRaExpend.value;

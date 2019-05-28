@@ -21,6 +21,7 @@
         Add(new EmitInputSystem(contexts));
         Add(new ClickEventSystem(contexts));
         Add(new MouseInOutEventSystem(contexts));
+        Add(new CheckWinSystem(contexts));
 
         Add(new SendMovementControlSystem(contexts));
         Add(new SendStateDataSystem(contexts));
@@ -32,6 +33,7 @@
         Add(new SendMatchDataSystem(contexts));
         Add(new ReceiveMatchDataSystem(contexts));
         Add(new PlayRecordSystem(contexts));
+        Add(new MatchWinSystem(contexts));
 
 
         Add(new GetReplayListSystem(contexts));
@@ -87,6 +89,7 @@
         Add(new MatchStartSystem(contexts));
         Add(new ReplayMatchRecordSystem(contexts));
 
+        Add(new ClearBattleSceneSystem(contexts));
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
         Add(new UiFollowSystem(contexts));
@@ -114,6 +117,7 @@
         Add(new AnimationEventSystems(contexts));
         Add(new AddViewSystem(contexts));
         Add(new ChangeViewSystem(contexts));
+        Add(new DeleteViewSystem(contexts));
 
         // Output & Destroy Systems
         Add(new DebugMessageSystem(contexts));

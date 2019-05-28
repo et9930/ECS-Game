@@ -11,6 +11,8 @@ public class PlayerStateControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         foreach (var e in _context.GetGroup(GameMatcher.Id))
         {

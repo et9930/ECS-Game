@@ -59,6 +59,7 @@ public partial class Contexts {
     public const string Id = "Id";
     public const string Name = "Name";
     public const string Tag = "Tag";
+    public const string UiName = "UiName";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
@@ -76,6 +77,11 @@ public partial class Contexts {
             Tag,
             game.GetGroup(GameMatcher.Tag),
             (e, c) => ((TagComponent)c).value));
+
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
+            UiName,
+            game.GetGroup(GameMatcher.UiName),
+            (e, c) => ((UiNameComponent)c).value));
     }
 }
 
@@ -91,6 +97,10 @@ public static class ContextsExtensions {
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithTag(this GameContext context, string value) {
         return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Tag)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithUiName(this GameContext context, string value) {
+        return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.UiName)).GetEntities(value);
     }
 }
 //------------------------------------------------------------------------------

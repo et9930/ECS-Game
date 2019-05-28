@@ -16,6 +16,8 @@ public class SendMovementControlSystem : IExecuteSystem, IInitializeSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.isReplaying) return;
 
@@ -28,7 +30,7 @@ public class SendMovementControlSystem : IExecuteSystem, IInitializeSystem
         if (!_context.hasCurrentPlayerId) return;
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
         if (currentPlayer == null || currentPlayer.isInitializePhysical) return;
-
+        if (currentPlayer.isDead) return;
         if (!currentPlayer.onTheGround.value || currentPlayer.isNormalAttacking || currentPlayer.isJumping) return;
 
         var newMovementControl = new MatchDataMovementControl()

@@ -23,6 +23,8 @@ public class CheckTaijutsuAttackHitSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        if (_context.hasBattleOver) return;
+
         foreach (var e in entities)
         {
             var attackRange = _context.characterBaseAttributes.dic[e.name.text].taijutsuAttackRange;

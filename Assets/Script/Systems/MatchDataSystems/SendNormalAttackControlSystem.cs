@@ -12,6 +12,8 @@ public class SendNormalAttackControlSystem : IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.isReplaying) return;
         if (_context.key.value.TaijutsuAttack)
@@ -21,7 +23,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
 
             var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
             if (currentPlayer == null) return;
-
+            if (currentPlayer.isDead) return;
             if (!currentPlayer.onTheGround.value || currentPlayer.isJumping || currentPlayer.isMakingYin) return;
 
             if (!currentPlayer.isNormalAttacking)

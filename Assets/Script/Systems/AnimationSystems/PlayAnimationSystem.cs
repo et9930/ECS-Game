@@ -20,6 +20,8 @@ public class PlayAnimationSystem : IExecuteSystem , IInitializeSystem
 
     public void Execute()
     {
+//        if (_context.hasBattleOver) return;
+
         foreach (var e in _context.GetGroup(GameMatcher.AllOf(GameMatcher.CurrentAnimation, GameMatcher.AnimationFrame)))
         {
 

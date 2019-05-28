@@ -46,13 +46,9 @@ public class MouseInOutEventSystem : ReactiveSystem<GameEntity>, IInitializeSyst
     {
         foreach (var e in entities)
         {
-            var uiName = e.name.text;
-            var index = e.name.text.IndexOf('_');
-            if (index != -1)
-            {
-                uiName = e.name.text.Substring(0, index);
-            }
+            if (!e.hasUiName) continue;
 
+            var uiName = e.uiName.value;
             if (e.mouseInState.value)
             {
                 if (_context.mouseInOutEventFunc.inDic.ContainsKey(uiName))

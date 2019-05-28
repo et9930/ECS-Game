@@ -26,22 +26,24 @@ public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             GameEntity menuContent = null;
-            GameEntity menuScrollRect = null;
+//            GameEntity menuScrollRect = null;
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "NinjutsuMenuContent") continue;
                 menuContent = ui;
                 break;
             }
 
-            foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
-            {
-                if (ui.name.text != "NinjutsuMenuScrollRect") continue;
-                menuScrollRect = ui;
-                break;
-            }
+//            foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
+//            {
+//                if (!ui.hasName) continue;
+//                if (ui.name.text != "NinjutsuMenuScrollRect") continue;
+//                menuScrollRect = ui;
+//                break;
+//            }
 
-            if (menuContent == null || menuScrollRect == null) continue;
+            if (menuContent == null/* || menuScrollRect == null*/) continue;
 
             foreach (var ninjutsuName in _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList)
             {
@@ -52,12 +54,13 @@ public class AddNinjutsuMenuItemSystem : ReactiveSystem<GameEntity>
                 itemEntity.ReplaceUiOpen("NinjutsuMenuItem");
             }
 
-            var height = _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList.Count * 40.0f;
-            if (height < 720.0f)
+            var height = _context.characterBaseAttributes.dic[e.loadPlayer.playerName].ninjutsuList.Count * 80.0f;
+            if (height < 400.0f)
             {
-                height = 720.0f;
+                height = 400.0f;
             }
-            menuScrollRect.ReplaceSize(new Vector2(32.5f, height));
+            menuContent.ReplaceSize(new Vector2(100.0f, height));
+            //_context.sceneService.instance.SetScrollBarSize("NinjutsuMenuScrollbar", 720.0f / height);
         }
     }
 }

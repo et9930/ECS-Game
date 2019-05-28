@@ -19,6 +19,8 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
 
     public void Execute()
     {
+        if (_context.hasBattleOver) return;
+
         if (_context.currentScene.name != "BattleScene") return;
         if (_context.GetGroup(GameMatcher.LoadPlayer).count > 0) return;
 
@@ -34,7 +36,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
             var finalLevel = e.finalPerceptionLevel.value;
 
             var eScreenPosition = _context.viewService.instance.WorldPositionToScreenPosition(e.position.value);
-            if (eScreenPosition.X >= 0 && eScreenPosition.X <= 1920 && eScreenPosition.Y >= 0 && eScreenPosition.Y <= 1080)
+            if (eScreenPosition.X >= 0 && eScreenPosition.X <= _context.viewService.instance.ScreenSize.X && eScreenPosition.Y >= 0 && eScreenPosition.Y <= _context.viewService.instance.ScreenSize.Y)
             {
                 finalLevel = -1;
             }
@@ -45,6 +47,8 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
             var accurateName = left ? "PerceptionPositionAccurateItemLeft" : "PerceptionPositionAccurateItemRight";
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
+
                 if (ui.name.text != listName) continue;
                 listEntity = ui;
                 break;
@@ -146,6 +150,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
 
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "PerceptionPositionExistLeft") continue;
                 ui.ReplaceActive(leftNum > 0);
                 break;
@@ -153,6 +158,7 @@ public class PerceptionPositionSystem : IInitializeSystem, IExecuteSystem
 
             foreach (var ui in _context.GetGroup(GameMatcher.UiRootId))
             {
+                if (!ui.hasName) continue;
                 if (ui.name.text != "PerceptionPositionExistRight") continue;
                 ui.ReplaceActive(rightNum > 0);
                 break;

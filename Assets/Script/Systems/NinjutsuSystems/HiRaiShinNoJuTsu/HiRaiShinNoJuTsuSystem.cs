@@ -24,6 +24,7 @@ public class HiRaiShinNoJuTsuSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
+            if (e.originator.value.isDead) continue;
             var targetPosition = e.jutsuTarget.value.position.value;
             targetPosition.X = Utilities.RandomFloat(targetPosition.X - 0.5f, targetPosition.X + 0.5f);
             targetPosition.Z = Utilities.RandomFloat(targetPosition.Z - 0.5f, targetPosition.Z + 0.5f);

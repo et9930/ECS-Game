@@ -35,6 +35,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["MatchReplayListWindowDownloadButton"] = OnMatchReplayListWindowDownloadButtonClick;
         _context.clickEventFunc.clickDic["MatchReplayListWindowCloseButton"] = OnMatchReplayListWindowCloseButtonClick;
         _context.clickEventFunc.clickDic["MatchReplayListWindowReplayButton"] = OnMatchReplayListWindowReplayButtonClick;
+        _context.clickEventFunc.clickDic["BattleSceneOverCloseButton"] = OnBattleSceneOverCloseButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -53,12 +54,7 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             e.ReplaceClickState(false);
             if (!_context.sceneService.instance.GetSelectableInteractable(e.name.text)) continue; 
-            var uiName = e.name.text;
-            var index = e.name.text.IndexOf('_');
-            if (index != -1)
-            {
-                uiName = e.name.text.Substring(0, index);
-            }
+            var uiName = e.uiName.value;
             if (_context.clickEventFunc.clickDic.ContainsKey(uiName))
             {
                 _context.clickEventFunc.clickDic[uiName](e);
@@ -72,7 +68,8 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         if (entity.leftNumber.value <= 0) return;
 
         var currentPlayer = _context.GetEntityWithId(_context.currentPlayerId.value);
-//        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
+        if (currentPlayer.isDead) return;
+        //        currentPlayer.ReplaceUseNinjaItem(entity.ninjaItemName.value);
         var newUseNinjaItemControl = new MatchDataUseNinjaItemControl
         {
             matchId = _context.currentMatchData.value.customMatchId,
@@ -445,5 +442,10 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         {
             _context.ReplaceStartReplay(_context.selectedReplayItem.entity.matchReplayListItem.matchData);
         }
+    }
+
+    private void OnBattleSceneOverCloseButtonClick(GameEntity entity)
+    {
+        _context.ReplaceLoadScene("MainScene");
     }
 }
