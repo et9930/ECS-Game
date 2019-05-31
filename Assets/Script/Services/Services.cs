@@ -12,8 +12,9 @@
     public readonly INetworkService Network;
     public readonly ILocalStorageService LocalStorage;
     public readonly IFileService File;
+    public readonly ISettingService Setting;
 
-    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time, IPhysicsService physics, INetworkService network, ILocalStorageService localStorage, IFileService file)
+    public Services(ILogService log, IViewService view, IMouseInputService mouseInput, ILoadConfigService loadConfig, ISceneService scene, ICoroutineService coroutine, IKeyInputService keyInput, ITimeService time, IPhysicsService physics, INetworkService network, ILocalStorageService localStorage, IFileService file, ISettingService setting)
     {
         Log = log;
         View = view;
@@ -27,5 +28,6 @@
         Network = network;
         LocalStorage = localStorage;
         File = file;
+        Setting = setting;
     }
 }

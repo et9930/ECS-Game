@@ -265,8 +265,12 @@
      <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\NetworkServiceComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\PhysicsServiceComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\SceneServiceComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\SettingServiceComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\TimeServiceComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\ServiceInstances\ViewServiceComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\SettingValuesComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\SettingWindowCloseComponent.cs" />
+     <Compile Include="Assets\Script\Components\UniqueComponents\SettingWindowOpenComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\SignInComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\StartReplayComponent.cs" />
      <Compile Include="Assets\Script\Components\UniqueComponents\TaijutsuAttackFreezingComponent.cs" />
@@ -304,6 +308,7 @@
      <Compile Include="Assets\Script\Generated\Events\Components\AnyPlayerChooseNinjaInfoListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyPointNinjaItemMenuItemListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyPointNinjutsuMenuItemListenerComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Components\AnySettingValuesListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuCurrentListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\AnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Events\Components\BattleValueDisplayListenerComponent.cs" />
@@ -349,6 +354,7 @@
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyPlayerChooseNinjaInfoListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyPointNinjaItemMenuItemListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyPointNinjutsuMenuItemListener.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnySettingValuesListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuCurrentListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IAnyTaiRyoKuRecoverSpeedListener.cs" />
      <Compile Include="Assets\Script\Generated\Events\Interfaces\IBattleValueDisplayListener.cs" />
@@ -393,6 +399,7 @@
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyPlayerChooseNinjaInfoEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyPointNinjaItemMenuItemEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyPointNinjutsuMenuItemEventSystem.cs" />
+     <Compile Include="Assets\Script\Generated\Events\Systems\AnySettingValuesEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuCurrentEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\AnyTaiRyoKuRecoverSpeedEventSystem.cs" />
      <Compile Include="Assets\Script\Generated\Events\Systems\BattleValueDisplayEventSystem.cs" />
@@ -454,6 +461,7 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPlayerChooseNinjaInfoListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjaItemMenuItemListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyPointNinjutsuMenuItemListenerComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameAnySettingValuesListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuCurrentListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameAnyTaiRyoKuRecoverSpeedListenerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameBattleOverComponent.cs" />
@@ -639,6 +647,10 @@
      <Compile Include="Assets\Script\Generated\Game\Components\GameSendMatchDataComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameSendToServerComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameServerConfigComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameSettingServiceComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameSettingValuesComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameSettingWindowCloseComponent.cs" />
+     <Compile Include="Assets\Script\Generated\Game\Components\GameSettingWindowOpenComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameSetUiPositionComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameShadowComponent.cs" />
      <Compile Include="Assets\Script\Generated\Game\Components\GameSignInComponent.cs" />
@@ -736,6 +748,7 @@
      <Compile Include="Assets\Script\Listeners\UnityListeners\ScaleListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\ScrollBarValueListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\SelectTargetListener.cs" />
+     <Compile Include="Assets\Script\Listeners\UnityListeners\SettingWindowListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\SizeListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\TextListener.cs" />
      <Compile Include="Assets\Script\Listeners\UnityListeners\TowardListener.cs" />
@@ -751,6 +764,7 @@
      <Compile Include="Assets\Script\Services\ServiceInterfaces\INetworkService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\IPhysicsService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\ISceneService.cs" />
+     <Compile Include="Assets\Script\Services\ServiceInterfaces\ISettingService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\ITimeService.cs" />
      <Compile Include="Assets\Script\Services\ServiceInterfaces\IViewService.cs" />
      <Compile Include="Assets\Script\Services\Services.cs" />
@@ -763,6 +777,7 @@
      <Compile Include="Assets\Script\Services\UnityServices\UnityMouseInputService.cs" />
      <Compile Include="Assets\Script\Services\UnityServices\UnityPhysicsService.cs" />
      <Compile Include="Assets\Script\Services\UnityServices\UnitySceneService.cs" />
+     <Compile Include="Assets\Script\Services\UnityServices\UnitySettingService.cs" />
      <Compile Include="Assets\Script\Services\UnityServices\UnityTimeService.cs" />
      <Compile Include="Assets\Script\Services\UnityServices\UnityViewService.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\CharacterBaseAttributes.cs" />
@@ -773,6 +788,7 @@
      <Compile Include="Assets\Script\Structs\ClientOnly\NinjaItemAttributes.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\NinjutsuAttributes.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\QuickActionList.cs" />
+     <Compile Include="Assets\Script\Structs\ClientOnly\Resolution.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\SceneConfigs.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\ServerConfig.cs" />
      <Compile Include="Assets\Script\Structs\ClientOnly\UiInfoList.cs" />
@@ -893,7 +909,7 @@
      <Compile Include="Assets\Script\Systems\ReplaySystems\ReplayMatchRecordSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\BattleValueDisplaySystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\ChangeUiParentSystem.cs" />
-     <Compile Include="Assets\Script\Systems\SceneSystems\ClearBattleSceneSystem.cs" />
+     <Compile Include="Assets\Script\Systems\SceneSystems\CleanBattleSceneSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\CloseUiSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\InitBattleSceneSystem.cs" />
      <Compile Include="Assets\Script\Systems\SceneSystems\InitLoginSceneSystem.cs" />
@@ -916,10 +932,13 @@
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterMouseInputServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterNetworkServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterPhysicsServiceSystem.cs" />
+     <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterSettingServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterTimeServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterUiServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\RegisterViewServiceSystem.cs" />
      <Compile Include="Assets\Script\Systems\ServiceRegistrationSystems\ServiceRegistrationSystems.cs" />
+     <Compile Include="Assets\Script\Systems\SettingSystems\OnSettingWindowCloseSystem.cs" />
+     <Compile Include="Assets\Script\Systems\SettingSystems\OnSettingWindowOpenSystem.cs" />
      <Compile Include="Assets\Script\Systems\TaijutsuSystems\CalculateTaijutsuAttackDamageSystem.cs" />
      <Compile Include="Assets\Script\Systems\TaijutsuSystems\CheckTaijutsuAttackDefendSystem.cs" />
      <Compile Include="Assets\Script\Systems\TaijutsuSystems\CheckTaijutsuAttackDodgeSystem.cs" />

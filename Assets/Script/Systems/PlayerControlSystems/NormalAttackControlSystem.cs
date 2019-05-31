@@ -29,6 +29,7 @@ public class NormalAttackControlSystem : ReactiveSystem<GameEntity>
         {
             var player = _context.GetEntityWithId(e.normalAttackControl.value.userId);
             if (player == null) continue;
+            player.ReplacePosition(e.normalAttackControl.value.position);
             if (e.normalAttackControl.value.immediately)
             {
                 player.ReplaceAnimation("attack_" + e.normalAttackControl.value.attackIndex, false);

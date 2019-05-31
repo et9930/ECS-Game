@@ -235,8 +235,9 @@ public class NakamaNetworkService : INetworkService
         {
             await _socket.SendMatchStateAsync(_match.Id, dataCode, payload);
         }
-        catch (Exception)
+        catch (Exception e)
         {
+            Debug.LogError(e.Message + "\n" + e.StackTrace);
             return false;
         }
 

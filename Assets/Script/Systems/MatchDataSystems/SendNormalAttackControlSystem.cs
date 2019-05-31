@@ -35,6 +35,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                     {
                         matchId = _context.currentMatchData.value.customMatchId,
                         userId = _context.currentPlayerId.value,
+                        position = currentPlayer.position.value,
                         attackIndex = _context.characterBaseAttributes.dic[currentPlayer.name.text]
                             .taijutsuAttackWithWeapon,
                         immediately = true
@@ -47,6 +48,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                     {
                         matchId = _context.currentMatchData.value.customMatchId,
                         userId = _context.currentPlayerId.value,
+                        position = currentPlayer.position.value,
                         attackIndex = 1,
                         immediately = true
                     };
@@ -69,6 +71,7 @@ public class SendNormalAttackControlSystem : IExecuteSystem
                 {
                     matchId = _context.currentMatchData.value.customMatchId,
                     userId = _context.currentPlayerId.value,
+                    position = currentPlayer.position.value,
                     attackIndex = currentAttackIndex + 1,
                     immediately = false
                 };

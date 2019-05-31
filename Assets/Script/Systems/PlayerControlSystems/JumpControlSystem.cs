@@ -35,15 +35,26 @@ public class JumpControlSystem : ReactiveSystem<GameEntity>
             {
                 case 0:
                     player.ReplaceVelocity(Vector3.Zero);
-                    player.ReplaceAnimation("jump_0", false);
+                    player.ReplaceAnimation(
+                        _context.imageAsset.infos[player.name.text].animationInfos.ContainsKey("jump_0")
+                            ? "jump_0"
+                            : "idle", false);
                     break;
                 case 1:
-                    player.ReplaceAnimation("jump_1", false);
+                    player.ReplaceAnimation(
+                        _context.imageAsset.infos[player.name.text].animationInfos.ContainsKey("jump_1")
+                            ? "jump_1"
+                            : "idle", false);
+
                     break;
                 case 2:
                     player.ReplaceAddForce(e.jumpControl.value.force, 0.04f);
                     _context.CreateEntity().ReplaceDebugMessage(e.jumpControl.value.force.ToString());
-                    player.ReplaceAnimation("jump_1", false);
+                    player.ReplaceAnimation(
+                        _context.imageAsset.infos[player.name.text].animationInfos.ContainsKey("jump_1")
+                            ? "jump_1"
+                            : "idle", false);
+
                     player.isJumping = false;
                     break;
             }

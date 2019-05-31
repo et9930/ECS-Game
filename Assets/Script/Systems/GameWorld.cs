@@ -39,6 +39,9 @@
         Add(new GetReplayListSystem(contexts));
         Add(new AddReplayListItemSystem(contexts));
         Add(new DownloadReplaySystem(contexts));
+
+        Add(new OnSettingWindowOpenSystem(contexts));
+        Add(new OnSettingWindowCloseSystem(contexts));
         
 
         // Main Game Logic Systems
@@ -89,7 +92,7 @@
         Add(new MatchStartSystem(contexts));
         Add(new ReplayMatchRecordSystem(contexts));
 
-        Add(new ClearBattleSceneSystem(contexts));
+        Add(new CleanBattleSceneSystem(contexts));
         Add(new SwitchSceneSystem(contexts));
         Add(new OpenUiSystem(contexts));
         Add(new UiFollowSystem(contexts));

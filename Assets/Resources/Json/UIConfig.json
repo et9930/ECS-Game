@@ -986,7 +986,7 @@
           "AnomalyButton": false,
           "ComponentName": "MainUIOperationSetting",
           "ComponentPath": "MainUI\/MainUIOperationList\/MainUIOperationSetting",
-          "Handle": [],
+          "Handle": ["Click"],
           "Listener": [],
           "saveEntity": false
         }
@@ -1209,7 +1209,7 @@
           "ComponentName": "MatchReplayListWindowScrollRect",
           "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect",
           "Handle": [],
-          "Listener": [],
+          "Listener": ["Size"],
           "saveEntity": false
         },
         {
@@ -1217,7 +1217,7 @@
           "ComponentName": "MatchReplayListWindowContent",
           "ComponentPath": "MatchReplayListWindow\/MatchReplayListWindowScrollRect\/MatchReplayListWindowContent",
           "Handle": [],
-          "Listener": [ "Size" ],
+          "Listener": [],
           "saveEntity": true
         },
         {
@@ -1564,7 +1564,7 @@
           "ComponentName": "NinjutsuMenuScrollRect",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect",
           "Handle": [],
-          "Listener": [],
+          "Listener": ["Size"],
           "saveEntity": false
         },
         {
@@ -1572,7 +1572,7 @@
           "ComponentName": "NinjutsuMenuContent",
           "ComponentPath": "NinjutsuMenu\/NinjutsuMenuScrollRect\/NinjutsuMenuContent",
           "Handle": [],
-          "Listener": [ "Size" ],
+          "Listener": [],
           "saveEntity": true
         },
         {
@@ -3395,6 +3395,230 @@
       ],
       "UiLayer": "NormalLayer",
       "UiName": "SelectTarget"
+    },
+    {
+      "Components": [
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindow",
+          "ComponentPath": "SettingWindow",
+          "Handle": [],
+          "Listener": ["SettingWindow"],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowMask",
+          "ComponentPath": "SettingWindow\/SettingWindowMask",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowBackground",
+          "ComponentPath": "SettingWindow\/SettingWindowBackground",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowTitle",
+          "ComponentPath": "SettingWindow\/SettingWindowTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowResolution",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowResolutionTitle",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowResolutionDropdown",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Label",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Arrow",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Arrow",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Template",
+          "ComponentPath": "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Viewport",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Content",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport\/Content",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport\/Content\/Item",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Background",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport\/Content\/Item\/Item Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Checkmark",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport\/Content\/Item\/Item Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Item Label",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Viewport\/Content\/Item\/Item Label",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Scrollbar",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Scrollbar",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Sliding Area",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Scrollbar\/Sliding Area",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Handle",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowResolution\/SettingWindowResolutionDropdown\/Template\/Scrollbar\/Sliding Area\/Handle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowFullScreen",
+          "ComponentPath": "SettingWindow\/SettingWindowFullScreen",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowFullScreenTitle",
+          "ComponentPath": "SettingWindow\/SettingWindowFullScreen\/SettingWindowFullScreenTitle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowFullScreenToggle",
+          "ComponentPath": "SettingWindow\/SettingWindowFullScreen\/SettingWindowFullScreenToggle",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Background",
+          "ComponentPath": "SettingWindow\/SettingWindowFullScreen\/SettingWindowFullScreenToggle\/Background",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Checkmark",
+          "ComponentPath":
+            "SettingWindow\/SettingWindowFullScreen\/SettingWindowFullScreenToggle\/Background\/Checkmark",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "SettingWindowCloseButton",
+          "ComponentPath": "SettingWindow\/SettingWindowCloseButton",
+          "Handle": ["Click"],
+          "Listener": [],
+          "saveEntity": false
+        },
+        {
+          "AnomalyButton": false,
+          "ComponentName": "Text",
+          "ComponentPath": "SettingWindow\/SettingWindowCloseButton\/Text",
+          "Handle": [],
+          "Listener": [],
+          "saveEntity": false
+        }
+      ],
+      "UiLayer": "NormalLayer",
+      "UiName": "SettingWindow"
     },
     {
       "Components": [

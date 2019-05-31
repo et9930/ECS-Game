@@ -62,6 +62,8 @@ public static class ListenerList
         { "BattleValueDisplay", typeof(BattleValueDisplayListener) },
 
         { "BattleSceneOver", typeof(BattleSceneOverListener) },
+
+        { "SettingWindow", typeof(SettingWindowListener) },
     };
 }
 

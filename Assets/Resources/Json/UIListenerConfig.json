@@ -451,6 +451,12 @@
       ]
     },
     {
+      "ComponentName": "MainUIOperationSetting",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
       "ComponentName": "SearchBattleWindow",
       "Listener": [
         "Active"
@@ -743,6 +749,18 @@
     },
     {
       "ComponentName": "BattleSceneOverCloseButton",
+      "Handle": [
+        "Click"
+      ]
+    },
+    {
+      "ComponentName": "SettingWindow",
+      "Listener": [
+        "SettingWindow"
+      ]
+    },
+    {
+      "ComponentName": "SettingWindowCloseButton",
       "Handle": [
         "Click"
       ]

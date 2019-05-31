@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using Entitas;
 
-public class ClearBattleSceneSystem : ReactiveSystem<GameEntity>
+public class CleanBattleSceneSystem : ReactiveSystem<GameEntity>
 {
     private readonly GameContext _context;
 
-    public ClearBattleSceneSystem(Contexts contexts) : base(contexts.game)
+    public CleanBattleSceneSystem(Contexts contexts) : base(contexts.game)
     {
         _context = contexts.game;
     }
@@ -25,7 +25,7 @@ public class ClearBattleSceneSystem : ReactiveSystem<GameEntity>
     {
         foreach (var e in entities)
         {
-            _context.CreateEntity().ReplaceDebugMessage("ClearBattleSceneSystem");
+            _context.CreateEntity().ReplaceDebugMessage("CleanBattleSceneSystem");
 
             // close view
             foreach (var view in _context.GetGroup(GameMatcher.View))

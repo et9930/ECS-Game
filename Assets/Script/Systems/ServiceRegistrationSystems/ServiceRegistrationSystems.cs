@@ -14,5 +14,6 @@
         Add(new RegisterNetworkServiceSystem(contexts, services.Network));
         Add(new RegisterLocalStorageServiceSystem(contexts, services.LocalStorage));
         Add(new RegisterFileServiceSystem(contexts, services.File));
+        Add(new RegisterSettingServiceSystem(contexts, services.Setting));
     }
 }

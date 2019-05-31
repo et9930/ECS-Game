@@ -5,7 +5,7 @@ public class UnityFileService : IFileService
 {
     private readonly string _saveDir = Application.persistentDataPath + "/SavedGames/";
 
-    public string GetPath(string matchId)
+    private string GetPath(string matchId)
     {
         return _saveDir + "match_record_data_" + matchId + ".savedmatch";
     }

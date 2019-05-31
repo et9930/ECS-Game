@@ -49,6 +49,7 @@ public class SendThrowWeaponControlSystem : ReactiveSystem<GameEntity>
 
         var newThrowWeaponControl = new MatchDataThrowWeaponControl
         {
+            matchId = _context.currentMatchData.value.customMatchId,
             userId = player.id.value,
             weaponName = player.currentWeapon.value,
             weaponId = getUuid.uuid,

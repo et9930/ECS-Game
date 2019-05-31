@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CreateFont : EditorWindow
 {
-    [MenuItem("Tools/创建字体(sprite)")]
+    [MenuItem("Tools/Create Font")]
     public static void Open()
     {
         GetWindow<CreateFont>("创建字体");
@@ -98,13 +98,12 @@ public class CreateFont : EditorWindow
             var matPathName = fontPath + fontName + ".mat";
             var lineSpace = 0.1f;
 //string loadPath = selectionPath.Remove(selectionPath.Length - selectionExt.Length).Replace("Assets/Resources/", "");  
-            var loadPath = selectionPath.Replace(selectionExt, "")
-                .Substring(selectionPath.IndexOf("/Resources/", StringComparison.Ordinal) + "/Resources/".Length);
+            var loadPath = selectionPath.Replace(selectionExt, "").Substring(selectionPath.IndexOf("/Resources/", StringComparison.Ordinal) + "/Resources/".Length);
             var sprites = Resources.LoadAll<Sprite>(loadPath);
             if (sprites.Length > 0)
             {
                 var mat = new Material(Shader.Find("GUI/Text Shader"));
-                mat.SetTexture(MainTex, tex);
+                mat.SetTexture(MainTex, tex); 
                 var m_myFont = new Font {material = mat};
                 var characterInfo = new UnityEngine.CharacterInfo[sprites.Length];
                 foreach (var t in sprites)

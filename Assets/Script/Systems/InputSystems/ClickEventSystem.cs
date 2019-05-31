@@ -36,6 +36,8 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         _context.clickEventFunc.clickDic["MatchReplayListWindowCloseButton"] = OnMatchReplayListWindowCloseButtonClick;
         _context.clickEventFunc.clickDic["MatchReplayListWindowReplayButton"] = OnMatchReplayListWindowReplayButtonClick;
         _context.clickEventFunc.clickDic["BattleSceneOverCloseButton"] = OnBattleSceneOverCloseButtonClick;
+        _context.clickEventFunc.clickDic["MainUIOperationSetting"] = OnMainUIOperationSettingClick;
+        _context.clickEventFunc.clickDic["SettingWindowCloseButton"] = OnSettingWindowCloseButtonClick;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -218,6 +220,15 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
         e.ReplaceUiOpen("MatchReplayListWindow");
         e.ReplaceName("MatchReplayListWindow");
         _context.isRequestReplayList = true;
+    }
+
+    private void OnMainUIOperationSettingClick(GameEntity entity)
+    {
+        var e = _context.CreateEntity();
+        e.ReplaceUiOpen("SettingWindow");
+        e.ReplaceName("SettingWindow");
+        _context.isRequestReplayList = true;
+        _context.isSettingWindowOpen = true;
     }
 
     private void OnSearchBattleWindowMaskClick(GameEntity entity)
@@ -447,5 +458,15 @@ public class ClickEventSystem : ReactiveSystem<GameEntity>, IInitializeSystem
     private void OnBattleSceneOverCloseButtonClick(GameEntity entity)
     {
         _context.ReplaceLoadScene("MainScene");
+    }
+
+    private void OnSettingWindowCloseButtonClick(GameEntity entity)
+    {
+        foreach (var e in _context.GetEntitiesWithName("SettingWindow"))
+        {
+            e.isUiClose = true;
+        }
+
+        _context.isSettingWindowClose = true;
     }
 }
