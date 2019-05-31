@@ -28,7 +28,7 @@ public class HealthReduceSystem : ReactiveSystem<GameEntity>
         foreach (var e in entities)
         {
             var healthReduceValue = e.healthReduce.value;
-            if (healthReduceValue > e.healthCurrent.value)
+            if (healthReduceValue >= e.healthCurrent.value)
             {
                 healthReduceValue = e.healthCurrent.value;
                 e.ReplaceAcceleration(Vector3.Zero);

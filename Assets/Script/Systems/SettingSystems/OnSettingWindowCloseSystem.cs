@@ -29,6 +29,7 @@ public class OnSettingWindowCloseSystem : ReactiveSystem<GameEntity>
             var resolution = _context.settingValues.resolutions[resolutionIndex];
             var fullScreen = _context.sceneService.instance.GetToggleOnState("SettingWindowFullScreenToggle");
             _context.settingService.instance.SetResolution(resolution, fullScreen);
+            _context.RemoveSettingValues();
         }
     }
 }

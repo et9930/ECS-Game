@@ -705,12 +705,6 @@
       ]
     },
     {
-      "ComponentName": "MatchReplayListWindowScrollRect",
-      "Listener": [
-        "Size"
-      ]
-    },
-    {
       "ComponentName": "MatchReplayListWindowScrollbar",
       "Listener": [
         "ScrollBarValue"
@@ -724,7 +718,9 @@
     },
     {
       "ComponentName": "MatchReplayListWindowContent",
-      "saveEntity": true
+      "Listener": [
+        "Size"
+      ]
     },
     {
       "ComponentName": "MatchReplayListItem",
