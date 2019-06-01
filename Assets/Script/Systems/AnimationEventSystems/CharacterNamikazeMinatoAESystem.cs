@@ -46,12 +46,33 @@ public class CharacterNamikazeMinatoAESystem : ReactiveSystem<GameEntity>
         frameDic = animationDic["attack_1"].frameDic;
         frameDic[10] = OnMinatoAttackPlayEffect;
         frameDic[11] = OnMinatoTaijutsuAttackCheck;
+
+        animationDic["attack_2"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
+        frameDic = animationDic["attack_2"].frameDic;
+        frameDic[6] = OnMinatoTaijutsuAttackCheck;
+        frameDic[11] = OnMinatoTaijutsuAttackCheck;
+
+        animationDic["attack_3"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
+        frameDic = animationDic["attack_3"].frameDic;
+        frameDic[5] = OnMinatoTaijutsuAttackCheck;
+
+
+        animationDic["attack_4"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
+        frameDic = animationDic["attack_4"].frameDic;
+        frameDic[10] = OnMinatoTaijutsuAttackCheck;
+
+
+        animationDic["attack_5"] = new AnimationEvent() { frameDic = new Dictionary<int, Action<GameEntity>>() };
+        frameDic = animationDic["attack_5"].frameDic;
+        frameDic[12] = OnMinatoTaijutsuAttackCheck;
+
+
     }
-    
-//    public void OnMinatoIdleOver()
-//    {
-//        _context.CreateEntity().ReplaceDebugMessage("OnMinatoIdleOver");
-//    }
+
+    //    public void OnMinatoIdleOver()
+    //    {
+    //        _context.CreateEntity().ReplaceDebugMessage("OnMinatoIdleOver");
+    //    }
 
     public void OnMinatoStartJumpOver(GameEntity entity)
     {

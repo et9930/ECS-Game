@@ -821,6 +821,7 @@
      <Compile Include="Assets\Script\Structs\ServerToClient\SCUserData.cs" />
      <Compile Include="Assets\Script\Systems\AnimationEventSystems\AnimationEventSystems.cs" />
      <Compile Include="Assets\Script\Systems\AnimationEventSystems\CharacterNamikazeMinatoAESystem.cs" />
+     <Compile Include="Assets\Script\Systems\AnimationEventSystems\CharacterUchihaMadaraAESystem.cs" />
      <Compile Include="Assets\Script\Systems\AnimationEventSystems\EffectAESystem.cs" />
      <Compile Include="Assets\Script\Systems\AnimationSystems\ChangeAnimationSystem.cs" />
      <Compile Include="Assets\Script\Systems\AnimationSystems\PlayAnimationSystem.cs" />
