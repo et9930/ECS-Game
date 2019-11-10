@@ -66,7 +66,6 @@ public class AddReplayListItemSystem : ReactiveSystem<GameEntity>
                 height = 385;
             }
 
-            UnityEngine.Debug.Log(height);
             replayListContent.ReplaceSize(new Vector2(820, height));
             _context.coroutineService.instance.StartCoroutine(SetScrollBarValue(replayScrollBar));
             //_context.sceneService.instance.SetScrollBarSize("MatchReplayListWindowScrollbar", 385.0f / height);

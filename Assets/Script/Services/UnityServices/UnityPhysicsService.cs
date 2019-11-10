@@ -44,14 +44,14 @@ public class UnityPhysicsService : IPhysicsService
         var tmpSharps2 = _shapeDic[go2.name][entity2.sprite.path.Substring(entity2.sprite.path.LastIndexOf('/') + 1)];
 
         for (var i = 0; i < pc1.pathCount; i++)
-            pc1.SetPath(i, null);
+            pc1.SetPath(i, (List<Vector2>) null);
         for (var i = 0; i < pc2.pathCount; i++)
-            pc2.SetPath(i, null);
+            pc2.SetPath(i, (List<Vector2>) null);
 
         for (var i = 0; i < tmpSharps1.Count; i++)
-            pc1.SetPath(i, tmpSharps1[i].ToArray());
+            pc1.SetPath(i, tmpSharps1[i]);
         for (var i = 0; i < tmpSharps2.Count; i++)
-            pc2.SetPath(i, tmpSharps2[i].ToArray());
+            pc2.SetPath(i, tmpSharps2[i]);
 
         var hasCollision = pc1.IsTouching(pc2);
 
